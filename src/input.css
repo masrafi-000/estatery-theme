@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563eb;
+  --color-primary-foreground: #ffffff;
+  
+  --color-secondary: #4b5563;
+  --color-secondary-foreground: #ffffff;
+  
+  --color-accent: #f59e0b;
+  --color-accent-foreground: #111827;
+  
+  --color-background: #ffffff;
+  --color-foreground: #111827;
+  
+  --color-surface: #f9fafb;
+  --color-surface-secondary: #f3f4f6;
+  
+  /* Container configuration */
+  --container-center: true;
+  --container-padding: 2rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    position: static !important;
+    top: 0 !important;
+  }
+}
+
+/* Next.js Styled Language Switcher Styles */
+.lang-options-menu.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+}
+
+#lang-select-trigger.open #lang-select-chevron {
+    transform: rotate(180deg);
+}
+
+.next-lang-switcher {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Cleanup */
+.goog-te-banner-frame.skiptranslate, 
+.goog-te-gadget-icon,
+#goog-gt-tt {
+  display: none !important;
+}

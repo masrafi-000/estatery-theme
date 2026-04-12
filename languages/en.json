@@ -1,0 +1,33 @@
+{
+  "brand": {
+    "tagline": "Real Estate Excellence"
+  },
+  "header": {
+    "language_label": "Language:"
+  },
+  "home": {
+    "hero": {
+      "title": "Modern Living Reimagined",
+      "description": "Welcome to Estatery, where we combine architectural excellence with premium real estate opportunities. Discover your dream home today."
+    },
+    "features": {
+      "title": "Premium Features",
+      "gsap": {
+        "title": "GSAP 3",
+        "description": "Smooth, high-performance animations that wow your visitors at first sight."
+      },
+      "lenis": {
+        "title": "Lenis",
+        "description": "Modern smooth scrolling integration for a boutique digital experience."
+      },
+      "tailwind": {
+        "title": "Tailwind v4",
+        "description": "The latest in CSS utility frameworks, providing rapid and scalable design."
+      }
+    },
+    "cta": "Explore Properties"
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  }
+}

@@ -1,0 +1,34 @@
+/*
+Theme Name: Estatery
+Theme URI: https://example.com/estatery
+Author: Antigravity
+Author URI: https://example.com
+Description: A premium real estate theme with GSAP animations and smooth scrolling.
+Version: 1.0.0
+Text Domain: estatery
+*/
+
+/* Custom styles can be added here */
+
+/* Lenis Smooth Scroll Recommended CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+

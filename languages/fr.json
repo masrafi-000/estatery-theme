@@ -1,0 +1,33 @@
+{
+  "brand": {
+    "tagline": "Excellence Immobilière"
+  },
+  "header": {
+    "language_label": "Langue:"
+  },
+  "home": {
+    "hero": {
+      "title": "La Vie Moderne Réimaginée",
+      "description": "Bienvenue chez Estatery, où nous combinons l'excellence architecturale avec des opportunités immobilières de premier ordre. Découvrez la maison de vos rêves dès aujourd'hui."
+    },
+    "features": {
+      "title": "Caractéristiques Premium",
+      "gsap": {
+        "title": "GSAP 3",
+        "description": "Des animations fluides et performantes qui époustouflent vos visiteurs dès le premier regard."
+      },
+      "lenis": {
+        "title": "Lenis",
+        "description": "Intégration moderne du défilement fluide pour une expérience numérique haut de gamme."
+      },
+      "tailwind": {
+        "title": "Tailwind v4",
+        "description": "Le dernier cri des frameworks utilitaires CSS, offrant une conception rapide et évolutive."
+      }
+    },
+    "cta": "Explorer les Propriétés"
+  },
+  "footer": {
+    "copyright": "Tous droits réservés."
+  }
+}
