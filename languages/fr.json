@@ -3,7 +3,13 @@
     "tagline": "Excellence Immobilière"
   },
   "header": {
-    "language_label": "Langue:"
+    "language_label": "Langue:",
+    "navigation": [
+      { "label": "Accueil", "url": "/" },
+      { "label": "Propriétés", "url": "/properties" },
+      { "label": "À propos", "url": "/about" },
+      { "label": "Contact", "url": "/contact" }
+    ]
   },
   "home": {
     "hero": {
@@ -14,18 +20,72 @@
       "title": "Caractéristiques Premium",
       "gsap": {
         "title": "GSAP 3",
-        "description": "Des animations fluides et performantes qui époustouflent vos visiteurs dès le premier regard."
+        "description": "Des animations fluides et performantes qui impressionnent vos visiteurs au premier coup d'œil."
       },
       "lenis": {
         "title": "Lenis",
-        "description": "Intégration moderne du défilement fluide pour une expérience numérique haut de gamme."
+        "description": "Intégration moderne du défilement fluide pour une expérience numérique boutique."
       },
       "tailwind": {
         "title": "Tailwind v4",
-        "description": "Le dernier cri des frameworks utilitaires CSS, offrant une conception rapide et évolutive."
+        "description": "Le dernier né des frameworks utilitaires CSS, offrant une conception rapide et évolutive."
       }
     },
     "cta": "Explorer les Propriétés"
+  },
+  "pages": {
+    "about": {
+      "title": "À Propos d'Estatery",
+      "subtitle": "Redéfinir les standards de l'immobilier.",
+      "content": "Fondée sur les principes d'intégrité et de luxe, Estatery est devenue un leader mondial de la gestion et de la vente de propriétés d'élite. Nous ne vendons pas seulement des maisons ; nous créons des styles de vie.",
+      "mission": "Notre mission est de fournir un service inégalé et des opportunités exclusives à notre clientèle mondiale.",
+      "vision": "Mener l'évolution de la vie moderne grâce à l'innovation architecturale."
+    },
+    "properties": {
+      "title": "Propriétés Exclusives",
+      "subtitle": "Découvrez une sélection rigoureuse de nos plus belles annonces.",
+      "items": [
+        {
+          "id": 1,
+          "title": "Villa Mer d'Azur",
+          "price": "4 500 000 $",
+          "location": "Malibu, Californie",
+          "description": "Un chef-d'œuvre au bord de l'eau avec piscine à débordement et accès à une plage privée.",
+          "image": "property_villa_modern"
+        },
+        {
+          "id": 2,
+          "title": "Penthouse Skyline",
+          "price": "2 800 000 $",
+          "location": "Centre-ville de Dubaï",
+          "description": "Luxe en haute altitude avec vue à 360 degrés sur la ville et le Burj Khalifa.",
+          "image": "property_penthouse_luxury"
+        },
+        {
+          "id": 3,
+          "title": "Loft Urbain",
+          "price": "1 200 000 $",
+          "location": "SoHo, New York",
+          "description": "Le design industriel rencontre le confort moderne au cœur du quartier des arts.",
+          "image": "property_apartment_urban_interiors"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "subtitle": "Contactez notre équipe pour des consultations exclusives.",
+      "info": {
+          "address": "123 Real Estate Blvd, Beverly Hills, CA",
+          "phone": "+1 (555) 000-1234",
+          "email": "contact@estatery.com"
+      },
+      "form": {
+          "name": "Nom complet",
+          "email": "Adresse e-mail",
+          "message": "Votre message",
+          "submit": "Envoyer le message"
+      }
+    }
   },
   "footer": {
     "copyright": "Tous droits réservés."

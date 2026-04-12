@@ -62,6 +62,27 @@ class Translator {
             }
         }
 
-        return is_string($temp) ? $temp : $key;
+        return (is_string($temp) || is_array($temp)) ? $temp : $key;
+    }
+
+    /**
+     * Resolve a path (slug) to its localized URL
+     */
+    public function resolve_nav_url($path) {
+        if ($path === '/') return home_url('/');
+        
+        $slug = ltrim($path, '/');
+        $page = get_page_by_path($slug);
+        
+        if ($page) {
+            // Get the translated version of the page for the current language
+            $translated_id = pll_get_post($page->ID, $this->lang);
+            if ($translated_id) {
+                return get_permalink($translated_id);
+            }
+            return get_permalink($page->ID);
+        }
+
+        return home_url($path);
     }
 }

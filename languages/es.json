@@ -3,18 +3,24 @@
     "tagline": "Excelencia Inmobiliaria"
   },
   "header": {
-    "language_label": "Idioma:"
+    "language_label": "Idioma:",
+    "navigation": [
+      { "label": "Inicio", "url": "/" },
+      { "label": "Propiedades", "url": "/properties" },
+      { "label": "Nosotros", "url": "/about" },
+      { "label": "Contacto", "url": "/contact" }
+    ]
   },
   "home": {
     "hero": {
-      "title": "Vida Moderna Reimaginada",
-      "description": "Bienvenido a Estatery, donde combinamos la excelencia arquitectónica con oportunidades inmobiliarias de primera calidad. Descubra la casa de sus sueños hoy mismo."
+      "title": "La Vida Moderna Reimaginada",
+      "description": "Bienvenido a Estatery, donde combinamos la excelencia arquitectónica con oportunidades inmobiliarias de primera clase. Descubra la casa de sus sueños hoy mismo."
     },
     "features": {
       "title": "Características Premium",
       "gsap": {
         "title": "GSAP 3",
-        "description": "Animaciones suaves y de alto rendimiento que cautivan a sus visitantes a primera vista."
+        "description": "Animaciones suaves y de alto rendimiento que impresionan a sus visitantes a primera vista."
       },
       "lenis": {
         "title": "Lenis",
@@ -22,10 +28,64 @@
       },
       "tailwind": {
         "title": "Tailwind v4",
-        "description": "Lo último en frameworks de utilidades CSS, ofreciendo un diseño rápido y escalable."
+        "description": "Lo último en frameworks de utilidades CSS, proporcionando un diseño rápido y escalable."
       }
     },
     "cta": "Explorar Propiedades"
+  },
+  "pages": {
+    "about": {
+      "title": "Acerca de Estatery",
+      "subtitle": "Redefiniendo los estándares de la inmobiliaria.",
+      "content": "Fundada sobre los principios de integridad y lujo, Estatery se ha convertido en un líder mundial en la gestión y venta de propiedades de élite. No solo vendemos casas; curamos estilos de vida.",
+      "mission": "Nuestra misión es proporcionar un servicio inigualable y oportunidades exclusivas a nuestra clientela global.",
+      "vision": "Liderar la evolución de la vida moderna a través de la innovación arquitectónica."
+    },
+    "properties": {
+      "title": "Propiedades Exclusivas",
+      "subtitle": "Descubra una selección curada de nuestras mejores ofertas.",
+      "items": [
+        {
+          "id": 1,
+          "title": "Villa Mar Azul",
+          "price": "$4,500,000",
+          "location": "Malibú, California",
+          "description": "Una impresionante obra maestra frente al mar con piscina infinita y acceso directo a la playa privada.",
+          "image": "property_villa_modern"
+        },
+        {
+          "id": 2,
+          "title": "Ático Horizonte",
+          "price": "$2,800,000",
+          "location": "Centro de Dubái",
+          "description": "Lujo de gran altura con vistas de 360 grados del perfil de la ciudad y el Burj Khalifa.",
+          "image": "property_penthouse_luxury"
+        },
+        {
+          "id": 3,
+          "title": "Loft Urbano",
+          "price": "$1,200,000",
+          "location": "SoHo, Nueva York",
+          "description": "El diseño industrial elegante se une a la comodidad moderna en el corazón del distrito del arte.",
+          "image": "property_apartment_urban_interiors"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Póngase en Contacto",
+      "subtitle": "Contacte a nuestro equipo para consultas exclusivas.",
+      "info": {
+          "address": "123 Real Estate Blvd, Beverly Hills, CA",
+          "phone": "+1 (555) 000-1234",
+          "email": "consultas@estatery.com"
+      },
+      "form": {
+          "name": "Nombre Completo",
+          "email": "Correo Electrónico",
+          "message": "Su Mensaje",
+          "submit": "Enviar Mensaje"
+      }
+    }
   },
   "footer": {
     "copyright": "Todos los derechos reservados."
