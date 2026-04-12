@@ -2,6 +2,7 @@
 
 @theme {
   --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
   --color-primary-foreground: #ffffff;
   
   --color-secondary: #4b5563;
@@ -13,12 +14,11 @@
   --color-background: #ffffff;
   --color-foreground: #111827;
   
-  --color-surface: #f9fafb;
-  --color-surface-secondary: #f3f4f6;
-  
-  /* Container configuration */
-  --container-center: true;
-  --container-padding: 2rem;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f9fafb;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui;
+  --font-display: "Jost", sans-serif;
 }
 
 @layer base {
@@ -26,6 +26,9 @@
     @apply bg-background text-foreground;
     position: static !important;
     top: 0 !important;
+  }
+  a {
+    text-decoration: none !important;
   }
 }
 
@@ -42,7 +45,7 @@
 }
 
 .next-lang-switcher {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Cleanup */

@@ -9,7 +9,11 @@
       { "label": "Propiedades", "url": "/properties" },
       { "label": "Nosotros", "url": "/about" },
       { "label": "Contacto", "url": "/contact" }
-    ]
+    ],
+    "actions": {
+      "contact": "Contáctenos",
+      "agent": "Ser Agente"
+    }
   },
   "home": {
     "hero": {

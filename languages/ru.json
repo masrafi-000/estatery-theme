@@ -9,7 +9,11 @@
       { "label": "Недвижимость", "url": "/properties" },
       { "label": "О нас", "url": "/about" },
       { "label": "Контакты", "url": "/contact" }
-    ]
+    ],
+    "actions": {
+      "contact": "Связаться с нами",
+      "agent": "Стать агентом"
+    }
   },
   "home": {
     "hero": {
