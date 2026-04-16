@@ -137,15 +137,15 @@
                 
                 if (document.querySelector('.reveal')) {
                     gsap.to(".reveal", {
-                        scrollTrigger: { trigger: "#why-choose", start: "top 80%", toggleActions: "play none none none" },
-                        opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: "power3.out"
+                        scrollTrigger: { trigger: "#why-choose", start: "top 85%", toggleActions: "play none none none" },
+                        opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: "power4.out"
                     });
                 }
                 
                 if (document.querySelector('.feature-box')) {
                     gsap.to(".feature-box", {
-                        scrollTrigger: { trigger: "#dynamic-features-wrapper", start: "top 75%", toggleActions: "play none none none" },
-                        opacity: 1, y: 0, stagger: 0.15, duration: 1, ease: "power4.out"
+                        scrollTrigger: { trigger: "#dynamic-features-wrapper", start: "top 80%", toggleActions: "play none none none" },
+                        opacity: 1, y: 0, scale: 1, stagger: 0.1, duration: 0.8, ease: "power4.out"
                     });
                 }
             }
@@ -164,10 +164,10 @@
                     const targetValue = parseInt($this.data('target'));
                     gsap.to(this, {
                         innerText: targetValue,
-                        duration: 2.5,
+                        duration: 1.5,
                         ease: "power2.out",
                         snap: { innerText: 1 },
-                        scrollTrigger: { trigger: "#stats-counter-section", start: "top 80%", toggleActions: "play none none none" },
+                        scrollTrigger: { trigger: "#stats-counter-section", start: "top 85%", toggleActions: "play none none none" },
                         onUpdate: function() {
                             $this.text(Math.ceil(this.targets()[0].innerText));
                         }
@@ -193,7 +193,7 @@
                 if (!isActive) {
                     $parent.addClass('active');
                     gsap.set($answer[0], { display: 'block' });
-                    gsap.fromTo($answer[0], { opacity: 0, height: 0 }, { opacity: 1, height: 'auto', duration: 0.5, ease: "power2.out" });
+                    gsap.fromTo($answer[0], { opacity: 0, height: 0 }, { opacity: 1, height: 'auto', duration: 0.4, ease: "power4.out" });
 
                     $faqCards.not($parent).each(function(index) {
                         const xSide = index % 2 === 0 ? -150 : 150;
@@ -236,13 +236,13 @@
             // Content Reveal Sequence
             const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
             tl.fromTo(".reveal-fade", 
-                { opacity: 0, scale: 0.8, y: 20 }, 
-                { opacity: 1, scale: 1, y: 0, duration: 1.5, delay: 0.3 }
+                { opacity: 0, scale: 0.9, y: 20 }, 
+                { opacity: 1, scale: 1, y: 0, duration: 0.8, delay: 0.1 }
             )
             .fromTo(".reveal-up", 
-                { opacity: 0, y: 40 }, 
-                { opacity: 1, y: 0, duration: 1.2, stagger: 0.15 }, 
-                "-=1"
+                { opacity: 0, y: 30 }, 
+                { opacity: 1, y: 0, duration: 0.8, stagger: 0.1 }, 
+                "-=0.6"
             );
 
             // Floating Background Shapes

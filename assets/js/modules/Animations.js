@@ -18,13 +18,13 @@ export default class Animations {
             gsap.from(cards, {
                 scrollTrigger: {
                     trigger: cardTrigger,
-                    start: 'top 80%',
+                    start: 'top 85%',
                 },
-                y: 60,
+                y: 40,
                 opacity: 0,
-                duration: 1,
-                stagger: 0.2,
-                ease: 'power3.out'
+                duration: 0.8,
+                stagger: 0.1,
+                ease: 'power4.out'
             });
         }
 
@@ -37,10 +37,10 @@ export default class Animations {
                         trigger: reveal,
                         start: 'top 90%',
                     },
-                    scale: 0.8,
+                    scale: 0.95,
                     opacity: 0,
-                    duration: 0.8,
-                    ease: 'back.out(1.7)'
+                    duration: 0.6,
+                    ease: 'power4.out'
                 });
             });
         }
