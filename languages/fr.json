@@ -8,6 +8,7 @@
       { "label": "Accueil", "url": "/" },
       { "label": "Propriétés", "url": "/properties" },
       { "label": "À propos", "url": "/about" },
+      { "label": "Investir", "url": "/invest" },
       { "label": "Contact", "url": "/contact" }
     ],
     "actions": {
@@ -96,11 +97,77 @@
   },
   "pages": {
     "about": {
-      "title": "À Propos d'Estatery",
-      "subtitle": "Redéfinir les standards de l'immobilier.",
-      "content": "Fondée sur les principes d'intégrité et de luxe, Estatery est devenue un leader mondial de la gestion et de la vente de propriétés d'élite. Nous ne vendons pas seulement des maisons ; nous créons des styles de vie.",
-      "mission": "Notre mission est de fournir un service inégalé et des opportunités exclusives à notre clientèle mondiale.",
-      "vision": "Mener l'évolution de la live moderne grâce à l'innovation architecturale."
+      "hero": {
+        "title": "À Propos De Nous",
+        "bg_text": "À Propos",
+        "subtitle": "Contactez Altara pour des solutions élégantes en investissements immobiliers"
+      },
+      "story": {
+        "badge": "Notre Histoire",
+        "title": "Nous développons des projets de qualité depuis 1988",
+        "description": "Nulla et sapien felis. Cras ex sapien, eleifend ac orci id, maximus aliquet ipsum. Duis in maximus nisl. Curabitur vitae mi fermentum, ullamcorper.",
+        "features": [
+          "Duis semper, nisi eget accumsan cursus, nisl ligula sagittis.",
+          "Pellentesque metus turpis, efficitur at turpis semper.",
+          "Curabitur efficitur et massa in elementum.",
+          "Morbi gravida sit amet sem a pharetra."
+        ]
+      },
+      "how_we_work": {
+        "badge": "Flux de Travail",
+        "title": "Comment nous donnons vie à votre <br> <span class='text-secondary'>vision</span>",
+        "steps": [
+          {
+            "id": "01",
+            "title": "Découverte",
+            "description": "Nous écoutons vos objectifs et analysons le potentiel du site pour créer une feuille de route stratégique."
+          },
+          {
+            "id": "02",
+            "title": "Design",
+            "description": "Nos architectes conçoivent des plans sur mesure qui équilibrent l'esthétique et la fonctionnalité."
+          },
+          {
+            "id": "03",
+            "title": "Construction",
+            "description": "En utilisant des matériaux haut de gamme et une main-d'œuvre experte, nous transformons les conceptions en réalité concrète."
+          },
+          {
+            "id": "04",
+            "title": "Livraison",
+            "description": "Un contrôle qualité final rigoureux garantit que tout répond à notre standard d'excellence de 1988."
+          }
+        ]
+      },
+      "philosophy": {
+        "badge": "Notre Philosophie",
+        "title": "Les piliers fondamentaux qui <br> définissent notre métier",
+        "values": [
+          {
+            "id": "01",
+            "title": "Intégrité Architecturale",
+            "description": "Nous priorisons la solidité structurelle et le design intemporel aux tendances passagères, garantissant que chaque projet dure des générations."
+          },
+          {
+            "id": "02",
+            "title": "Innovation Durable",
+            "description": "Intégrer des technologies intelligentes et des matériaux écologiques pour réduire l'empreinte carbone sans sacrifier le luxe."
+          },
+          {
+            "id": "03",
+            "title": "Vision Centrée sur le Client",
+            "description": "Votre vision est notre plan. Nous maintenons une communication transparente du premier croquis à la dernière brique."
+          }
+        ]
+      },
+      "leadership": {
+        "badge": "Message Exécutif",
+        "years_label": "Années d'Intégrité",
+        "title": "Concevoir l'<span class='italic text-secondary'>avenir</span>, <br> respecter le <span class='italic'>passé</span>.",
+        "message": "Notre voyage a commencé en 1988 avec un plan simple : construire avec une qualité sans compromis. Aujourd'hui, nous continuons à combler le fossé entre l'innovation architecturale et le design centré sur l'humain. Nous ne développons pas seulement des projets ; nous cultivons des héritages.",
+        "name": "Asif Ahamed",
+        "role": "Fondateur et Directeur Général"
+      }
     },
     "properties": {
       "title": "Propriétés Exclusives",
@@ -133,18 +200,129 @@
       ]
     },
     "contact": {
-      "title": "Contactez-nous",
-      "subtitle": "Contactez notre équipe pour des consultations exclusives.",
+      "hero": {
+        "title": "Contactez-nous",
+        "bg_text": "Contact",
+        "subtitle": "Contactez l'équipe dédiée d'Altara pour des stratégies d'investissement immobilier sur mesure et des conseils d'experts."
+      },
       "info": {
-          "address": "123 Real Estate Blvd, Beverly Hills, CA",
-          "phone": "+1 (555) 000-1234",
-          "email": "contact@estatery.com"
+        "badge": "Contactez-nous",
+        "title": "Contactez-nous",
+        "company": "Capital Union",
+        "description": "Conseils d'experts en investissements immobiliers et solutions immobilières de premier ordre à travers le Bangladesh.",
+        "office_label": "Adresse du Bureau",
+        "office_address": "Secteur 07 d'Uttara, autoroute Dhaka - Mymensingh, Bangladesh",
+        "email_label": "Écrivez-nous",
+        "phone_label": "Appelez Directement"
       },
       "form": {
-          "name": "Nom complet",
-          "email": "Adresse e-mail",
-          "message": "Votre message",
-          "submit": "Envoyer le message"
+        "title": "Envoyez-nous un Message",
+        "first_name_label": "Prénom",
+        "first_name_placeholder": "Prénom",
+        "last_name_label": "Nom de famille",
+        "last_name_placeholder": "Nom de famille",
+        "email_label": "Adresse e-mail",
+        "email_placeholder": "Adresse e-mail",
+        "phone_label": "Numéro de téléphone",
+        "phone_placeholder": "Numéro de téléphone",
+        "property_info_label": "Informations sur la propriété",
+        "property_type_placeholder": "Type",
+        "zip_label": "Code postal",
+        "zip_placeholder": "Code postal",
+        "city_label": "Ville",
+        "city_placeholder": "Ville",
+        "bedrooms_label": "Nb de chambres",
+        "bedrooms_placeholder": "Nb de chambres",
+        "bathrooms_label": "Nb de salles de bain",
+        "bathrooms_placeholder": "Nb de salles de bain",
+        "budget_label": "Votre budget",
+        "budget_placeholder": "Votre budget",
+        "submit": "Envoyer la Demande"
+      }
+    },
+    "invest": {
+      "hero": {
+        "title": "Opportunités d'Investissement",
+        "bg_text": "Investir",
+        "subtitle": "Sécurisez votre avenir avec des portefeuilles immobiliers à haut rendement et des développements immobiliers exclusifs."
+      },
+      "philosophy": {
+        "badge": "Stratégie de Niveau Institutionnel",
+        "title": "Une Approche Disciplinée Pour La <br> Préservation Du Capital.",
+        "focus_area_label": "Zone de Focalisation",
+        "focus_area_title": "Intégrité des Actifs Physiques",
+        "description": "Chez Capital Union, notre philosophie est enracinée dans la préservation de la richesse générationnelle. Nous privilégions les actifs physiques ayant une utilité sociale à long terme.",
+        "quote": "\"Nous ne courons pas après les tendances du marché ; nous nous concentrons plutôt sur la valeur intrinsèque et la résilience économique pour assurer l'avenir de nos partenaires.\"",
+        "items": [
+          {
+            "id": "01",
+            "title": "Discipline de Risque",
+            "description": "Des points d'entrée conservateurs avec des filets de sécurité à marge élevée pour chaque déploiement de capital."
+          },
+          {
+            "id": "02",
+            "title": "Préservation des Actifs",
+            "description": "Se concentrer sur des emplacements de choix et des structures durables qui résistent au temps."
+          }
+        ]
+      },
+      "growth": {
+        "title": "Investissement Immobilier Intelligent",
+        "subtitle": "Développez votre patrimoine grâce à des actifs immobiliers à forte croissance dans des emplacements de choix.",
+        "items": [
+          {
+            "title": "ROI Cohérent",
+            "description": "Bénéficiez de rendements annuels allant de 8 % à 15 % sur des propriétés commerciales et résidentielles de premier ordre."
+          },
+          {
+            "title": "Actifs Sécurisés",
+            "description": "Chaque propriété est vérifiée à 100 % sur le plan juridique avec des titres de propriété physiques et l'approbation du gouvernement."
+          },
+          {
+            "title": "Faible Barrière à l'Entrée",
+            "description": "Commencez votre parcours immobilier avec un investissement minimal. La propriété de luxe est désormais accessible."
+          }
+        ],
+        "cta": {
+          "title": "Prêt à assurer votre avenir ?",
+          "subtitle": "Téléchargez gratuitement notre guide d'investissement 2024.",
+          "button": "Obtenir le Guide d'Investissement"
+        }
+      },
+      "onboarding": {
+        "badge": "Intégration Exclusive",
+        "title": "Commencez Votre Parcours d'Investissement",
+        "subtitle": "Remplissez le formulaire de demande pour aider notre équipe des relations capital à comprendre vos objectifs.",
+        "form": {
+          "name_label": "Nom Légal Complet *",
+          "name_placeholder": "ex. Ahamed Asif",
+          "questions": [
+            "Client Existant ?",
+            "Possédez-vous un Bien en Espagne ?",
+            "Résident Fiscal en Espagne ?"
+          ],
+          "options": {
+            "no": "Non",
+            "yes": "Oui"
+          },
+          "interest_label": "Domaines d'Intérêt *",
+          "interests": [
+            "Terrains",
+            "Résidentiel",
+            "Commercial",
+            "Hôtels",
+            "Agriculture",
+            "Autre"
+          ],
+          "amount_label": "Montant de l'Investissement *",
+          "amounts": [
+            "50 000 € - 100 000 €",
+            "100 000 € - 500 000 €",
+            "500 000 € - 1 M€+"
+          ],
+          "submit": "Envoyer la Demande",
+          "footer": "Portail Chiffré et Confidentiel"
+        }
       }
     }
   },

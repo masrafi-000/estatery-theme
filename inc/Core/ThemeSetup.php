@@ -32,7 +32,6 @@ class ThemeSetup {
     }
 
     public static function ensure_pages_exist() {
-        if (get_option('estatery_pages_bootstrapped')) return;
         if (!function_exists('pll_languages_list')) return;
 
         $pages_to_create = [
@@ -47,6 +46,10 @@ class ThemeSetup {
             'contact' => [
                 'title'    => 'Contact',
                 'template' => 'page-contact.php'
+            ],
+            'invest' => [
+                'title'    => 'Invest',
+                'template' => 'page-invest.php'
             ]
         ];
 

@@ -8,6 +8,7 @@
       { "label": "Home", "url": "/" },
       { "label": "Properties", "url": "/properties" },
       { "label": "About", "url": "/about" },
+      { "label": "Invest", "url": "/invest" },
       { "label": "Contact", "url": "/contact" }
     ],
     "actions": {
@@ -96,11 +97,77 @@
   },
   "pages": {
     "about": {
-      "title": "About Estatery",
-      "subtitle": "Redefining the standards of real estate.",
-      "content": "Founded on the principles of integrity and luxury, Estatery has become a global leader in elite property management and sales. We don't just sell houses; we curate lifestyles.",
-      "mission": "Our mission is to provide unparalleled service and exclusive opportunities to our global clientele.",
-      "vision": "Leading the evolution of modern living through architectural innovation."
+      "hero": {
+        "title": "About Us",
+        "bg_text": "About",
+        "subtitle": "Contact Altara for Elegant Solutions in Property Investments"
+      },
+      "story": {
+        "badge": "Our Story",
+        "title": "We Develop Quality Project Since 1988",
+        "description": "Nulla et sapien felis. Cras ex sapien, eleifend ac orci id, maximus aliquet ipsum. Duis in maximus nisl. Curabitur vitae mi fermentum, ullamcorper.",
+        "features": [
+          "Duis semper, nisi eget accumsan cursus, nisl ligula sagittis.",
+          "Pellentesque metus turpis, efficitur at turpis semper.",
+          "Curabitur efficitur et massa in elementum.",
+          "Morbi gravida sit amet sem a pharetra."
+        ]
+      },
+      "how_we_work": {
+        "badge": "Work Flow",
+        "title": "How We Bring Your <br> <span class='text-secondary'>Vision to Life</span>",
+        "steps": [
+          {
+            "id": "01",
+            "title": "Discovery",
+            "description": "We listen to your goals and analyze site potential to create a strategic roadmap."
+          },
+          {
+            "id": "02",
+            "title": "Design",
+            "description": "Our architects craft bespoke blueprints that balance aesthetics with functionality."
+          },
+          {
+            "id": "03",
+            "title": "Build",
+            "description": "Using premium materials and expert labor, we transform designs into concrete reality."
+          },
+          {
+            "id": "04",
+            "title": "Deliver",
+            "description": "A final rigorous quality check ensures everything meets our 1988-standard of excellence."
+          }
+        ]
+      },
+      "philosophy": {
+        "badge": "Our Philosophy",
+        "title": "The Core Pillars That <br> Define Our Craft",
+        "values": [
+          {
+            "id": "01",
+            "title": "Architectural Integrity",
+            "description": "We prioritize structural soundness and timeless design over passing trends, ensuring every project lasts for generations."
+          },
+          {
+            "id": "02",
+            "title": "Sustainable Innovation",
+            "description": "Integrating smart technology and eco-friendly materials to reduce carbon footprints without sacrificing luxury."
+          },
+          {
+            "id": "03",
+            "title": "Client-Centric Vision",
+            "description": "Your vision is our blueprint. We maintain transparent communication from the first sketch to the final brick."
+          }
+        ]
+      },
+      "leadership": {
+        "badge": "Executive Message",
+        "years_label": "Years of Integrity",
+        "title": "Designing the <span class='italic text-secondary'>Future</span>, <br> Respecting the <span class='italic'>Past</span>.",
+        "message": "Our journey began in 1988 with a simple blueprint: to build with uncompromising quality. Today, we continue to bridge the gap between architectural innovation and human-centric design. We don't just develop projects; we cultivate legacies.",
+        "name": "Asif Ahamed",
+        "role": "Founder & Managing Director"
+      }
     },
     "properties": {
       "title": "Exclusive Properties",
@@ -133,18 +200,129 @@
       ]
     },
     "contact": {
-      "title": "Get In Touch",
-      "subtitle": "Contact our team for exclusive consultations.",
+      "hero": {
+        "title": "Get in Touch",
+        "bg_text": "Contact",
+        "subtitle": "Reach out to Altara's dedicated team for tailored property investment strategies and expert guidance."
+      },
       "info": {
-          "address": "123 Real Estate Blvd, Suite 100, Beverly Hills, CA",
-          "phone": "+1 (555) 000-1234",
-          "email": "inquiry@estatery.com"
+        "badge": "Get In Touch",
+        "title": "Contact Us",
+        "company": "Capital Union",
+        "description": "Expert guidance in property investments and premium real estate solutions across Bangladesh.",
+        "office_label": "Office Address",
+        "office_address": "Uttara Sector 07, Dhaka - Mymensingh Highway, Bangladesh",
+        "email_label": "Email Us",
+        "phone_label": "Call Directly"
       },
       "form": {
-          "name": "Full Name",
-          "email": "Email Address",
-          "message": "Your Message",
-          "submit": "Send Message"
+        "title": "Send us a Message",
+        "first_name_label": "First Name",
+        "first_name_placeholder": "First name",
+        "last_name_label": "Last Name",
+        "last_name_placeholder": "Last name",
+        "email_label": "Email address",
+        "email_placeholder": "Email address",
+        "phone_label": "Phone number",
+        "phone_placeholder": "Phone number",
+        "property_info_label": "Property Information",
+        "property_type_placeholder": "Type",
+        "zip_label": "Zip code",
+        "zip_placeholder": "Zip code",
+        "city_label": "City",
+        "city_placeholder": "City",
+        "bedrooms_label": "N. of bedrooms",
+        "bedrooms_placeholder": "N. of bedrooms",
+        "bathrooms_label": "N. of bathrooms",
+        "bathrooms_placeholder": "N. of bathrooms",
+        "budget_label": "Your budget",
+        "budget_placeholder": "Your budget",
+        "submit": "Submit Application"
+      }
+    },
+    "invest": {
+      "hero": {
+        "title": "Investment Opportunities",
+        "bg_text": "Invest",
+        "subtitle": "Secure your future with high-yield real estate portfolios and exclusive property developments."
+      },
+      "philosophy": {
+        "badge": "Institutional Grade Strategy",
+        "title": "A Disciplined Approach To <br> Capital Preservation.",
+        "focus_area_label": "Focus Area",
+        "focus_area_title": "Physical Asset Integrity",
+        "description": "At Capital Union, our philosophy is rooted in the preservation of generational wealth. We prioritize physical assets with long-term social utility.",
+        "quote": "\"We do not chase market trends; instead, we focus on intrinsic value and economic resilience to secure the future for our partners.\"",
+        "items": [
+          {
+            "id": "01",
+            "title": "Risk Discipline",
+            "description": "Conservative entry points with high-margin safety nets for every capital deployment."
+          },
+          {
+            "id": "02",
+            "title": "Asset Preservation",
+            "description": "Focusing on premium locations and sustainable structures that endure time."
+          }
+        ]
+      },
+      "growth": {
+        "title": "Smart Real Estate Investing",
+        "subtitle": "Build your wealth through high-growth real estate assets in prime locations.",
+        "items": [
+          {
+            "title": "Consistent ROI",
+            "description": "Enjoy annual returns ranging from 8% to 15% on prime commercial and residential properties."
+          },
+          {
+            "title": "Secure Assets",
+            "description": "Every property is 100% legally vetted with physical title deeds and government approval."
+          },
+          {
+            "title": "Low Entry Barrier",
+            "description": "Start your real estate journey with a minimum investment. Luxury property ownership is now accessible."
+          }
+        ],
+        "cta": {
+          "title": "Ready to secure your future?",
+          "subtitle": "Download our 2024 Investment Guide for free.",
+          "button": "Get Investment Guide"
+        }
+      },
+      "onboarding": {
+        "badge": "Exclusive Onboarding",
+        "title": "Start Your Investment Journey",
+        "subtitle": "Complete the inquiry form to help our capital relations team understand your objectives.",
+        "form": {
+          "name_label": "Full Legal Name *",
+          "name_placeholder": "e.g. Ahamed Asif",
+          "questions": [
+            "Existing Client?",
+            "Own Spanish Property?",
+            "Tax Resident of Spain?"
+          ],
+          "options": {
+            "no": "No",
+            "yes": "Yes"
+          },
+          "interest_label": "Areas of Interest *",
+          "interests": [
+            "Land plots",
+            "Residential",
+            "Commercial",
+            "Hotels",
+            "Agriculture",
+            "Other"
+          ],
+          "amount_label": "Investment Amount *",
+          "amounts": [
+            "€50,000 - €100,000",
+            "€100,000 - €500,000",
+            "€500,000 - €1M+"
+          ],
+          "submit": "Submit Application",
+          "footer": "Encrypted & Confidential Portal"
+        }
       }
     }
   },

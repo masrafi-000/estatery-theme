@@ -4,16 +4,16 @@
   --color-primary: #2563eb;
   --color-primary-dark: #1d4ed8;
   --color-primary-foreground: #ffffff;
-  
+
   --color-secondary: #4b5563;
   --color-secondary-foreground: #ffffff;
-  
+
   --color-accent: #4744e3;
   --color-accent-foreground: #ffffff;
-  
+
   --color-background: #ffffff;
   --color-foreground: #111827;
-  
+
   --color-surface: #ffffff;
   --color-surface-secondary: #f9fafb;
 
@@ -30,26 +30,32 @@
   a {
     text-decoration: none !important;
   }
+
+  *,
+  *::before,
+  *::after {
+    border-radius: 0 !important;
+  }
 }
 
 /* Next.js Styled Language Switcher Styles */
 .lang-options-menu.active {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateY(0) !important;
-    pointer-events: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
 }
 
 #lang-select-trigger.open #lang-select-chevron {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .next-lang-switcher {
-    font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* Cleanup */
-.goog-te-banner-frame.skiptranslate, 
+.goog-te-banner-frame.skiptranslate,
 .goog-te-gadget-icon,
 #goog-gt-tt {
   display: none !important;
