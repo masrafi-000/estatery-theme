@@ -129,7 +129,7 @@ $properties = [
         </div>
 
         <div class="text-center mt-6">
-            <a href="<?php echo home_url('/all-properties'); ?>"
+            <a href="<?php echo home_url('properties'); ?>"
                 class="inline-flex items-center gap-3 bg-primary text-white font-black px-6 py-3 rounded-2xl hover:bg-slate-900 transition-all duration-500 shadow-xl shadow-primary/20 group text-xs">
                 <?php echo esc_html( t('home.featured.view_all') ); ?>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"

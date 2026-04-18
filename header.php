@@ -20,9 +20,9 @@
         <aside id="drawer-content" class="absolute top-0 left-0 h-full w-[85%] max-w-[380px] bg-white shadow-2xl transition-transform duration-500 -translate-x-full flex flex-col">
             <div class="p-6 border-b border-gray-100 flex items-center justify-between">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center gap-3 no-underline group">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Logo-1.png' ); ?>" 
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/LOGO-3.png' ); ?>" 
                          alt="<?php bloginfo( 'name' ); ?>" 
-                         class="h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                         class="h-16 w-auto object-contain scale-[2.5] origin-left transition-transform duration-500 max-w-none">
                 </a>
                 <button id="drawer-close" class="p-2 text-gray-400 hover:text-primary transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -60,9 +60,9 @@
                 <!-- Left: Logo -->
                 <div class="flex-1 flex justify-start items-center">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center gap-3 group no-underline">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Logo-1.png' ); ?>" 
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/LOGO-3.png' ); ?>" 
                              alt="<?php bloginfo( 'name' ); ?>" 
-                             class="h-16 md:h-19 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                             class="h-16 md:h-20 w-auto object-contain scale-[2.5] md:scale-[3] origin-left transition-transform duration-500 max-w-none">
                     </a>
                 </div>
 

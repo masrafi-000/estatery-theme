@@ -10,7 +10,7 @@
                 <div class="bg-gray-50 p-10 rounded-[2.5rem] border border-gray-100 sticky top-10">
                     <h3 class="text-3xl font-bold text-secondary mb-6"><?php echo esc_html( t('home.faq.help_title') ); ?></h3>
                     <p class="text-secondary mb-8"><?php echo esc_html( t('home.faq.help_description') ); ?></p>
-                    <a href="#"
+                    <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>"
                         class="bg-secondary text-white px-8 py-4 rounded-2xl font-bold inline-block hover:bg-blue-600 transition-all">
                         <?php echo esc_html( t('home.faq.contact_button') ); ?>
                     </a>
@@ -72,4 +72,4 @@
 }
 </style>
 
-
+
