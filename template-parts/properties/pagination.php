@@ -7,18 +7,16 @@
  * @var int $window         Pages to show around current (default: 2)
  */
 
-$current_page = isset($current_page) ? (int) $current_page : 1;
-$total_pages  = isset($total_pages)  ? (int) $total_pages  : 10;
-$window       = isset($window)       ? (int) $window       : 2;
+$current_page = $args['current_page'] ?? 1;
+$total_pages  = $args['total_pages']  ?? 1;
+$window       = $args['window']       ?? 2;
 
 if ( $total_pages <= 1 ) return;
 
 $base_url = strtok( $_SERVER['REQUEST_URI'], '?' );
 
 function pagination_url( string $base, int $page ): string {
-    $params = $_GET;
-    $params['paged'] = $page;
-    return esc_url( $base . '?' . http_build_query($params) );
+    return esc_url( get_pagenum_link( $page ) );
 }
 
 /**

@@ -21,12 +21,18 @@
                     $all_properties = t('pages.properties.items') ?: [];
                     
                     // 2. State management
-                    $per_page      = 6; // Using small number for testing pagination with 6 items
+                    $per_page      = 6; 
                     $total_results = count($all_properties);
-                    $current_page  = max(1, (int) ($_GET['paged'] ?? 1));
+                    
+                    // Standard WordPress way to get the current page (works for /page/2/ and ?paged=2)
+                    $paged         = get_query_var('paged') ?: (get_query_var('page') ?: 1);
+                    $total_pages   = ceil($total_results / $per_page);
+                    
+                    // Clamp page between 1 and max pages
+                    $current_page  = max(1, min($total_pages, (int)$paged));
+                    
                     $current_sort  = $_GET['sort'] ?? 'newest';
                     $current_view  = $_GET['view'] ?? 'grid';
-                    $total_pages   = ceil($total_results / $per_page);
 
                     // 3. Sorting logic (Optional, but good for UX)
                     if ($current_sort === 'price_low') {

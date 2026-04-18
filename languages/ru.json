@@ -285,6 +285,78 @@
                     "sqft": 8200,
                     "description": "Архитектурное чудо со стеклянными стенами от пола до потолка и панорамным видом на каньон.",
                     "image": "https:\/\/images.unsplash.com\/photo-1564013799919-ab600027ffc6?q=80&w=1200"
+                },
+                {
+                    "id": 7,
+                    "title": "The Glass House",
+                    "price": "$6,200,000",
+                    "location": "Beverly Hills, CA",
+                    "type": "Buy",
+                    "beds": 6,
+                    "baths": 5,
+                    "sqft": 8200,
+                    "description": "Архитектурное чудо со стеклянными стенами от пола до потолка и панорамным видом на каньон.",
+                    "image": "https:\/\/images.unsplash.com\/photo-1564013799919-ab600027ffc6?q=80&w=1200"
+                },
+                {
+                    "id": 8,
+                    "title": "The Glass House",
+                    "price": "$6,200,000",
+                    "location": "Beverly Hills, CA",
+                    "type": "Buy",
+                    "beds": 6,
+                    "baths": 5,
+                    "sqft": 8200,
+                    "description": "Архитектурное чудо со стеклянными стенами от пола до потолка и панорамным видом на каньон.",
+                    "image": "https:\/\/images.unsplash.com\/photo-1564013799919-ab600027ffc6?q=80&w=1200"
+                },
+                {
+                    "id": 9,
+                    "title": "The Glass House",
+                    "price": "$6,200,000",
+                    "location": "Beverly Hills, CA",
+                    "type": "Buy",
+                    "beds": 6,
+                    "baths": 5,
+                    "sqft": 8200,
+                    "description": "Архитектурное чудо со стеклянными стенами от пола до потолка и панорамным видом на каньон.",
+                    "image": "https:\/\/images.unsplash.com\/photo-1564013799919-ab600027ffc6?q=80&w=1200"
+                },
+                {
+                    "id": 10,
+                    "title": "The Glass House",
+                    "price": "$6,200,000",
+                    "location": "Beverly Hills, CA",
+                    "type": "Buy",
+                    "beds": 6,
+                    "baths": 5,
+                    "sqft": 8200,
+                    "description": "Архитектурное чудо со стеклянными стенами от пола до потолка и панорамным видом на каньон.",
+                    "image": "https:\/\/images.unsplash.com\/photo-1564013799919-ab600027ffc6?q=80&w=1200"
+                },
+                {
+                    "id": 11,
+                    "title": "The Glass House",
+                    "price": "$6,200,000",
+                    "location": "Beverly Hills, CA",
+                    "type": "Buy",
+                    "beds": 6,
+                    "baths": 5,
+                    "sqft": 8200,
+                    "description": "Архитектурное чудо со стеклянными стенами от пола до потолка и панорамным видом на каньон.",
+                    "image": "https:\/\/images.unsplash.com\/photo-1564013799919-ab600027ffc6?q=80&w=1200"
+                },
+                {
+                    "id": 12,
+                    "title": "The Glass House",
+                    "price": "$6,200,000",
+                    "location": "Beverly Hills, CA",
+                    "type": "Buy",
+                    "beds": 6,
+                    "baths": 5,
+                    "sqft": 8200,
+                    "description": "Архитектурное чудо со стеклянными стенами от пола до потолка и панорамным видом на каньон.",
+                    "image": "https:\/\/images.unsplash.com\/photo-1564013799919-ab600027ffc6?q=80&w=1200"
                 }
             ],
             "filters": {
@@ -324,10 +396,26 @@
                 "title": "Поиск по категории",
                 "subtitle": "Найдите идеальный тип жилья, который подходит вашему образу жизни.",
                 "types": [
-                    { "name": "Квартиры", "count": "12 объектов", "icon": "building" },
-                    { "name": "Виллы", "count": "8 объектов", "icon": "home" },
-                    { "name": "Таунхаусы", "count": "5 объектов", "icon": "townhouse" },
-                    { "name": "Коммерческая", "count": "3 объекта", "icon": "office" }
+                    {
+                        "name": "Квартиры",
+                        "count": "12 объектов",
+                        "icon": "building"
+                    },
+                    {
+                        "name": "Виллы",
+                        "count": "8 объектов",
+                        "icon": "home"
+                    },
+                    {
+                        "name": "Таунхаусы",
+                        "count": "5 объектов",
+                        "icon": "townhouse"
+                    },
+                    {
+                        "name": "Коммерческая",
+                        "count": "3 объекта",
+                        "icon": "office"
+                    }
                 ]
             },
             "actions": {
