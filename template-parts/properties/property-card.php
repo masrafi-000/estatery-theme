@@ -63,7 +63,7 @@ $property = $args['property'];
 
         <div class="mt-auto">
             <a href="#" class="flex items-center justify-center gap-3 w-full bg-slate-900 text-white font-black text-xs uppercase tracking-[0.2em] py-4  hover:bg-primary transition-all duration-300 shadow-xl shadow-slate-900/10 active:scale-[0.98]">
-                View Details
+                <?php echo esc_html( t('pages.properties.actions.view_details') ); ?>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>

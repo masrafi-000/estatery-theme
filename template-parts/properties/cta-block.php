@@ -3,10 +3,9 @@
  * Component: Properties Call to Action
  */
 ?>
-<section class="bg-white py-24">
-    <div class="container mx-auto px-4">
+<section class=" w-full my-8">
+    <div class=" mx-auto ">
         <div class="relative bg-slate-900 overflow-hidden shadow-2xl">
-
             <!-- Background Image -->
             <div class="absolute inset-0">
                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000"
@@ -26,6 +25,7 @@
             <!-- Top accent line -->
             <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent"></div>
 
+
             <!-- Content -->
             <div class="relative z-10 py-28 px-6 md:px-16 lg:px-24">
                 <div class="max-w-5xl mx-auto">
@@ -39,7 +39,7 @@
                             <!-- Eyebrow -->
                             <div class="flex items-center gap-3 mb-8">
                                 <div class="w-8 h-[2px] bg-primary"></div>
-                                <span class="text-primary text-[10px] font-black uppercase tracking-[0.4em]">
+                                <span class="text-white text-[10px] font-black uppercase tracking-[0.4em]">
                                     <?php echo esc_html( t('pages.properties.cta.eyebrow') ?? 'Opportunity Awaits' ); ?>
                                 </span>
                             </div>
@@ -52,13 +52,13 @@
                                     $half  = ceil(count($words) / 2);
                                     echo implode(' ', array_slice($words, 0, $half));
                                 ?>
-                                <span class="block text-primary">
+                                <span class="block text-white">
                                     <?php echo implode(' ', array_slice($words, $half)); ?>
                                 </span>
                             </h2>
 
                             <!-- Subtitle -->
-                            <p class="text-white/50 text-base md:text-lg font-medium leading-relaxed max-w-xl">
+                            <p class="text-white/80 text-base md:text-lg font-medium leading-relaxed max-w-xl">
                                 <?php echo esc_html( t('pages.properties.cta.subtitle') ?? 'Browse thousands of curated listings and connect with trusted agents to make your next move.' ); ?>
                             </p>
                         </div>
@@ -79,7 +79,7 @@
                                         <span class="block text-2xl lg:text-3xl font-black text-white tracking-tight">
                                             <?php echo esc_html($stat['value']); ?>
                                         </span>
-                                        <span class="block text-[10px] font-bold text-white/40 uppercase tracking-[0.15em] mt-1 lg:mt-0 lg:text-right">
+                                        <span class="block text-[10px] font-bold text-white/90 uppercase tracking-[0.15em] mt-1 lg:mt-0 lg:text-right">
                                             <?php echo esc_html($stat['label']); ?>
                                         </span>
                                     </div>
@@ -126,7 +126,7 @@
                                 <svg class="w-3.5 h-3.5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                <span class="text-[10px] font-bold text-white/40 uppercase tracking-[0.15em]">
+                                <span class="text-[10px] font-bold text-white/70 uppercase tracking-[0.15em]">
                                     <?php echo esc_html($badge); ?>
                                 </span>
                             </div>

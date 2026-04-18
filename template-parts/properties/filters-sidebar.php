@@ -20,10 +20,10 @@
                     </div>
                     <div>
                         <div class="text-[15px] font-medium text-slate-900 tracking-[-0.01em]">
-                            Filter results 
+                            <?php echo esc_html( t('pages.properties.filters.filter_results') ); ?> 
                             <span id="active-badge" class="active-badge hidden items-center justify-center min-width-[18px] h-[18px] px-1.5 bg-primary/10 text-primary rounded-[20px] text-[10px] font-medium ml-1.5">0</span>
                         </div>
-                        <div class="text-[12px] text-slate-400 mt-0.5">Refine your search</div>
+                        <div class="text-[12px] text-slate-400 mt-0.5"><?php echo esc_html( t('pages.properties.filters.refine_search') ); ?></div>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                         <svg class="absolute left-[11px] top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                         </svg>
-                        <input type="text" id="search-input" placeholder="City, address, zip…" 
+                        <input type="text" id="search-input" placeholder="<?php echo esc_attr( t('pages.properties.filters.location_placeholder') ); ?>" 
                                class="w-full pl-9 pr-3.5 py-[9px] text-[13px] bg-slate-50 border-[0.5px] border-slate-100 rounded-2xl text-slate-900 outline-none transition-all focus:border-primary/50">
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                 <div class="filter-group">
                     <div class="text-[11px] font-medium text-slate-400 tracking-[0.06em] uppercase mb-2.5"><?php echo esc_html( t('pages.properties.filters.status') ); ?></div>
                     <div class="flex gap-1 bg-slate-50 rounded-2xl p-[3px]" id="status-tabs">
-                        <button class="tab-btn active flex-1 py-[7px] px-1 text-[11px] font-medium rounded-[6px] transition-all bg-transparent text-slate-600 [&.active]:bg-white [&.active]:text-slate-900 [&.active]:border-[0.5px] [&.active]:border-slate-100" data-val="all">All</button>
+                        <button class="tab-btn active flex-1 py-[7px] px-1 text-[11px] font-medium rounded-[6px] transition-all bg-transparent text-slate-600 [&.active]:bg-white [&.active]:text-slate-900 [&.active]:border-[0.5px] [&.active]:border-slate-100" data-val="all"><?php echo esc_html( t('pages.properties.filters.all_tabs') ); ?></button>
                         <button class="tab-btn flex-1 py-[7px] px-1 text-[11px] font-medium rounded-[6px] transition-all bg-transparent text-slate-600 [&.active]:bg-white [&.active]:text-slate-900 [&.active]:border-[0.5px] [&.active]:border-slate-100" data-val="buy"><?php echo esc_html( t('pages.properties.filters.buy') ); ?></button>
                         <button class="tab-btn flex-1 py-[7px] px-1 text-[11px] font-medium rounded-[6px] transition-all bg-transparent text-slate-600 [&.active]:bg-white [&.active]:text-slate-900 [&.active]:border-[0.5px] [&.active]:border-slate-100" data-val="rent"><?php echo esc_html( t('pages.properties.filters.rent') ); ?></button>
                     </div>
@@ -88,12 +88,12 @@
                     <div class="grid grid-cols-2 gap-2">
                         <div class="relative">
                             <span class="absolute left-[10px] top-1/2 -translate-y-1/2 text-[12px] text-slate-400">$</span>
-                            <input type="number" id="price-min" placeholder="Min" 
+                            <input type="number" id="price-min" placeholder="<?php echo esc_attr( t('pages.properties.filters.min_placeholder') ); ?>" 
                                    class="w-full pl-[22px] pr-2.5 py-[9px] text-[13px] bg-slate-50 border-[0.5px] border-slate-100 rounded-2xl text-slate-900 outline-none transition-all focus:border-primary/50">
                         </div>
                         <div class="relative">
                             <span class="absolute left-[10px] top-1/2 -translate-y-1/2 text-[12px] text-slate-400">$</span>
-                            <input type="number" id="price-max" placeholder="Max" 
+                            <input type="number" id="price-max" placeholder="<?php echo esc_attr( t('pages.properties.filters.max_placeholder') ); ?>" 
                                    class="w-full pl-[22px] pr-2.5 py-[9px] text-[13px] bg-slate-50 border-[0.5px] border-slate-100 rounded-2xl text-slate-900 outline-none transition-all focus:border-primary/50">
                         </div>
                     </div>
@@ -103,7 +103,7 @@
                 <div class="filter-group">
                     <div class="text-[11px] font-medium text-slate-400 tracking-[0.06em] uppercase mb-2.5"><?php echo esc_html( t('pages.properties.filters.beds') ); ?></div>
                     <div class="flex gap-[5px] flex-wrap" id="beds-chips">
-                        <button class="chip active py-1.5 px-3 text-[12px] border-[0.5px] border-slate-100 rounded-[20px] transition-all bg-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900 [&.active]:bg-primary/10 [&.active]:border-primary/20 [&.active]:text-primary" data-val="any">Any</button>
+                        <button class="chip active py-1.5 px-3 text-[12px] border-[0.5px] border-slate-100 rounded-[20px] transition-all bg-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900 [&.active]:bg-primary/10 [&.active]:border-primary/20 [&.active]:text-primary" data-val="any"><?php echo esc_html( t('pages.properties.filters.any') ); ?></button>
                         <button class="chip py-1.5 px-3 text-[12px] border-[0.5px] border-slate-100 rounded-[20px] transition-all bg-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900 [&.active]:bg-primary/10 [&.active]:border-primary/20 [&.active]:text-primary" data-val="1">1+</button>
                         <button class="chip py-1.5 px-3 text-[12px] border-[0.5px] border-slate-100 rounded-[20px] transition-all bg-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900 [&.active]:bg-primary/10 [&.active]:border-primary/20 [&.active]:text-primary" data-val="2">2+</button>
                         <button class="chip py-1.5 px-3 text-[12px] border-[0.5px] border-slate-100 rounded-[20px] transition-all bg-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900 [&.active]:bg-primary/10 [&.active]:border-primary/20 [&.active]:text-primary" data-val="3">3+</button>
@@ -115,7 +115,7 @@
                 <div class="filter-group">
                     <div class="text-[11px] font-medium text-slate-400 tracking-[0.06em] uppercase mb-2.5"><?php echo esc_html( t('pages.properties.filters.baths') ); ?></div>
                     <div class="flex gap-[5px] flex-wrap" id="baths-chips">
-                        <button class="chip active py-1.5 px-3 text-[12px] border-[0.5px] border-slate-100 rounded-[20px] transition-all bg-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900 [&.active]:bg-primary/10 [&.active]:border-primary/20 [&.active]:text-primary" data-val="any">Any</button>
+                        <button class="chip active py-1.5 px-3 text-[12px] border-[0.5px] border-slate-100 rounded-[20px] transition-all bg-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900 [&.active]:bg-primary/10 [&.active]:border-primary/20 [&.active]:text-primary" data-val="any"><?php echo esc_html( t('pages.properties.filters.any') ); ?></button>
                         <button class="chip py-1.5 px-3 text-[12px] border-[0.5px] border-slate-100 rounded-[20px] transition-all bg-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900 [&.active]:bg-primary/10 [&.active]:border-primary/20 [&.active]:text-primary" data-val="1">1+</button>
                         <button class="chip py-1.5 px-3 text-[12px] border-[0.5px] border-slate-100 rounded-[20px] transition-all bg-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900 [&.active]:bg-primary/10 [&.active]:border-primary/20 [&.active]:text-primary" data-val="2">2+</button>
                         <button class="chip py-1.5 px-3 text-[12px] border-[0.5px] border-slate-100 rounded-[20px] transition-all bg-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900 [&.active]:bg-primary/10 [&.active]:border-primary/20 [&.active]:text-primary" data-val="3">3+</button>
@@ -127,8 +127,8 @@
 
                 <!-- Footer Buttons -->
                 <div class="flex flex-col gap-2 pt-1">
-                    <button class="w-full p-[11px] text-[13px] font-medium bg-slate-900 text-white border-none rounded-2xl transition-all hover:opacity-85 active:scale-[0.98] tracking-[0.01em]" onclick="applyFilters()">Apply filters</button>
-                    <button class="w-full p-2.25 text-[12px] font-medium bg-transparent text-slate-400 border-[0.5px] border-slate-100 rounded-2xl transition-all hover:text-slate-900 hover:border-slate-300" onclick="resetFilters()">Reset all</button>
+                    <button class="w-full p-[11px] text-[13px] font-medium bg-slate-900 text-white border-none rounded-2xl transition-all hover:opacity-85 active:scale-[0.98] tracking-[0.01em]" onclick="applyFilters()"><?php echo esc_html( t('pages.properties.filters.apply_button') ); ?></button>
+                    <button class="w-full p-2.25 text-[12px] font-medium bg-transparent text-slate-400 border-[0.5px] border-slate-100 rounded-2xl transition-all hover:text-slate-900 hover:border-slate-300" onclick="resetFilters()"><?php echo esc_html( t('pages.properties.filters.reset_button') ); ?></button>
                 </div>
 
             </div>
@@ -137,6 +137,8 @@
 </aside>
 
 <script>
+    const i18n = <?php echo json_encode( t('pages.properties.js') ); ?>;
+
     document.addEventListener('DOMContentLoaded', function() {
         const state = {
             search: '',
@@ -228,10 +230,10 @@
             if (state.status !== 'all') parts.push(state.status);
             if (state.types.length) parts.push(state.types.join(', '));
             if (state.priceMin && state.priceMax) parts.push('$' + Number(state.priceMin).toLocaleString() + ' – $' + Number(state.priceMax).toLocaleString());
-            else if (state.priceMin) parts.push('from $' + Number(state.priceMin).toLocaleString());
-            else if (state.priceMax) parts.push('up to $' + Number(state.priceMax).toLocaleString());
-            if (state.beds !== 'any') parts.push(state.beds + '+ beds');
-            if (state.baths !== 'any') parts.push(state.baths + '+ baths');
+            else if (state.priceMin) parts.push(i18n.from + ' $' + Number(state.priceMin).toLocaleString());
+            else if (state.priceMax) parts.push(i18n.up_to + ' $' + Number(state.priceMax).toLocaleString());
+            if (state.beds !== 'any') parts.push(state.beds + '+ ' + i18n.beds_label);
+            if (state.baths !== 'any') parts.push(state.baths + '+ ' + i18n.baths_label);
 
             if (parts.length > 0) {
                 selectors.summaryBar.classList.add('visible');
@@ -248,7 +250,7 @@
             console.log('%c[Property Filters] Applied', 'color:#0ea5e9;font-weight:bold', data);
             const btn = document.querySelector('button[onclick="applyFilters()"]');
             const orig = btn.textContent;
-            btn.textContent = 'Applied!';
+            btn.textContent = i18n.applied;
             btn.style.opacity = '0.7';
             setTimeout(() => { btn.textContent = orig; btn.style.opacity = ''; }, 1200);
         };

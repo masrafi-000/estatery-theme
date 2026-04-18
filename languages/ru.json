@@ -189,6 +189,30 @@
         "properties": {
             "title": "Эксклюзивная Недвижимость",
             "subtitle": "Откройте для себя подборку наших лучших предложений.",
+            "grid_header": {
+                "showing_result": "Результаты поиска",
+                "items_available": "Объектов найдено",
+                "range": "Показано %1$s\u2013%2$s",
+                "no_results": "Попробуйте изменить параметры фильтров.",
+                "view_grid": "Сетка",
+                "view_list": "Список",
+                "sort_by": "Сортировать по",
+                "filters_active": "Фильтры активны"
+            },
+            "sort": {
+                "label": "Сортировать по",
+                "newest": "Сначала новые",
+                "oldest": "Сначала старые",
+                "price_low": "Цена: по возрастанию",
+                "price_high": "Цена: по убыванию",
+                "area_low": "Площадь: от меньшей",
+                "area_high": "Площадь: от большей"
+            },
+            "pagination": {
+                "prev": "Предыдущая страница",
+                "next": "Следующая страница",
+                "go_to": "Перейти на страницу %s"
+            },
             "items": [
                 {
                     "id": 1,
@@ -199,7 +223,7 @@
                     "beds": 5,
                     "baths": 4,
                     "sqft": 6500,
-                    "description": "A stunning waterfront masterpiece with infinity pool and private beach access.",
+                    "description": "Потрясающий шедевр на берегу моря с бесконечным бассейном и выходом на частный пляж.",
                     "image": "https:\/\/images.unsplash.com\/photo-1613490493576-7fde63acd811?q=80&w=1200"
                 },
                 {
@@ -211,7 +235,7 @@
                     "beds": 4,
                     "baths": 3,
                     "sqft": 4200,
-                    "description": "High-altitude luxury with 360-degree views of the city skyline and Burj Khalifa.",
+                    "description": "Роскошь на большой высоте с 360-градусным видом на городской пейзаж и Бурдж-Халифа.",
                     "image": "https:\/\/images.unsplash.com\/photo-1512917774080-9991f1c4c750?q=80&w=1200"
                 },
                 {
@@ -223,7 +247,7 @@
                     "beds": 2,
                     "baths": 2,
                     "sqft": 1800,
-                    "description": "Sleek industrial design meets modern comfort in the heart of the art district.",
+                    "description": "Лаконичный индустриальный дизайн сочетается с современным комфортом в самом сердце арт-квартала.",
                     "image": "https:\/\/images.unsplash.com\/photo-1502672260266-1c1ef2d93688?q=80&w=1200"
                 },
                 {
@@ -235,7 +259,7 @@
                     "beds": 3,
                     "baths": 2.5,
                     "sqft": 2800,
-                    "description": "Experimental architecture blending seamlessly with the natural mountain environment.",
+                    "description": "Экспериментальная архитектура, органично вписывающаяся в природную горную среду.",
                     "image": "https:\/\/images.unsplash.com\/photo-1518780664697-55e3ad937233?q=80&w=1200"
                 },
                 {
@@ -247,7 +271,7 @@
                     "beds": 1,
                     "baths": 1,
                     "sqft": 950,
-                    "description": "Charming apartment with a private oversized terrace and lush garden views.",
+                    "description": "Очаровательная квартира с собственной огромной террасой и пышным видом на сад.",
                     "image": "https:\/\/images.unsplash.com\/photo-1493809842364-78817add7ffb?q=80&w=1200"
                 },
                 {
@@ -259,57 +283,70 @@
                     "beds": 6,
                     "baths": 5,
                     "sqft": 8200,
-                    "description": "An architectural marvel featuring floor-to-ceiling glass walls and panoramic canyon views.",
+                    "description": "Архитектурное чудо со стеклянными стенами от пола до потолка и панорамным видом на каньон.",
                     "image": "https:\/\/images.unsplash.com\/photo-1564013799919-ab600027ffc6?q=80&w=1200"
                 }
             ],
             "filters": {
-                "all": "All Properties",
-                "buy": "For Sale",
-                "rent": "For Rent",
-                "type": "Property Type",
-                "location": "Location",
-                "price": "Price Range",
-                "search": "Search Properties",
-                "min_price": "Min Price",
-                "max_price": "Max Price",
-                "beds": "Bedrooms",
-                "baths": "Bathrooms",
-                "status": "Property Status",
-                "features": "Amenities",
-                "reset": "Reset Filters",
-                "apply": "Apply Filters"
+                "all": "Все объекты",
+                "buy": "На продажу",
+                "rent": "В аренду",
+                "type": "Тип объекта",
+                "location": "Расположение",
+                "location_placeholder": "Город, адрес, индекс…",
+                "price": "Ценовой диапазон",
+                "search": "Поиск недвижимости",
+                "min_price": "Мин. цена",
+                "max_price": "Макс. цена",
+                "min_placeholder": "Мин",
+                "max_placeholder": "Макс",
+                "beds": "Спальни",
+                "baths": "Ванные",
+                "any": "Любой",
+                "status": "Статус недвижимости",
+                "all_tabs": "Все",
+                "features": "Удобства",
+                "reset": "Сбросить фильтры",
+                "reset_button": "Сбросить все",
+                "apply": "Применить фильтры",
+                "apply_button": "Применить",
+                "filter_results": "Фильтр результатов",
+                "refine_search": "Уточните поиск"
+            },
+            "js": {
+                "applied": "Применено!",
+                "from": "от",
+                "up_to": "до",
+                "beds_label": "спален",
+                "baths_label": "ванных"
             },
             "categories": {
-                "title": "Explore by Category",
-                "subtitle": "Find the perfect type of home that suits your lifestyle.",
+                "title": "Поиск по категории",
+                "subtitle": "Найдите идеальный тип жилья, который подходит вашему образу жизни.",
                 "types": [
-                    {
-                        "name": "Apartments",
-                        "count": "12 Properties",
-                        "icon": "building"
-                    },
-                    {
-                        "name": "Villas",
-                        "count": "8 Properties",
-                        "icon": "home"
-                    },
-                    {
-                        "name": "Townhouses",
-                        "count": "5 Properties",
-                        "icon": "townhouse"
-                    },
-                    {
-                        "name": "Commercial",
-                        "count": "3 Properties",
-                        "icon": "office"
-                    }
+                    { "name": "Квартиры", "count": "12 объектов", "icon": "building" },
+                    { "name": "Виллы", "count": "8 объектов", "icon": "home" },
+                    { "name": "Таунхаусы", "count": "5 объектов", "icon": "townhouse" },
+                    { "name": "Коммерческая", "count": "3 объекта", "icon": "office" }
                 ]
             },
+            "actions": {
+                "view_details": "Подробнее"
+            },
             "cta": {
-                "title": "List Your Property with Us",
-                "subtitle": "Join thousands of satisfied homeowners who found the right buyers through our platform.",
-                "button": "Get Started Now"
+                "title": "Разместите свою недвижимость у нас",
+                "subtitle": "Присоединяйтесь к тысячам довольных домовладельцев, которые нашли подходящих покупателей через нашу платформу.",
+                "button": "Начать прямо сейчас",
+                "eyebrow": "Возможности ждут",
+                "stat_listings": "Активных объектов",
+                "stat_clients": "Счастливых клиентов",
+                "stat_experience": "Лет опыта",
+                "button_primary": "Просмотреть объекты",
+                "button_secondary": "Поговорить с агентом",
+                "badge_licensed": "Лицензировано и регулируемо",
+                "badge_secure": "Безопасные транзакции",
+                "badge_support": "Поддержка 24/7",
+                "badge_verified": "Только проверенные объекты"
             }
         },
         "contact": {

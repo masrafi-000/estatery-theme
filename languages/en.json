@@ -174,22 +174,62 @@
     "properties": {
       "title": "Exclusive Properties",
       "subtitle": "Discover a curated selection of our finest listings.",
+      "grid_header": {
+        "showing_result": "Search Results",
+        "items_available": "Properties Found",
+        "range": "Showing %1$s\u2013%2$s",
+        "no_results": "Try adjusting your filters.",
+        "view_grid": "Grid view",
+        "view_list": "List view",
+        "sort_by": "Sort by",
+        "filters_active": "Filters Active"
+      },
+      "sort": {
+        "label": "Sort By",
+        "newest": "Newest First",
+        "oldest": "Oldest First",
+        "price_low": "Price: Low to High",
+        "price_high": "Price: High to Low",
+        "area_low": "Area: Smallest First",
+        "area_high": "Area: Largest First"
+      },
+      "pagination": {
+        "prev": "Previous page",
+        "next": "Next page",
+        "go_to": "Go to page %s"
+      },
       "filters": {
         "all": "All Properties",
         "buy": "For Sale",
         "rent": "For Rent",
         "type": "Property Type",
         "location": "Location",
+        "location_placeholder": "City, address, zip…",
         "price": "Price Range",
         "search": "Search Properties",
         "min_price": "Min Price",
         "max_price": "Max Price",
+        "min_placeholder": "Min",
+        "max_placeholder": "Max",
         "beds": "Bedrooms",
         "baths": "Bathrooms",
+        "any": "Any",
         "status": "Property Status",
+        "all_tabs": "All",
         "features": "Amenities",
         "reset": "Reset Filters",
-        "apply": "Apply Filters"
+        "reset_button": "Reset all",
+        "apply": "Apply Filters",
+        "apply_button": "Apply filters",
+        "filter_results": "Filter results",
+        "refine_search": "Refine your search"
+      },
+      "js": {
+        "applied": "Applied!",
+        "from": "from",
+        "up_to": "up to",
+        "beds_label": "beds",
+        "baths_label": "baths"
       },
       "categories": {
         "title": "Explore by Category",
@@ -201,10 +241,23 @@
           { "name": "Commercial", "count": "3 Properties", "icon": "office" }
         ]
       },
+      "actions": {
+        "view_details": "View Details"
+      },
       "cta": {
         "title": "List Your Property with Us",
         "subtitle": "Join thousands of satisfied homeowners who found the right buyers through our platform.",
-        "button": "Get Started Now"
+        "button": "Get Started Now",
+        "eyebrow": "Opportunity Awaits",
+        "stat_listings": "Active Listings",
+        "stat_clients": "Happy Clients",
+        "stat_experience": "Years Experience",
+        "button_primary": "Browse Listings",
+        "button_secondary": "Talk to an Agent",
+        "badge_licensed": "Licensed & Regulated",
+        "badge_secure": "Secure Transactions",
+        "badge_support": "24/7 Client Support",
+        "badge_verified": "Verified Listings Only"
       },
       "items": [
         {
