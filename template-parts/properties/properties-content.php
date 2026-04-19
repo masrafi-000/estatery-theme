@@ -25,6 +25,8 @@
                         $parsed_data = json_decode($json_data, true);
                         $raw_properties = $parsed_data['root']['property'] ?? [];
 
+                        $current_lang = \Estatery\Core\Translator::getInstance()->getLang();
+
                         foreach ($raw_properties as $prop) {
                             $price = $prop['price'][0] ?? '';
                             $currency = $prop['currency'][0] ?? '';
@@ -32,12 +34,16 @@
                             
                             $formatted_price = number_format((float)$price, 0, '.', ',') . ' ' . $currency_symbol;
 
+                            // Use dynamic language description, or stay empty if missing
+                            $desc_data = $prop['desc'][0] ?? [];
+                            $description = $desc_data[$current_lang][0] ?? '';
+
                             $all_properties[] = [
                                 'id' => $prop['id'][0] ?? '',
                                 'title' => ucfirst($prop['type'][0] ?? 'Property') . ' ' . ($prop['town'][0] ?? ''),
                                 'price' => $formatted_price,
                                 'location' => ($prop['town'][0] ?? '') . ', ' . ($prop['province'][0] ?? ''),
-                                'description' => $prop['desc'][0]['en'][0] ?? '',
+                                'description' => $description,
                                 'type' => ($prop['price_freq'][0] ?? '') === 'sale' ? 'buy' : 'rent',
                                 'category' => $prop['type'][0] ?? '',
                                 'beds' => $prop['beds'][0] ?? '0',

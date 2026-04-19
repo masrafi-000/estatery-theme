@@ -12,7 +12,7 @@
     <?php wp_body_open(); ?>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobile-drawer" class="fixed inset-0 z-[100] invisible pointer-events-none transition-all duration-500">
+    <div id="mobile-drawer" class="fixed inset-0 z-100 invisible pointer-events-none transition-all duration-500">
         <!-- Overlay -->
         <div id="drawer-overlay" class="absolute inset-0 bg-black/50 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
         
@@ -20,7 +20,7 @@
         <aside id="drawer-content" class="absolute top-0 left-0 h-full w-[85%] max-w-[380px] bg-white shadow-2xl transition-transform duration-500 -translate-x-full flex flex-col">
             <div class="p-6 border-b border-gray-100 flex items-center justify-between">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center gap-3 no-underline group">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/public/images/Logo-1.png' ); ?>" 
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/public/images/logo-ll.png' ); ?>" 
                          alt="<?php bloginfo( 'name' ); ?>" 
                          class="h-14 w-auto object-contain scale-[1.8] origin-left transition-transform duration-500">
                 </a>

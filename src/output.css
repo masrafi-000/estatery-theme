@@ -7,7 +7,6 @@
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-blue-50: oklch(97% 0.014 254.604);
     --color-blue-100: oklch(93.2% 0.032 255.585);
     --color-blue-500: oklch(62.3% 0.214 259.815);
@@ -87,7 +86,6 @@
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --blur-sm: 8px;
     --blur-md: 12px;
-    --blur-xl: 24px;
     --blur-3xl: 64px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -98,8 +96,6 @@
     --color-accent: #4744e3;
     --color-background: #ffffff;
     --color-foreground: #111827;
-    --color-surface: #ffffff;
-    --color-surface-secondary: #f9fafb;
   }
 }
 @layer base {
@@ -426,6 +422,9 @@
   }
   .z-20 {
     z-index: 20;
+  }
+  .z-100 {
+    z-index: 100;
   }
   .z-\[90\] {
     z-index: 90;
