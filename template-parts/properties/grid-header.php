@@ -86,6 +86,8 @@ function view_url( string $view ): string {
     <div class="flex items-center gap-3 flex-wrap">
 
         <!-- View Toggle -->
+       <!--
+        
         <div class="flex items-center border border-slate-200 bg-white overflow-hidden">
             <a href="<?php echo view_url('grid'); ?>"
                class="w-10 h-10 flex items-center justify-center transition-colors duration-150
@@ -111,6 +113,7 @@ function view_url( string $view ): string {
             </a>
         </div>
 
+        -->
         <!-- Divider -->
         <span class="hidden sm:block w-px h-6 bg-slate-200"></span>
 
