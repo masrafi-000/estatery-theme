@@ -393,6 +393,7 @@
                 "any": "Peu importe",
                 "status": "Statut de la propriété",
                 "all_tabs": "Toutes",
+                "new_build": "Nouvelle Construction",
                 "features": "Équipements",
                 "reset": "Réinitialiser",
                 "reset_button": "Tout réinitialiser",
@@ -415,24 +416,34 @@
                 "subtitle": "Trouvez le type de maison idéal qui correspond à votre style de vie.",
                 "types": [
                     {
-                        "name": "Appartements",
-                        "count": "12 Propriétés",
-                        "icon": "building"
-                    },
-                    {
-                        "name": "Villas",
-                        "count": "8 Propriétés",
+                        "name": "Villa",
+                        "slug": "villa",
+                        "count": "Voir tout",
                         "icon": "home"
                     },
                     {
-                        "name": "Maisons",
-                        "count": "5 Propriétés",
+                        "name": "Appartement",
+                        "slug": "apartment",
+                        "count": "Voir tout",
+                        "icon": "building"
+                    },
+                    {
+                        "name": "Local Commercial",
+                        "slug": "shop",
+                        "count": "Voir tout",
+                        "icon": "office"
+                    },
+                    {
+                        "name": "Maison Adossée",
+                        "slug": "townhouse",
+                        "count": "Voir tout",
                         "icon": "townhouse"
                     },
                     {
-                        "name": "Commercial",
-                        "count": "3 Propriétés",
-                        "icon": "office"
+                        "name": "Bungalow",
+                        "slug": "bungalow",
+                        "count": "Voir tout",
+                        "icon": "home"
                     }
                 ]
             },

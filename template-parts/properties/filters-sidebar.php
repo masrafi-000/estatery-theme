@@ -48,10 +48,8 @@
                 <!-- Status Filter -->
                 <div class="filter-group">
                     <div class="text-[11px] font-medium text-slate-400 tracking-[0.06em] uppercase mb-2.5"><?php echo esc_html( t('pages.properties.filters.status') ); ?></div>
-                    <div class="flex gap-1 bg-slate-50 rounded-2xl p-[3px]" id="status-tabs">
+                    <div class="flex flex-wrap gap-1 bg-slate-50 rounded-2xl p-[3px]" id="status-tabs">
                         <button class="tab-btn active flex-1 py-[7px] px-1 text-[11px] font-medium rounded-[6px] transition-all bg-transparent text-slate-600 [&.active]:bg-white [&.active]:text-slate-900 [&.active]:border-[0.5px] [&.active]:border-slate-100" data-val="all"><?php echo esc_html( t('pages.properties.filters.all_tabs') ); ?></button>
-                        <button class="tab-btn flex-1 py-[7px] px-1 text-[11px] font-medium rounded-[6px] transition-all bg-transparent text-slate-600 [&.active]:bg-white [&.active]:text-slate-900 [&.active]:border-[0.5px] [&.active]:border-slate-100" data-val="buy"><?php echo esc_html( t('pages.properties.filters.buy') ); ?></button>
-                        <button class="tab-btn flex-1 py-[7px] px-1 text-[11px] font-medium rounded-[6px] transition-all bg-transparent text-slate-600 [&.active]:bg-white [&.active]:text-slate-900 [&.active]:border-[0.5px] [&.active]:border-slate-100" data-val="rent"><?php echo esc_html( t('pages.properties.filters.rent') ); ?></button>
                         <button class="tab-btn flex-1 py-[7px] px-1 text-[11px] font-medium rounded-[6px] transition-all bg-transparent text-slate-600 [&.active]:bg-white [&.active]:text-slate-900 [&.active]:border-[0.5px] [&.active]:border-slate-100" data-val="new_build"><?php echo esc_html( t('pages.properties.filters.new_build') ); ?></button>
                     </div>
                 </div>
@@ -65,7 +63,7 @@
                         if ( is_array($types) ) :
                             foreach ( $types as $type ) :
                                 ?>
-                                <div class="type-item group flex items-center justify-between px-2.5 py-2 rounded-2xl cursor-pointer border-[0.5px] border-transparent transition-all hover:bg-slate-50 [&.selected]:bg-primary/5 [&.selected]:border-primary/20" data-type="<?php echo esc_attr(strtolower($type['name'])); ?>">
+                                <div class="type-item group flex items-center justify-between px-2.5 py-2 rounded-2xl cursor-pointer border-[0.5px] border-transparent transition-all hover:bg-slate-50 [&.selected]:bg-primary/5 [&.selected]:border-primary/20" data-type="<?php echo esc_attr($type['slug']); ?>">
                                     <div class="w-4 h-4 border-[1.5px] border-slate-200 rounded-[4px] flex-shrink-0 flex items-center justify-center transition-all group-[.selected]:bg-primary group-[.selected]:border-primary">
                                         <svg class="w-2.5 h-2.5 text-white opacity-0 transition-opacity group-[.selected]:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>

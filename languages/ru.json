@@ -393,6 +393,7 @@
                 "any": "Любой",
                 "status": "Статус недвижимости",
                 "all_tabs": "Все",
+                "new_build": "Новостройка",
                 "features": "Удобства",
                 "reset": "Сбросить фильтры",
                 "reset_button": "Сбросить все",
@@ -415,24 +416,34 @@
                 "subtitle": "Найдите идеальный тип жилья, который подходит вашему образу жизни.",
                 "types": [
                     {
-                        "name": "Квартиры",
-                        "count": "12 объектов",
-                        "icon": "building"
-                    },
-                    {
-                        "name": "Виллы",
-                        "count": "8 объектов",
+                        "name": "Вилла",
+                        "slug": "villa",
+                        "count": "Показать все",
                         "icon": "home"
                     },
                     {
-                        "name": "Таунхаусы",
-                        "count": "5 объектов",
+                        "name": "Квартира",
+                        "slug": "apartment",
+                        "count": "Показать все",
+                        "icon": "building"
+                    },
+                    {
+                        "name": "Магазин",
+                        "slug": "shop",
+                        "count": "Показать все",
+                        "icon": "office"
+                    },
+                    {
+                        "name": "Таунхаус",
+                        "slug": "townhouse",
+                        "count": "Показать все",
                         "icon": "townhouse"
                     },
                     {
-                        "name": "Коммерческая",
-                        "count": "3 объекта",
-                        "icon": "office"
+                        "name": "Бунгало",
+                        "slug": "bungalow",
+                        "count": "Показать все",
+                        "icon": "home"
                     }
                 ]
             },

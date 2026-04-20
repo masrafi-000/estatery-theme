@@ -129,4 +129,4 @@
         })
         .catch(err => console.error('Error fetching featured properties:', err));
     });
-</script>ipt>
+</script>

@@ -259,26 +259,31 @@
                 "types": [
                     {
                         "name": "Villa",
+                        "slug": "villa",
                         "count": "View All",
                         "icon": "home"
                     },
                     {
                         "name": "Apartment",
+                        "slug": "apartment",
                         "count": "View All",
                         "icon": "building"
                     },
                     {
                         "name": "Shop",
+                        "slug": "shop",
                         "count": "View All",
                         "icon": "office"
                     },
                     {
                         "name": "Townhouse",
+                        "slug": "townhouse",
                         "count": "View All",
                         "icon": "townhouse"
                     },
                     {
                         "name": "Bungalow",
+                        "slug": "bungalow",
                         "count": "View All",
                         "icon": "home"
                     }
