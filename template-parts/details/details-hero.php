@@ -8,15 +8,18 @@
 $property_data = get_query_var( 'property_data' );
 
 if ( $property_data ) {
-    $banner_title    = ucfirst($property_data['type'][0] ?? 'Property') . ' ' . ($property_data['town'][0] ?? '');
-    $banner_bg_text  = $property_data['town'][0] ?? 'Details';
-    $banner_subtitle = $property_data['location_detail'][0] ?? 'Explore the premium details and investment potential of this property';
+    $raw_type = strtolower($property_data['type'][0] ?? 'property');
+    $translated_type = t("pages.properties.meta.{$raw_type}") ?: ucfirst($raw_type);
+    
+    $banner_title    = $translated_type . ' ' . ($property_data['town'][0] ?? '');
+    $banner_bg_text  = $property_data['town'][0] ?? t('pages.property_details.bg_text') ?: 'Details';
+    $banner_subtitle = $property_data['location_detail'][0] ?? t('pages.property_details.subtitle') ?: 'Explore the premium details and investment potential of this property';
     
     $banner_image = $property_data['images'][0]['image'][0]['url'][0] ?? "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1600";
 } else {
     $banner_title    = get_the_title();
-    $banner_bg_text   = "Details";
-    $banner_subtitle  = "Explore the premium details and investment potential of this property";
+    $banner_bg_text   = t('pages.property_details.bg_text') ?: "Details";
+    $banner_subtitle  = t('pages.property_details.subtitle') ?: "Explore the premium details and investment potential of this property";
 
     if (has_post_thumbnail()) {
         $banner_image = get_the_post_thumbnail_url(get_the_ID(), 'full');

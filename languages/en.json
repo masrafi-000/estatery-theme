@@ -252,7 +252,31 @@
                 "from": "from",
                 "up_to": "up to",
                 "beds_label": "beds",
-                "baths_label": "baths"
+                "baths_label": "baths",
+                "success_inquiry": "Thank you! Your inquiry has been sent. We will contact you soon.",
+                "close": "Close",
+                "error_generic": "Something went wrong. Please try again.",
+                "fill_required": "Please fill all required fields."
+            },
+            "meta": {
+                "sale": "For Sale",
+                "rent": "For Rent",
+                "apartment": "Apartment",
+                "villa": "Villa",
+                "penthouse": "Penthouse",
+                "townhouse": "Townhouse",
+                "shop": "Commercial",
+                "not_found": "Property not found."
+            },
+            "amenities": {
+                "sea_view": "Sea View",
+                "private_pool": "Private Pool",
+                "parking": "Parking Space",
+                "garden": "Private Garden",
+                "ac": "Air Conditioning",
+                "security": "24/7 Security",
+                "gym": "Fitness Center",
+                "wifi": "High-speed WiFi"
             },
             "categories": {
                 "title": "Explore by Category",

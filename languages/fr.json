@@ -247,6 +247,37 @@
                 "sidebar_sr_description": "Barre latérale de filtrage de recherche de propriétés avec filtres de statut, type, prix, chambres et salles de bain",
                 "plus_label": "%s+"
             },
+            "js": {
+                "applied": "Appliqué !",
+                "from": "de",
+                "up_to": "jusqu'à",
+                "beds_label": "chambres",
+                "baths_label": "salles de bain",
+                "success_inquiry": "Merci ! Votre demande a été envoyée. Nous vous contacterons bientôt.",
+                "close": "Fermer",
+                "error_generic": "Un problème est survenu. Veuillez réessayer.",
+                "fill_required": "Veuillez remplir tous les champs obligatoires."
+            },
+            "meta": {
+                "sale": "À Vendre",
+                "rent": "À Louer",
+                "apartment": "Appartement",
+                "villa": "Villa",
+                "penthouse": "Penthouse",
+                "townhouse": "Maison de ville",
+                "shop": "Commerce",
+                "not_found": "Propriété non trouvée."
+            },
+            "amenities": {
+                "sea_view": "Vue sur la Mer",
+                "private_pool": "Piscine Privée",
+                "parking": "Place de Parking",
+                "garden": "Jardin Privé",
+                "ac": "Climatisation",
+                "security": "Sécurité 24/7",
+                "gym": "Centre de Fitness",
+                "wifi": "WiFi haut débit"
+            },
             "categories": {
                 "types": [
                     { "name": "Villa", "slug": "villa", "count": "Voir tout" },
@@ -255,13 +286,6 @@
                     { "name": "Maison de ville", "slug": "townhouse", "count": "Voir tout" },
                     { "name": "Bungalow", "slug": "bungalow", "count": "Voir tout" }
                 ]
-            },
-            "js": {
-                "applied": "Appliqué !",
-                "from": "de",
-                "up_to": "jusqu'à",
-                "beds_label": "ch.",
-                "baths_label": "sdb."
             },
             "items": [
                 {
@@ -420,96 +444,7 @@
                     "description": "Un refuge paisible avec embarcadère privé et vue cristalline sur la montagne.",
                     "image": "https:\/\/images.unsplash.com\/photo-1513584684374-8bdb7489feef?q=80&w=1200"
                 }
-            ],
-            "filters": {
-                "all": "Toutes les propriétés",
-                "buy": "À vendre",
-                "rent": "À louer",
-                "type": "Type de propriété",
-                "location": "Emplacement",
-                "location_placeholder": "Ville, adresse, CP…",
-                "search": "Rechercher des propriétés",
-                "price": "Tranche de prix",
-                "min_price": "Prix min",
-                "max_price": "Prix max",
-                "min_placeholder": "Min",
-                "max_placeholder": "Max",
-                "beds": "Chambres",
-                "baths": "Salles de bain",
-                "any": "Peu importe",
-                "status": "Statut de la propriété",
-                "all_tabs": "Toutes",
-                "new_build": "Nouvelle Construction",
-                "features": "Équipements",
-                "reset": "Réinitialiser",
-                "reset_button": "Tout réinitialiser",
-                "apply": "Appliquer",
-                "apply_button": "Appliquer les filtres",
-                "filter_results": "Filtrer les résultats",
-                "refine_search": "Affinez votre recherche",
-                "sidebar_sr_description": "Boîte latérale de filtres pour la recherche de propriétés avec statut, type, prix, chambres et salles de bain",
-                "plus_label": "%s+"
-            },
-            "js": {
-                "applied": "Appliqué !",
-                "from": "de",
-                "up_to": "jusqu'à",
-                "beds_label": "ch.",
-                "baths_label": "sdb"
-            },
-            "categories": {
-                "title": "Explorer par catégorie",
-                "subtitle": "Trouvez le type de maison idéal qui correspond à votre style de vie.",
-                "types": [
-                    {
-                        "name": "Villa",
-                        "slug": "villa",
-                        "count": "Voir tout",
-                        "icon": "home"
-                    },
-                    {
-                        "name": "Appartement",
-                        "slug": "apartment",
-                        "count": "Voir tout",
-                        "icon": "building"
-                    },
-                    {
-                        "name": "Local Commercial",
-                        "slug": "shop",
-                        "count": "Voir tout",
-                        "icon": "office"
-                    },
-                    {
-                        "name": "Maison Adossée",
-                        "slug": "townhouse",
-                        "count": "Voir tout",
-                        "icon": "townhouse"
-                    },
-                    {
-                        "name": "Bungalow",
-                        "slug": "bungalow",
-                        "count": "Voir tout",
-                        "icon": "home"
-                    }
-                ]
-            },
-            "actions": {
-                "view_details": "Voir les détails"
-            },
-            "cta": {
-                "eyebrow": "L'opportunité vous attend",
-                "title": "Trouvez la propriété de vos rêves",
-                "subtitle": "Explorez des milliers d'annonces sélectionnées et connectez-vous avec des agents de confiance.",
-                "stat_listings": "Annonces actives",
-                "stat_clients": "Clients satisfaits",
-                "stat_experience": "Années d'expérience",
-                "button_primary": "Voir les annonces",
-                "button_secondary": "Parler à un agent",
-                "badge_licensed": "Licencié et régulé",
-                "badge_secure": "Transactions sécurisées",
-                "badge_support": "Support 24\/7",
-                "badge_verified": "Annonces vérifiées uniquement"
-            }
+            ]
         },
         "contact": {
             "hero": {

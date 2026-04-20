@@ -2,7 +2,7 @@
 $property_data = get_query_var( 'property_data' );
 
 if ( ! $property_data ) {
-    echo '<div class="max-w-7xl mx-auto px-4 py-12 text-center text-slate-500 font-bold text-xl">Property not found.</div>';
+    echo '<div class="max-w-7xl mx-auto px-4 py-12 text-center text-slate-500 font-bold text-xl">' . esc_html(t('pages.properties.meta.not_found') ?: 'Property not found.') . '</div>';
     return;
 }
 
@@ -22,8 +22,12 @@ $has_pool = $property_data['pool'][0] ?? '0';
 $raw_features = $property_data['features'][0]['feature'] ?? [];
 $features = [];
 foreach ($raw_features as $feature_name) {
+    if (empty($feature_name)) continue;
+    $slug = strtolower(str_replace([' ', '-'], '_', $feature_name));
+    $display_label = t("pages.properties.amenities.{$slug}") ?: $feature_name;
+    
     $features[] = [
-        'name' => $feature_name,
+        'name' => $display_label,
         'icon' => '<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />'
     ];
 }
@@ -120,7 +124,11 @@ $gallery_images_json = json_encode($images);
                         <?php if(!empty($property_data['new_build'][0])): ?>
                             <span class="inline-block bg-primary text-white text-[10px] font-black px-3 py-1 rounded-xl uppercase tracking-widest mb-2"><?php echo esc_html(t('pages.property_details.new_build')); ?></span>
                         <?php endif; ?>
-                        <h2 class="text-3xl font-serif font-bold text-slate-900"><?php echo esc_html(ucfirst($property_data['type'][0] ?? 'Property')); ?></h2>
+                        <?php 
+                            $raw_type = strtolower($property_data['type'][0] ?? 'property');
+                            $translated_type = t("pages.properties.meta.{$raw_type}") ?: ucfirst($raw_type);
+                        ?>
+                        <h2 class="text-3xl font-serif font-bold text-slate-900"><?php echo esc_html($translated_type); ?></h2>
                         <p class="text-slate-500 mt-1 flex items-center gap-1 text-sm font-medium">
                             <i data-lucide="map-pin" class="w-4 h-4"></i>
                             <?php echo esc_html(($property_data['location_detail'][0] ?? '') . ', ' . ($property_data['town'][0] ?? '') . ', ' . ($property_data['province'][0] ?? '')); ?>
@@ -135,7 +143,11 @@ $gallery_images_json = json_encode($images);
                             ?>
                         </div>
                         <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">
-                            <?php echo esc_html(t('pages.property_details.for')); ?> <?php echo esc_html($property_data['price_freq'][0] ?? 'sale'); ?>
+                            <?php 
+                                $freq = strtolower($property_data['price_freq'][0] ?? 'sale');
+                                $translated_freq = t("pages.properties.meta.{$freq}") ?: $freq;
+                                echo esc_html(t('pages.property_details.for') . ' ' . $translated_freq); 
+                            ?>
                         </p>
                     </div>
                 </div>
@@ -194,22 +206,150 @@ $gallery_images_json = json_encode($images);
             <div class="sticky top-8 bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-100">
                 <div class="p-8">
                     <h5 class="font-bold mb-4 text-slate-800"><?php echo esc_html(t('pages.property_details.form.contact_us')); ?></h5>
-                    <form class="space-y-4">
-                        <input type="text" placeholder="<?php echo esc_attr(t('pages.property_details.form.name')); ?>"
-                            class="w-full px-4 py-3 bg-slate-50 border rounded-lg outline-none focus:border-primary">
-                        <input type="text" placeholder="<?php echo esc_attr(t('pages.property_details.form.number')); ?>"
-                            class="w-full px-4 py-3 bg-slate-50 border rounded-lg outline-none focus:border-primary">
-                        <input type="email" placeholder="<?php echo esc_attr(t('pages.property_details.form.email')); ?>"
-                            class="w-full px-4 py-3 bg-slate-50 border rounded-lg outline-none focus:border-primary">
-                        <textarea rows="4" placeholder="<?php echo esc_attr(t('pages.property_details.form.message')); ?>"
-                            class="w-full px-4 py-3 bg-slate-50 border rounded-lg outline-none focus:border-primary resize-none"></textarea>
-                        <button
-                            class="w-full py-4 bg-primary  hover:text-gray-50 font-bold rounded-lg hover:bg-slate-800 text-white transition-all flex items-center justify-center gap-2">
-                            <i data-lucide="send" class="w-4 h-4"></i> <?php echo esc_html(t('pages.property_details.form.submit')); ?>
+                    <form id="property-inquiry-form" class="space-y-4">
+                        <?php wp_nonce_field('estatery_inquiry_nonce', 'inquiry_nonce'); ?>
+                        
+                        <!-- Hidden Property Data -->
+                        <input type="hidden" name="prop_id" value="<?php echo esc_attr($property_data['id'][0] ?? ''); ?>">
+                        <input type="hidden" name="prop_title" value="<?php echo esc_attr(ucfirst($property_data['type'][0] ?? 'Property') . ' ' . ($property_data['town'][0] ?? '')); ?>">
+                        <input type="hidden" name="prop_price" value="<?php echo esc_attr($price . ' ' . $currency); ?>">
+                        <input type="hidden" name="prop_area" value="<?php echo esc_attr($surface_built); ?>">
+                        <input type="hidden" name="prop_image" value="<?php echo esc_url($main_image); ?>">
+                        <input type="hidden" name="prop_beds" value="<?php echo esc_attr($beds); ?>">
+                        <input type="hidden" name="prop_baths" value="<?php echo esc_attr($baths); ?>">
+                        <input type="hidden" name="prop_pool" value="<?php echo esc_attr($has_pool); ?>">
+                        <input type="hidden" name="prop_type" value="<?php echo esc_attr($property_data['type'][0] ?? ''); ?>">
+                        <input type="hidden" name="prop_loc" value="<?php echo esc_attr(($property_data['location_detail'][0] ?? '') . ', ' . ($property_data['town'][0] ?? '') . ', ' . ($property_data['province'][0] ?? '')); ?>">
+                        <input type="hidden" name="prop_lat" value="<?php echo esc_attr($lat); ?>">
+                        <input type="hidden" name="prop_lng" value="<?php echo esc_attr($lng); ?>">
+
+                        <input type="text" name="name" required placeholder="<?php echo esc_attr(t('pages.property_details.form.name')); ?>"
+                            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:border-primary transition-all">
+                        <input type="text" name="phone" placeholder="<?php echo esc_attr(t('pages.property_details.form.number')); ?>"
+                            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:border-primary transition-all">
+                        <input type="email" name="email" required placeholder="<?php echo esc_attr(t('pages.property_details.form.email')); ?>"
+                            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:border-primary transition-all">
+                        <textarea name="message" rows="4" required placeholder="<?php echo esc_attr(t('pages.property_details.form.message')); ?>"
+                            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:border-primary resize-none transition-all"></textarea>
+                        
+                        <div id="inquiry-message" class="hidden text-sm p-4 rounded-lg"></div>
+
+                        <button type="submit" id="submit-button"
+                            class="w-full py-4 bg-primary hover:text-gray-50 font-bold rounded-lg hover:bg-slate-800 text-white transition-all flex items-center justify-center gap-2 group">
+                            <span class="button-text flex items-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i> <?php echo esc_html(t('pages.property_details.form.submit')); ?>
+                            </span>
+                            <span class="loading-spinner hidden">
+                                <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                            </span>
                         </button>
                     </form>
+
+                    <script>
+                    function showInquirySuccess() {
+                        const modal = document.getElementById('inquirySuccessModal');
+                        const container = modal.querySelector('.modal-content');
+                        modal.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden';
+                        setTimeout(() => {
+                            modal.classList.add('opacity-100');
+                            container.classList.add('scale-100', 'opacity-100');
+                            container.classList.remove('scale-95', 'opacity-0');
+                        }, 10);
+                    }
+
+                    function closeInquirySuccess() {
+                        const modal = document.getElementById('inquirySuccessModal');
+                        const container = modal.querySelector('.modal-content');
+                        modal.classList.remove('opacity-100');
+                        container.classList.remove('scale-100', 'opacity-100');
+                        container.classList.add('scale-95', 'opacity-0');
+                        setTimeout(() => {
+                            modal.classList.add('hidden');
+                            document.body.style.overflow = 'auto';
+                        }, 300);
+                    }
+
+                    document.getElementById('property-inquiry-form').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        
+                        const form = this;
+                        const btn = form.querySelector('#submit-button');
+                        const btnText = btn.querySelector('.button-text');
+                        const spinner = btn.querySelector('.loading-spinner');
+                        const msgBox = document.getElementById('inquiry-message');
+                        
+                        btn.disabled = true;
+                        btnText.classList.add('hidden');
+                        spinner.classList.remove('hidden');
+                        msgBox.classList.add('hidden');
+
+                        const formData = new FormData(form);
+                        formData.append('action', 'estatery_submit_inquiry');
+                        formData.append('nonce', form.querySelector('[name="inquiry_nonce"]').value);
+
+                        fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            btn.disabled = false;
+                            btnText.classList.remove('hidden');
+                            spinner.classList.add('hidden');
+
+                            if (data.success) {
+                                form.reset();
+                                showInquirySuccess();
+                            } else {
+                                msgBox.classList.remove('hidden');
+                                msgBox.className = 'text-sm p-4 rounded-lg bg-red-50 text-red-700 border border-red-200 mb-4';
+                                msgBox.innerText = data.data.message;
+                            }
+                        })
+                        .catch(error => {
+                            btn.disabled = false;
+                            btnText.classList.remove('hidden');
+                            spinner.classList.add('hidden');
+                            msgBox.classList.remove('hidden');
+                            msgBox.className = 'text-sm p-4 rounded-lg bg-red-50 text-red-700 border border-red-200 mb-4';
+                            msgBox.innerText = '<?php echo esc_js(t('pages.properties.js.error_generic') ?: 'Something went wrong. Please try again.'); ?>';
+                        });
+                    });
+                    </script>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Inquiry Success Modal -->
+    <div id="inquirySuccessModal" class="fixed inset-0 z-[10000] bg-slate-900/60 backdrop-blur-xl flex items-center justify-center p-4 hidden transition-opacity duration-300 opacity-0">
+        <div class="modal-content relative w-full max-w-sm bg-white/95 rounded-[2.5rem] p-10 text-center shadow-[0_32px_64px_-15px_rgba(0,0,0,0.3)] border border-white/40 transform scale-95 opacity-0 transition-all duration-500">
+            
+            <!-- Success Icon -->
+            <div class="mb-8 inline-flex items-center justify-center w-24 h-24 bg-green-50 rounded-full text-green-500 shadow-inner">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+
+            <h3 class="text-3xl font-bold text-slate-800 mb-4 tracking-tight">
+                <?php echo esc_html(t('pages.properties.js.applied')); ?>
+            </h3>
+            <p class="text-slate-600 mb-10 leading-relaxed text-lg">
+                <?php echo esc_html(t('pages.properties.js.success_inquiry')); ?>
+            </p>
+
+            <button onclick="closeInquirySuccess()" 
+                class="w-full py-5 bg-primary text-white font-bold rounded-2xl hover:bg-slate-900 transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-2 group">
+                <span class="group-hover:-translate-y-0.5 transition-transform">
+                    <?php echo esc_html(t('pages.properties.js.close') ?: 'Close'); ?>
+                </span>
+            </button>
         </div>
     </div>
 
