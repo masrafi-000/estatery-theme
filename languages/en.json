@@ -242,6 +242,7 @@
                 "apply": "Apply Filters",
                 "apply_button": "Apply filters",
                 "filter_results": "Filter results",
+                "filters_active": "Filters applied",
                 "refine_search": "Refine your search",
                 "sidebar_sr_description": "Property search filter sidebar with status, type, price, bedrooms, and bathrooms filters",
                 "plus_label": "%s+"

@@ -217,6 +217,52 @@
                 "next": "Page suivante",
                 "go_to": "Aller à la page %s"
             },
+            "filters": {
+                "all": "Toutes les propriétés",
+                "buy": "A vendre",
+                "rent": "A louer",
+                "type": "Type de bien",
+                "location": "Localisation",
+                "location_placeholder": "Ville, adresse, code postal…",
+                "price": "Gamme de prix",
+                "search": "Rechercher des biens",
+                "min_price": "Prix min",
+                "max_price": "Prix max",
+                "min_placeholder": "Min",
+                "max_placeholder": "Max",
+                "beds": "Chambres",
+                "baths": "Salles de bain",
+                "any": "Tous",
+                "status": "Statut",
+                "all_tabs": "Tout",
+                "new_build": "Neuf",
+                "features": "Équipements",
+                "reset": "Réinitialiser les filtres",
+                "reset_button": "Réinitialiser tout",
+                "apply": "Appliquer les filtres",
+                "apply_button": "Appliquer les filtres",
+                "filter_results": "Filtrer les résultats",
+                "filters_active": "Filtres appliqués",
+                "refine_search": "Affinez votre recherche",
+                "sidebar_sr_description": "Barre latérale de filtrage de recherche de propriétés avec filtres de statut, type, prix, chambres et salles de bain",
+                "plus_label": "%s+"
+            },
+            "categories": {
+                "types": [
+                    { "name": "Villa", "slug": "villa", "count": "Voir tout" },
+                    { "name": "Appartement", "slug": "apartment", "count": "Voir tout" },
+                    { "name": "Commerce", "slug": "shop", "count": "Voir tout" },
+                    { "name": "Maison de ville", "slug": "townhouse", "count": "Voir tout" },
+                    { "name": "Bungalow", "slug": "bungalow", "count": "Voir tout" }
+                ]
+            },
+            "js": {
+                "applied": "Appliqué !",
+                "from": "de",
+                "up_to": "jusqu'à",
+                "beds_label": "ch.",
+                "baths_label": "sdb."
+            },
             "items": [
                 {
                     "id": 1,

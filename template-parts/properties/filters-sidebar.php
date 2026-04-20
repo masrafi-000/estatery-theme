@@ -6,12 +6,32 @@
 
 <h2 class="sr-only"><?php echo esc_html( t('pages.properties.filters.sidebar_sr_description') ?? 'Property search filter sidebar' ); ?></h2>
 
-<aside class="lg:w-[400px]">
-    <div data-aos="fade-right">
-        <div class="sidebar bg-white border-[0.5px] border-slate-100 overflow-hidden">
-            
-            <!-- Sidebar Header -->
-            <div class="px-6 pt-6 pb-5 border-b border-slate-100">
+<aside class="lg:w-[380px] flex-shrink-0">
+    <!-- Mobile Filter Toggle -->
+    <button id="mobile-filter-toggle" class="lg:hidden w-full flex items-center justify-between bg-white border border-slate-100 rounded-2xl p-4 mb-6 active:scale-[0.98] transition-all shadow-sm">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m12 12a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                </svg>
+            </div>
+            <div class="text-left">
+                <span class="block text-[13px] font-bold text-slate-900 uppercase tracking-tight"><?php echo esc_html( t('pages.properties.filters.filter_results') ); ?></span>
+                <span id="mobile-active-badge" class="text-[11px] text-slate-400 font-medium hidden"><?php echo esc_html( t('pages.properties.filters.filters_active') ); ?>: <span class="count">0</span></span>
+                <span id="mobile-no-active" class="text-[11px] text-slate-400 font-medium"><?php echo esc_html( t('pages.properties.filters.refine_search') ); ?></span>
+            </div>
+        </div>
+        <svg id="toggle-chevron" class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+
+    <div id="sidebar-collapsible" class="hidden lg:block transition-all duration-300 overflow-hidden">
+        <div data-aos="fade-right">
+            <div class="sidebar bg-white border-[0.5px] border-slate-100 overflow-hidden rounded-2xl lg:rounded-none">
+                
+                <!-- Sidebar Header (Desktop) -->
+                <div class="hidden lg:block px-6 pt-6 pb-5 border-b border-slate-100">
                 <div class="flex items-center gap-2.5 mb-1.5">
                     <div class="w-9 h-9 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0 text-primary">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,6 +150,7 @@
                 </div>
 
             </div>
+            </div>
         </div>
     </div>
 </aside>
@@ -164,14 +185,21 @@
         const state = window.filterState;
 
         const selectors = {
-            searchInput: document.getElementById('search-input'),
-            statusTabs:  document.querySelectorAll('#status-tabs .tab-btn'),
-            typeItems:   document.querySelectorAll('#type-list .type-item'),
-            priceMin:    document.getElementById('price-min'),
-            priceMax:    document.getElementById('price-max'),
-            activeBadge: document.getElementById('active-badge'),
-            summaryBar:  document.getElementById('summary-bar') || null, // Might be in another template
-            summaryText: document.getElementById('summary-text') || null
+            searchInput:     document.getElementById('search-input'),
+            statusTabs:      document.querySelectorAll('#status-tabs .tab-btn'),
+            typeItems:       document.querySelectorAll('#type-list .type-item'),
+            priceMin:        document.getElementById('price-min'),
+            priceMax:        document.getElementById('price-max'),
+            activeBadge:     document.getElementById('active-badge'),
+            summaryBar:      document.getElementById('summary-bar') || null,
+            summaryText:     document.getElementById('summary-text') || null,
+            // Mobile Specific
+            mobileToggle:    document.getElementById('mobile-filter-toggle'),
+            mobileBadge:     document.getElementById('mobile-active-badge'),
+            mobileNoActive:  document.getElementById('mobile-no-active'),
+            mobileCount:     document.querySelector('#mobile-active-badge .count'),
+            sidebarContent:  document.getElementById('sidebar-collapsible'),
+            toggleChevron:   document.getElementById('toggle-chevron')
         };
 
         // 1. Sync Inputs with Initial State
@@ -260,16 +288,42 @@
 
         function updateUI() {
             const count = countActiveFilters();
+            
+            // Desktop Badge
             if (selectors.activeBadge) {
                 if (count > 0) {
-                    selectors.activeBadge.classList.remove('hidden');
-                    selectors.activeBadge.classList.add('inline-flex');
+                    selectors.activeBadge.classList.replace('hidden', 'inline-flex');
                     selectors.activeBadge.textContent = count;
                 } else {
-                    selectors.activeBadge.classList.add('hidden');
-                    selectors.activeBadge.classList.remove('inline-flex');
+                    selectors.activeBadge.classList.replace('inline-flex', 'hidden');
                 }
             }
+
+            // Mobile Badge Sync
+            if (selectors.mobileBadge && selectors.mobileNoActive) {
+                if (count > 0) {
+                    selectors.mobileBadge.classList.remove('hidden');
+                    selectors.mobileNoActive.classList.add('hidden');
+                    if (selectors.mobileCount) selectors.mobileCount.textContent = count;
+                } else {
+                    selectors.mobileBadge.classList.add('hidden');
+                    selectors.mobileNoActive.classList.remove('hidden');
+                }
+            }
+        }
+
+        // Mobile Toggle Handler
+        if (selectors.mobileToggle && selectors.sidebarContent) {
+            selectors.mobileToggle.addEventListener('click', () => {
+                const isHidden = selectors.sidebarContent.classList.contains('hidden');
+                if (isHidden) {
+                    selectors.sidebarContent.classList.remove('hidden');
+                    if (selectors.toggleChevron) selectors.toggleChevron.classList.add('rotate-180');
+                } else {
+                    selectors.sidebarContent.classList.add('hidden');
+                    if (selectors.toggleChevron) selectors.toggleChevron.classList.remove('rotate-180');
+                }
+            });
         }
 
         // Auto-Update Functions

@@ -217,6 +217,52 @@
                 "next": "Следующая страница",
                 "go_to": "Перейти на страницу %s"
             },
+            "filters": {
+                "all": "Все объекты",
+                "buy": "Продажа",
+                "rent": "Аренда",
+                "type": "Тип недвижимости",
+                "location": "Расположение",
+                "location_placeholder": "Город, адрес, индекс…",
+                "price": "Ценовой диапазон",
+                "search": "Поиск недвижимости",
+                "min_price": "Мин. цена",
+                "max_price": "Макс. цена",
+                "min_placeholder": "От",
+                "max_placeholder": "До",
+                "beds": "Спальни",
+                "baths": "Ванные",
+                "any": "Любое",
+                "status": "Статус",
+                "all_tabs": "Все",
+                "new_build": "Новостройка",
+                "features": "Удобства",
+                "reset": "Сбросить фильтры",
+                "reset_button": "Сбросить все",
+                "apply": "Применить фильтры",
+                "apply_button": "Применить фильтры",
+                "filter_results": "Фильтровать результаты",
+                "filters_active": "Фильтры применены",
+                "refine_search": "Уточните ваш поиск",
+                "sidebar_sr_description": "Боковая панель фильтров поиска недвижимости: статус, тип, цена, спальни и ванные",
+                "plus_label": "%s+"
+            },
+            "categories": {
+                "types": [
+                    { "name": "Вилла", "slug": "villa", "count": "Смотреть все" },
+                    { "name": "Квартира", "slug": "apartment", "count": "Смотреть все" },
+                    { "name": "Магазин", "slug": "shop", "count": "Смотреть все" },
+                    { "name": "Таунхаус", "slug": "townhouse", "count": "Смотреть все" },
+                    { "name": "Бунгало", "slug": "bungalow", "count": "Смотреть все" }
+                ]
+            },
+            "js": {
+                "applied": "Применено!",
+                "from": "от",
+                "up_to": "до",
+                "beds_label": "сп.",
+                "baths_label": "ван."
+            },
             "items": [
                 {
                     "id": 1,

@@ -217,6 +217,52 @@
                 "next": "Página siguiente",
                 "go_to": "Ir a la página %s"
             },
+            "filters": {
+                "all": "Todas las propiedades",
+                "buy": "En venta",
+                "rent": "En alquiler",
+                "type": "Tipo de propiedad",
+                "location": "Ubicación",
+                "location_placeholder": "Ciudad, dirección, código postal…",
+                "price": "Rango de precios",
+                "search": "Buscar propiedades",
+                "min_price": "Precio min",
+                "max_price": "Precio máx",
+                "min_placeholder": "Mín",
+                "max_placeholder": "Máx",
+                "beds": "Dormitorios",
+                "baths": "Baños",
+                "any": "Cualquiera",
+                "status": "Estado",
+                "all_tabs": "Todo",
+                "new_build": "Obra nueva",
+                "features": "Amenidades",
+                "reset": "Restablecer filtros",
+                "reset_button": "Restablecer todo",
+                "apply": "Aplicar filtros",
+                "apply_button": "Aplicar filtros",
+                "filter_results": "Filtrar resultados",
+                "filters_active": "Filtros aplicados",
+                "refine_search": "Refine su búsqueda",
+                "sidebar_sr_description": "Filtros de búsqueda de propiedades por estado, tipo, precio, dormitorios y baños",
+                "plus_label": "%s+"
+            },
+            "categories": {
+                "types": [
+                    { "name": "Villa", "slug": "villa", "count": "Ver todo" },
+                    { "name": "Apartamento", "slug": "apartment", "count": "Ver todo" },
+                    { "name": "Local", "slug": "shop", "count": "Ver todo" },
+                    { "name": "Adosado", "slug": "townhouse", "count": "Ver todo" },
+                    { "name": "Bungalow", "slug": "bungalow", "count": "Ver todo" }
+                ]
+            },
+            "js": {
+                "applied": "¡Aplicado!",
+                "from": "desde",
+                "up_to": "hasta",
+                "beds_label": "dorm.",
+                "baths_label": "baños"
+            },
             "items": [
                 {
                     "id": 1,

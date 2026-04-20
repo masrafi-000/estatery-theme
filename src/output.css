@@ -3348,6 +3348,11 @@
       display: flex;
     }
   }
+  .lg\:hidden {
+    @media (width >= 64rem) {
+      display: none;
+    }
+  }
   .lg\:h-full {
     @media (width >= 64rem) {
       height: 100%;
@@ -3386,6 +3391,11 @@
   .lg\:w-7\/12 {
     @media (width >= 64rem) {
       width: calc(7 / 12 * 100%);
+    }
+  }
+  .lg\:w-\[380px\] {
+    @media (width >= 64rem) {
+      width: 380px;
     }
   }
   .lg\:w-\[400px\] {
@@ -3496,6 +3506,11 @@
   .lg\:gap-12 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 12);
+    }
+  }
+  .lg\:rounded-none {
+    @media (width >= 64rem) {
+      border-radius: 0;
     }
   }
   .lg\:rounded-tr-none {
