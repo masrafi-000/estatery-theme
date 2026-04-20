@@ -22,6 +22,24 @@ class AdminDashboard {
 
         add_submenu_page(
             'estatery-inquiries',
+            'Investment Leads',
+            'Investment Leads',
+            'manage_options',
+            'estatery-investments',
+            [$this, 'render_investments_page']
+        );
+
+        add_submenu_page(
+            'estatery-inquiries',
+            'Contact Messages',
+            'Contact Messages',
+            'manage_options',
+            'estatery-contacts',
+            [$this, 'render_contacts_page']
+        );
+
+        add_submenu_page(
+            'estatery-inquiries',
             'Inquiry Settings',
             'Settings',
             'manage_options',
@@ -117,6 +135,324 @@ class AdminDashboard {
                     <?php endif; ?>
                 </tbody>
             </table>
+        </div>
+        <?php
+    }
+
+    public function render_contacts_page() {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'estatery_contacts';
+
+        if (isset($_GET['view_contact'])) {
+            $this->render_single_contact_view(intval($_GET['view_contact']));
+            return;
+        }
+
+        if (isset($_GET['mark_read'])) {
+            $wpdb->update($table_name, ['status' => 'read'], ['id' => intval($_GET['mark_read'])]);
+        }
+
+        $messages = $wpdb->get_results("SELECT * FROM $table_name ORDER BY time DESC LIMIT 100");
+
+        ?>
+        <div class="wrap">
+            <h1 class="wp-heading-inline">Contact Messages</h1>
+            <hr class="wp-header-end">
+
+            <style>
+                .inquiry-table { width: 100%; border-collapse: collapse; background: white; margin-top: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
+                .inquiry-table th, .inquiry-table td { padding: 15px; text-align: left; border-bottom: 1px solid #f0f0f0; }
+                .inquiry-table th { background: #fdfdfd; font-weight: 600; color: #444; border-bottom: 2px solid #f0f0f0; }
+                .inquiry-table tr:hover { background: #fafafa; }
+                .inquiry-table tr.unread { background: #fffcf0; }
+                .status-badge { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+                .status-unread { background: #fcf6e5; color: #854d0e; }
+                .status-read { background: #f3f4f6; color: #6b7280; }
+                .view-btn { background: #6366f1 !important; color: white !important; border: none !important; padding: 5px 12px !important; border-radius: 4px !important; text-decoration: none !important; font-size: 12px !important; }
+                .view-btn:hover { background: #4f46e5 !important; }
+            </style>
+
+            <table class="inquiry-table">
+                <thead>
+                    <tr>
+                        <th style="width: 150px;">Date</th>
+                        <th>Sender Name</th>
+                        <th>Email</th>
+                        <th>Sourcing Focus</th>
+                        <th>Budget</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if (empty($messages)): ?>
+                        <tr><td colspan="6" style="text-align: center; padding: 40px;">No messages found yet.</td></tr>
+                    <?php else: ?>
+                        <?php foreach ($messages as $item): ?>
+                            <tr class="<?php echo $item->status; ?>">
+                                <td style="color: #666;">
+                                    <strong><?php echo date('M d, Y', strtotime($item->time)); ?></strong>
+                                </td>
+                                <td><strong style="color: #1e293b;"><?php echo esc_html($item->first_name . ' ' . $item->last_name); ?></strong></td>
+                                <td><a href="mailto:<?php echo esc_attr($item->email); ?>"><?php echo esc_html($item->email); ?></a></td>
+                                <td>
+                                    <span style="font-size: 11px; color: #64748b;">
+                                        <?php echo esc_html($item->property_type); ?> in <?php echo esc_html($item->city); ?>
+                                    </span>
+                                </td>
+                                <td><strong style="color: #059669;"><?php echo esc_html($item->budget); ?></strong></td>
+                                <td>
+                                    <a href="?page=estatery-contacts&view_contact=<?php echo $item->id; ?>" class="view-btn">View Full Details</a>
+                                    <?php if ($item->status === 'unread'): ?>
+                                        <a href="?page=estatery-contacts&mark_read=<?php echo $item->id; ?>" style="font-size: 11px; margin-left: 8px; color: #64748b;">Mark Read</a>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+        <?php
+    }
+
+    private function render_single_contact_view($id) {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'estatery_contacts';
+        $contact = $wpdb->get_row($wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $id));
+
+        if (!$contact) {
+            echo '<div class="notice notice-error"><p>Message not found.</p></div>';
+            return;
+        }
+
+        $wpdb->update($table_name, ['status' => 'read'], ['id' => $id]);
+
+        ?>
+        <div class="wrap">
+            <h1 class="wp-heading-inline">Contact Message Details</h1>
+            <a href="?page=estatery-contacts" class="page-title-action">Back to List</a>
+            <hr class="wp-header-end">
+
+            <div style="max-width: 900px; background: white; margin-top: 20px; border-radius: 16px; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); overflow: hidden; border: 1px solid #f1f5f9;">
+                <div style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); padding: 45px; color: white;">
+                    <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; font-weight: 700;">Property Sourcing Inquiry</span>
+                    <h2 style="margin: 15px 0 0 0; font-size: 32px; color: white; font-weight: 800;"><?php echo esc_html($contact->first_name . ' ' . $contact->last_name); ?></h2>
+                    <div style="margin-top: 10px; font-size: 14px; opacity: 0.9;"><?php echo date('l, F j, Y \a\t H:i', strtotime($contact->time)); ?></div>
+                </div>
+
+                <div style="padding: 45px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 45px;">
+                        <div>
+                            <label style="display: block; color: #94a3b8; font-size: 10px; text-transform: uppercase; font-weight: 800; letter-spacing: 0.05em; margin-bottom: 10px;">Contact Information</label>
+                            <div style="background: #f8fafc; padding: 20px; border-radius: 12px; border: 1px solid #f1f5f9;">
+                                <a href="mailto:<?php echo esc_attr($contact->email); ?>" style="display: block; font-size: 18px; color: #4f46e5; text-decoration: none; font-weight: 700; margin-bottom: 5px;">
+                                    <?php echo esc_html($contact->email); ?>
+                                </a>
+                                <span style="font-size: 16px; color: #475569; font-weight: 600;"><?php echo esc_html($contact->phone ?: 'No phone provided'); ?></span>
+                            </div>
+                        </div>
+                        <div>
+                            <label style="display: block; color: #94a3b8; font-size: 10px; text-transform: uppercase; font-weight: 800; letter-spacing: 0.05em; margin-bottom: 10px;">Investment Budget</label>
+                            <div style="background: #ecfdf5; padding: 24px; border-radius: 12px; border: 1px solid #d1fae5; text-align: center;">
+                                <span style="font-size: 28px; color: #059669; font-weight: 900;"><?php echo esc_html($contact->budget ?: 'Not Specified'); ?></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 45px;">
+                        <label style="display: block; color: #94a3b8; font-size: 10px; text-transform: uppercase; font-weight: 800; letter-spacing: 0.05em; margin-bottom: 20px;">Sourcing Requirements</label>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+                            <div style="padding: 20px; background: white; border: 1px solid #f1f5f9; border-radius: 12px; text-align: center;">
+                                <span style="display: block; font-size: 9px; color: #94a3b8; margin-bottom: 8px; text-transform: uppercase;">Property Type</span>
+                                <strong style="font-size: 13px; color: #1e293b;"><?php echo esc_html($contact->property_type ?: 'N/A'); ?></strong>
+                            </div>
+                            <div style="padding: 20px; background: white; border: 1px solid #f1f5f9; border-radius: 12px; text-align: center;">
+                                <span style="display: block; font-size: 9px; color: #94a3b8; margin-bottom: 8px; text-transform: uppercase;">Target City</span>
+                                <strong style="font-size: 13px; color: #1e293b;"><?php echo esc_html($contact->city ?: 'N/A'); ?></strong>
+                            </div>
+                            <div style="padding: 20px; background: white; border: 1px solid #f1f5f9; border-radius: 12px; text-align: center;">
+                                <span style="display: block; font-size: 9px; color: #94a3b8; margin-bottom: 8px; text-transform: uppercase;">ZIP Code</span>
+                                <strong style="font-size: 13px; color: #1e293b;"><?php echo esc_html($contact->zip ?: 'N/A'); ?></strong>
+                            </div>
+                            <div style="padding: 20px; background: white; border: 1px solid #f1f5f9; border-radius: 12px; text-align: center;">
+                                <span style="display: block; font-size: 9px; color: #94a3b8; margin-bottom: 8px; text-transform: uppercase;">Bed/Bath</span>
+                                <strong style="font-size: 13px; color: #1e293b;"><?php echo esc_html($contact->bedrooms); ?>B / <?php echo esc_html($contact->bathrooms); ?>B</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="border-top: 1px solid #f1f5f9; padding-top: 35px; display: flex; justify-content: flex-end;">
+                        <a href="mailto:<?php echo esc_attr($contact->email); ?>" 
+                           style="background: #1e293b; color: white; text-decoration: none; padding: 14px 28px; border-radius: 10px; font-weight: 700; font-size: 13px; transition: background 0.2s;">
+                           Reply to Inquiry
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+
+    public function render_investments_page() {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'estatery_investments';
+
+        if (isset($_GET['view_invest'])) {
+            $this->render_single_invest_view(intval($_GET['view_invest']));
+            return;
+        }
+
+        if (isset($_GET['mark_read'])) {
+            $wpdb->update($table_name, ['status' => 'read'], ['id' => intval($_GET['mark_read'])]);
+        }
+
+        $leads = $wpdb->get_results("SELECT * FROM $table_name ORDER BY time DESC LIMIT 100");
+
+        ?>
+        <div class="wrap">
+            <h1 class="wp-heading-inline">Investment Leads</h1>
+            <hr class="wp-header-end">
+
+            <style>
+                .inquiry-table { width: 100%; border-collapse: collapse; background: white; margin-top: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
+                .inquiry-table th, .inquiry-table td { padding: 15px; text-align: left; border-bottom: 1px solid #f0f0f0; }
+                .inquiry-table th { background: #fdfdfd; font-weight: 600; color: #444; border-bottom: 2px solid #f0f0f0; }
+                .inquiry-table tr:hover { background: #fafafa; }
+                .inquiry-table tr.unread { background: #fffcf0; }
+                .status-badge { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+                .status-unread { background: #fef9c3; color: #854d0e; }
+                .status-read { background: #f3f4f6; color: #6b7280; }
+                .view-btn { background: #0f172a !important; color: white !important; border: none !important; padding: 5px 12px !important; border-radius: 4px !important; text-decoration: none !important; font-size: 12px !important; }
+                .view-btn:hover { background: #334155 !important; }
+            </style>
+
+            <table class="inquiry-table">
+                <thead>
+                    <tr>
+                        <th style="width: 150px;">Received At</th>
+                        <th>Investor Name</th>
+                        <th>Contact Email</th>
+                        <th>Investment Range</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if (empty($leads)): ?>
+                        <tr><td colspan="6" style="text-align: center; padding: 40px;">No investment leads found yet.</td></tr>
+                    <?php else: ?>
+                        <?php foreach ($leads as $item): ?>
+                            <tr class="<?php echo $item->status; ?>">
+                                <td style="color: #666;">
+                                    <span style="font-weight: 600; color: #222;"><?php echo date('M d, Y', strtotime($item->time)); ?></span><br>
+                                    <?php echo date('H:i', strtotime($item->time)); ?>
+                                </td>
+                                <td><strong style="color: #0f172a;"><?php echo esc_html($item->user_name); ?></strong></td>
+                                <td><a href="mailto:<?php echo esc_attr($item->user_email); ?>"><?php echo esc_html($item->user_email); ?></a></td>
+                                <td>
+                                    <span style="background: #f1f5f9; padding: 4px 8px; border-radius: 4px; font-weight: 600; color: #475569; font-size: 11px;">
+                                        <?php echo esc_html($item->amount); ?>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="status-badge <?php echo $item->status === 'unread' ? 'status-unread' : 'status-read'; ?>">
+                                        <?php echo $item->status; ?>
+                                    </span>
+                                </td>
+                                <td>
+                                    <a href="?page=estatery-investments&view_invest=<?php echo $item->id; ?>" class="view-btn">View Profile</a>
+                                    <?php if ($item->status === 'unread'): ?>
+                                        <a href="?page=estatery-investments&mark_read=<?php echo $item->id; ?>" style="font-size: 11px; margin-left: 8px; color: #64748b;">Mark Read</a>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+        <?php
+    }
+
+    private function render_single_invest_view($id) {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'estatery_investments';
+        $lead = $wpdb->get_row($wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $id));
+
+        if (!$lead) {
+            echo '<div class="notice notice-error"><p>Lead not found.</p></div>';
+            return;
+        }
+
+        $wpdb->update($table_name, ['status' => 'read'], ['id' => $id]);
+
+        ?>
+        <div class="wrap">
+            <h1 class="wp-heading-inline">Investor Profile</h1>
+            <a href="?page=estatery-investments" class="page-title-action">Back to List</a>
+            <hr class="wp-header-end">
+
+            <div style="max-width: 800px; background: white; margin-top: 20px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); overflow: hidden;">
+                <div style="background: #0f172a; padding: 40px; color: white;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7;">Investment Lead</span>
+                            <h2 style="margin: 10px 0 0 0; font-size: 28px; color: white;"><?php echo esc_html($lead->user_name); ?></h2>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="font-size: 12px; opacity: 0.7;"><?php echo date('F j, Y \a\t H:i', strtotime($lead->time)); ?></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="padding: 40px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px;">
+                        <div>
+                            <strong style="display: block; color: #64748b; font-size: 11px; text-transform: uppercase; margin-bottom: 8px;">Contact Information</strong>
+                            <a href="mailto:<?php echo esc_attr($lead->user_email); ?>" style="font-size: 18px; color: #2563eb; text-decoration: none; font-weight: 600;">
+                                <?php echo esc_html($lead->user_email); ?>
+                            </a>
+                        </div>
+                        <div>
+                            <strong style="display: block; color: #64748b; font-size: 11px; text-transform: uppercase; margin-bottom: 8px;">Target Investment Range</strong>
+                            <span style="font-size: 18px; color: #0f172a; font-weight: 700;"><?php echo esc_html($lead->amount); ?></span>
+                        </div>
+                    </div>
+
+                    <div style="background: #f8fafc; padding: 30px; border-radius: 12px; margin-bottom: 40px;">
+                        <h3 style="margin: 0 0 20px 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; color: #475569;">Investor Qualifications</h3>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                            <div style="padding: 15px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <span style="display: block; font-size: 10px; color: #64748b; margin-bottom: 5px;">Existing Client</span>
+                                <strong style="font-size: 13px; text-transform: uppercase;"><?php echo esc_html($lead->existing_client); ?></strong>
+                            </div>
+                            <div style="padding: 15px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <span style="display: block; font-size: 10px; color: #64748b; margin-bottom: 5px;">Owns Property</span>
+                                <strong style="font-size: 13px; text-transform: uppercase;"><?php echo esc_html($lead->own_spanish_property); ?></strong>
+                            </div>
+                            <div style="padding: 15px; background: white; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                                <span style="display: block; font-size: 10px; color: #64748b; margin-bottom: 5px;">Tax Resident</span>
+                                <strong style="font-size: 13px; text-transform: uppercase;"><?php echo esc_html($lead->tax_resident); ?></strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <strong style="display: block; color: #64748b; font-size: 11px; text-transform: uppercase; margin-bottom: 15px;">Areas of Interest</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <?php 
+                            $interests = explode(', ', $lead->interests);
+                            foreach ($interests as $interest): 
+                                if (empty($interest)) continue;
+                            ?>
+                                <span style="padding: 6px 14px; background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; border-radius: 20px; font-size: 12px; font-weight: 600;">
+                                    <?php echo esc_html($interest); ?>
+                                </span>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <?php
     }

@@ -543,6 +543,8 @@
                 "form": {
                     "name_label": "Nom Légal Complet *",
                     "name_placeholder": "ex. Ahamed Asif",
+                    "email_label": "Adresse e-mail *",
+                    "email_placeholder": "ex. asif@exemple.com",
                     "questions": [
                         "Client Existant ?",
                         "Possédez-vous un Bien en Espagne ?",
@@ -562,10 +564,14 @@
                         "Autre"
                     ],
                     "amount_label": "Montant de l'Investissement *",
-                    "amounts": [
-                        "50 000 € - 100 000 €",
-                        "100 000 € - 500 000 €",
-                        "500 000 € - 1 M€+"
+                     "amounts": [
+                        "€1,000,000 - €2,000,000",
+                        "€2,000,000 - €3,000,000",
+                        "€3,000,000 - €4,000,000",
+                        "€4,000,000 - €5,000,000",
+                        "€5,000,000 - €10,000,000",
+                        "€10,000,000 - €20,000,000",
+                        "€20,000,000+"
                     ],
                     "submit": "Envoyer la Demande",
                     "footer": "Portail Chiffré et Confidentiel"

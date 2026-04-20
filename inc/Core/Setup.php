@@ -24,6 +24,8 @@ class Setup {
 
         load_theme_textdomain( 'estatery', get_template_directory() . '/languages' );
         $this->create_inquiry_table();
+        $this->create_invest_table();
+        $this->create_contact_table();
     }
 
     /**
@@ -53,6 +55,61 @@ class Setup {
             user_email varchar(255) NOT NULL,
             user_phone varchar(100) NOT NULL,
             user_message text NOT NULL,
+            status varchar(20) DEFAULT 'unread' NOT NULL,
+            PRIMARY KEY  (id)
+        ) $charset_collate;";
+
+        require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+        dbDelta( $sql );
+    }
+
+    /**
+     * Create the investments table using dbDelta
+     */
+    private function create_invest_table() {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'estatery_investments';
+        $charset_collate = $wpdb->get_charset_collate();
+
+        $sql = "CREATE TABLE $table_name (
+            id mediumint(9) NOT NULL AUTO_INCREMENT,
+            time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+            user_name varchar(255) NOT NULL,
+            user_email varchar(255) NOT NULL,
+            existing_client varchar(10) NOT NULL,
+            own_spanish_property varchar(10) NOT NULL,
+            tax_resident varchar(10) NOT NULL,
+            interests text NOT NULL,
+            amount varchar(100) NOT NULL,
+            status varchar(20) DEFAULT 'unread' NOT NULL,
+            PRIMARY KEY  (id)
+        ) $charset_collate;";
+
+        require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+        dbDelta( $sql );
+    }
+
+    /**
+     * Create the contacts table using dbDelta
+     */
+    private function create_contact_table() {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'estatery_contacts';
+        $charset_collate = $wpdb->get_charset_collate();
+
+        $sql = "CREATE TABLE $table_name (
+            id mediumint(9) NOT NULL AUTO_INCREMENT,
+            time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+            first_name varchar(255) NOT NULL,
+            last_name varchar(255) NOT NULL,
+            email varchar(255) NOT NULL,
+            phone varchar(100) NOT NULL,
+            property_type varchar(255) NOT NULL,
+            zip varchar(20) NOT NULL,
+            city varchar(255) NOT NULL,
+            bedrooms varchar(10) NOT NULL,
+            bathrooms varchar(10) NOT NULL,
+            budget varchar(100) NOT NULL,
             status varchar(20) DEFAULT 'unread' NOT NULL,
             PRIMARY KEY  (id)
         ) $charset_collate;";

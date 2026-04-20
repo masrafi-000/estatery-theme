@@ -543,6 +543,8 @@
                 "form": {
                     "name_label": "Nombre Legal Completo *",
                     "name_placeholder": "ej. Ahamed Asif",
+                    "email_label": "Correo electrónico *",
+                    "email_placeholder": "ej. asif@ejemplo.com",
                     "questions": [
                         "¿Cliente Existente?",
                         "¿Posee Propiedades en España?",
@@ -563,9 +565,13 @@
                     ],
                     "amount_label": "Monto de Inversión *",
                     "amounts": [
-                        "€50,000 - €100,000",
-                        "€100,000 - €500,000",
-                        "€500,000 - €1M+"
+                        "€1,000,000 - €2,000,000",
+                        "€2,000,000 - €3,000,000",
+                        "€3,000,000 - €4,000,000",
+                        "€4,000,000 - €5,000,000",
+                        "€5,000,000 - €10,000,000",
+                        "€10,000,000 - €20,000,000",
+                        "€20,000,000+"
                     ],
                     "submit": "Enviar Solicitud",
                     "footer": "Portal Encriptado y Confidencial"

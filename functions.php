@@ -12,6 +12,8 @@ require_once get_template_directory() . '/inc/Core/ThemeSetup.php';
 require_once get_template_directory() . '/inc/Core/Translator.php';
 require_once get_template_directory() . '/inc/Core/AjaxHandler.php';
 require_once get_template_directory() . '/inc/Core/InquiryHandler.php';
+require_once get_template_directory() . '/inc/Core/InvestHandler.php';
+require_once get_template_directory() . '/inc/Core/ContactHandler.php';
 require_once get_template_directory() . '/inc/Core/AdminDashboard.php';
 
 // Instantiate Core Controllers
@@ -20,6 +22,8 @@ new Estatery\Core\Enqueue();
 new Estatery\Core\I18n();
 new Estatery\Core\AjaxHandler();
 new Estatery\Core\InquiryHandler();
+new Estatery\Core\InvestHandler();
+new Estatery\Core\ContactHandler();
 new Estatery\Core\AdminDashboard();
 
 // Bootstrap pages and settings
