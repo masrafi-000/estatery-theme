@@ -19,8 +19,8 @@
         <!-- Drawer Content -->
         <aside id="drawer-content" class="absolute top-0 left-0 h-full w-[85%] max-w-[380px] bg-white shadow-2xl transition-transform duration-500 -translate-x-full flex flex-col">
             <div class="p-6 border-b border-gray-100 flex items-center justify-between">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center gap-3 no-underline group">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/public/images/logo-ll.png' ); ?>" 
+                <a href="<?php echo esc_url( \Estatery\Core\Translator::getInstance()->resolve_nav_url('/') ); ?>" class="flex items-center gap-3 no-underline group">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/public/images/logo-3.png' ); ?>" 
                          alt="<?php bloginfo( 'name' ); ?>" 
                          class="h-14 w-auto object-contain scale-[1.8] origin-left transition-transform duration-500">
                 </a>
@@ -59,7 +59,7 @@
                 
                 <!-- Left: Logo -->
                 <div class="flex-1 flex justify-start items-center">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center gap-3 group no-underline">
+                    <a href="<?php echo esc_url( \Estatery\Core\Translator::getInstance()->resolve_nav_url('/') ); ?>" class="flex items-center gap-3 group no-underline">
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/public/images/Logo-3.png' ); ?>" 
                              alt="<?php bloginfo( 'name' ); ?>" 
                              class="h-12 md:h-20 w-auto object-contain scale-[2] md:scale-[3] origin-left transition-transform duration-500 max-w-none">

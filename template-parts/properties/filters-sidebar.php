@@ -478,5 +478,10 @@
         // Initial init
         initPaginationLinks();
         updateUI();
+
+        // Trigger search on load if URL params are present
+        if (window.location.search) {
+            updateProperties(1);
+        }
     });
 </script>

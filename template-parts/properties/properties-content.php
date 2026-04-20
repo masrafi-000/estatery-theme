@@ -35,7 +35,7 @@
                     // 1.5 Apply Filters
                     $search    = strtolower($_GET['search'] ?? '');
                     $status    = $_GET['status']   ?? 'all';
-                    $types     = isset($_GET['types']) ? explode(',', $_GET['types']) : [];
+                    $types     = isset($_GET['types']) ? array_filter(explode(',', $_GET['types'])) : [];
                     $min_price = (float)($_GET['min_price'] ?? 0);
                     $max_price = (float)($_GET['max_price'] ?? 0);
                     $beds      = (int)($_GET['beds'] ?? 0);
