@@ -9,11 +9,12 @@
  * @var string $current_view    'grid' | 'list'
  */
 
-$total_results = isset($total_results) ? (int) $total_results : 0;
-$current_page  = isset($current_page)  ? (int) $current_page  : 1;
-$per_page      = isset($per_page)      ? (int) $per_page      : 12;
-$current_sort  = isset($current_sort)  ? sanitize_key($current_sort) : 'newest';
-$current_view  = isset($current_view)  ? sanitize_key($current_view) : 'grid';
+// Fallback for variables passed via get_template_part $args or global scope
+$total_results = isset($args['total_results']) ? (int)$args['total_results'] : ($total_results ?? 0);
+$current_page  = isset($args['current_page'])  ? (int)$args['current_page']  : ($current_page  ?? 1);
+$per_page      = isset($args['per_page'])      ? (int)$args['per_page']      : ($per_page      ?? 12);
+$current_sort  = isset($args['current_sort'])  ? sanitize_key($args['current_sort']) : ($current_sort ?? 'newest');
+$current_view  = isset($args['current_view'])  ? sanitize_key($args['current_view']) : ($current_view ?? 'grid');
 
 // Calculated range: "Showing 13–24 of 86 properties"
 $range_from = min( ( ($current_page - 1) * $per_page ) + 1, $total_results );
@@ -123,10 +124,11 @@ function view_url( string $view ): string {
         </span>
 
         <div class="relative">
-            <select onchange="if(window.filterState){ window.filterState.sort = new URL(this.value, window.location.origin).searchParams.get('sort'); updateProperties(1); }"
+            <select onchange="if(window.filterState){ window.filterState.sort = this.options[this.selectedIndex].getAttribute('data-sort'); updateProperties(1); }"
                     class="appearance-none bg-white border border-slate-200 pl-4 pr-10 h-10 text-[11px] font-black uppercase tracking-[0.15em] text-slate-700 outline-none cursor-pointer hover:border-slate-400 focus:border-slate-900 transition-colors duration-150">
                 <?php foreach ( $sort_options as $key => $label ) : ?>
                     <option value="<?php echo sort_url($key); ?>"
+                            data-sort="<?php echo esc_attr($key); ?>"
                             <?php selected( $current_sort, $key ); ?>>
                         <?php echo esc_html($label); ?>
                     </option>

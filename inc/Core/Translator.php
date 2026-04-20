@@ -160,18 +160,23 @@ class Translator {
     public static function map_property_data($prop, $lang = 'en') {
         $id = $prop['id'][0] ?? '';
         $title = ucfirst($prop['type'][0] ?? 'Property') . ' ' . ($prop['town'][0] ?? '');
-        
+        // Price formatting for display
         $price_raw = $prop['price'][0] ?? '0';
+        // Handle cases where price might be an array within an array or contain ranges
+        $price_str = is_array($price_raw) ? ($price_raw[0] ?? '0') : $price_raw;
+        $price_clean = preg_replace('/[^0-9]/', '', (string)$price_str);
+        
         $currency = $prop['currency'][0] ?? 'EUR';
-        $symbol = $currency === 'EUR' ? '€' : ($currency === 'USD' ? '$' : $currency);
-        $price = number_format((float)$price_raw, 0, '.', ',') . ' ' . $symbol;
-        
-        $location = ($prop['town'][0] ?? '') . ', ' . ($prop['province'][0] ?? '');
-        $description = $prop['desc'][0][$lang][0] ?? '';
-        
+        $currency_symbol = $currency === 'EUR' ? '€' : ($currency === 'USD' ? '$' : $currency);
+        $price = number_format((float)$price_clean, 0, '.', ',') . ' ' . $currency_symbol;
+        if (($prop['price_freq'][0] ?? '') === 'rent') $price .= ' /mo';
+
+        $sqft_raw = $prop['surface_area'][0]['built'][0] ?? '0';
+        $sqft_str = is_array($sqft_raw) ? ($sqft_raw[0] ?? '0') : $sqft_raw;
+        $sqft_clean = preg_replace('/[^0-9]/', '', (string)$sqft_str);
+        $sqft = $sqft_clean ? $sqft_clean . ' m²' : '';
         $beds = $prop['beds'][0] ?? '0';
         $baths = $prop['baths'][0] ?? '0';
-        $sqft = $prop['surface_area'][0]['built'][0] ?? '0';
         
         $type = (strtolower($prop['price_freq'][0] ?? '') === 'sale') ? 'buy' : 'rent';
         
@@ -185,15 +190,15 @@ class Translator {
             'title' => $title,
             'category' => $prop['type'][0] ?? '',
             'price' => $price,
-            'raw_price' => (float)$price_raw,
-            'location' => $location,
+            'raw_price' => (float)$price_clean,
+            'location' => ($prop['town'][0] ?? '') . ', ' . ($prop['province'][0] ?? ''),
             'location_detail' => $prop['location_detail'][0] ?? '',
-            'description' => $description,
+            'description' => $prop['desc'][0][$lang][0] ?? '',
             'type' => $type,
             'beds' => $beds,
             'baths' => $baths,
             'sqft' => $sqft,
-            'raw_sqft' => (float)$sqft,
+            'raw_sqft' => (float)$sqft_clean,
             'pool' => ($prop['pool'][0] ?? '0') === '1',
             'image' => $image,
             'new_build' => ($prop['new_build'][0] ?? '0') === '1',
