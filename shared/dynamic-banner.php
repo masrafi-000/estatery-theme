@@ -6,33 +6,33 @@ $image    = isset($banner_image) ? $banner_image : "https://images.pexels.com/ph
 $bg_text  = isset($banner_bg_text) ? $banner_bg_text : $title;
 ?>
 
-<section class="relative h-[60vh] min-h-[400px] w-full flex items-center overflow-hidden bg-[#1a1a1a]">
+<section class="relative min-h-[500px] lg:h-[65vh] w-full flex items-center overflow-hidden bg-[#1a1a1a] py-20 lg:py-0">
     <div class="absolute inset-0 z-0">
         <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute inset-0 bg-black/65"></div>
     </div>
 
-    <div class="absolute bottom-[-20px] right-[-10px] z-10 select-none hidden lg:block">
-        <h2 class="text-[12rem] font-serif font-bold text-transparent opacity-20 uppercase"
-            style="-webkit-text-stroke: 2px white; line-height: 1;">
+    <div class="absolute lg:bottom-[-20px] lg:right-[-10px] bottom-0 right-0 z-10 select-none pointer-events-none overflow-hidden max-w-full">
+        <h2 class="text-[6rem] md:text-[10rem] lg:text-[14rem] font-serif font-bold text-transparent opacity-10 uppercase whitespace-nowrap"
+            style="-webkit-text-stroke: 1.5px white; line-height: 0.9;">
             <?php echo $bg_text; ?>
         </h2>
     </div>
 
     <div class="container mx-auto px-6 lg:px-12 relative z-20">
-        <div class="max-w-2xl space-y-4">
-            <nav class="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-400 mb-4">
-                <a href="<?php echo site_url(); ?>" class="hover:text-white transition-colors">Home</a>
-                <span>/</span>
+        <div class="max-w-4xl space-y-6">
+            <nav class="flex items-center gap-3 text-xs uppercase tracking-widest text-gray-300 mb-6 font-medium">
+                <a href="<?php echo site_url(); ?>" class="hover:text-secondary transition-colors">Home</a>
+                <span class="opacity-50">/</span>
                 <span class="text-white"><?php echo $title; ?></span>
             </nav>
 
-            <h1 class="text-6xl md:text-8xl font-serif text-white font-medium capitalize leading-tight">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white font-medium capitalize leading-[1.1] break-words">
                 <?php echo strtolower($title); ?><span class="text-secondary">.</span>
             </h1>
 
             <p
-                class="text-lg md:text-xl text-gray-200 font-light max-w-lg leading-relaxed border-l-2 border-primary pl-6">
+                class="text-lg md:text-xl text-gray-200 font-light max-w-2xl leading-relaxed border-l-2 border-secondary pl-6 mt-8">
                 <?php echo $subtitle; ?>
             </p>
         </div>

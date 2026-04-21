@@ -124,7 +124,29 @@
       "description": "Everything you need to know about the platform.",
       "help_title": "Need More Help?",
       "help_description": "Our support team is here for you.",
-      "contact_button": "Contact Support"
+      "contact_button": "Contact Support",
+      "items": [
+        {
+          "question": "How do I start searching for a property?",
+          "answer": "You can start by using our search bar at the top of the page."
+        },
+        {
+          "question": "Are the property listings verified?",
+          "answer": "Yes, every listing on Estatery goes through a strict verification process."
+        },
+        {
+          "question": "Can I list my own property for sale?",
+          "answer": "Absolutely! Click on the Sell Property button and follow the steps."
+        },
+        {
+          "question": "Is there any commission fee for buyers?",
+          "answer": "We provide transparent pricing. Browsing is free."
+        },
+        {
+          "question": "How can I contact a real estate agent?",
+          "answer": "Each detail page has a Contact Agent button."
+        }
+      ]
     }
   },
   "pages": {

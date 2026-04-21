@@ -5,6 +5,17 @@
     "email": "info@altara.com",
     "tagline": "Excellence Immobilière"
   },
+  "js": {
+    "applied": "Appliqué !",
+    "from": "de",
+    "up_to": "jusqu'à",
+    "beds_label": "chambres",
+    "baths_label": "salles de bain",
+    "success_inquiry": "Merci ! Votre demande a été envoyée. Nous vous contacterons bientôt.",
+    "close": "Fermer",
+    "error_generic": "Un problème est survenu. Veuillez réessayer.",
+    "fill_required": "Veuillez remplir tous les champs obligatoires."
+  },
   "header": {
     "language_label": "Langue:",
     "navigation": [
@@ -113,7 +124,29 @@
       "description": "Tout ce que vous devez savoir sur la plateforme.",
       "help_title": "Besoin d'Aide Supplémentaire ?",
       "help_description": "Notre équipe de support est là pour vous.",
-      "contact_button": "Contacter le Support"
+      "contact_button": "Contacter le Support",
+      "items": [
+        {
+          "question": "Comment commencer à chercher une propriété ?",
+          "answer": "Vous pouvez commencer par utiliser notre barre de recherche en haut de la page."
+        },
+        {
+          "question": "Les annonces immobilières sont-elles vérifiées ?",
+          "answer": "Oui, chaque annonce sur Estatery passe par un processus de vérification strict."
+        },
+        {
+          "question": "Puis-je lister ma propre propriété à vendre ?",
+          "answer": "Absolument ! Cliquez sur le bouton Vendre une propriété et suivez les étapes."
+        },
+        {
+          "question": "Y a-t-il des frais de commission pour les acheteurs ?",
+          "answer": "Nous offrons des prix transparents. La navigation est gratuite."
+        },
+        {
+          "question": "Comment puis-je contacter un agent immobilier ?",
+          "answer": "Chaque page de détails dispose d'un bouton Contacter un agent."
+        }
+      ]
     }
   },
   "pages": {
@@ -250,17 +283,6 @@
         "sidebar_sr_description": "Barre latérale de filtrage de recherche de propriétés avec filtres de statut, type, prix, chambres et salles de bain",
         "plus_label": "%s+"
       },
-      "js": {
-        "applied": "Appliqué !",
-        "from": "de",
-        "up_to": "jusqu'à",
-        "beds_label": "chambres",
-        "baths_label": "salles de bain",
-        "success_inquiry": "Merci ! Votre demande a été envoyée. Nous vous contacterons bientôt.",
-        "close": "Fermer",
-        "error_generic": "Un problème est survenu. Veuillez réessayer.",
-        "fill_required": "Veuillez remplir tous les champs obligatoires."
-      },
       "meta": {
         "sale": "À Vendre",
         "rent": "À Louer",
@@ -273,6 +295,8 @@
       },
 
       "categories": {
+        "title": "Explorez par Catégorie",
+        "subtitle": "Trouvez le type de maison idéal qui correspond à votre style de vie.",
         "types": [
           { "name": "Villa", "slug": "villa", "count": "Voir tout" },
           { "name": "Appartement", "slug": "apartment", "count": "Voir tout" },

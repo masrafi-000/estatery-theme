@@ -5,6 +5,17 @@
     "email": "info@altara.com",
     "tagline": "Excelencia Inmobiliaria"
   },
+  "js": {
+    "applied": "¡Aplicado!",
+    "from": "desde",
+    "up_to": "hasta",
+    "beds_label": "dormitorios",
+    "baths_label": "baños",
+    "success_inquiry": "¡Gracias! Su consulta ha sido enviada. Nos pondremos en contacto con usted pronto.",
+    "close": "Cerrar",
+    "error_generic": "Algo salió mal. Por favor, inténtelo de nuevo.",
+    "fill_required": "Por favor, complete todos los campos obligatorios."
+  },
   "header": {
     "language_label": "Idioma:",
     "navigation": [
@@ -113,7 +124,29 @@
       "description": "Todo lo que necesita saber sobre la plataforma.",
       "help_title": "¿Necesita Más Ayuda?",
       "help_description": "Nuestro equipo de soporte está aquí para usted.",
-      "contact_button": "Contactar Soporte"
+      "contact_button": "Contactar Soporte",
+      "items": [
+        {
+          "question": "¿Cómo comienzo a buscar una propiedad?",
+          "answer": "Puede comenzar utilizando nuestra barra de búsqueda en la parte superior de la página."
+        },
+        {
+          "question": "¿Están verificados los listados de propiedades?",
+          "answer": "Sí, cada listado en Estatery pasa por un estricto proceso de verificación."
+        },
+        {
+          "question": "¿Puedo poner mi propia propiedad en venta?",
+          "answer": "¡Absolutamente! Haga clic en el botón Vender propiedad y siga los pasos."
+        },
+        {
+          "question": "¿Hay alguna comisión para los compradores?",
+          "answer": "Ofrecemos precios transparentes. La navegación es gratuita."
+        },
+        {
+          "question": "¿Cómo puedo contactar a un agente inmobiliario?",
+          "answer": "Cada página de detalles tiene un botón de Contactar Agente."
+        }
+      ]
     }
   },
   "pages": {
@@ -250,17 +283,6 @@
         "sidebar_sr_description": "Filtros de búsqueda de propiedades por estado, tipo, precio, dormitorios y baños",
         "plus_label": "%s+"
       },
-      "js": {
-        "applied": "¡Aplicado!",
-        "from": "desde",
-        "up_to": "hasta",
-        "beds_label": "dormitorios",
-        "baths_label": "baños",
-        "success_inquiry": "¡Gracias! Su consulta ha sido enviada. Nos pondremos en contacto con usted pronto.",
-        "close": "Cerrar",
-        "error_generic": "Algo salió mal. Por favor, inténtelo de nuevo.",
-        "fill_required": "Por favor, complete todos los campos obligatorios."
-      },
       "meta": {
         "sale": "En Venta",
         "rent": "En Alquiler",
@@ -273,6 +295,8 @@
       },
 
       "categories": {
+        "title": "Explorar por Categoría",
+        "subtitle": "Encuentre el tipo de hogar perfecto que se adapte a su estilo de vida.",
         "types": [
           { "name": "Villa", "slug": "villa", "count": "Ver todo" },
           { "name": "Apartamento", "slug": "apartment", "count": "Ver todo" },

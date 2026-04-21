@@ -19,12 +19,12 @@
 
             <div class="lg:w-7/12 space-y-4 w-full relative" id="accordion-container">
                 <?php
-                $faq_query = new WP_Query(['post_type' => 'faq', 'posts_per_page' => -1, 'order' => 'ASC']);
-                if ($faq_query->have_posts()) :
-                    while ($faq_query->have_posts()) : $faq_query->the_post(); ?>
+                $faq_items = t('home.faq.items');
+                if (!empty($faq_items) && is_array($faq_items)) :
+                    foreach ($faq_items as $item) : ?>
                 <div class="faq-card bg-gray-50 border border-gray-100 rounded-2xl overflow-hidden mb-4">
                     <button class="faq-toggle w-full flex items-center justify-between p-7 text-left outline-none">
-                        <span class="text-lg font-bold text-secondary pr-4"><?php the_title(); ?></span>
+                        <span class="text-lg font-bold text-secondary pr-4"><?php echo esc_html($item['question']); ?></span>
                         <span class="faq-icon text-blue-500 transition-transform duration-300">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
@@ -35,12 +35,11 @@
                     <div class="faq-answer hidden px-7 pb-7 text-secondary leading-relaxed">
                         <div class="w-full h-px bg-gray-200 mb-5"></div>
                         <div class="prose max-w-none">
-                            <?php the_content(); ?>
+                            <?php echo wp_kses_post($item['answer']); ?>
                         </div>
                     </div>
                 </div>
-                <?php endwhile;
-                    wp_reset_postdata();
+                <?php endforeach;
                 endif; ?>
             </div>
         </div>

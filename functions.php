@@ -69,55 +69,6 @@ function estatery_handle_lang_switch() {
     exit;
 }
 
-
-// FAQ Custom Post Type Register
-function register_faq_custom_post_type()
-{
-    $labels = [
-        'name' => 'FAQs',
-        'singular_name' => 'FAQ',
-        'add_new' => 'Add New FAQ',
-        'add_new_item' => 'Add New FAQ',
-        'menu_name' => 'FAQs',
-    ];
-    $args = [
-        'labels' => $labels,
-        'public' => true,
-        'menu_icon' => 'dashicons-editor-help',
-        'supports' => ['title', 'editor'],
-        'show_in_rest' => true,
-    ];
-    register_post_type('faq', $args);
-}
-add_action('init', 'register_faq_custom_post_type');
- 
- 
-function insert_default_faqs()
-{
-    if (get_option('default_faqs_inserted')) return;
- 
-    $defaults = [
-        ['q' => 'How do I start searching for a property?', 'a' => 'You can start by using our search bar at the top of the page.'],
-        ['q' => 'Are the property listings verified?', 'a' => 'Yes, every listing on Estatery goes through a strict verification process.'],
-        ['q' => 'Can I list my own property for sale?', 'a' => 'Absolutely! Click on the Sell Property button and follow the steps.'],
-        ['q' => 'Is there any commission fee for buyers?', 'a' => 'We provide transparent pricing. Browsing is free.'],
-        ['q' => 'How can I contact a real estate agent?', 'a' => 'Each detail page has a Contact Agent button.']
-    ];
- 
-    foreach ($defaults as $faq) {
-        wp_insert_post([
-            'post_title'   => $faq['q'],
-            'post_content' => $faq['a'],
-            'post_status'  => 'publish',
-            'post_type'    => 'faq',
-        ]);
-    }
-    update_option('default_faqs_inserted', true);
-}
-add_action('admin_init', 'insert_default_faqs');
-
-
-
 function luxury_realestate_customize_register($wp_customize)
 {
     // Hero Section Panel
