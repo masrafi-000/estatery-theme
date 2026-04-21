@@ -357,18 +357,50 @@ $gallery_images_json = json_encode($images);
             id="modalContainer">
 
             <button onclick="closeModal()"
-                class="absolute -top-3 -right-3 md:top-6 md:right-6 p-3 rounded-full shadow-2xl transition-all z-[100001] flex items-center justify-center border-slate-200">
+                class="absolute top-5 right-5 md:top-8 md:right-8 w-12 h-12 rounded-full bg-slate-900/90 backdrop-blur-md text-white shadow-2xl transition-all duration-500 z-[100002] flex items-center justify-center group/close hover:bg-primary hover:rotate-90 hover:scale-110 active:scale-95">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-colors">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
 
             <div
-                class="w-full h-[55vh] md:h-[60vh] rounded-3xl overflow-hidden bg-black/40 relative flex items-center justify-center border border-white/10 shadow-inner">
+                class="w-full h-[55vh] md:h-[60vh] rounded-3xl overflow-hidden bg-black/40 relative flex items-center justify-center border border-white/10 shadow-inner group/modal">
                 <img id="modal-main-img" src=""
-                    class="w-full h-full object-cover transition-all duration-500 scale-100 opacity-0">
+                    class="w-full h-full object-cover transition-all duration-500 scale-100 opacity-100">
+
+                <!-- Navigation Buttons -->
+                <button onclick="navigateGallery(-1)" 
+                    class="absolute left-4 p-4 rounded-full bg-primary shadow-2xl shadow-primary/40 text-white hover:bg-slate-900 transition-all duration-300 hidden md:flex items-center justify-center z-[10001] hover:scale-110 active:scale-95 group/nav">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5"></path>
+                        <path d="M12 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button onclick="navigateGallery(1)" 
+                    class="absolute right-4 p-4 rounded-full bg-primary shadow-2xl shadow-primary/40 text-white hover:bg-slate-900 transition-all duration-300 hidden md:flex items-center justify-center z-[10001] hover:scale-110 active:scale-95 group/nav">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <!-- Mobile Navigation Controls -->
+                <div class="absolute bottom-6 flex gap-4 md:hidden z-[10001]">
+                    <button onclick="navigateGallery(-1)" class="p-4 rounded-full bg-primary shadow-xl text-white">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 12H5"></path>
+                            <path d="M12 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button onclick="navigateGallery(1)" class="p-4 rounded-full bg-primary shadow-xl text-white">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
             <div id="modal-thumbnails-container"
@@ -402,6 +434,7 @@ $gallery_images_json = json_encode($images);
 
     <script>
         const propertyImages = <?php echo $gallery_images_json; ?>;
+        let currentGalleryIndex = 0;
 
         document.addEventListener('DOMContentLoaded', () => {
             const sideContainer = document.getElementById('side-gallery-container');
@@ -430,7 +463,7 @@ $gallery_images_json = json_encode($images);
                 thumb.src = `${img}?auto=compress&cs=tinysrgb&w=300`;
                 thumb.className =
                     "modal-thumb w-16 h-16 md:w-20 md:h-20 rounded-2xl object-cover cursor-pointer border-2 border-transparent opacity-40 hover:opacity-100 transition-all flex-shrink-0";
-                thumb.onclick = () => updateModalImg(thumb, img);
+                thumb.onclick = () => updateModalImg(thumb, img, index);
                 modalThumbContainer.appendChild(thumb);
             });
 
@@ -461,8 +494,9 @@ $gallery_images_json = json_encode($images);
                 modalContainer.classList.remove('scale-95', 'opacity-0');
             }, 10);
 
-            const firstThumb = document.querySelector('.modal-thumb');
-            if (firstThumb) updateModalImg(firstThumb, propertyImages[0]);
+            const allThumbs = document.querySelectorAll('.modal-thumb');
+            const targetThumb = allThumbs[currentGalleryIndex] || allThumbs[0];
+            if (targetThumb) updateModalImg(targetThumb, propertyImages[currentGalleryIndex] || propertyImages[0], currentGalleryIndex);
         }
 
         function closeModal() {
@@ -475,7 +509,16 @@ $gallery_images_json = json_encode($images);
             }, 400);
         }
 
-        function updateModalImg(el, fullUrl) {
+        function navigateGallery(direction) {
+            currentGalleryIndex = (currentGalleryIndex + direction + propertyImages.length) % propertyImages.length;
+            const allThumbs = document.querySelectorAll('.modal-thumb');
+            const thumb = allThumbs[currentGalleryIndex];
+            const img = propertyImages[currentGalleryIndex];
+            if (thumb) updateModalImg(thumb, img, currentGalleryIndex);
+        }
+
+        function updateModalImg(el, fullUrl, index) {
+            currentGalleryIndex = index;
             modalMainImg.classList.remove('opacity-100', 'scale-100');
             modalMainImg.classList.add('opacity-0', 'scale-95');
             setTimeout(() => {
@@ -500,9 +543,11 @@ $gallery_images_json = json_encode($images);
         });
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                closeModal();
-            }
+            if (modal.classList.contains('hidden')) return;
+            
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'ArrowRight') navigateGallery(1);
+            if (e.key === 'ArrowLeft') navigateGallery(-1);
         });
     </script>
     <script>
