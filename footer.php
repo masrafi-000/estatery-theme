@@ -42,8 +42,8 @@ $social_links = [
             <!-- Agency Brand -->
             <div class="lg:col-span-4 space-y-8">
                 <a href="<?php echo \Estatery\Core\Translator::getInstance()->resolve_nav_url('/'); ?>" class="inline-block transition-transform hover:scale-105 duration-300">
-                    <img src="<?php echo get_template_directory_uri(); ?>/public/images/Logo.png"
-                        alt="<?php echo esc_attr( t('brand.name') ); ?>" class="h-24 md:h-32 w-auto">
+                    <img src="<?php echo get_template_directory_uri(); ?>/public/images/logo-ll.png"
+                        alt="<?php echo esc_attr( t('brand.name') ); ?>" class="h-16 md:h-20 w-auto">
                 </a>
                 <p class="text-slate-500 leading-relaxed max-w-sm text-sm">
                     <?php echo esc_html( t('footer.tagline') ); ?>
