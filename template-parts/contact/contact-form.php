@@ -1,5 +1,5 @@
 <?php $form = t('pages.contact.form'); ?>
-<div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-secondary/5">
+<div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-secondary/5 js-contact-form-card">
     <h3 class="text-2xl font-bold text-secondary mb-8"><?php echo esc_html($form['title']); ?></h3>
 
     <form id="estatery-contact-form" class="space-y-6">

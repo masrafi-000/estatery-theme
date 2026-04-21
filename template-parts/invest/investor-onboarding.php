@@ -1,9 +1,9 @@
 <?php $onboarding = t('pages.invest.onboarding'); ?>
 
-<section class="py-24 bg-white" id="investment-onboarding">
+<section class="py-24 bg-white js-onboarding-section">
     <div class="container mx-auto px-6 max-w-6xl">
 
-        <div class="max-w-3xl mx-auto text-center mb-16">
+        <div class="max-w-3xl mx-auto text-center mb-16 js-onboarding-header">
             <span class="inline-block text-primary font-bold uppercase tracking-[0.3em] text-[10px] mb-2">
                 <?php echo esc_html($onboarding['badge']); ?>
             </span>
@@ -15,7 +15,7 @@
             </p>
         </div>
 
-        <div class="w-full">
+        <div class="w-full js-onboarding-form">
             <div class="bg-[#fcfcfc] p-8 md:p-14 rounded-3xl border border-secondary/5 shadow-sm">
                 <form id="investor-onboarding-form" class="space-y-12">
                     <?php wp_nonce_field('estatery_invest_nonce', 'invest_nonce'); ?>
@@ -132,6 +132,60 @@
         </div>
 
         <script>
+        (function() {
+            function initInvestorOnboardingAnims() {
+                if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+                
+                gsap.registerPlugin(ScrollTrigger);
+                const section = document.querySelector(".js-onboarding-section");
+                if (!section) return;
+
+                const headerItems = section.querySelectorAll(".js-onboarding-header > *");
+                const formCard    = section.querySelector(".js-onboarding-form");
+
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 82%",
+                        toggleActions: "play none none none",
+                        once: true
+                    }
+                });
+
+                // 1. Header
+                if (headerItems.length) {
+                    gsap.set(headerItems, { opacity: 0, y: 30 });
+                    tl.to(headerItems, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        stagger: 0.12,
+                        ease: "power3.out"
+                    });
+                }
+
+                // 2. Form Card
+                if (formCard) {
+                    gsap.set(formCard, { opacity: 0, y: 40 });
+                    tl.to(formCard, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        ease: "power3.out",
+                        clearProps: "transform,opacity"
+                    }, "-=0.6");
+                }
+            }
+
+            if (document.readyState === 'loading') {
+                window.addEventListener('load', initInvestorOnboardingAnims);
+            } else {
+                initInvestorOnboardingAnims();
+            }
+        })();
+        </script>
+
+        <script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('investor-onboarding-form');
             if (!form) return;
@@ -185,4 +239,4 @@
         </script>
 
     </div>
-</section>
+</section>

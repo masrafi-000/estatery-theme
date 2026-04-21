@@ -1,28 +1,25 @@
 <?php $info = t('pages.contact.info'); ?>
-<section class="py-24 bg-[#fcfcfc]" id="contact-page">
+<<section class="py-24 bg-[#fcfcfc] js-contact-section" id="contact-page">
     <div class="container mx-auto px-6 max-w-7xl">
 
-        <div class="max-w-3xl mx-auto text-center mb-20">
-            <span class="inline-block text-secondary font-bold uppercase tracking-[0.3em] text-[10px] ">
+        <div class="max-w-3xl mx-auto text-center mb-20 js-contact-header">
+            <span class="inline-block text-secondary font-bold uppercase tracking-[0.3em] text-[10px]">
                 <?php echo esc_html($info['badge']); ?>
             </span>
             <h2 class="text-4xl md:text-5xl font-bold text-secondary mb-6 leading-tight">
                 <?php echo esc_html($info['title']); ?>
             </h2>
-
         </div>
 
         <div class="flex flex-col lg:flex-row gap-16 items-start">
 
-            <div class="w-full lg:w-2/3">
+            <div class="w-full lg:w-2/3 js-contact-form-wrap">
                 <?php
-
                 get_template_part('template-parts/contact/contact-form');
                 ?>
             </div>
 
-            <div
-                class="w-full lg:w-1/3 space-y-10 bg-white p-8 md:p-10 rounded-[2.5rem] border border-secondary/5 shadow-sm">
+            <div class="w-full lg:w-1/3 space-y-10 bg-white p-8 md:p-10 rounded-[2.5rem] border border-secondary/5 shadow-sm js-contact-details">
 
                 <div class="space-y-6 pb-6 border-b border-secondary/5">
                     <div class="text-2xl font-black text-secondary uppercase tracking-tighter">
@@ -114,8 +111,7 @@
             </div>
         </div>
 
-        <div
-            class="mt-20 w-full h-[450px] rounded-[2.5rem] overflow-hidden border border-secondary/5 shadow-2xl  transition-all duration-700 hover:grayscale-0">
+        <div class="mt-20 w-full h-[450px] rounded-[2.5rem] overflow-hidden border border-secondary/5 shadow-2xl transition-all duration-700 hover:grayscale-0 js-contact-map">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3590.963471012879!2d-80.13264982361663!3d25.77174780821953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b48999335805%3A0xc6829148d8881b7a!2s2892%20Ocean%20Dr%2C%20Miami%20Beach%2C%20FL%2033139%2C%20USA!5e0!3m2!1sen!2sbd!4v1713175000000!5m2!1sen!2sbd"
                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
@@ -124,3 +120,81 @@
 
     </div>
 </section>
+
+<script>
+(function() {
+    function initContactPageAnims() {
+        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+        
+        gsap.registerPlugin(ScrollTrigger);
+        const section = document.querySelector(".js-contact-section");
+        if (!section) return;
+
+        const headerItems = section.querySelectorAll(".js-contact-header > *");
+        const formCard    = section.querySelector(".js-contact-form-card");
+        const infoCard    = section.querySelector(".js-contact-details");
+        const mapArea     = section.querySelector(".js-contact-map");
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top 82%",
+                toggleActions: "play none none none",
+                once: true
+            }
+        });
+
+        // 1. Header
+        if (headerItems.length) {
+            gsap.set(headerItems, { opacity: 0, y: 30 });
+            tl.to(headerItems, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                stagger: 0.12,
+                ease: "power3.out"
+            });
+        }
+
+        // 2. Form and Info Cards (Staggered entrance)
+        if (formCard || infoCard) {
+            const cards = [];
+            if (formCard) {
+                gsap.set(formCard, { opacity: 0, x: -30 });
+                cards.push(formCard);
+            }
+            if (infoCard) {
+                gsap.set(infoCard, { opacity: 0, x: 30 });
+                cards.push(infoCard);
+            }
+
+            tl.to(cards, {
+                opacity: 1,
+                x: 0,
+                duration: 1,
+                stagger: 0.2,
+                ease: "power3.out",
+                clearProps: "transform,opacity"
+            }, "-=0.6");
+        }
+
+        // 3. Map Reveal
+        if (mapArea) {
+            gsap.set(mapArea, { opacity: 0, scale: 0.96, y: 30 });
+            tl.to(mapArea, {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                duration: 1.2,
+                ease: "power2.out"
+            }, "-=0.8");
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        window.addEventListener('load', initContactPageAnims);
+    } else {
+        initContactPageAnims();
+    }
+})();
+</script>

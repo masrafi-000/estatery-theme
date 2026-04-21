@@ -85,36 +85,7 @@ function view_url( string $view ): string {
 
     <!-- Right: View toggle + Sort -->
     <div class="flex items-center gap-3 flex-wrap">
-
-        <!-- View Toggle -->
-       <!--
         
-        <div class="flex items-center border border-slate-200 bg-white overflow-hidden">
-            <a href="<?php echo view_url('grid'); ?>"
-               class="w-10 h-10 flex items-center justify-center transition-colors duration-150
-                      <?php echo $current_view === 'grid' ? 'bg-slate-900 text-white' : 'text-slate-400 hover:text-slate-700 hover:bg-slate-50'; ?>"
-               title="<?php echo esc_attr( t('pages.properties.grid_header.view_grid') ?? 'Grid view' ); ?>">
-                <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="1" y="1" width="6" height="6" rx="0.75"/>
-                    <rect x="9" y="1" width="6" height="6" rx="0.75"/>
-                    <rect x="1" y="9" width="6" height="6" rx="0.75"/>
-                    <rect x="9" y="9" width="6" height="6" rx="0.75"/>
-                </svg>
-            </a>
-            <span class="w-px h-5 bg-slate-200"></span>
-            <a href="<?php echo view_url('list'); ?>"
-               class="w-10 h-10 flex items-center justify-center transition-colors duration-150
-                      <?php echo $current_view === 'list' ? 'bg-slate-900 text-white' : 'text-slate-400 hover:text-slate-700 hover:bg-slate-50'; ?>"
-               title="<?php echo esc_attr( t('pages.properties.grid_header.view_list') ?? 'List view' ); ?>">
-                <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="1"  y="2.5" width="14" height="1.5" rx="0.75"/>
-                    <rect x="1"  y="7"   width="14" height="1.5" rx="0.75"/>
-                    <rect x="1"  y="11.5" width="14" height="1.5" rx="0.75"/>
-                </svg>
-            </a>
-        </div>
-
-        -->
         <!-- Divider -->
         <span class="hidden sm:block w-px h-6 bg-slate-200"></span>
 

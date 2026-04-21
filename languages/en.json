@@ -1,593 +1,587 @@
 {
-    "brand": {
-        "tagline": "Real Estate Excellence"
-    },
-    "js": {
-        "applied": "Applied!",
-        "from": "from",
-        "up_to": "up to",
-        "beds_label": "beds",
-        "baths_label": "baths",
-        "success_inquiry": "Thank you! Your inquiry has been sent. We will contact you soon.",
-        "close": "Close",
-        "error_generic": "Something went wrong. Please try again.",
-        "fill_required": "Please fill all required fields."
-    },
-    "header": {
-        "language_label": "Language:",
-        "navigation": [
-            {
-                "label": "Home",
-                "url": "\/"
-            },
-            {
-                "label": "Properties",
-                "url": "\/properties"
-            },
-            {
-                "label": "About",
-                "url": "\/about"
-            },
-            {
-                "label": "Invest",
-                "url": "\/invest"
-            },
-            {
-                "label": "Contact",
-                "url": "\/contact"
-            }
-        ],
-        "actions": {
-            "contact": "Contact Us",
-            "agent": "Become Agent"
-        }
-    },
-    "home": {
-        "hero": {
-            "agency_label": "Real Estate Agency",
-            "title": "Find Your Dream <br class=\"hidden md:block\"> Apartment",
-            "description": "Explore our curated list of luxury properties designed for your ultimate comfort and style.",
-            "tabs": {
-                "buy": "Buy",
-                "rent": "Rent"
-            },
-            "form": {
-                "search_label": "Search Property",
-                "search_placeholder": "Property name...",
-                "location_label": "Location",
-                "location_placeholder": "Select Location",
-                "type_label": "Property Type",
-                "location_options": {
-                    "dhaka": "Dhaka",
-                    "chittagong": "Chittagong",
-                    "mymensingh": "Mymensingh"
-                },
-                "property_types": {
-                    "apartment": "Apartment",
-                    "luxury": "Luxury Estate",
-                    "villa": "Villa"
-                },
-                "search_button": "Search Now"
-            }
-        },
-        "featured": {
-            "label": "Exclusive Listings",
-            "title": "Featured Properties",
-            "description": "Handpicked properties just for you.",
-            "beds": "Beds",
-            "baths": "Baths",
-            "pool": "Pool",
-            "sqft": "Sqft",
-            "view_all": "ALL PROPERTIES"
-        },
-        "why_choose": {
-            "title": "Why Choose Capital Union",
-            "description": "We provide everything you need to find, buy, or rent your perfect property with confidence.",
-            "features": [
-                {
-                    "title": "Verified Listings",
-                    "description": "All properties are verified and authenticated to ensure you get accurate information."
-                },
-                {
-                    "title": "Market Insights",
-                    "description": "Access real-time market data and trends to make informed investment decisions."
-                },
-                {
-                    "title": "Expert Agents",
-                    "description": "Work with experienced real estate professionals who understand your needs."
-                },
-                {
-                    "title": "24\/7 Support",
-                    "description": "Our dedicated support team is available around the clock to assist you."
-                },
-                {
-                    "title": "Best Deals",
-                    "description": "Get access to exclusive listings and the best deals in the market."
-                },
-                {
-                    "title": "Personalized Service",
-                    "description": "Receive tailored recommendations based on your preferences and requirements."
-                }
-            ]
-        },
-        "stats": {
-            "listed": "Properties Listed",
-            "families": "Happy Families",
-            "visitors": "Monthly Visitors",
-            "satisfaction": "Customer Satisfaction"
-        },
-        "faq": {
-            "title": "Frequently Asked Questions",
-            "description": "Everything you need to know about the platform.",
-            "help_title": "Need More Help?",
-            "help_description": "Our support team is here for you.",
-            "contact_button": "Contact Support"
-        }
-    },
-    "pages": {
-        "about": {
-            "hero": {
-                "title": "About Us",
-                "bg_text": "About",
-                "subtitle": "Contact Altara for Elegant Solutions in Property Investments"
-            },
-            "story": {
-                "badge": "Our Story",
-                "title": "We Develop Quality Project Since 1988",
-                "description": "Nulla et sapien felis. Cras ex sapien, eleifend ac orci id, maximus aliquet ipsum. Duis in maximus nisl. Curabitur vitae mi fermentum, ullamcorper.",
-                "features": [
-                    "Duis semper, nisi eget accumsan cursus, nisl ligula sagittis.",
-                    "Pellentesque metus turpis, efficitur at turpis semper.",
-                    "Curabitur efficitur et massa in elementum.",
-                    "Morbi gravida sit amet sem a pharetra."
-                ]
-            },
-            "how_we_work": {
-                "badge": "Work Flow",
-                "title": "How We Bring Your <br> <span class='text-secondary'>Vision to Life<\/span>",
-                "steps": [
-                    {
-                        "id": "01",
-                        "title": "Discovery",
-                        "description": "We listen to your goals and analyze site potential to create a strategic roadmap."
-                    },
-                    {
-                        "id": "02",
-                        "title": "Design",
-                        "description": "Our architects craft bespoke blueprints that balance aesthetics with functionality."
-                    },
-                    {
-                        "id": "03",
-                        "title": "Build",
-                        "description": "Using premium materials and expert labor, we transform designs into concrete reality."
-                    },
-                    {
-                        "id": "04",
-                        "title": "Deliver",
-                        "description": "A final rigorous quality check ensures everything meets our 1988-standard of excellence."
-                    }
-                ]
-            },
-            "philosophy": {
-                "badge": "Our Philosophy",
-                "title": "The Core Pillars That <br> Define Our Craft",
-                "values": [
-                    {
-                        "id": "01",
-                        "title": "Architectural Integrity",
-                        "description": "We prioritize structural soundness and timeless design over passing trends, ensuring every project lasts for generations."
-                    },
-                    {
-                        "id": "02",
-                        "title": "Sustainable Innovation",
-                        "description": "Integrating smart technology and eco-friendly materials to reduce carbon footprints without sacrificing luxury."
-                    },
-                    {
-                        "id": "03",
-                        "title": "Client-Centric Vision",
-                        "description": "Your vision is our blueprint. We maintain transparent communication from the first sketch to the final brick."
-                    }
-                ]
-            },
-            "leadership": {
-                "badge": "Executive Message",
-                "years_label": "Years of Integrity",
-                "title": "Designing the <span class='italic text-secondary'>Future<\/span>, <br> Respecting the <span class='italic'>Past<\/span>.",
-                "message": "Our journey began in 1988 with a simple blueprint: to build with uncompromising quality. Today, we continue to bridge the gap between architectural innovation and human-centric design. We don't just develop projects; we cultivate legacies.",
-                "name": "Asif Ahamed",
-                "role": "Founder & Managing Director"
-            }
-        },
-        "properties": {
-            "title": "Exclusive Properties",
-            "subtitle": "Discover a curated selection of our finest listings.",
-            "hero_banner": {
-                "bg_text": "Market"
-            },
-            "grid_header": {
-                "showing_result": "Search Results",
-                "items_available": "Properties Found",
-                "range": "Showing %1$s–%2$s",
-                "no_results": "Try adjusting your filters.",
-                "view_grid": "Grid view",
-                "view_list": "List view",
-                "sort_by": "Sort by",
-                "filters_active": "Filters Active"
-            },
-            "sort": {
-                "label": "Sort By",
-                "newest": "Newest First",
-                "oldest": "Oldest First",
-                "price_low": "Price: Low to High",
-                "price_high": "Price: High to Low",
-                "area_low": "Area: Smallest First",
-                "area_high": "Area: Largest First"
-            },
-            "pagination": {
-                "prev": "Previous page",
-                "next": "Next page",
-                "go_to": "Go to page %s"
-            },
-            "filters": {
-                "all": "All Properties",
-                "buy": "For Sale",
-                "rent": "For Rent",
-                "type": "Property Type",
-                "location": "Location",
-                "location_placeholder": "City, address, zip…",
-                "price": "Price Range",
-                "search": "Search Properties",
-                "min_price": "Min Price",
-                "max_price": "Max Price",
-                "min_placeholder": "Min",
-                "max_placeholder": "Max",
-                "beds": "Bedrooms",
-                "baths": "Bathrooms",
-                "any": "Any",
-                "status": "Property Status",
-                "all_tabs": "All",
-                "new_build": "New Build",
-                "features": "Amenities",
-                "reset": "Reset Filters",
-                "reset_button": "Reset all",
-                "apply": "Apply Filters",
-                "apply_button": "Apply filters",
-                "filter_results": "Filter results",
-                "filters_active": "Filters applied",
-                "refine_search": "Refine your search",
-                "sidebar_sr_description": "Property search filter sidebar with status, type, price, bedrooms, and bathrooms filters",
-                "plus_label": "%s+"
-            },
-            "meta": {
-                "sale": "For Sale",
-                "rent": "For Rent",
-                "apartment": "Apartment",
-                "villa": "Villa",
-                "penthouse": "Penthouse",
-                "townhouse": "Townhouse",
-                "shop": "Commercial",
-                "not_found": "Property not found."
-            },
-            "amenities": {
-                "sea_view": "Sea View",
-                "private_pool": "Private Pool",
-                "parking": "Parking Space",
-                "garden": "Private Garden",
-                "ac": "Air Conditioning",
-                "security": "24/7 Security",
-                "gym": "Fitness Center",
-                "wifi": "High-speed WiFi"
-            },
-            "categories": {
-                "title": "Explore by Category",
-                "subtitle": "Find the perfect type of home that suits your lifestyle.",
-                "types": [
-                    {
-                        "name": "Villa",
-                        "slug": "villa",
-                        "count": "View All",
-                        "icon": "home"
-                    },
-                    {
-                        "name": "Apartment",
-                        "slug": "apartment",
-                        "count": "View All",
-                        "icon": "building"
-                    },
-                    {
-                        "name": "Shop",
-                        "slug": "shop",
-                        "count": "View All",
-                        "icon": "office"
-                    },
-                    {
-                        "name": "Townhouse",
-                        "slug": "townhouse",
-                        "count": "View All",
-                        "icon": "townhouse"
-                    },
-                    {
-                        "name": "Bungalow",
-                        "slug": "bungalow",
-                        "count": "View All",
-                        "icon": "home"
-                    }
-                ]
-            },
-            "actions": {
-                "view_details": "View Details"
-            },
-            "cta": {
-                "title": "List Your Property with Us",
-                "subtitle": "Join thousands of satisfied homeowners who found the right buyers through our platform.",
-                "button": "Get Started Now",
-                "eyebrow": "Opportunity Awaits",
-                "stat_listings": "Active Listings",
-                "stat_clients": "Happy Clients",
-                "stat_experience": "Years Experience",
-                "button_primary": "Browse Listings",
-                "button_secondary": "Talk to an Agent",
-                "badge_licensed": "Licensed & Regulated",
-                "badge_secure": "Secure Transactions",
-                "badge_support": "24\/7 Client Support",
-                "badge_verified": "Verified Listings Only"
-            }
-        },
-        "contact": {
-            "hero": {
-                "title": "Get in Touch",
-                "bg_text": "Contact",
-                "subtitle": "Reach out to Altara's dedicated team for tailored property investment strategies and expert guidance."
-            },
-            "info": {
-                "badge": "Get In Touch",
-                "title": "Contact Us",
-                "company": "Capital Union",
-                "description": "Expert guidance in property investments and premium real estate solutions across Bangladesh.",
-                "office_label": "Office Address",
-                "office_address": "Uttara Sector 07, Dhaka - Mymensingh Highway, Bangladesh",
-                "email_label": "Email Us",
-                "phone_label": "Call Directly"
-            },
-            "form": {
-                "title": "Send us a Message",
-                "first_name_label": "First Name",
-                "first_name_placeholder": "First name",
-                "last_name_label": "Last Name",
-                "last_name_placeholder": "Last name",
-                "email_label": "Email address",
-                "email_placeholder": "Email address",
-                "phone_label": "Phone number",
-                "phone_placeholder": "Phone number",
-                "property_info_label": "Property Information",
-                "property_type_placeholder": "Type",
-                "zip_label": "Zip code",
-                "zip_placeholder": "Zip code",
-                "city_label": "City",
-                "city_placeholder": "City",
-                "bedrooms_label": "N. of bedrooms",
-                "bedrooms_placeholder": "N. of bedrooms",
-                "bathrooms_label": "N. of bathrooms",
-                "bathrooms_placeholder": "N. of bathrooms",
-                "budget_label": "Your budget",
-                "budget_placeholder": "Your budget",
-                "submit": "Submit Application"
-            }
-        },
-        "invest": {
-            "hero": {
-                "title": "Investment Opportunities",
-                "bg_text": "Invest",
-                "subtitle": "Secure your future with high-yield real estate portfolios and exclusive property developments."
-            },
-            "philosophy": {
-                "badge": "Institutional Grade Strategy",
-                "title": "A Disciplined Approach To <br> Capital Preservation.",
-                "focus_area_label": "Focus Area",
-                "focus_area_title": "Physical Asset Integrity",
-                "description": "At Capital Union, our philosophy is rooted in the preservation of generational wealth. We prioritize physical assets with long-term social utility.",
-                "quote": "\"We do not chase market trends; instead, we focus on intrinsic value and economic resilience to secure the future for our partners.\"",
-                "items": [
-                    {
-                        "id": "01",
-                        "title": "Risk Discipline",
-                        "description": "Conservative entry points with high-margin safety nets for every capital deployment."
-                    },
-                    {
-                        "id": "02",
-                        "title": "Asset Preservation",
-                        "description": "Focusing on premium locations and sustainable structures that endure time."
-                    }
-                ]
-            },
-            "growth": {
-                "title": "Smart Real Estate Investing",
-                "subtitle": "Build your wealth through high-growth real estate assets in prime locations.",
-                "items": [
-                    {
-                        "title": "Consistent ROI",
-                        "description": "Enjoy annual returns ranging from 8% to 15% on prime commercial and residential properties."
-                    },
-                    {
-                        "title": "Secure Assets",
-                        "description": "Every property is 100% legally vetted with physical title deeds and government approval."
-                    },
-                    {
-                        "title": "Low Entry Barrier",
-                        "description": "Start your real estate journey with a minimum investment. Luxury property ownership is now accessible."
-                    }
-                ],
-                "cta": {
-                    "title": "Ready to secure your future?",
-                    "subtitle": "Download our 2024 Investment Guide for free.",
-                    "button": "Get Investment Guide"
-                }
-            },
-            "onboarding": {
-                "badge": "Exclusive Onboarding",
-                "title": "Start Your Investment Journey",
-                "subtitle": "Complete the inquiry form to help our capital relations team understand your objectives.",
-                "form": {
-                    "name_label": "Full Legal Name *",
-                    "name_placeholder": "e.g. Ahamed Asif",
-                    "email_label": "Email Address *",
-                    "email_placeholder": "e.g. asif@example.com",
-                    "questions": [
-                        "Existing Client?",
-                        "Own Spanish Property?",
-                        "Tax Resident of Spain?"
-                    ],
-                    "options": {
-                        "no": "No",
-                        "yes": "Yes"
-                    },
-                    "interest_label": "Areas of Interest *",
-                    "interests": [
-                        "Land plots",
-                        "Residential",
-                        "Commercial",
-                        "Hotels",
-                        "Agriculture",
-                        "Other"
-                    ],
-                    "amount_label": "Investment Amount *",
-                    "amounts": [
-                        "€1,000,000 - €2,000,000",
-                        "€2,000,000 - €3,000,000",
-                        "€3,000,000 - €4,000,000",
-                        "€4,000,000 - €5,000,000",
-                        "€5,000,000 - €10,000,000",
-                        "€10,000,000 - €20,000,000",
-                        "€20,000,000+"
-                    ],
-                    "submit": "Submit Application",
-                    "footer": "Encrypted & Confidential Portal"
-                }
-            }
-        },
-        "error_404": {
-            "bg_text": "404",
-            "subtitle": "Oops! Page Not Found",
-            "message": "We've searched our entire portfolio, but we couldn't find anything at",
-            "search_placeholder": "Search for properties...",
-            "back_home": "Back to Home",
-            "view_properties": "View All Properties"
-        },
-        "property_details": {
-            "new_build": "New Build",
-            "for": "For",
-            "description": "Description",
-            "features": "Features",
-            "bedrooms": "Bedrooms",
-            "bathrooms": "Bathrooms",
-            "building": "Building",
-            "lot_size": "Lot Size",
-            "view_photos": "View Photos",
-            "form": {
-                "contact_us": "Contact Us",
-                "name": "Name",
-                "number": "Number",
-                "email": "Email",
-                "message": "I'm interested in this property.",
-                "submit": "SEND MESSAGE"
-            }
-        },
-        "privacy_policy": {
-            "hero": {
-                "title": "Privacy Policy",
-                "bg_text": "Privacy",
-                "subtitle": "How we collect, use, and handle your data."
-            },
-            "content": {
-                "title": "Privacy Policy",
-                "description": "This Privacy Policy outlines how your data is managed across our platforms. We respect your privacy and are committed to protecting it through our compliance with this policy.",
-                "sections": [
-                    {
-                        "title": "1. Information Collection",
-                        "text": "We collect several different types of information for various purposes to provide and improve our Service to you. This includes personally identifiable information such as email address, first name and last name, phone number, and address."
-                    },
-                    {
-                        "title": "2. How We Use Your Data",
-                        "text": "Capital Union uses the collected data for various purposes: to provide and maintain our Service, to notify you about changes, to provide customer support, to gather analysis so that we can improve our Service, and to monitor the usage of our Service."
-                    },
-                    {
-                        "title": "3. Data Security",
-                        "text": "The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security."
-                    }
-                ]
-            }
-        },
-        "terms_of_service": {
-            "hero": {
-                "title": "Terms of Service",
-                "bg_text": "Terms",
-                "subtitle": "Rules and guidelines for using our platform."
-            },
-            "content": {
-                "title": "Terms of Service",
-                "description": "By accessing or using our platform, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access our services.",
-                "sections": [
-                    {
-                        "title": "1. Intellectual Property",
-                        "text": "The Service and its original content, features, and functionality are and will remain the exclusive property of Capital Union and its licensors. The Service is protected by copyright, trademark, and other laws of both the country and foreign countries."
-                    },
-                    {
-                        "title": "2. User Obligations",
-                        "text": "When you create an account with us, you must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service."
-                    },
-                    {
-                        "title": "3. Limitation of Liability",
-                        "text": "In no event shall Capital Union, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses."
-                    }
-                ]
-            }
-        },
-        "cookie_policy": {
-            "hero": {
-                "title": "Cookie Policy",
-                "bg_text": "Cookies",
-                "subtitle": "Information about our use of cookies."
-            },
-            "content": {
-                "title": "Cookie Policy",
-                "description": "Our site uses cookies to distinguish you from other users. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site.",
-                "sections": [
-                    {
-                        "title": "1. Types of Cookies We Use",
-                        "text": "We use Session Cookies to operate our Service. We use Preference Cookies to remember your preferences and various settings. We use Security Cookies for security purposes. All of these ensure an optimal and seamless browsing experience."
-                    },
-                    {
-                        "title": "2. Third-Party Cookies",
-                        "text": "In addition to our own cookies, we may also use various third-parties cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and so on. These providers have their own strict data policies."
-                    },
-                    {
-                        "title": "3. Managing Your Cookies",
-                        "text": "You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service. We recommend retaining them for full platform usage."
-                    }
-                ]
-            }
-        }
-    },
-    "footer": {
-        "tagline": "Find your dream home with the most comprehensive real estate platform.",
-        "copyright": "All rights reserved.",
-        "menus": {
-            "quick_links": "Quick Links",
-            "company": "Company",
-            "legal": "Legal"
-        },
-        "links": {
-            "buy": "Buy Property",
-            "rent": "Rent Property",
-            "sell": "Sell Property",
-            "services": "Services",
-            "about": "About Us",
-            "contact": "Contact",
-            "careers": "Careers",
-            "blog": "Blog",
-            "privacy": "Privacy Policy",
-            "terms": "Terms of Service",
-            "cookie": "Cookie Policy"
-        }
+  "brand": {
+    "name": "Capital Union Investment",
+    "platform": "Capital Union Investment",
+    "email": "info@altara.com",
+    "tagline": "Real Estate Excellence"
+  },
+  "js": {
+    "applied": "Applied!",
+    "from": "from",
+    "up_to": "up to",
+    "beds_label": "beds",
+    "baths_label": "baths",
+    "success_inquiry": "Thank you! Your inquiry has been sent. We will contact you soon.",
+    "close": "Close",
+    "error_generic": "Something went wrong. Please try again.",
+    "fill_required": "Please fill all required fields."
+  },
+  "header": {
+    "language_label": "Language:",
+    "navigation": [
+      {
+        "label": "Home",
+        "url": "\/"
+      },
+      {
+        "label": "Properties",
+        "url": "\/properties"
+      },
+      {
+        "label": "About",
+        "url": "\/about"
+      },
+      {
+        "label": "Invest",
+        "url": "\/invest"
+      },
+      {
+        "label": "Contact",
+        "url": "\/contact"
+      }
+    ],
+    "actions": {
+      "contact": "Contact Us",
+      "agent": "Become Agent"
     }
+  },
+  "home": {
+    "hero": {
+      "agency_label": "Real Estate Agency",
+      "title": "Find Your Dream <br class=\"hidden md:block\"> Apartment",
+      "description": "Explore our curated list of luxury properties designed for your ultimate comfort and style.",
+      "tabs": {
+        "buy": "Buy",
+        "rent": "Rent"
+      },
+      "form": {
+        "search_label": "Search Property",
+        "search_placeholder": "Property name...",
+        "location_label": "Location",
+        "location_placeholder": "Select Location",
+        "type_label": "Property Type",
+        "location_options": {
+          "dhaka": "Dhaka",
+          "chittagong": "Chittagong",
+          "mymensingh": "Mymensingh"
+        },
+        "property_types": {
+          "apartment": "Apartment",
+          "luxury": "Luxury Estate",
+          "villa": "Villa"
+        },
+        "search_button": "Search Now"
+      }
+    },
+    "featured": {
+      "label": "Exclusive Listings",
+      "title": "Featured Properties",
+      "description": "Handpicked properties just for you.",
+      "beds": "Beds",
+      "baths": "Baths",
+      "pool": "Pool",
+      "sqft": "Sqft",
+      "view_all": "ALL PROPERTIES"
+    },
+    "why_choose": {
+      "title": "Why Choose Capital Union",
+      "description": "We provide everything you need to find, buy, or rent your perfect property with confidence.",
+      "features": [
+        {
+          "title": "Verified Listings",
+          "description": "All properties are verified and authenticated to ensure you get accurate information."
+        },
+        {
+          "title": "Market Insights",
+          "description": "Access real-time market data and trends to make informed investment decisions."
+        },
+        {
+          "title": "Expert Agents",
+          "description": "Work with experienced real estate professionals who understand your needs."
+        },
+        {
+          "title": "24\/7 Support",
+          "description": "Our dedicated support team is available around the clock to assist you."
+        },
+        {
+          "title": "Best Deals",
+          "description": "Get access to exclusive listings and the best deals in the market."
+        },
+        {
+          "title": "Personalized Service",
+          "description": "Receive tailored recommendations based on your preferences and requirements."
+        }
+      ]
+    },
+    "stats": {
+      "listed": "Properties Listed",
+      "families": "Happy Families",
+      "visitors": "Monthly Visitors",
+      "satisfaction": "Customer Satisfaction"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Everything you need to know about the platform.",
+      "help_title": "Need More Help?",
+      "help_description": "Our support team is here for you.",
+      "contact_button": "Contact Support"
+    }
+  },
+  "pages": {
+    "about": {
+      "hero": {
+        "title": "About Us",
+        "bg_text": "About",
+        "subtitle": "Contact Altara for Elegant Solutions in Property Investments"
+      },
+      "story": {
+        "badge": "Our Story",
+        "title": "We Develop Quality Project Since 1988",
+        "description": "Nulla et sapien felis. Cras ex sapien, eleifend ac orci id, maximus aliquet ipsum. Duis in maximus nisl. Curabitur vitae mi fermentum, ullamcorper.",
+        "features": [
+          "Duis semper, nisi eget accumsan cursus, nisl ligula sagittis.",
+          "Pellentesque metus turpis, efficitur at turpis semper.",
+          "Curabitur efficitur et massa in elementum.",
+          "Morbi gravida sit amet sem a pharetra."
+        ]
+      },
+      "how_we_work": {
+        "badge": "Work Flow",
+        "title": "How We Bring Your <br> <span class='text-secondary'>Vision to Life<\/span>",
+        "steps": [
+          {
+            "id": "01",
+            "title": "Discovery",
+            "description": "We listen to your goals and analyze site potential to create a strategic roadmap."
+          },
+          {
+            "id": "02",
+            "title": "Design",
+            "description": "Our architects craft bespoke blueprints that balance aesthetics with functionality."
+          },
+          {
+            "id": "03",
+            "title": "Build",
+            "description": "Using premium materials and expert labor, we transform designs into concrete reality."
+          },
+          {
+            "id": "04",
+            "title": "Deliver",
+            "description": "A final rigorous quality check ensures everything meets our 1988-standard of excellence."
+          }
+        ]
+      },
+      "philosophy": {
+        "badge": "Our Philosophy",
+        "title": "The Core Pillars That <br> Define Our Craft",
+        "values": [
+          {
+            "id": "01",
+            "title": "Architectural Integrity",
+            "description": "We prioritize structural soundness and timeless design over passing trends, ensuring every project lasts for generations."
+          },
+          {
+            "id": "02",
+            "title": "Sustainable Innovation",
+            "description": "Integrating smart technology and eco-friendly materials to reduce carbon footprints without sacrificing luxury."
+          },
+          {
+            "id": "03",
+            "title": "Client-Centric Vision",
+            "description": "Your vision is our blueprint. We maintain transparent communication from the first sketch to the final brick."
+          }
+        ]
+      },
+      "leadership": {
+        "badge": "Executive Message",
+        "years_label": "Years of Integrity",
+        "title": "Designing the <span class='italic text-secondary'>Future<\/span>, <br> Respecting the <span class='italic'>Past<\/span>.",
+        "message": "Our journey began in 1988 with a simple blueprint: to build with uncompromising quality. Today, we continue to bridge the gap between architectural innovation and human-centric design. We don't just develop projects; we cultivate legacies.",
+        "name": "Asif Ahamed",
+        "role": "Founder & Managing Director"
+      }
+    },
+    "properties": {
+      "title": "Exclusive Properties",
+      "subtitle": "Discover a curated selection of our finest listings.",
+      "hero_banner": {
+        "bg_text": "Market"
+      },
+      "grid_header": {
+        "showing_result": "Search Results",
+        "items_available": "Properties Found",
+        "range": "Showing %1$s–%2$s",
+        "no_results": "Try adjusting your filters.",
+        "view_grid": "Grid view",
+        "view_list": "List view",
+        "sort_by": "Sort by",
+        "filters_active": "Filters Active"
+      },
+      "sort": {
+        "label": "Sort By",
+        "newest": "Newest First",
+        "oldest": "Oldest First",
+        "price_low": "Price: Low to High",
+        "price_high": "Price: High to Low",
+        "area_low": "Area: Smallest First",
+        "area_high": "Area: Largest First"
+      },
+      "pagination": {
+        "prev": "Previous page",
+        "next": "Next page",
+        "go_to": "Go to page %s"
+      },
+      "filters": {
+        "all": "All Properties",
+        "buy": "For Sale",
+        "rent": "For Rent",
+        "type": "Property Type",
+        "location": "Location",
+        "location_placeholder": "City, address, zip…",
+        "price": "Price Range",
+        "search": "Search Properties",
+        "min_price": "Min Price",
+        "max_price": "Max Price",
+        "min_placeholder": "Min",
+        "max_placeholder": "Max",
+        "beds": "Bedrooms",
+        "baths": "Bathrooms",
+        "any": "Any",
+        "status": "Property Status",
+        "all_tabs": "All",
+        "new_build": "New Build",
+        "features": "Amenities",
+        "reset": "Reset Filters",
+        "reset_button": "Reset all",
+        "apply": "Apply Filters",
+        "apply_button": "Apply filters",
+        "filter_results": "Filter results",
+        "filters_active": "Filters applied",
+        "refine_search": "Refine your search",
+        "sidebar_sr_description": "Property search filter sidebar with status, type, price, bedrooms, and bathrooms filters",
+        "plus_label": "%s+"
+      },
+      "meta": {
+        "sale": "For Sale",
+        "rent": "For Rent",
+        "apartment": "Apartment",
+        "villa": "Villa",
+        "penthouse": "Penthouse",
+        "townhouse": "Townhouse",
+        "shop": "Commercial",
+        "not_found": "Property not found."
+      },
+
+      "categories": {
+        "title": "Explore by Category",
+        "subtitle": "Find the perfect type of home that suits your lifestyle.",
+        "types": [
+          {
+            "name": "Villa",
+            "slug": "villa",
+            "count": "View All",
+            "icon": "home"
+          },
+          {
+            "name": "Apartment",
+            "slug": "apartment",
+            "count": "View All",
+            "icon": "building"
+          },
+          {
+            "name": "Shop",
+            "slug": "shop",
+            "count": "View All",
+            "icon": "office"
+          },
+          {
+            "name": "Townhouse",
+            "slug": "townhouse",
+            "count": "View All",
+            "icon": "townhouse"
+          },
+          {
+            "name": "Bungalow",
+            "slug": "bungalow",
+            "count": "View All",
+            "icon": "home"
+          }
+        ]
+      },
+      "actions": {
+        "view_details": "View Details"
+      },
+      "cta": {
+        "title": "List Your Property with Us",
+        "subtitle": "Join thousands of satisfied homeowners who found the right buyers through our platform.",
+        "button": "Get Started Now",
+        "eyebrow": "Opportunity Awaits",
+        "stat_listings": "Active Listings",
+        "stat_clients": "Happy Clients",
+        "stat_experience": "Years Experience",
+        "button_primary": "Browse Listings",
+        "button_secondary": "Talk to an Agent",
+        "badge_licensed": "Licensed & Regulated",
+        "badge_secure": "Secure Transactions",
+        "badge_support": "24\/7 Client Support",
+        "badge_verified": "Verified Listings Only"
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Get in Touch",
+        "bg_text": "Contact",
+        "subtitle": "Reach out to Altara's dedicated team for tailored property investment strategies and expert guidance."
+      },
+      "info": {
+        "badge": "Get In Touch",
+        "title": "Contact Us",
+        "company": "Capital Union",
+        "description": "Expert guidance in property investments and premium real estate solutions across Bangladesh.",
+        "office_label": "Office Address",
+        "office_address": "Uttara Sector 07, Dhaka - Mymensingh Highway, Bangladesh",
+        "email_label": "Email Us",
+        "phone_label": "Call Directly"
+      },
+      "form": {
+        "title": "Send us a Message",
+        "first_name_label": "First Name",
+        "first_name_placeholder": "First name",
+        "last_name_label": "Last Name",
+        "last_name_placeholder": "Last name",
+        "email_label": "Email address",
+        "email_placeholder": "Email address",
+        "phone_label": "Phone number",
+        "phone_placeholder": "Phone number",
+        "property_info_label": "Property Information",
+        "property_type_placeholder": "Type",
+        "zip_label": "Zip code",
+        "zip_placeholder": "Zip code",
+        "city_label": "City",
+        "city_placeholder": "City",
+        "bedrooms_label": "N. of bedrooms",
+        "bedrooms_placeholder": "N. of bedrooms",
+        "bathrooms_label": "N. of bathrooms",
+        "bathrooms_placeholder": "N. of bathrooms",
+        "budget_label": "Your budget",
+        "budget_placeholder": "Your budget",
+        "submit": "Submit Application"
+      }
+    },
+    "invest": {
+      "hero": {
+        "title": "Investment Opportunities",
+        "bg_text": "Invest",
+        "subtitle": "Secure your future with high-yield real estate portfolios and exclusive property developments."
+      },
+      "philosophy": {
+        "badge": "Institutional Grade Strategy",
+        "title": "A Disciplined Approach To <br> Capital Preservation.",
+        "focus_area_label": "Focus Area",
+        "focus_area_title": "Physical Asset Integrity",
+        "description": "At Capital Union, our philosophy is rooted in the preservation of generational wealth. We prioritize physical assets with long-term social utility.",
+        "quote": "\"We do not chase market trends; instead, we focus on intrinsic value and economic resilience to secure the future for our partners.\"",
+        "items": [
+          {
+            "id": "01",
+            "title": "Risk Discipline",
+            "description": "Conservative entry points with high-margin safety nets for every capital deployment."
+          },
+          {
+            "id": "02",
+            "title": "Asset Preservation",
+            "description": "Focusing on premium locations and sustainable structures that endure time."
+          }
+        ]
+      },
+      "growth": {
+        "title": "Smart Real Estate Investing",
+        "subtitle": "Build your wealth through high-growth real estate assets in prime locations.",
+        "items": [
+          {
+            "title": "Consistent ROI",
+            "description": "Enjoy annual returns ranging from 8% to 15% on prime commercial and residential properties."
+          },
+          {
+            "title": "Secure Assets",
+            "description": "Every property is 100% legally vetted with physical title deeds and government approval."
+          },
+          {
+            "title": "Low Entry Barrier",
+            "description": "Start your real estate journey with a minimum investment. Luxury property ownership is now accessible."
+          }
+        ],
+        "cta": {
+          "title": "Ready to secure your future?",
+          "subtitle": "Download our 2024 Investment Guide for free.",
+          "button": "Get Investment Guide"
+        }
+      },
+      "onboarding": {
+        "badge": "Exclusive Onboarding",
+        "title": "Start Your Investment Journey",
+        "subtitle": "Complete the inquiry form to help our capital relations team understand your objectives.",
+        "form": {
+          "name_label": "Full Legal Name *",
+          "name_placeholder": "e.g. Ahamed Asif",
+          "email_label": "Email Address *",
+          "email_placeholder": "e.g. asif@example.com",
+          "questions": [
+            "Existing Client?",
+            "Own Spanish Property?",
+            "Tax Resident of Spain?"
+          ],
+          "options": {
+            "no": "No",
+            "yes": "Yes"
+          },
+          "interest_label": "Areas of Interest *",
+          "interests": [
+            "Land plots",
+            "Residential",
+            "Commercial",
+            "Hotels",
+            "Agriculture",
+            "Other"
+          ],
+          "amount_label": "Investment Amount *",
+          "amounts": [
+            "€1,000,000 - €2,000,000",
+            "€2,000,000 - €3,000,000",
+            "€3,000,000 - €4,000,000",
+            "€4,000,000 - €5,000,000",
+            "€5,000,000 - €10,000,000",
+            "€10,000,000 - €20,000,000",
+            "€20,000,000+"
+          ],
+          "submit": "Submit Application",
+          "footer": "Encrypted & Confidential Portal"
+        }
+      }
+    },
+    "error_404": {
+      "bg_text": "404",
+      "subtitle": "Oops! Page Not Found",
+      "message": "We've searched our entire portfolio, but we couldn't find anything at",
+      "search_placeholder": "Search for properties...",
+      "back_home": "Back to Home",
+      "view_properties": "View All Properties"
+    },
+    "property_details": {
+      "new_build": "New Build",
+      "for": "For",
+      "description": "Description",
+      "features": "Features",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "building": "Building",
+      "lot_size": "Lot Size",
+      "view_photos": "View Photos",
+      "form": {
+        "contact_us": "Contact Us",
+        "name": "Name",
+        "number": "Number",
+        "email": "Email",
+        "message": "I'm interested in this property.",
+        "submit": "SEND MESSAGE"
+      }
+    },
+    "privacy_policy": {
+      "hero": {
+        "title": "Privacy Policy",
+        "bg_text": "Privacy",
+        "subtitle": "How we collect, use, and handle your data."
+      },
+      "content": {
+        "title": "Privacy Policy",
+        "description": "This Privacy Policy outlines how your data is managed across our platforms. We respect your privacy and are committed to protecting it through our compliance with this policy.",
+        "sections": [
+          {
+            "title": "1. Information Collection",
+            "text": "We collect several different types of information for various purposes to provide and improve our Service to you. This includes personally identifiable information such as email address, first name and last name, phone number, and address."
+          },
+          {
+            "title": "2. How We Use Your Data",
+            "text": "Capital Union uses the collected data for various purposes: to provide and maintain our Service, to notify you about changes, to provide customer support, to gather analysis so that we can improve our Service, and to monitor the usage of our Service."
+          },
+          {
+            "title": "3. Data Security",
+            "text": "The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security."
+          }
+        ]
+      }
+    },
+    "terms_of_service": {
+      "hero": {
+        "title": "Terms of Service",
+        "bg_text": "Terms",
+        "subtitle": "Rules and guidelines for using our platform."
+      },
+      "content": {
+        "title": "Terms of Service",
+        "description": "By accessing or using our platform, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access our services.",
+        "sections": [
+          {
+            "title": "1. Intellectual Property",
+            "text": "The Service and its original content, features, and functionality are and will remain the exclusive property of Capital Union and its licensors. The Service is protected by copyright, trademark, and other laws of both the country and foreign countries."
+          },
+          {
+            "title": "2. User Obligations",
+            "text": "When you create an account with us, you must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service."
+          },
+          {
+            "title": "3. Limitation of Liability",
+            "text": "In no event shall Capital Union, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses."
+          }
+        ]
+      }
+    },
+    "cookie_policy": {
+      "hero": {
+        "title": "Cookie Policy",
+        "bg_text": "Cookies",
+        "subtitle": "Information about our use of cookies."
+      },
+      "content": {
+        "title": "Cookie Policy",
+        "description": "Our site uses cookies to distinguish you from other users. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site.",
+        "sections": [
+          {
+            "title": "1. Types of Cookies We Use",
+            "text": "We use Session Cookies to operate our Service. We use Preference Cookies to remember your preferences and various settings. We use Security Cookies for security purposes. All of these ensure an optimal and seamless browsing experience."
+          },
+          {
+            "title": "2. Third-Party Cookies",
+            "text": "In addition to our own cookies, we may also use various third-parties cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and so on. These providers have their own strict data policies."
+          },
+          {
+            "title": "3. Managing Your Cookies",
+            "text": "You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service. We recommend retaining them for full platform usage."
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Find your dream home with the most comprehensive real estate platform.",
+    "copyright": "All rights reserved.",
+    "menus": {
+      "quick_links": "Quick Links",
+      "company": "Company",
+      "legal": "Legal"
+    },
+    "links": {
+      "buy": "Buy Property",
+      "rent": "Rent Property",
+      "sell": "Sell Property",
+      "services": "Services",
+      "about": "About Us",
+      "contact": "Contact",
+      "careers": "Careers",
+      "blog": "Blog",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookie": "Cookie Policy"
+    }
+  }
 }

@@ -1,9 +1,9 @@
 <?php $story = t('pages.about.story'); ?>
-<section class="relative py-16 lg:py-24 bg-white overflow-hidden">
+<section class="relative py-16 lg:py-24 bg-white overflow-hidden js-about-story">
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-            <div class="lg:col-span-6 grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 reveal-images">
+            <div class="lg:col-span-6 grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 js-story-images">
 
                 <!-- Left Side -->
                 <div class="grid grid-rows-2 gap-4 lg:gap-6 h-full">
@@ -34,9 +34,9 @@
 
             </div>
 
-            <div class="lg:col-span-6 space-y-6 reveal-text">
+            <div class="lg:col-span-6 space-y-6 js-story-text">
                 <div class="flex items-center gap-2">
-                    <span class=" text-secondary font-bold uppercase tracking-[0.3em] text-xs"> <?php echo esc_html($story['badge']); ?></span>
+                    <span class="text-secondary font-bold uppercase tracking-[0.3em] text-xs"><?php echo esc_html($story['badge']); ?></span>
                 </div>
 
                 <h2 class="text-4xl font-extrabold text-secondary mb-6">
@@ -56,18 +56,18 @@
                     <?php endforeach; ?>
                 </ul>
 
-                <div class="grid grid-cols-3 gap-4 pt-6">
+                <div class="grid grid-cols-3 gap-4 pt-6 js-story-thumbnails">
                     <div class="rounded-lg overflow-hidden h-24 shadow-md">
                         <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80"
-                            class="w-full h-full object-cover">
+                            class="w-full h-full object-cover" alt="">
                     </div>
                     <div class="rounded-lg overflow-hidden h-24 shadow-md">
                         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
-                            class="w-full h-full object-cover">
+                            class="w-full h-full object-cover" alt="">
                     </div>
                     <div class="rounded-lg overflow-hidden h-24 shadow-md">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80"
-                            class="w-full h-full object-cover">
+                            class="w-full h-full object-cover" alt="">
                     </div>
                 </div>
             </div>
@@ -77,50 +77,73 @@
 </section>
 
 <script>
-    (function() {
-        const initAboutStory = () => {
-            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-            
-            gsap.registerPlugin(ScrollTrigger);
-            const section = document.querySelector(".reveal-images").closest('section');
-            if (!section) return;
+(function () {
+    function initAboutStory() {
+        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top 85%",
-                    toggleActions: "play none none none"
-                }
+        gsap.registerPlugin(ScrollTrigger);
+
+        var section = document.querySelector('.js-about-story');
+        if (!section) return;
+
+        var images      = section.querySelectorAll('.js-story-images img');
+        var textItems   = section.querySelectorAll('.js-story-text > *');
+        var thumbnails  = section.querySelectorAll('.js-story-thumbnails > *');
+
+        // Guard: nothing to animate
+        if (!images.length && !textItems.length) return;
+
+        var tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: 'top 80%',
+                toggleActions: 'play none none none',
+                once: true
+            }
+        });
+
+        // 1. Images — staggered slide-up + fade
+        if (images.length) {
+            gsap.set(images, { opacity: 0, y: 50, scale: 1.04 });
+            tl.to(images, {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.85,
+                stagger: 0.12,
+                ease: 'power3.out'
             });
-
-            // 1. Reveal Images (Staggered slide and fade)
-            if (document.querySelectorAll(".reveal-images img").length) {
-                tl.from(".reveal-images img", {
-                    y: 40,
-                    scale: 1.05,
-                    opacity: 0,
-                    duration: 0.8,
-                    stagger: 0.1,
-                    ease: "power4.out"
-                });
-            }
-
-            // 2. Reveal Text Content (Staggered side entrance)
-            if (document.querySelector(".reveal-text")) {
-                tl.from(".reveal-text > *", {
-                    x: 30,
-                    opacity: 0,
-                    duration: 0.8,
-                    stagger: 0.1,
-                    ease: "power4.out"
-                }, "-=0.6");
-            }
-        };
-
-        if (document.readyState === 'complete') {
-            initAboutStory();
-        } else {
-            window.addEventListener('load', initAboutStory);
         }
-    })();
+
+        // 2. Text children — staggered slide-in from right
+        if (textItems.length) {
+            gsap.set(textItems, { opacity: 0, x: 35 });
+            tl.to(textItems, {
+                opacity: 1,
+                x: 0,
+                duration: 0.75,
+                stagger: 0.1,
+                ease: 'power3.out'
+            }, '-=0.55');
+        }
+
+        // 3. Thumbnails — scale pop after text
+        if (thumbnails.length) {
+            gsap.set(thumbnails, { opacity: 0, scale: 0.88 });
+            tl.to(thumbnails, {
+                opacity: 1,
+                scale: 1,
+                duration: 0.55,
+                stagger: 0.08,
+                ease: 'back.out(1.4)'
+            }, '-=0.3');
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        window.addEventListener('load', initAboutStory);
+    } else {
+        initAboutStory();
+    }
+})();
 </script>

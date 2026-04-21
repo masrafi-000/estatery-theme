@@ -1,552 +1,564 @@
 {
-    "brand": {
-        "tagline": "Excellence Immobilière"
-    },
-    "header": {
-        "language_label": "Langue:",
-        "navigation": [
-            {
-                "label": "Accueil",
-                "url": "\/"
-            },
-            {
-                "label": "Propriétés",
-                "url": "\/properties"
-            },
-            {
-                "label": "À propos",
-                "url": "\/about"
-            },
-            {
-                "label": "Investir",
-                "url": "\/invest"
-            },
-            {
-                "label": "Contact",
-                "url": "\/contact"
-            }
-        ],
-        "actions": {
-            "contact": "Contactez-nous",
-            "agent": "Devenir Agent"
-        }
-    },
-    "home": {
-        "hero": {
-            "agency_label": "Agence Immobilière",
-            "title": "Trouvez l'Appartement <br class=\"hidden md:block\"> de vos Rêves",
-            "description": "Explorez notre liste de propriétés de luxe conçues pour votre confort et votre style ultimes.",
-            "tabs": {
-                "buy": "Acheter",
-                "rent": "Louer"
-            },
-            "form": {
-                "search_label": "Rechercher une Propriété",
-                "search_placeholder": "Nom de la propriété...",
-                "location_label": "Emplacement",
-                "location_placeholder": "Sélectionner l'Emplacement",
-                "type_label": "Type de Propriété",
-                "location_options": {
-                    "dhaka": "Dhaka",
-                    "chittagong": "Chittagong",
-                    "mymensingh": "Mymensingh"
-                },
-                "property_types": {
-                    "apartment": "Appartement",
-                    "luxury": "Domaine de Luxe",
-                    "villa": "Villa"
-                },
-                "search_button": "Rechercher Maintenant"
-            }
-        },
-        "featured": {
-            "label": "Annonces Exclusives",
-            "title": "Propriétés en Vedette",
-            "description": "Des propriétés triées sur le volet juste pour vous.",
-            "beds": "Ch.",
-            "baths": "SdB",
-            "pool": "piscine",
-            "sqft": "m²",
-            "view_all": "TOUTES LES PROPRIÉTÉS"
-        },
-        "why_choose": {
-            "title": "Pourquoi Choisir Capital Union",
-            "description": "Nous fournissons tout ce dont vous avez besoin pour trouver, acheter ou louer votre propriété parfaite en toute confiance.",
-            "features": [
-                {
-                    "title": "Annonces Vérifiées",
-                    "description": "Toutes les propriétés sont vérifiées et authentifiées pour vous garantir des informations précises."
-                },
-                {
-                    "title": "Aperçu du Marché",
-                    "description": "Accédez aux données et tendances du marché en temps réel pour prendre des décisions d'investissement éclairées."
-                },
-                {
-                    "title": "Agents Experts",
-                    "description": "Travaillez avec des professionnels de l'immobilier expérimentés qui comprennent vos besoins."
-                },
-                {
-                    "title": "Support 24\/7",
-                    "description": "Notre équipe de support dédiée est disponible 24h\/24 pour vous aider."
-                },
-                {
-                    "title": "Meilleures Offres",
-                    "description": "Accédez à des annonces exclusives et aux meilleures offres du marché."
-                },
-                {
-                    "title": "Service Personnalisé",
-                    "description": "Recevez des recommandations personnalisées basées sur vos préférences et vos exigences."
-                }
-            ]
-        },
-        "stats": {
-            "listed": "Propriétés Listées",
-            "families": "Familles Heureuses",
-            "visitors": "Visiteurs Mensuels",
-            "satisfaction": "Satisfaction Client"
-        },
-        "faq": {
-            "title": "Foire Aux Questions",
-            "description": "Tout ce que vous devez savoir sur la plateforme.",
-            "help_title": "Besoin d'Aide Supplémentaire ?",
-            "help_description": "Notre équipe de support est là pour vous.",
-            "contact_button": "Contacter le Support"
-        }
-    },
-    "pages": {
-        "about": {
-            "hero": {
-                "title": "À Propos De Nous",
-                "bg_text": "À Propos",
-                "subtitle": "Contactez Altara pour des solutions élégantes en investissements immobiliers"
-            },
-            "story": {
-                "badge": "Notre Histoire",
-                "title": "Nous développons des projets de qualité depuis 1988",
-                "description": "Nulla et sapien felis. Cras ex sapien, eleifend ac orci id, maximus aliquet ipsum. Duis in maximus nisl. Curabitur vitae mi fermentum, ullamcorper.",
-                "features": [
-                    "Duis semper, nisi eget accumsan cursus, nisl ligula sagittis.",
-                    "Pellentesque metus turpis, efficitur at turpis semper.",
-                    "Curabitur efficitur et massa in elementum.",
-                    "Morbi gravida sit amet sem a pharetra."
-                ]
-            },
-            "how_we_work": {
-                "badge": "Flux de Travail",
-                "title": "Comment nous donnons vie à votre <br> <span class='text-secondary'>vision<\/span>",
-                "steps": [
-                    {
-                        "id": "01",
-                        "title": "Découverte",
-                        "description": "Nous écoutons vos objectifs et analysons le potentiel du site pour créer une feuille de route stratégique."
-                    },
-                    {
-                        "id": "02",
-                        "title": "Design",
-                        "description": "Nos architectes conçoivent des plans sur mesure qui équilibrent l'esthétique et la fonctionnalité."
-                    },
-                    {
-                        "id": "03",
-                        "title": "Construction",
-                        "description": "En utilisant des matériaux haut de gamme et une main-d'œuvre experte, nous transformons les conceptions en réalité concrète."
-                    },
-                    {
-                        "id": "04",
-                        "title": "Livraison",
-                        "description": "Un contrôle qualité final rigoureux garantit que tout répond à notre standard d'excellence de 1988."
-                    }
-                ]
-            },
-            "philosophy": {
-                "badge": "Notre Philosophie",
-                "title": "Les piliers fondamentaux qui <br> définissent notre métier",
-                "values": [
-                    {
-                        "id": "01",
-                        "title": "Intégrité Architecturale",
-                        "description": "Nous priorisons la solidité structurelle et le design intemporel aux tendances passagères, garantissant que chaque projet dure des générations."
-                    },
-                    {
-                        "id": "02",
-                        "title": "Innovation Durable",
-                        "description": "Intégrer des technologies intelligentes et des matériaux écologiques pour réduire l'empreinte carbone sans sacrifier le luxe."
-                    },
-                    {
-                        "id": "03",
-                        "title": "Vision Centrée sur le Client",
-                        "description": "Votre vision est notre plan. Nous maintenons une communication transparente du premier croquis à la dernière brique."
-                    }
-                ]
-            },
-            "leadership": {
-                "badge": "Message Exécutif",
-                "years_label": "Années d'Intégrité",
-                "title": "Concevoir l'<span class='italic text-secondary'>avenir<\/span>, <br> respecter le <span class='italic'>passé<\/span>.",
-                "message": "Notre voyage a commencé en 1988 avec un plan simple : construire avec une qualité sans compromis. Aujourd'hui, nous continuons à combler le fossé entre l'innovation architecturale et le design centré sur l'humain. Nous ne développons pas seulement des projets ; nous cultivons des héritages.",
-                "name": "Asif Ahamed",
-                "role": "Fondateur et Directeur Général"
-            }
-        },
-        "properties": {
-            "title": "Propriétés Exclusives",
-            "subtitle": "Découvrez une sélection rigoureuse de nos plus belles annonces.",
-            "hero_banner": {
-                "bg_text": "Marché"
-            },
-            "grid_header": {
-                "showing_result": "Résultats de recherche",
-                "items_available": "Propriétés trouvées",
-                "range": "Affichage de %1$s–%2$s",
-                "no_results": "Essayez d'ajuster vos filtres.",
-                "view_grid": "Vue en grille",
-                "view_list": "Vue en liste",
-                "sort_by": "Trier par",
-                "filters_active": "Filtres actifs"
-            },
-            "sort": {
-                "label": "Trier par",
-                "newest": "Le plus récent",
-                "oldest": "Le plus ancien",
-                "price_low": "Prix : croissant",
-                "price_high": "Prix : décroissant",
-                "area_low": "Surface : croissante",
-                "area_high": "Surface : décroissante"
-            },
-            "pagination": {
-                "prev": "Page précédente",
-                "next": "Page suivante",
-                "go_to": "Aller à la page %s"
-            },
-            "filters": {
-                "all": "Toutes les propriétés",
-                "buy": "A vendre",
-                "rent": "A louer",
-                "type": "Type de bien",
-                "location": "Localisation",
-                "location_placeholder": "Ville, adresse, code postal…",
-                "price": "Gamme de prix",
-                "search": "Rechercher des biens",
-                "min_price": "Prix min",
-                "max_price": "Prix max",
-                "min_placeholder": "Min",
-                "max_placeholder": "Max",
-                "beds": "Chambres",
-                "baths": "Salles de bain",
-                "any": "Tous",
-                "status": "Statut",
-                "all_tabs": "Tout",
-                "new_build": "Neuf",
-                "features": "Équipements",
-                "reset": "Réinitialiser les filtres",
-                "reset_button": "Réinitialiser tout",
-                "apply": "Appliquer les filtres",
-                "apply_button": "Appliquer les filtres",
-                "filter_results": "Filtrer les résultats",
-                "filters_active": "Filtres appliqués",
-                "refine_search": "Affinez votre recherche",
-                "sidebar_sr_description": "Barre latérale de filtrage de recherche de propriétés avec filtres de statut, type, prix, chambres et salles de bain",
-                "plus_label": "%s+"
-            },
-            "js": {
-                "applied": "Appliqué !",
-                "from": "de",
-                "up_to": "jusqu'à",
-                "beds_label": "chambres",
-                "baths_label": "salles de bain",
-                "success_inquiry": "Merci ! Votre demande a été envoyée. Nous vous contacterons bientôt.",
-                "close": "Fermer",
-                "error_generic": "Un problème est survenu. Veuillez réessayer.",
-                "fill_required": "Veuillez remplir tous les champs obligatoires."
-            },
-            "meta": {
-                "sale": "À Vendre",
-                "rent": "À Louer",
-                "apartment": "Appartement",
-                "villa": "Villa",
-                "penthouse": "Penthouse",
-                "townhouse": "Maison de ville",
-                "shop": "Commerce",
-                "not_found": "Propriété non trouvée."
-            },
-            "amenities": {
-                "sea_view": "Vue sur la Mer",
-                "private_pool": "Piscine Privée",
-                "parking": "Place de Parking",
-                "garden": "Jardin Privé",
-                "ac": "Climatisation",
-                "security": "Sécurité 24/7",
-                "gym": "Centre de Fitness",
-                "wifi": "WiFi haut débit"
-            },
-            "categories": {
-                "types": [
-                    { "name": "Villa", "slug": "villa", "count": "Voir tout" },
-                    { "name": "Appartement", "slug": "apartment", "count": "Voir tout" },
-                    { "name": "Commerce", "slug": "shop", "count": "Voir tout" },
-                    { "name": "Maison de ville", "slug": "townhouse", "count": "Voir tout" },
-                    { "name": "Bungalow", "slug": "bungalow", "count": "Voir tout" }
-                ]
-            },
-            "actions": {
-                "view_details": "Voir les Détails"
-            }
-    
-        },
-        "contact": {
-            "hero": {
-                "title": "Contactez-nous",
-                "bg_text": "Contact",
-                "subtitle": "Contactez l'équipe dédiée d'Altara pour des stratégies d'investissement immobilier sur mesure et des conseils d'experts."
-            },
-            "info": {
-                "badge": "Contactez-nous",
-                "title": "Contactez-nous",
-                "company": "Capital Union",
-                "description": "Conseils d'experts en investissements immobiliers et solutions immobilières de premier ordre à travers le Bangladesh.",
-                "office_label": "Adresse du Bureau",
-                "office_address": "Secteur 07 d'Uttara, autoroute Dhaka - Mymensingh, Bangladesh",
-                "email_label": "Écrivez-nous",
-                "phone_label": "Appelez Directement"
-            },
-            "form": {
-                "title": "Envoyez-nous un Message",
-                "first_name_label": "Prénom",
-                "first_name_placeholder": "Prénom",
-                "last_name_label": "Nom de famille",
-                "last_name_placeholder": "Nom de famille",
-                "email_label": "Adresse e-mail",
-                "email_placeholder": "Adresse e-mail",
-                "phone_label": "Numéro de téléphone",
-                "phone_placeholder": "Numéro de téléphone",
-                "property_info_label": "Informations sur la propriété",
-                "property_type_placeholder": "Type",
-                "zip_label": "Code postal",
-                "zip_placeholder": "Code postal",
-                "city_label": "Ville",
-                "city_placeholder": "Ville",
-                "bedrooms_label": "Nb de chambres",
-                "bedrooms_placeholder": "Nb de chambres",
-                "bathrooms_label": "Nb de salles de bain",
-                "bathrooms_placeholder": "Nb de salles de bain",
-                "budget_label": "Votre budget",
-                "budget_placeholder": "Votre budget",
-                "submit": "Envoyer la Demande"
-            }
-        },
-        "invest": {
-            "hero": {
-                "title": "Opportunités d'Investissement",
-                "bg_text": "Investir",
-                "subtitle": "Sécurisez votre avenir avec des portefeuilles immobiliers à haut rendement et des développements immobiliers exclusifs."
-            },
-            "philosophy": {
-                "badge": "Stratégie de Niveau Institutionnel",
-                "title": "Une Approche Disciplinée Pour La <br> Préservation Du Capital.",
-                "focus_area_label": "Zone de Focalisation",
-                "focus_area_title": "Intégrité des Actifs Physiques",
-                "description": "Chez Capital Union, notre philosophie est enracinée dans la préservation de la richesse générationnelle. Nous privilégions les actifs physiques ayant une utilité sociale à long terme.",
-                "quote": "\"Nous ne courons pas après les tendances du marché ; nous nous concentrons plutôt sur la valeur intrinsèque et la résilience économique pour assurer l'avenir de nos partenaires.\"",
-                "items": [
-                    {
-                        "id": "01",
-                        "title": "Discipline de Risque",
-                        "description": "Des points d'entrée conservateurs avec des filets de sécurité à marge élevée pour chaque déploiement de capital."
-                    },
-                    {
-                        "id": "02",
-                        "title": "Préservation des Actifs",
-                        "description": "Se concentrer sur des emplacements de choix et des structures durables qui résistent au temps."
-                    }
-                ]
-            },
-            "growth": {
-                "title": "Investissement Immobilier Intelligent",
-                "subtitle": "Développez votre patrimoine grâce à des actifs immobiliers à forte croissance dans des emplacements de choix.",
-                "items": [
-                    {
-                        "title": "ROI Cohérent",
-                        "description": "Bénéficiez de rendements annuels allant de 8 % à 15 % sur des propriétés commerciales et résidentielles de premier ordre."
-                    },
-                    {
-                        "title": "Actifs Sécurisés",
-                        "description": "Chaque propriété est vérifiée à 100 % sur le plan juridique avec des titres de propriété physiques et l'approbation du gouvernement."
-                    },
-                    {
-                        "title": "Faible Barrière à l'Entrée",
-                        "description": "Commencez votre parcours immobilier avec un investissement minimal. La propriété de luxe est désormais accessible."
-                    }
-                ],
-                "cta": {
-                    "title": "Prêt à assurer votre avenir ?",
-                    "subtitle": "Téléchargez gratuitement notre guide d'investissement 2024.",
-                    "button": "Obtenir le Guide d'Investissement"
-                }
-            },
-            "onboarding": {
-                "badge": "Intégration Exclusive",
-                "title": "Commencez Votre Parcours d'Investissement",
-                "subtitle": "Remplissez le formulaire de demande pour aider notre équipe des relations capital à comprendre vos objectifs.",
-                "form": {
-                    "name_label": "Nom Légal Complet *",
-                    "name_placeholder": "ex. Ahamed Asif",
-                    "email_label": "Adresse e-mail *",
-                    "email_placeholder": "ex. asif@exemple.com",
-                    "questions": [
-                        "Client Existant ?",
-                        "Possédez-vous un Bien en Espagne ?",
-                        "Résident Fiscal en Espagne ?"
-                    ],
-                    "options": {
-                        "no": "Non",
-                        "yes": "Oui"
-                    },
-                    "interest_label": "Domaines d'Intérêt *",
-                    "interests": [
-                        "Terrains",
-                        "Résidentiel",
-                        "Commercial",
-                        "Hôtels",
-                        "Agriculture",
-                        "Autre"
-                    ],
-                    "amount_label": "Montant de l'Investissement *",
-                     "amounts": [
-                        "€1,000,000 - €2,000,000",
-                        "€2,000,000 - €3,000,000",
-                        "€3,000,000 - €4,000,000",
-                        "€4,000,000 - €5,000,000",
-                        "€5,000,000 - €10,000,000",
-                        "€10,000,000 - €20,000,000",
-                        "€20,000,000+"
-                    ],
-                    "submit": "Envoyer la Demande",
-                    "footer": "Portail Chiffré et Confidentiel"
-                }
-            }
-        },
-        "error_404": {
-            "bg_text": "404",
-            "subtitle": "Oups ! Page Introuvable",
-            "message": "Nous avons parcouru tout notre portefeuille, mais nous n'avons rien trouvé à l'adresse",
-            "search_placeholder": "Rechercher des propriétés...",
-            "back_home": "Retour à l'Accueil",
-            "view_properties": "Voir Toutes les Propriétés"
-        },
-        "property_details": {
-            "new_build": "Nouvelle Construction",
-            "for": "À",
-            "description": "Description",
-            "features": "Caractéristiques",
-            "bedrooms": "Chambres",
-            "bathrooms": "Salles de bain",
-            "building": "Bâtiment",
-            "lot_size": "Taille du terrain",
-            "view_photos": "Voir les photos",
-            "form": {
-                "contact_us": "Contactez-nous",
-                "name": "Nom",
-                "number": "Numéro",
-                "email": "E-mail",
-                "message": "Je suis intéressé par cette propriété.",
-                "submit": "ENVOYER LE MESSAGE"
-            }
-        },
-        "privacy_policy": {
-            "hero": {
-                "title": "Politique de Confidentialité",
-                "bg_text": "Confidentialité",
-                "subtitle": "Comment nous collectons, utilisons et gérons vos données."
-            },
-            "content": {
-                "title": "Politique de Confidentialité",
-                "description": "Cette politique de confidentialité décrit comment vos données sont gérées sur nos plateformes. Nous respectons votre vie privée et nous nous engageons à la protéger en nous conformant à cette politique.",
-                "sections": [
-                    {
-                        "title": "1. Collecte d'Informations",
-                        "text": "Nous collectons plusieurs types d'informations à différentes fins pour vous fournir et améliorer notre Service. Cela inclut des informations personnellement identifiables telles que l'adresse e-mail, le nom et le prénom, le numéro de téléphone et l'adresse."
-                    },
-                    {
-                        "title": "2. Comment Nous Utilisons Vos Données",
-                        "text": "Capital Union utilise les données collectées à diverses fins : fournir et maintenir notre Service, vous informer des modifications, fournir un support client, recueillir des analyses afin que nous puissions améliorer notre Service et surveiller l'utilisation de notre Service."
-                    },
-                    {
-                        "title": "3. Sécurité des Données",
-                        "text": "La sécurité de vos données est importante pour nous, mais n'oubliez pas qu'aucune méthode de transmission sur Internet ou méthode de stockage électronique n'est sûre à 100 %. Bien que nous nous efforcions d'utiliser des moyens commercialement acceptables pour protéger vos données personnelles, nous ne pouvons garantir leur sécurité absolue."
-                    }
-                ]
-            }
-        },
-        "terms_of_service": {
-            "hero": {
-                "title": "Conditions d'Utilisation",
-                "bg_text": "Conditions",
-                "subtitle": "Règles et directives pour l'utilisation de notre plateforme."
-            },
-            "content": {
-                "title": "Conditions d'Utilisation",
-                "description": "En accédant ou en utilisant notre plateforme, vous acceptez d'être lié par ces conditions. Si vous n'êtes pas d'accord avec une partie de ces conditions, vous ne pouvez pas accéder à nos services.",
-                "sections": [
-                    {
-                        "title": "1. Propriété Intellectuelle",
-                        "text": "Le Service et son contenu, ses caractéristiques et ses fonctionnalités d'origine sont et resteront la propriété exclusive de Capital Union et de ses concédants de licence. Le Service est protégé par le droit d'auteur, le droit des marques et d'autres lois du pays et des pays étrangers."
-                    },
-                    {
-                        "title": "2. Obligations de l'Utilisateur",
-                        "text": "Lorsque vous créez un compte avec nous, vous devez nous fournir des informations exactes, complètes et à jour en tout temps. Le non-respect de cette obligation constitue une violation des Conditions, ce qui peut entraîner la résiliation immédiate de votre compte sur notre Service."
-                    },
-                    {
-                        "title": "3. Limitation de Responsabilité",
-                        "text": "En aucun cas, Capital Union, ni ses dirigeants, employés, partenaires, agents, fournisseurs ou sociétés affiliées ne pourront être tenus responsables de tout dommage indirect, accessoire, spécial, consécutif ou punitif, y compris, sans s'y limiter, la perte de bénéfices, de données, d'utilisation, de clientèle ou d'autres pertes intangibles."
-                    }
-                ]
-            }
-        },
-        "cookie_policy": {
-            "hero": {
-                "title": "Politique en matière de Cookies",
-                "bg_text": "Cookies",
-                "subtitle": "Informations sur notre utilisation des cookies."
-            },
-            "content": {
-                "title": "Politique en matière de Cookies",
-                "description": "Notre site utilise des cookies pour vous distinguer des autres utilisateurs. Cela nous aide à vous offrir une bonne expérience lorsque vous naviguez sur notre site web et nous permet également de l'améliorer.",
-                "sections": [
-                    {
-                        "title": "1. Types de Cookies que Nous Utilisons",
-                        "text": "Nous utilisons des cookies de session pour faire fonctionner notre Service. Nous utilisons des cookies de préférence pour mémoriser vos préférences et divers paramètres. Nous utilisons des cookies de sécurité à des fins de sécurité."
-                    },
-                    {
-                        "title": "2. Cookies Tiers",
-                        "text": "En plus de nos propres cookies, nous pouvons également utiliser divers cookies tiers pour signaler les statistiques d'utilisation du Service, diffuser des publicités sur et via le Service, etc. Ces fournisseurs ont leurs propres politiques de données strictes."
-                    },
-                    {
-                        "title": "3. Gérer Vos Cookies",
-                        "text": "Vous pouvez configurer votre navigateur pour refuser tous les cookies ou pour vous indiquer quand un cookie est envoyé. Cependant, si vous n'acceptez pas les cookies, vous ne pourrez peut-être pas utiliser certaines parties de notre Service."
-                    }
-                ]
-            }
-        }
-    },
-    "footer": {
-        "tagline": "Trouvez la maison de vos rêves avec la plateforme immobilière la plus complète.",
-        "copyright": "Tous droits réservés.",
-        "menus": {
-            "quick_links": "Liens Rapides",
-            "company": "Entreprise",
-            "legal": "Mentions Légales"
-        },
-        "links": {
-            "buy": "Acheter une Propriété",
-            "rent": "Louer une Propriété",
-            "sell": "Vendre une Propriété",
-            "services": "Services",
-            "about": "À Propos de Nous",
-            "contact": "Contact",
-            "careers": "Carrières",
-            "blog": "Blog",
-            "privacy": "Politique de Confidentialité",
-            "terms": "Conditions d'Utilisation",
-            "cookie": "Politique de Cookies"
-        }
+  "brand": {
+    "name": "Capital Union Investment",
+    "platform": "Capital Union Investment",
+    "email": "info@altara.com",
+    "tagline": "Excellence Immobilière"
+  },
+  "header": {
+    "language_label": "Langue:",
+    "navigation": [
+      {
+        "label": "Accueil",
+        "url": "\/"
+      },
+      {
+        "label": "Propriétés",
+        "url": "\/properties"
+      },
+      {
+        "label": "À propos",
+        "url": "\/about"
+      },
+      {
+        "label": "Investir",
+        "url": "\/invest"
+      },
+      {
+        "label": "Contact",
+        "url": "\/contact"
+      }
+    ],
+    "actions": {
+      "contact": "Contactez-nous",
+      "agent": "Devenir Agent"
     }
+  },
+  "home": {
+    "hero": {
+      "agency_label": "Agence Immobilière",
+      "title": "Trouvez l'Appartement <br class=\"hidden md:block\"> de vos Rêves",
+      "description": "Explorez notre liste de propriétés de luxe conçues pour votre confort et votre style ultimes.",
+      "tabs": {
+        "buy": "Acheter",
+        "rent": "Louer"
+      },
+      "form": {
+        "search_label": "Rechercher une Propriété",
+        "search_placeholder": "Nom de la propriété...",
+        "location_label": "Emplacement",
+        "location_placeholder": "Sélectionner l'Emplacement",
+        "type_label": "Type de Propriété",
+        "location_options": {
+          "dhaka": "Dhaka",
+          "chittagong": "Chittagong",
+          "mymensingh": "Mymensingh"
+        },
+        "property_types": {
+          "apartment": "Appartement",
+          "luxury": "Domaine de Luxe",
+          "villa": "Villa"
+        },
+        "search_button": "Rechercher Maintenant"
+      }
+    },
+    "featured": {
+      "label": "Annonces Exclusives",
+      "title": "Propriétés en Vedette",
+      "description": "Des propriétés triées sur le volet juste pour vous.",
+      "beds": "Ch.",
+      "baths": "SdB",
+      "pool": "piscine",
+      "sqft": "m²",
+      "view_all": "TOUTES LES PROPRIÉTÉS"
+    },
+    "why_choose": {
+      "title": "Pourquoi Choisir Capital Union",
+      "description": "Nous fournissons tout ce dont vous avez besoin pour trouver, acheter ou louer votre propriété parfaite en toute confiance.",
+      "features": [
+        {
+          "title": "Annonces Vérifiées",
+          "description": "Toutes les propriétés sont vérifiées et authentifiées pour vous garantir des informations précises."
+        },
+        {
+          "title": "Aperçu du Marché",
+          "description": "Accédez aux données et tendances du marché en temps réel pour prendre des décisions d'investissement éclairées."
+        },
+        {
+          "title": "Agents Experts",
+          "description": "Travaillez avec des professionnels de l'immobilier expérimentés qui comprennent vos besoins."
+        },
+        {
+          "title": "Support 24\/7",
+          "description": "Notre équipe de support dédiée est disponible 24h\/24 pour vous aider."
+        },
+        {
+          "title": "Meilleures Offres",
+          "description": "Accédez à des annonces exclusives et aux meilleures offres du marché."
+        },
+        {
+          "title": "Service Personnalisé",
+          "description": "Recevez des recommandations personnalisées basées sur vos préférences et vos exigences."
+        }
+      ]
+    },
+    "stats": {
+      "listed": "Propriétés Listées",
+      "families": "Familles Heureuses",
+      "visitors": "Visiteurs Mensuels",
+      "satisfaction": "Satisfaction Client"
+    },
+    "faq": {
+      "title": "Foire Aux Questions",
+      "description": "Tout ce que vous devez savoir sur la plateforme.",
+      "help_title": "Besoin d'Aide Supplémentaire ?",
+      "help_description": "Notre équipe de support est là pour vous.",
+      "contact_button": "Contacter le Support"
+    }
+  },
+  "pages": {
+    "about": {
+      "hero": {
+        "title": "À Propos De Nous",
+        "bg_text": "À Propos",
+        "subtitle": "Contactez Altara pour des solutions élégantes en investissements immobiliers"
+      },
+      "story": {
+        "badge": "Notre Histoire",
+        "title": "Nous développons des projets de qualité depuis 1988",
+        "description": "Nulla et sapien felis. Cras ex sapien, eleifend ac orci id, maximus aliquet ipsum. Duis in maximus nisl. Curabitur vitae mi fermentum, ullamcorper.",
+        "features": [
+          "Duis semper, nisi eget accumsan cursus, nisl ligula sagittis.",
+          "Pellentesque metus turpis, efficitur at turpis semper.",
+          "Curabitur efficitur et massa in elementum.",
+          "Morbi gravida sit amet sem a pharetra."
+        ]
+      },
+      "how_we_work": {
+        "badge": "Flux de Travail",
+        "title": "Comment nous donnons vie à votre <br> <span class='text-secondary'>vision<\/span>",
+        "steps": [
+          {
+            "id": "01",
+            "title": "Découverte",
+            "description": "Nous écoutons vos objectifs et analysons le potentiel du site pour créer une feuille de route stratégique."
+          },
+          {
+            "id": "02",
+            "title": "Design",
+            "description": "Nos architectes conçoivent des plans sur mesure qui équilibrent l'esthétique et la fonctionnalité."
+          },
+          {
+            "id": "03",
+            "title": "Construction",
+            "description": "En utilisant des matériaux haut de gamme et une main-d'œuvre experte, nous transformons les conceptions en réalité concrète."
+          },
+          {
+            "id": "04",
+            "title": "Livraison",
+            "description": "Un contrôle qualité final rigoureux garantit que tout répond à notre standard d'excellence de 1988."
+          }
+        ]
+      },
+      "philosophy": {
+        "badge": "Notre Philosophie",
+        "title": "Les piliers fondamentaux qui <br> définissent notre métier",
+        "values": [
+          {
+            "id": "01",
+            "title": "Intégrité Architecturale",
+            "description": "Nous priorisons la solidité structurelle et le design intemporel aux tendances passagères, garantissant que chaque projet dure des générations."
+          },
+          {
+            "id": "02",
+            "title": "Innovation Durable",
+            "description": "Intégrer des technologies intelligentes et des matériaux écologiques pour réduire l'empreinte carbone sans sacrifier le luxe."
+          },
+          {
+            "id": "03",
+            "title": "Vision Centrée sur le Client",
+            "description": "Votre vision est notre plan. Nous maintenons une communication transparente du premier croquis à la dernière brique."
+          }
+        ]
+      },
+      "leadership": {
+        "badge": "Message Exécutif",
+        "years_label": "Années d'Intégrité",
+        "title": "Concevoir l'<span class='italic text-secondary'>avenir<\/span>, <br> respecter le <span class='italic'>passé<\/span>.",
+        "message": "Notre voyage a commencé en 1988 avec un plan simple : construire avec une qualité sans compromis. Aujourd'hui, nous continuons à combler le fossé entre l'innovation architecturale et le design centré sur l'humain. Nous ne développons pas seulement des projets ; nous cultivons des héritages.",
+        "name": "Asif Ahamed",
+        "role": "Fondateur et Directeur Général"
+      }
+    },
+    "properties": {
+      "title": "Propriétés Exclusives",
+      "subtitle": "Découvrez une sélection rigoureuse de nos plus belles annonces.",
+      "hero_banner": {
+        "bg_text": "Marché"
+      },
+      "grid_header": {
+        "showing_result": "Résultats de recherche",
+        "items_available": "Propriétés trouvées",
+        "range": "Affichage de %1$s–%2$s",
+        "no_results": "Essayez d'ajuster vos filtres.",
+        "view_grid": "Vue en grille",
+        "view_list": "Vue en liste",
+        "sort_by": "Trier par",
+        "filters_active": "Filtres actifs"
+      },
+      "sort": {
+        "label": "Trier par",
+        "newest": "Le plus récent",
+        "oldest": "Le plus ancien",
+        "price_low": "Prix : croissant",
+        "price_high": "Prix : décroissant",
+        "area_low": "Surface : croissante",
+        "area_high": "Surface : décroissante"
+      },
+      "pagination": {
+        "prev": "Page précédente",
+        "next": "Page suivante",
+        "go_to": "Aller à la page %s"
+      },
+      "filters": {
+        "all": "Toutes les propriétés",
+        "buy": "A vendre",
+        "rent": "A louer",
+        "type": "Type de bien",
+        "location": "Localisation",
+        "location_placeholder": "Ville, adresse, code postal…",
+        "price": "Gamme de prix",
+        "search": "Rechercher des biens",
+        "min_price": "Prix min",
+        "max_price": "Prix max",
+        "min_placeholder": "Min",
+        "max_placeholder": "Max",
+        "beds": "Chambres",
+        "baths": "Salles de bain",
+        "any": "Tous",
+        "status": "Statut",
+        "all_tabs": "Tout",
+        "new_build": "Neuf",
+        "features": "Équipements",
+        "reset": "Réinitialiser les filtres",
+        "reset_button": "Réinitialiser tout",
+        "apply": "Appliquer les filtres",
+        "apply_button": "Appliquer les filtres",
+        "filter_results": "Filtrer les résultats",
+        "filters_active": "Filtres appliqués",
+        "refine_search": "Affinez votre recherche",
+        "sidebar_sr_description": "Barre latérale de filtrage de recherche de propriétés avec filtres de statut, type, prix, chambres et salles de bain",
+        "plus_label": "%s+"
+      },
+      "js": {
+        "applied": "Appliqué !",
+        "from": "de",
+        "up_to": "jusqu'à",
+        "beds_label": "chambres",
+        "baths_label": "salles de bain",
+        "success_inquiry": "Merci ! Votre demande a été envoyée. Nous vous contacterons bientôt.",
+        "close": "Fermer",
+        "error_generic": "Un problème est survenu. Veuillez réessayer.",
+        "fill_required": "Veuillez remplir tous les champs obligatoires."
+      },
+      "meta": {
+        "sale": "À Vendre",
+        "rent": "À Louer",
+        "apartment": "Appartement",
+        "villa": "Villa",
+        "penthouse": "Penthouse",
+        "townhouse": "Maison de ville",
+        "shop": "Commerce",
+        "not_found": "Propriété non trouvée."
+      },
+
+      "categories": {
+        "types": [
+          { "name": "Villa", "slug": "villa", "count": "Voir tout" },
+          { "name": "Appartement", "slug": "apartment", "count": "Voir tout" },
+          { "name": "Commerce", "slug": "shop", "count": "Voir tout" },
+          {
+            "name": "Maison de ville",
+            "slug": "townhouse",
+            "count": "Voir tout"
+          },
+          { "name": "Bungalow", "slug": "bungalow", "count": "Voir tout" }
+        ]
+      },
+      "actions": {
+        "view_details": "Voir les Détails"
+      },
+      "cta": {
+        "title": "Listez votre propriété avec nous",
+        "subtitle": "Rejoignez des milliers de propriétaires satisfaits qui ont trouvé les bons acheteurs grâce à notre plateforme.",
+        "button": "Commencer maintenant",
+        "eyebrow": "L'opportunité vous attend",
+        "stat_listings": "Annonces actives",
+        "stat_clients": "Clients heureux",
+        "stat_experience": "Années d'expérience",
+        "button_primary": "Parcourir les annonces",
+        "button_secondary": "Parler à un agent",
+        "badge_licensed": "Agréé et réglementé",
+        "badge_secure": "Transactions sécurisées",
+        "badge_support": "Support client 24/7",
+        "badge_verified": "Annonces vérifiées uniquement"
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Contactez-nous",
+        "bg_text": "Contact",
+        "subtitle": "Contactez l'équipe dédiée d'Altara pour des stratégies d'investissement immobilier sur mesure et des conseils d'experts."
+      },
+      "info": {
+        "badge": "Contactez-nous",
+        "title": "Contactez-nous",
+        "company": "Capital Union",
+        "description": "Conseils d'experts en investissements immobiliers et solutions immobilières de premier ordre à travers le Bangladesh.",
+        "office_label": "Adresse du Bureau",
+        "office_address": "Secteur 07 d'Uttara, autoroute Dhaka - Mymensingh, Bangladesh",
+        "email_label": "Écrivez-nous",
+        "phone_label": "Appelez Directement"
+      },
+      "form": {
+        "title": "Envoyez-nous un Message",
+        "first_name_label": "Prénom",
+        "first_name_placeholder": "Prénom",
+        "last_name_label": "Nom de famille",
+        "last_name_placeholder": "Nom de famille",
+        "email_label": "Adresse e-mail",
+        "email_placeholder": "Adresse e-mail",
+        "phone_label": "Numéro de téléphone",
+        "phone_placeholder": "Numéro de téléphone",
+        "property_info_label": "Informations sur la propriété",
+        "property_type_placeholder": "Type",
+        "zip_label": "Code postal",
+        "zip_placeholder": "Code postal",
+        "city_label": "Ville",
+        "city_placeholder": "Ville",
+        "bedrooms_label": "Nb de chambres",
+        "bedrooms_placeholder": "Nb de chambres",
+        "bathrooms_label": "Nb de salles de bain",
+        "bathrooms_placeholder": "Nb de salles de bain",
+        "budget_label": "Votre budget",
+        "budget_placeholder": "Votre budget",
+        "submit": "Envoyer la Demande"
+      }
+    },
+    "invest": {
+      "hero": {
+        "title": "Opportunités d'Investissement",
+        "bg_text": "Investir",
+        "subtitle": "Sécurisez votre avenir avec des portefeuilles immobiliers à haut rendement et des développements immobiliers exclusifs."
+      },
+      "philosophy": {
+        "badge": "Stratégie de Niveau Institutionnel",
+        "title": "Une Approche Disciplinée Pour La <br> Préservation Du Capital.",
+        "focus_area_label": "Zone de Focalisation",
+        "focus_area_title": "Intégrité des Actifs Physiques",
+        "description": "Chez Capital Union, notre philosophie est enracinée dans la préservation de la richesse générationnelle. Nous privilégions les actifs physiques ayant une utilité sociale à long terme.",
+        "quote": "\"Nous ne courons pas après les tendances du marché ; nous nous concentrons plutôt sur la valeur intrinsèque et la résilience économique pour assurer l'avenir de nos partenaires.\"",
+        "items": [
+          {
+            "id": "01",
+            "title": "Discipline de Risque",
+            "description": "Des points d'entrée conservateurs avec des filets de sécurité à marge élevée pour chaque déploiement de capital."
+          },
+          {
+            "id": "02",
+            "title": "Préservation des Actifs",
+            "description": "Se concentrer sur des emplacements de choix et des structures durables qui résistent au temps."
+          }
+        ]
+      },
+      "growth": {
+        "title": "Investissement Immobilier Intelligent",
+        "subtitle": "Développez votre patrimoine grâce à des actifs immobiliers à forte croissance dans des emplacements de choix.",
+        "items": [
+          {
+            "title": "ROI Cohérent",
+            "description": "Bénéficiez de rendements annuels allant de 8 % à 15 % sur des propriétés commerciales et résidentielles de premier ordre."
+          },
+          {
+            "title": "Actifs Sécurisés",
+            "description": "Chaque propriété est vérifiée à 100 % sur le plan juridique avec des titres de propriété physiques et l'approbation du gouvernement."
+          },
+          {
+            "title": "Faible Barrière à l'Entrée",
+            "description": "Commencez votre parcours immobilier avec un investissement minimal. La propriété de luxe est désormais accessible."
+          }
+        ],
+        "cta": {
+          "title": "Prêt à assurer votre avenir ?",
+          "subtitle": "Téléchargez gratuitement notre guide d'investissement 2024.",
+          "button": "Obtenir le Guide d'Investissement"
+        }
+      },
+      "onboarding": {
+        "badge": "Intégration Exclusive",
+        "title": "Commencez Votre Parcours d'Investissement",
+        "subtitle": "Remplissez le formulaire de demande pour aider notre équipe des relations capital à comprendre vos objectifs.",
+        "form": {
+          "name_label": "Nom Légal Complet *",
+          "name_placeholder": "ex. Ahamed Asif",
+          "email_label": "Adresse e-mail *",
+          "email_placeholder": "ex. asif@exemple.com",
+          "questions": [
+            "Client Existant ?",
+            "Possédez-vous un Bien en Espagne ?",
+            "Résident Fiscal en Espagne ?"
+          ],
+          "options": {
+            "no": "Non",
+            "yes": "Oui"
+          },
+          "interest_label": "Domaines d'Intérêt *",
+          "interests": [
+            "Terrains",
+            "Résidentiel",
+            "Commercial",
+            "Hôtels",
+            "Agriculture",
+            "Autre"
+          ],
+          "amount_label": "Montant de l'Investissement *",
+          "amounts": [
+            "€1,000,000 - €2,000,000",
+            "€2,000,000 - €3,000,000",
+            "€3,000,000 - €4,000,000",
+            "€4,000,000 - €5,000,000",
+            "€5,000,000 - €10,000,000",
+            "€10,000,000 - €20,000,000",
+            "€20,000,000+"
+          ],
+          "submit": "Envoyer la Demande",
+          "footer": "Portail Chiffré et Confidentiel"
+        }
+      }
+    },
+    "error_404": {
+      "bg_text": "404",
+      "subtitle": "Oups ! Page Introuvable",
+      "message": "Nous avons parcouru tout notre portefeuille, mais nous n'avons rien trouvé à l'adresse",
+      "search_placeholder": "Rechercher des propriétés...",
+      "back_home": "Retour à l'Accueil",
+      "view_properties": "Voir Toutes les Propriétés"
+    },
+    "property_details": {
+      "new_build": "Nouvelle Construction",
+      "for": "À",
+      "description": "Description",
+      "features": "Caractéristiques",
+      "bedrooms": "Chambres",
+      "bathrooms": "Salles de bain",
+      "building": "Bâtiment",
+      "lot_size": "Taille du terrain",
+      "view_photos": "Voir les photos",
+      "form": {
+        "contact_us": "Contactez-nous",
+        "name": "Nom",
+        "number": "Numéro",
+        "email": "E-mail",
+        "message": "Je suis intéressé par cette propriété.",
+        "submit": "ENVOYER LE MESSAGE"
+      }
+    },
+    "privacy_policy": {
+      "hero": {
+        "title": "Politique de Confidentialité",
+        "bg_text": "Confidentialité",
+        "subtitle": "Comment nous collectons, utilisons et gérons vos données."
+      },
+      "content": {
+        "title": "Politique de Confidentialité",
+        "description": "Cette politique de confidentialité décrit comment vos données sont gérées sur nos plateformes. Nous respectons votre vie privée et nous nous engageons à la protéger en nous conformant à cette politique.",
+        "sections": [
+          {
+            "title": "1. Collecte d'Informations",
+            "text": "Nous collectons plusieurs types d'informations à différentes fins pour vous fournir et améliorer notre Service. Cela inclut des informations personnellement identifiables telles que l'adresse e-mail, le nom et le prénom, le numéro de téléphone et l'adresse."
+          },
+          {
+            "title": "2. Comment Nous Utilisons Vos Données",
+            "text": "Capital Union utilise les données collectées à diverses fins : fournir et maintenir notre Service, vous informer des modifications, fournir un support client, recueillir des analyses afin que nous puissions améliorer notre Service et surveiller l'utilisation de notre Service."
+          },
+          {
+            "title": "3. Sécurité des Données",
+            "text": "La sécurité de vos données est importante pour nous, mais n'oubliez pas qu'aucune méthode de transmission sur Internet ou méthode de stockage électronique n'est sûre à 100 %. Bien que nous nous efforcions d'utiliser des moyens commercialement acceptables pour protéger vos données personnelles, nous ne pouvons garantir leur sécurité absolue."
+          }
+        ]
+      }
+    },
+    "terms_of_service": {
+      "hero": {
+        "title": "Conditions d'Utilisation",
+        "bg_text": "Conditions",
+        "subtitle": "Règles et directives pour l'utilisation de notre plateforme."
+      },
+      "content": {
+        "title": "Conditions d'Utilisation",
+        "description": "En accédant ou en utilisant notre plateforme, vous acceptez d'être lié par ces conditions. Si vous n'êtes pas d'accord avec une partie de ces conditions, vous ne pouvez pas accéder à nos services.",
+        "sections": [
+          {
+            "title": "1. Propriété Intellectuelle",
+            "text": "Le Service et son contenu, ses caractéristiques et ses fonctionnalités d'origine sont et resteront la propriété exclusive de Capital Union et de ses concédants de licence. Le Service est protégé par le droit d'auteur, le droit des marques et d'autres lois du pays et des pays étrangers."
+          },
+          {
+            "title": "2. Obligations de l'Utilisateur",
+            "text": "Lorsque vous créez un compte avec nous, vous devez nous fournir des informations exactes, complètes et à jour en tout temps. Le non-respect de cette obligation constitue une violation des Conditions, ce qui peut entraîner la résiliation immédiate de votre compte sur notre Service."
+          },
+          {
+            "title": "3. Limitation de Responsabilité",
+            "text": "En aucun cas, Capital Union, ni ses dirigeants, employés, partenaires, agents, fournisseurs ou sociétés affiliées ne pourront être tenus responsables de tout dommage indirect, accessoire, spécial, consécutif ou punitif, y compris, sans s'y limiter, la perte de bénéfices, de données, d'utilisation, de clientèle ou d'autres pertes intangibles."
+          }
+        ]
+      }
+    },
+    "cookie_policy": {
+      "hero": {
+        "title": "Politique en matière de Cookies",
+        "bg_text": "Cookies",
+        "subtitle": "Informations sur notre utilisation des cookies."
+      },
+      "content": {
+        "title": "Politique en matière de Cookies",
+        "description": "Notre site utilise des cookies pour vous distinguer des autres utilisateurs. Cela nous aide à vous offrir une bonne expérience lorsque vous naviguez sur notre site web et nous permet également de l'améliorer.",
+        "sections": [
+          {
+            "title": "1. Types de Cookies que Nous Utilisons",
+            "text": "Nous utilisons des cookies de session pour faire fonctionner notre Service. Nous utilisons des cookies de préférence pour mémoriser vos préférences et divers paramètres. Nous utilisons des cookies de sécurité à des fins de sécurité."
+          },
+          {
+            "title": "2. Cookies Tiers",
+            "text": "En plus de nos propres cookies, nous pouvons également utiliser divers cookies tiers pour signaler les statistiques d'utilisation du Service, diffuser des publicités sur et via le Service, etc. Ces fournisseurs ont leurs propres politiques de données strictes."
+          },
+          {
+            "title": "3. Gérer Vos Cookies",
+            "text": "Vous pouvez configurer votre navigateur pour refuser tous les cookies ou pour vous indiquer quand un cookie est envoyé. Cependant, si vous n'acceptez pas les cookies, vous ne pourrez peut-être pas utiliser certaines parties de notre Service."
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Trouvez la maison de vos rêves avec la plateforme immobilière la plus complète.",
+    "copyright": "Tous droits réservés.",
+    "menus": {
+      "quick_links": "Liens Rapides",
+      "company": "Entreprise",
+      "legal": "Mentions Légales"
+    },
+    "links": {
+      "buy": "Acheter une Propriété",
+      "rent": "Louer une Propriété",
+      "sell": "Vendre une Propriété",
+      "services": "Services",
+      "about": "À Propos de Nous",
+      "contact": "Contact",
+      "careers": "Carrières",
+      "blog": "Blog",
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions d'Utilisation",
+      "cookie": "Politique de Cookies"
+    }
+  }
 }
