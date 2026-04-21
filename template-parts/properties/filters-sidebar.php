@@ -6,7 +6,7 @@
 
 <h2 class="sr-only"><?php echo esc_html( t('pages.properties.filters.sidebar_sr_description') ?? 'Property search filter sidebar' ); ?></h2>
 
-<aside class="lg:w-[380px] flex-shrink-0 ">
+<aside class="lg:w-[380px] flex-shrink-0 lg:sticky lg:top-24 lg:self-start">
     <!-- Mobile Filter Toggle -->
     <button id="mobile-filter-toggle" class="lg:hidden w-full flex items-center justify-between bg-white border border-slate-100 rounded-2xl p-4 mb-6 active:scale-[0.98] transition-all shadow-sm">
         <div class="flex items-center gap-3">
