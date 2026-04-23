@@ -77,20 +77,40 @@ class AjaxHandler {
         $view      = sanitize_text_field($_POST['view'] ?? 'grid');
 
         // 1. Data Source
-        $json_file = get_template_directory() . '/data/properties.json';
-        if (!file_exists($json_file)) {
-            wp_send_json_error('Data file not found');
+        $all_raw = [];
+        
+        // 1a. Load Admin Added Properties (CPT)
+        $admin_posts = get_posts([
+            'post_type' => 'property',
+            'posts_per_page' => -1,
+            'post_status' => 'publish'
+        ]);
+        foreach ($admin_posts as $post) {
+            $raw = PropertyCPT::to_kyero_array($post->ID, $lang);
+            if ($raw) {
+                $raw['is_admin_added'] = true;
+                $all_raw[] = $raw;
+            }
         }
 
-        $json_data = file_get_contents($json_file);
-        $parsed_data = json_decode($json_data, true);
-        $raw_properties = $parsed_data['root']['property'] ?? [];
+        // 1b. Load JSON Source
+        $json_file = get_template_directory() . '/data/properties.json';
+        if (file_exists($json_file)) {
+            $json_data = file_get_contents($json_file);
+            $parsed_data = json_decode($json_data, true);
+            $raw_json_properties = $parsed_data['root']['property'] ?? [];
+            foreach ($raw_json_properties as $rp) {
+                $rp['is_admin_added'] = false;
+                $all_raw[] = $rp;
+            }
+        }
 
         // 2. Filter & Map
         $filtered = [];
-        foreach ($raw_properties as $prop) {
+        foreach ($all_raw as $prop) {
             $item = Translator::map_property_data($prop, $lang);
-            $item['category'] = strtolower($prop['type'][0] ?? ''); // Use lowercase for robust matching
+            $item['is_admin_added'] = $prop['is_admin_added'] ?? false;
+            $item['category'] = strtolower($prop['type'][0] ?? '');
 
             // Search text
             if ($search && 
@@ -133,26 +153,27 @@ class AjaxHandler {
         }
 
         // 3. Sorting
-        switch ( $sort ) {
-            case 'newest':
-                usort($filtered, fn($a, $b) => $b['unix_date'] <=> $a['unix_date']);
-                break;
-            case 'oldest':
-                usort($filtered, fn($a, $b) => $a['unix_date'] <=> $b['unix_date']);
-                break;
-            case 'price_asc':
-                usort($filtered, fn($a, $b) => $a['raw_price'] <=> $b['raw_price']);
-                break;
-            case 'price_desc':
-                usort($filtered, fn($a, $b) => $b['raw_price'] <=> $a['raw_price']);
-                break;
-            case 'area_asc':
-                usort($filtered, fn($a, $b) => $a['raw_sqft'] <=> $b['raw_sqft']);
-                break;
-            case 'area_desc':
-                usort($filtered, fn($a, $b) => $b['raw_sqft'] <=> $a['raw_sqft']);
-                break;
-        }
+        usort($filtered, function($a, $b) use ($sort) {
+            if (($a['is_admin_added'] ?? false) !== ($b['is_admin_added'] ?? false)) {
+                return ($b['is_admin_added'] ?? false) <=> ($a['is_admin_added'] ?? false);
+            }
+            switch ( $sort ) {
+                case 'newest':
+                    return $b['unix_date'] <=> $a['unix_date'];
+                case 'oldest':
+                    return $a['unix_date'] <=> $b['unix_date'];
+                case 'price_asc':
+                    return $a['raw_price'] <=> $b['raw_price'];
+                case 'price_desc':
+                    return $b['raw_price'] <=> $a['raw_price'];
+                case 'area_asc':
+                    return $a['raw_sqft'] <=> $b['raw_sqft'];
+                case 'area_desc':
+                    return $b['raw_sqft'] <=> $a['raw_sqft'];
+                default:
+                    return $b['unix_date'] <=> $a['unix_date'];
+            }
+        });
 
         // 4. Pagination
         $per_page = 12;

@@ -353,17 +353,21 @@
       "hero": {
         "title": "Get in Touch",
         "bg_text": "Contact",
-        "subtitle": "Reach out to Altara's dedicated team for tailored property investment strategies and expert guidance."
+        "subtitle": "Reach out to Capital Union's dedicated team for tailored property investment strategies and expert guidance."
       },
       "info": {
-        "badge": "Get In Touch",
-        "title": "Contact Us",
-        "company": "Capital Union",
-        "description": "Expert guidance in property investments and premium real estate solutions across Bangladesh.",
+        "badge": "Capital Union Investment",
+        "title": "Get in touch",
+        "company": "Capital Union Investment",
+        "description": "Get in touch for expert guidance in property investments and premium real estate solutions in Alicante.",
         "office_label": "Office Address",
-        "office_address": "Uttara Sector 07, Dhaka - Mymensingh Highway, Bangladesh",
+        "office_address": "Avenidad de La Constitucion, Formentera del Segura 03179 (Alicante)",
         "email_label": "Email Us",
-        "phone_label": "Call Directly"
+        "email_value": "info@capitalunioninvestment.com",
+        "phone_label": "Call Directly",
+        "phone_value": "+34 639 31 58 61",
+        "hours_label": "Working Hours",
+        "hours_value": "Mon-Fri 9 am - 8.30 pm"
       },
       "form": {
         "title": "Send us a Message",

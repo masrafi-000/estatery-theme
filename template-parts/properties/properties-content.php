@@ -20,15 +20,33 @@
                     // 1. Data Source
                     $json_file = get_template_directory() . '/data/properties.json';
                     $all_properties = [];
+                    $current_lang = \Estatery\Core\Translator::getInstance()->getLang();
+
+                    // 1a. Load Admin Added Properties (CPT)
+                    $admin_posts = get_posts([
+                        'post_type' => 'property',
+                        'posts_per_page' => -1,
+                        'post_status' => 'publish'
+                    ]);
+                    foreach ($admin_posts as $post) {
+                        $raw = \Estatery\Core\PropertyCPT::to_kyero_array($post->ID, $current_lang);
+                        if ($raw) {
+                            $mapped = \Estatery\Core\Translator::map_property_data($raw, $current_lang);
+                            $mapped['is_admin_added'] = true; // Flag for prioritization
+                            $all_properties[] = $mapped;
+                        }
+                    }
+
+                    // 1b. Load JSON Properties
                     if (file_exists($json_file)) {
                         $json_data = file_get_contents($json_file);
                         $parsed_data = json_decode($json_data, true);
                         $raw_properties = $parsed_data['root']['property'] ?? [];
 
-                        $current_lang = \Estatery\Core\Translator::getInstance()->getLang();
-
                         foreach ($raw_properties as $prop) {
-                            $all_properties[] = \Estatery\Core\Translator::map_property_data($prop, $current_lang);
+                            $mapped = \Estatery\Core\Translator::map_property_data($prop, $current_lang);
+                            $mapped['is_admin_added'] = false;
+                            $all_properties[] = $mapped;
                         }
                     }
                     
@@ -86,26 +104,30 @@
                     $current_view  = $_GET['view'] ?? 'grid';
 
                     // 3. Sorting logic
-                    switch ( $current_sort ) {
-                        case 'newest':
-                            usort($all_properties, fn($a, $b) => $b['unix_date'] <=> $a['unix_date']);
-                            break;
-                        case 'oldest':
-                            usort($all_properties, fn($a, $b) => $a['unix_date'] <=> $b['unix_date']);
-                            break;
-                        case 'price_asc':
-                            usort($all_properties, fn($a, $b) => $a['raw_price'] <=> $b['raw_price']);
-                            break;
-                        case 'price_desc':
-                            usort($all_properties, fn($a, $b) => $b['raw_price'] <=> $a['raw_price']);
-                            break;
-                        case 'area_asc':
-                            usort($all_properties, fn($a, $b) => $a['raw_sqft'] <=> $b['raw_sqft']);
-                            break;
-                        case 'area_desc':
-                            usort($all_properties, fn($a, $b) => $b['raw_sqft'] <=> $a['raw_sqft']);
-                            break;
-                    }
+                    usort($all_properties, function($a, $b) use ($current_sort) {
+                        // Priority 1: Admin Added Properties Always on Top
+                        if ($a['is_admin_added'] !== $b['is_admin_added']) {
+                            return $b['is_admin_added'] <=> $a['is_admin_added'];
+                        }
+
+                        // Priority 2: Selected Sort Order
+                        switch ( $current_sort ) {
+                            case 'newest':
+                                return $b['unix_date'] <=> $a['unix_date'];
+                            case 'oldest':
+                                return $a['unix_date'] <=> $b['unix_date'];
+                            case 'price_asc':
+                                return $a['raw_price'] <=> $b['raw_price'];
+                            case 'price_desc':
+                                return $b['raw_price'] <=> $a['raw_price'];
+                            case 'area_asc':
+                                return $a['raw_sqft'] <=> $b['raw_sqft'];
+                            case 'area_desc':
+                                return $b['raw_sqft'] <=> $a['raw_sqft'];
+                            default:
+                                return $b['unix_date'] <=> $a['unix_date'];
+                        }
+                    });
 
                     // 2. State management
                     $per_page      = 12; 

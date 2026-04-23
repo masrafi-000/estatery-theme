@@ -335,14 +335,18 @@
         "subtitle": "Contactez l'équipe dédiée d'Altara pour des stratégies d'investissement immobilier sur mesure et des conseils d'experts."
       },
       "info": {
-        "badge": "Contactez-nous",
+        "badge": "Capital Union Investment",
         "title": "Contactez-nous",
-        "company": "Capital Union",
-        "description": "Conseils d'experts en investissements immobiliers et solutions immobilières de premier ordre à travers le Bangladesh.",
+        "company": "Capital Union Investment",
+        "description": "Contactez-nous pour des conseils d'experts en investissements immobiliers et des solutions immobilières de premier ordre à Alicante.",
         "office_label": "Adresse du Bureau",
-        "office_address": "Secteur 07 d'Uttara, autoroute Dhaka - Mymensingh, Bangladesh",
+        "office_address": "Avenidad de La Constitucion, Formentera del Segura 03179 (Alicante)",
         "email_label": "Écrivez-nous",
-        "phone_label": "Appelez Directement"
+        "email_value": "info@capitalunioninvestment.com",
+        "phone_label": "Appelez Directement",
+        "phone_value": "+34 639 31 58 61",
+        "hours_label": "Heures de travail",
+        "hours_value": "Lun-Ven 9 am - 8.30 pm"
       },
       "form": {
         "title": "Envoyez-nous un Message",

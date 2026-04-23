@@ -10,6 +10,7 @@ $property_id = $_GET['id'] ?? '';
 $property_data = null;
 
 if ( $property_id ) {
+    // 1. Try JSON Source first
     $json_file = get_template_directory() . '/data/properties.json';
     if ( file_exists( $json_file ) ) {
         $json_data = file_get_contents( $json_file );
@@ -22,6 +23,11 @@ if ( $property_id ) {
                 break;
             }
         }
+    }
+
+    // 2. Fallback to Database (Admin Added)
+    if ( ! $property_data && is_numeric($property_id) ) {
+        $property_data = \Estatery\Core\PropertyCPT::to_kyero_array( intval($property_id) );
     }
 }
 

@@ -106,12 +106,12 @@
                     <div class="text-[11px] font-medium text-slate-400 tracking-[0.06em] uppercase mb-2.5"><?php echo esc_html( t('pages.properties.filters.price') ); ?></div>
                     <div class="grid grid-cols-2 gap-2">
                         <div class="relative">
-                            <span class="absolute left-[10px] top-1/2 -translate-y-1/2 text-[12px] text-slate-400">$</span>
+                            <span class="absolute left-[10px] top-1/2 -translate-y-1/2 text-[12px] text-slate-400">€</span>
                             <input type="number" id="price-min" placeholder="<?php echo esc_attr( t('pages.properties.filters.min_placeholder') ); ?>" 
                                    class="w-full pl-[22px] pr-2.5 py-[9px] text-[13px] bg-slate-50 border-[0.5px] border-slate-100 rounded-2xl text-slate-900 outline-none transition-all focus:border-primary/50">
                         </div>
                         <div class="relative">
-                            <span class="absolute left-[10px] top-1/2 -translate-y-1/2 text-[12px] text-slate-400">$</span>
+                            <span class="absolute left-[10px] top-1/2 -translate-y-1/2 text-[12px] text-slate-400">€</span>
                             <input type="number" id="price-max" placeholder="<?php echo esc_attr( t('pages.properties.filters.max_placeholder') ); ?>" 
                                    class="w-full pl-[22px] pr-2.5 py-[9px] text-[13px] bg-slate-50 border-[0.5px] border-slate-100 rounded-2xl text-slate-900 outline-none transition-all focus:border-primary/50">
                         </div>

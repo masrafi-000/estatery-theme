@@ -15,6 +15,7 @@ require_once get_template_directory() . '/inc/Core/InquiryHandler.php';
 require_once get_template_directory() . '/inc/Core/InvestHandler.php';
 require_once get_template_directory() . '/inc/Core/ContactHandler.php';
 require_once get_template_directory() . '/inc/Core/AdminDashboard.php';
+require_once get_template_directory() . '/inc/Core/PropertyCPT.php';
 
 // Instantiate Core Controllers
 new Estatery\Core\Setup();
@@ -25,6 +26,7 @@ new Estatery\Core\InquiryHandler();
 new Estatery\Core\InvestHandler();
 new Estatery\Core\ContactHandler();
 new Estatery\Core\AdminDashboard();
+new Estatery\Core\PropertyCPT();
 
 // Bootstrap pages and settings
 \Estatery\Core\ThemeSetup::init();

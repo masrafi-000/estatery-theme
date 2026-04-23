@@ -52,15 +52,15 @@
                         <div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center shrink-0">
                             <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v10a2 2 0 002 2z">
                                 </path>
                             </svg>
                         </div>
                         <div>
                             <h4 class="text-secondary font-bold uppercase tracking-widest text-[10px] mb-1 opacity-50">
                                 <?php echo esc_html($info['email_label']); ?></h4>
-                            <a href="mailto:info@altara.com"
-                                class="text-secondary text-sm font-semibold hover:text-primary transition-colors">info@altara.com</a>
+                            <a href="mailto:<?php echo esc_attr($info['email_value']); ?>"
+                                class="text-secondary text-sm font-semibold hover:text-primary transition-colors"><?php echo esc_html($info['email_value']); ?></a>
                         </div>
                     </div>
 
@@ -75,11 +75,26 @@
                         <div>
                             <h4 class="text-secondary font-bold uppercase tracking-widest text-[10px] mb-1 opacity-50">
                                 <?php echo esc_html($info['phone_label']); ?></h4>
-                            <a href="tel:+880123456789"
-                                class="text-secondary text-sm font-semibold hover:text-primary transition-colors">+88
-                                0123 456 789</a>
+                            <a href="tel:<?php echo esc_attr(str_replace(' ', '', $info['phone_value'])); ?>"
+                                class="text-secondary text-sm font-semibold hover:text-primary transition-colors"><?php echo esc_html($info['phone_value']); ?></a>
                         </div>
                     </div>
+
+                    <?php if (isset($info['hours_value'])): ?>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-secondary font-bold uppercase tracking-widest text-[10px] mb-1 opacity-50">
+                                <?php echo esc_html($info['hours_label']); ?></h4>
+                            <p class="text-secondary text-sm font-semibold"><?php echo esc_html($info['hours_value']); ?></p>
+                        </div>
+                    </div>
+                    <?php endif; ?>
                 </div>
 
                 <div class="pt-6 border-t border-secondary/5">

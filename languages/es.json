@@ -326,19 +326,23 @@
     },
     "contact": {
       "hero": {
-        "title": "Ponerse en Contacto",
+        "title": "Póngase en contacto",
         "bg_text": "Contacto",
-        "subtitle": "Póngase en contacto con el equipo dedicado de Altara para obtener estrategias de inversión inmobiliaria a medida y orientación experta."
+        "subtitle": "Póngase en contacto con el equipo dedicado de Capital Union para obtener estrategias de inversión inmobiliaria a medida y orientación expertas."
       },
       "info": {
-        "badge": "Póngase en Contacto",
+        "badge": "Ponerse en contacto",
         "title": "Contáctenos",
-        "company": "Capital Union",
-        "description": "Orientación experta en inversiones inmobiliarias y soluciones inmobiliarias de primera calidad en todo Bangladesh.",
-        "office_label": "Dirección de la Oficina",
-        "office_address": "Sector 07 de Uttara, autopista Dhaka - Mymensingh, Bangladesh",
-        "email_label": "Envíenos un Correo",
-        "phone_label": "Llamar Directamente"
+        "company": "Capital Union Investment",
+        "description": "Póngase en contacto para obtener orientación experta en inversiones inmobiliarias y soluciones inmobiliarias de primera calidad en Alicante.",
+        "office_label": "Dirección de la oficina",
+        "office_address": "Avenidad de La Constitucion, Formentera del Segura 03179 (Alicante)",
+        "email_label": "Envíenos un correo",
+        "email_value": "info@capitalunioninvestment.com",
+        "phone_label": "Llamar directamente",
+        "phone_value": "+34 639 31 58 61",
+        "hours_label": "Horario de trabajo",
+        "hours_value": "Lun-Vie 9 am - 8.30 pm"
       },
       "form": {
         "title": "Envíanos un Mensaje",
