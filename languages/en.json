@@ -14,7 +14,8 @@
     "success_inquiry": "Thank you! Your inquiry has been sent. We will contact you soon.",
     "close": "Close",
     "error_generic": "Something went wrong. Please try again.",
-    "fill_required": "Please fill all required fields."
+    "fill_required": "Please fill all required fields.",
+    "loading": "Loading..."
   },
   "header": {
     "language_label": "Language:",

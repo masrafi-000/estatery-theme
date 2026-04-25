@@ -14,7 +14,8 @@
     "success_inquiry": "¡Gracias! Su consulta ha sido enviada. Nos pondremos en contacto con usted pronto.",
     "close": "Cerrar",
     "error_generic": "Algo salió mal. Por favor, inténtelo de nuevo.",
-    "fill_required": "Por favor, complete todos los campos obligatorios."
+    "fill_required": "Por favor, complete todos los campos obligatorios.",
+    "loading": ""
   },
   "header": {
     "language_label": "Idioma:",

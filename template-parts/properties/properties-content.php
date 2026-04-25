@@ -149,7 +149,7 @@
                         <div id="properties-loading" class="absolute inset-0 bg-white/60 backdrop-blur-[2px] z-20 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
                             <div class="flex flex-col items-center gap-3">
                                 <div class="w-10 h-10 border-4 border-primary/20 border-t-primary rounded-full animate-spin"></div>
-                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest"><?php echo esc_html( t('pages.properties.js.loading') ?? 'Loading...' ); ?></span>
+                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest"><?php echo esc_html( t('js.loading') ?? 'Loading...' ); ?></span>
                             </div>
                         </div>
 

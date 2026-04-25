@@ -210,8 +210,27 @@ class PropertyCPT {
             </div>
         </div>
         <div class="estatery-meta-field">
-            <label>Amenities / Features (One per line)</label>
-            <textarea name="property_features" class="estatery-control-alt" rows="6" placeholder="e.g. Air Conditioning&#10;Private Parking&#10;Sea Views"><?php echo esc_textarea($features); ?></textarea>
+            <label>Amenities / Features</label>
+            <?php
+            $available_features = [
+                'Terrace', 'Swimming Pool', 'Solarium', 'Garden', 
+                'Private pool', 'Private parking', 'Basement', 'Clear Views',
+                'Air Conditioning', 'Heating', 'Sea Views', 'Mountain Views',
+                'Garage', 'Gym', 'Alarm System', 'Lift', 'Furnished', 
+                'Storage Room', 'Utility Room', 'White Goods'
+            ];
+            
+            $saved_features = !empty($features) ? array_map('trim', explode("\n", $features)) : [];
+            ?>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; margin-top: 5px;">
+                <?php foreach ($available_features as $feature): ?>
+                    <label style="font-size: 13px; font-weight: 500; color: #475569; display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox" name="property_features[]" value="<?php echo esc_attr($feature); ?>" 
+                               <?php checked(in_array($feature, $saved_features)); ?>>
+                        <?php echo esc_html($feature); ?>
+                    </label>
+                <?php endforeach; ?>
+            </div>
         </div>
         <?php
     }
@@ -264,6 +283,10 @@ class PropertyCPT {
             <div class="estatery-meta-field">
                 <label>Province</label>
                 <input type="text" name="property_province" class="estatery-control-alt" value="<?php echo esc_attr($province); ?>">
+            </div>
+            <div class="estatery-meta-field">
+                <label>Country</label>
+                <input type="text" name="property_country" class="estatery-control-alt" value="<?php echo esc_attr(get_post_meta($post->ID, '_country', true) ?: 'Spain'); ?>">
             </div>
             <div class="estatery-meta-field">
                 <label>Zone / Location Detail</label>
@@ -378,16 +401,20 @@ class PropertyCPT {
             '_resale'           => 'property_resale',
             '_town'             => 'property_town',
             '_province'         => 'property_province',
+            '_country'          => 'property_country',
             '_latitude'         => 'property_latitude',
             '_longitude'        => 'property_longitude',
-            '_location_detail'  => 'property_location_detail',
-            '_features'         => 'property_features'
+            '_location_detail'  => 'property_location_detail'
         ];
 
         foreach ($fields as $meta_key => $post_key) {
             $val = isset($_POST[$post_key]) ? sanitize_text_field($_POST[$post_key]) : '';
             update_post_meta($post_id, $meta_key, $val);
         }
+
+        // Special handling for features (array)
+        $features = isset($_POST['property_features']) ? array_map('sanitize_text_field', $_POST['property_features']) : [];
+        update_post_meta($post_id, '_features', implode("\n", $features));
 
         // Thumbnail / Featured Image
         if (isset($_POST['_thumbnail_id'])) {
@@ -440,7 +467,7 @@ class PropertyCPT {
             'type' => [get_post_meta($post_id, '_type', true) ?: 'property'],
             'town' => [get_post_meta($post_id, '_town', true) ?: ''],
             'province' => [get_post_meta($post_id, '_province', true) ?: ''],
-            'country' => ['Spain'],
+            'country' => [get_post_meta($post_id, '_country', true) ?: 'Spain'],
             'location_detail' => [get_post_meta($post_id, '_location_detail', true) ?: ''],
             'desc' => [$desc],
             'features' => [['feature' => $raw_features]],
