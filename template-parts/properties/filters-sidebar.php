@@ -53,7 +53,7 @@
 
                
 
-                <!-- Location Filter -->
+                <!-- Search Filter -->
                 <div class="filter-group">
                     <div class="text-[11px] font-medium text-slate-400 tracking-[0.06em] uppercase mb-2.5"><?php echo esc_html( t('pages.properties.filters.location') ); ?></div>
                     <div class="relative">

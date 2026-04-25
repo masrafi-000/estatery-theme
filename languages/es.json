@@ -15,7 +15,7 @@
     "close": "Cerrar",
     "error_generic": "Algo salió mal. Por favor, inténtelo de nuevo.",
     "fill_required": "Por favor, complete todos los campos obligatorios.",
-    "loading": ""
+    "loading": "Cargando..."
   },
   "header": {
     "language_label": "Idioma:",
@@ -259,6 +259,7 @@
         "buy": "En venta",
         "rent": "En alquiler",
         "type": "Tipo de propiedad",
+        "loading": "Cargando...",
         "location": "Ubicación",
         "location_placeholder": "Ciudad, dirección, código postal…",
         "price": "Rango de precios",
@@ -471,6 +472,8 @@
       "view_properties": "Ver Todas las Propiedades"
     },
     "property_details": {
+      "bg_text": "Detalles",
+      "subtitle": "Explore los detalles premium y el potencial de inversión de esta propiedad",
       "new_build": "Obra Nueva",
       "resale": "Reventa",
       "for": "Para",

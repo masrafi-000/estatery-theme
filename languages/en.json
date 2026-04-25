@@ -496,6 +496,8 @@
       "view_properties": "View All Properties"
     },
     "property_details": {
+      "bg_text": "Details",
+      "subtitle": "Explore the premium details and investment potential of this property",
       "new_build": "New Build",
       "resale": "Resale",
       "for": "For",

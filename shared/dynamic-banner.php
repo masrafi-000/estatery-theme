@@ -4,6 +4,11 @@ $title    = isset($banner_title) ? $banner_title : "Page Title";
 $subtitle = isset($banner_subtitle) ? $banner_subtitle : "Default subtitle text goes here.";
 $image    = isset($banner_image) ? $banner_image : "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg";
 $bg_text  = isset($banner_bg_text) ? $banner_bg_text : $title;
+
+// Breadcrumbs logic
+$breadcrumbs = isset($banner_breadcrumbs) ? $banner_breadcrumbs : [
+    ['label' => 'Home', 'url' => site_url()]
+];
 ?>
 
 <section class="relative min-h-[500px] lg:h-[65vh] w-full flex items-center overflow-hidden bg-[#1a1a1a] py-20 lg:py-0">
@@ -22,9 +27,17 @@ $bg_text  = isset($banner_bg_text) ? $banner_bg_text : $title;
     <div class="container mx-auto px-6 lg:px-12 relative z-20">
         <div class="max-w-4xl space-y-6">
             <nav class="flex items-center gap-3 text-xs uppercase tracking-widest text-gray-300 mb-6 font-medium">
-                <a href="<?php echo site_url(); ?>" class="hover:text-secondary transition-colors">Home</a>
-                <span class="opacity-50">/</span>
-                <span class="text-white"><?php echo $title; ?></span>
+                <?php foreach ($breadcrumbs as $index => $crumb): ?>
+                    <?php if ($index > 0): ?>
+                        <span class="opacity-50">/</span>
+                    <?php endif; ?>
+                    
+                    <?php if ($index === count($breadcrumbs) - 1): ?>
+                        <span class="text-white"><?php echo esc_html($crumb['label']); ?></span>
+                    <?php else: ?>
+                        <a href="<?php echo esc_url($crumb['url']); ?>" class="hover:text-secondary transition-colors"><?php echo esc_html($crumb['label']); ?></a>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </nav>
 
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white font-medium capitalize leading-[1.1] break-words">

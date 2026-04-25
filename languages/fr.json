@@ -14,7 +14,8 @@
     "success_inquiry": "Merci ! Votre demande a été envoyée. Nous vous contacterons bientôt.",
     "close": "Fermer",
     "error_generic": "Un problème est survenu. Veuillez réessayer.",
-    "fill_required": "Veuillez remplir tous les champs obligatoires."
+    "fill_required": "Veuillez remplir tous les champs obligatoires.",
+    "loading": "Chargement..."
   },
   "header": {
     "language_label": "Langue:",
@@ -474,6 +475,8 @@
       "view_properties": "Voir Toutes les Propriétés"
     },
     "property_details": {
+      "bg_text": "Détails",
+      "subtitle": "Explorez les détails premium et le potentiel d'investissement de cette propriété",
       "new_build": "Nouvelle Construction",
       "resale": "Revente",
       "for": "À",

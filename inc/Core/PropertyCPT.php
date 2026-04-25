@@ -458,6 +458,7 @@ class PropertyCPT {
 
         return [
             'id' => [(string)$post_id],
+            'title' => [$post->post_title],
             'date' => [$post->post_date],
             'price' => [get_post_meta($post_id, '_price', true) ?: '0'],
             'currency' => [get_post_meta($post_id, '_currency', true) ?: 'EUR'],

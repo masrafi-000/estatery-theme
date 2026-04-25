@@ -124,10 +124,13 @@ $gallery_images_json = json_encode($images);
                             <span class="inline-block bg-slate-900 text-white text-[10px] font-black px-3 py-1 rounded-xl uppercase tracking-widest mb-2"><?php echo esc_html(t('pages.property_details.resale')); ?></span>
                         <?php endif; ?>
                         <?php 
-                            $raw_type = strtolower($property_data['type'][0] ?? 'property');
-                            $translated_type = t("pages.properties.meta.{$raw_type}") ?: ucfirst($raw_type);
+                            $title = $property_data['title'][0] ?? '';
+                            if (empty($title)) {
+                                $raw_type = strtolower($property_data['type'][0] ?? 'property');
+                                $title = t("pages.properties.meta.{$raw_type}") ?: ucfirst($raw_type);
+                            }
                         ?>
-                        <h2 class="text-3xl font-serif font-bold text-slate-900"><?php echo esc_html($translated_type); ?></h2>
+                        <h2 class="text-3xl font-serif font-bold text-slate-900"><?php echo esc_html($title); ?></h2>
                         <p class="text-slate-500 mt-1 flex items-center gap-1 text-sm font-medium">
                             <i data-lucide="map-pin" class="w-4 h-4"></i>
                             <?php echo esc_html(($property_data['location_detail'][0] ?? '') . ', ' . ($property_data['town'][0] ?? '') . ', ' . ($property_data['province'][0] ?? '')); ?>

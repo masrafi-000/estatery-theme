@@ -167,7 +167,7 @@ class Translator {
      */
     public static function map_property_data($prop, $lang = 'en') {
         $id = $prop['id'][0] ?? '';
-        $title = ucfirst($prop['type'][0] ?? 'Property') . ' ' . ($prop['town'][0] ?? '');
+        $title = $prop['title'][0] ?? (ucfirst($prop['type'][0] ?? 'Property') . ' ' . ($prop['town'][0] ?? ''));
         // Price formatting for display
         $price_raw = $prop['price'][0] ?? '0';
         // Handle cases where price might be an array within an array or contain ranges
