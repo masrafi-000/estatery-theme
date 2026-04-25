@@ -301,7 +301,6 @@
         "types": [
           { "name": "Вилла", "slug": "villa", "count": "Смотреть все" },
           { "name": "Квартира", "slug": "apartment", "count": "Смотреть все" },
-          { "name": "Магазин", "slug": "shop", "count": "Смотреть все" },
           { "name": "Таунхаус", "slug": "townhouse", "count": "Смотреть все" },
           { "name": "Бунгало", "slug": "bungalow", "count": "Смотреть все" }
         ]

@@ -303,7 +303,6 @@
         "types": [
           { "name": "Villa", "slug": "villa", "count": "Ver todo" },
           { "name": "Apartamento", "slug": "apartment", "count": "Ver todo" },
-          { "name": "Local", "slug": "shop", "count": "Ver todo" },
           { "name": "Adosado", "slug": "townhouse", "count": "Ver todo" },
           { "name": "Bungalow", "slug": "bungalow", "count": "Ver todo" }
         ]

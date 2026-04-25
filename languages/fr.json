@@ -302,7 +302,6 @@
         "types": [
           { "name": "Villa", "slug": "villa", "count": "Voir tout" },
           { "name": "Appartement", "slug": "apartment", "count": "Voir tout" },
-          { "name": "Commerce", "slug": "shop", "count": "Voir tout" },
           {
             "name": "Maison de ville",
             "slug": "townhouse",

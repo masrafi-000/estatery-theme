@@ -313,12 +313,6 @@
             "icon": "building"
           },
           {
-            "name": "Shop",
-            "slug": "shop",
-            "count": "View All",
-            "icon": "office"
-          },
-          {
             "name": "Townhouse",
             "slug": "townhouse",
             "count": "View All",
