@@ -28,6 +28,7 @@ if ( $property_id ) {
 
 // Pass the data down to the component
 set_query_var( 'property_data', $property_data );
+set_query_var( 'is_investment', true );
 
 // Reusing the same design layout as requested
 get_template_part( 'template-parts/details/details-content' );

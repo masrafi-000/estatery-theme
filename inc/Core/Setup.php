@@ -24,6 +24,7 @@ class Setup {
 
         load_theme_textdomain( 'estatery', get_template_directory() . '/languages' );
         $this->create_inquiry_table();
+        $this->create_investment_query_table();
         $this->create_invest_table();
         $this->create_contact_table();
     }
@@ -58,6 +59,42 @@ class Setup {
             status varchar(20) DEFAULT 'unread' NOT NULL,
             PRIMARY KEY  (id)
         ) $charset_collate;";
+
+        require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+        dbDelta( $sql );
+    }
+
+    /**
+     * Create the investment queries table
+     */
+    private function create_investment_query_table() {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'estatery_investment_queries';
+        $charset_collate = $wpdb->get_charset_collate();
+
+        $sql = "CREATE TABLE $table_name (
+            id mediumint(9) NOT NULL AUTO_INCREMENT,
+            time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+            property_id varchar(100) NOT NULL,
+            property_title varchar(255) NOT NULL,
+            property_price varchar(100) NOT NULL,
+            property_area varchar(100) NOT NULL,
+            property_image text NOT NULL,
+            property_beds varchar(10) NOT NULL,
+            property_baths varchar(10) NOT NULL,
+            property_pool varchar(10) NOT NULL,
+            property_type varchar(100) NOT NULL,
+            property_location text NOT NULL,
+            property_lat varchar(50) NOT NULL,
+            property_lng varchar(50) NOT NULL,
+            user_name varchar(255) NOT NULL,
+            user_email varchar(255) NOT NULL,
+            user_phone varchar(100) NOT NULL,
+            user_message text NOT NULL,
+            status varchar(20) DEFAULT 'unread' NOT NULL,
+            PRIMARY KEY  (id)
+        ) $charset_collate;";
+
 
         require_once ABSPATH . 'wp-admin/includes/upgrade.php';
         dbDelta( $sql );

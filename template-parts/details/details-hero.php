@@ -17,9 +17,13 @@ if ( $property_data ) {
     
     $banner_image = $property_data['images'][0]['image'][0]['url'][0] ?? "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1600";
     
+    $is_investment = get_query_var( 'is_investment' );
+    $nav_index     = $is_investment ? 3 : 1;
+    $nav_label_def = $is_investment ? 'Invest' : 'Properties';
+
     $banner_breadcrumbs = [
         ['label' => t('header.navigation.0.label') ?: 'Home', 'url' => home_url(t('header.navigation.0.url'))],
-        ['label' => t('header.navigation.1.label') ?: 'Properties', 'url' => home_url(t('header.navigation.1.url'))],
+        ['label' => t("header.navigation.{$nav_index}.label") ?: $nav_label_def, 'url' => home_url(t("header.navigation.{$nav_index}.url"))],
         ['label' => $banner_title, 'url' => '#']
     ];
 } else {
@@ -33,10 +37,19 @@ if ( $property_data ) {
         $banner_image = "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1600";
     }
 
-    $banner_breadcrumbs = [
-        ['label' => t('header.navigation.0.label') ?: 'Home', 'url' => home_url(t('header.navigation.0.url'))],
-        ['label' => $banner_title, 'url' => '#']
-    ];
+    $is_investment = get_query_var( 'is_investment' );
+    if ( $is_investment ) {
+        $banner_breadcrumbs = [
+            ['label' => t('header.navigation.0.label') ?: 'Home', 'url' => home_url(t('header.navigation.0.url'))],
+            ['label' => t('header.navigation.3.label') ?: 'Invest', 'url' => home_url(t('header.navigation.3.url'))],
+            ['label' => $banner_title, 'url' => '#']
+        ];
+    } else {
+        $banner_breadcrumbs = [
+            ['label' => t('header.navigation.0.label') ?: 'Home', 'url' => home_url(t('header.navigation.0.url'))],
+            ['label' => $banner_title, 'url' => '#']
+        ];
+    }
 }
 
 $shared_banner_path = get_template_directory() . '/shared/dynamic-banner.php';

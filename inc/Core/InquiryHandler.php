@@ -39,9 +39,10 @@ class InquiryHandler {
         $prop_loc   = sanitize_text_field($_POST['prop_loc'] ?? '');
         $prop_lat   = sanitize_text_field($_POST['prop_lat'] ?? '');
         $prop_lng   = sanitize_text_field($_POST['prop_lng'] ?? '');
+        $is_invest  = ($_POST['is_investment'] ?? '0') === '1';
 
         global $wpdb;
-        $table_name = $wpdb->prefix . 'estatery_inquiries';
+        $table_name = $is_invest ? $wpdb->prefix . 'estatery_investment_queries' : $wpdb->prefix . 'estatery_inquiries';
 
         $inserted = $wpdb->insert($table_name, [
             'time'              => current_time('mysql'),

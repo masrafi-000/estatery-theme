@@ -8,7 +8,7 @@ if ( ! $property_data ) {
 
 $current_lang = \Estatery\Core\Translator::getInstance()->getLang();
 
-$desc_data = $property_data['desc'][0] ?? [];
+$desc_data = $property_data['desc'][0] ?? ($property_data['desc'] ?? []);
 $description = $desc_data[$current_lang][0] ?? ($desc_data['en'][0] ?? '');
 $description_parts = array_filter(array_map('trim', explode("\n\n", $description)));
 
@@ -18,8 +18,8 @@ $surface_built = $property_data['surface_area'][0]['built'][0] ?? '0';
 $surface_plot = $property_data['surface_area'][0]['plot'][0] ?? '0';
 $has_pool = $property_data['pool'][0] ?? '0';
 
-// Features mapping — raw strings directly from properties.json
-$raw_features = $property_data['features'][0]['feature'] ?? [];
+// Features mapping — raw strings directly from properties.json or investments.json
+$raw_features = $property_data['features'][0]['feature'] ?? ($property_data['features']['feature'] ?? []);
 $features = [];
 foreach ($raw_features as $feature_name) {
     if (empty($feature_name)) continue;
@@ -217,6 +217,7 @@ $gallery_images_json = json_encode($images);
                         <input type="hidden" name="prop_loc" value="<?php echo esc_attr(($property_data['location_detail'][0] ?? '') . ', ' . ($property_data['town'][0] ?? '') . ', ' . ($property_data['province'][0] ?? '')); ?>">
                         <input type="hidden" name="prop_lat" value="<?php echo esc_attr($lat); ?>">
                         <input type="hidden" name="prop_lng" value="<?php echo esc_attr($lng); ?>">
+                        <input type="hidden" name="is_investment" value="<?php echo get_query_var('is_investment') ? '1' : '0'; ?>">
 
                         <input type="text" name="name" required placeholder="<?php echo esc_attr(t('pages.property_details.form.name')); ?>"
                             class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:border-primary transition-all">

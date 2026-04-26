@@ -10,6 +10,8 @@ class AjaxHandler {
         add_action('wp_ajax_nopriv_get_featured_properties', [$this, 'get_featured_properties']);
         add_action('wp_ajax_get_filtered_properties', [$this, 'get_filtered_properties']);
         add_action('wp_ajax_nopriv_get_filtered_properties', [$this, 'get_filtered_properties']);
+        add_action('wp_ajax_get_investments', [$this, 'get_investments']);
+        add_action('wp_ajax_nopriv_get_investments', [$this, 'get_investments']);
     }
 
     public function get_featured_properties() {
@@ -214,5 +216,41 @@ class AjaxHandler {
             'current_page'    => $current_page,
             'total_pages'     => $total_pages
         ]);
+    }
+
+    public function get_investments() {
+        $lang = sanitize_key($_POST['lang'] ?? 'en');
+        $cache_key = 'estatery_investments_v1_' . $lang;
+        
+        $cached_html = get_transient($cache_key);
+        if (false !== $cached_html) {
+            wp_send_json_success(['html' => $cached_html]);
+        }
+
+        $json_file = get_template_directory() . '/data/investments.json';
+        
+        if (!file_exists($json_file)) {
+            wp_send_json_error('Data file not found');
+        }
+
+        $raw_json = file_get_contents($json_file);
+        $data = json_decode($raw_json, true);
+        $raw_properties = $data['root']['property'] ?? [];
+
+        ob_start();
+        if (!empty($raw_properties)) {
+            foreach ($raw_properties as $prop) {
+                $mapped = Translator::map_property_data($prop, $lang);
+                $mapped['is_investment'] = true;
+                get_template_part('template-parts/properties/property-card', null, ['property' => $mapped]);
+            }
+        } else {
+            echo '<div class="col-span-full py-20 text-center text-slate-400 font-medium italic">' . t('pages.invest.no_properties') . '</div>';
+        }
+        $html = ob_get_clean();
+
+        set_transient($cache_key, $html, 12 * HOUR_IN_SECONDS);
+
+        wp_send_json_success(['html' => $html]);
     }
 }

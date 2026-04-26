@@ -15,21 +15,58 @@
         "location_detail": ["Altea Hills"],
         "beds": ["5"],
         "baths": ["4"],
-        "surface_area": [{"built": ["350"]}],
+        "surface_area": [{ "built": ["350"] }],
         "images": [
           {
             "image": [
-              {"url": ["https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg"]},
-              {"url": ["https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg"]}
+              {
+                "url": [
+                  "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg"
+                ]
+              }
             ]
           }
         ],
         "desc": {
-          "en": ["Luxury villa in Altea Hills with stunning sea views. High ROI potential through premium rentals."],
-          "es": ["Villa de lujo en Altea Hills con impresionantes vistas al mar. Alto potencial de ROI mediante alquileres premium."]
+          "en": [
+            "Luxury villa in Altea Hills with stunning sea views. High ROI potential through premium rentals."
+          ],
+          "es": [
+            "Villa de lujo en Altea Hills con impresionantes vistas al mar. Alto potencial de ROI mediante alquileres premium."
+          ]
         },
         "features": {
-          "feature": ["Infinity Pool", "Sea View", "Gated Community", "Smart Home"]
+          "feature": [
+            "Infinity Pool",
+            "Sea View",
+            "Gated Community",
+            "Smart Home"
+          ]
         }
       },
       {
@@ -46,18 +83,50 @@
         "location_detail": ["Playa de Poniente"],
         "beds": ["2"],
         "baths": ["2"],
-        "surface_area": [{"built": ["95"]}],
+        "surface_area": [{ "built": ["95"] }],
         "images": [
           {
             "image": [
-              {"url": ["https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg"]},
-              {"url": ["https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg"]}
+              {
+                "url": [
+                  "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg"
+                ]
+              }
             ]
           }
         ],
         "desc": {
-          "en": ["Modern apartment with sea views, perfect for vacation rentals in Benidorm."],
-          "es": ["Apartamento moderno con vistas al mar, perfecto para alquileres vacacionales en Benidorm."]
+          "en": [
+            "Modern apartment with sea views, perfect for vacation rentals in Benidorm."
+          ],
+          "es": [
+            "Apartamento moderno con vistas al mar, perfecto para alquileres vacacionales en Benidorm."
+          ]
         },
         "features": {
           "feature": ["Terrace", "Gym", "Pool", "Parking"]
@@ -77,18 +146,50 @@
         "location_detail": ["El Portet"],
         "beds": ["6"],
         "baths": ["5"],
-        "surface_area": [{"built": ["500"]}],
+        "surface_area": [{ "built": ["500"] }],
         "images": [
           {
             "image": [
-              {"url": ["https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg"]},
-              {"url": ["https://images.pexels.com/photos/209296/pexels-photo-209296.jpeg"]}
+              {
+                "url": [
+                  "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/209296/pexels-photo-209296.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/209296/pexels-photo-209296.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/209296/pexels-photo-209296.jpeg"
+                ]
+              }
             ]
           }
         ],
         "desc": {
-          "en": ["Exclusive frontline villa in Moraira. Prime investment for capital appreciation."],
-          "es": ["Villa exclusiva en primera línea en Moraira. Inversión de primer orden para revalorización de capital."]
+          "en": [
+            "Exclusive frontline villa in Moraira. Prime investment for capital appreciation."
+          ],
+          "es": [
+            "Villa exclusiva en primera línea en Moraira. Inversión de primer orden para revalorización de capital."
+          ]
         },
         "features": {
           "feature": ["Beachfront", "Garden", "Wine Cellar", "Security"]
@@ -108,17 +209,50 @@
         "location_detail": ["City Center"],
         "beds": ["3"],
         "baths": ["2"],
-        "surface_area": [{"built": ["110"]}],
+        "surface_area": [{ "built": ["110"] }],
         "images": [
           {
             "image": [
-              {"url": ["https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"]}
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+                ]
+              }
             ]
           }
         ],
         "desc": {
-          "en": ["Renovated apartment in Alicante city center. Ideal for long-term rental income."],
-          "es": ["Apartamento renovado en el centro de Alicante. Ideal para ingresos por alquiler a largo plazo."]
+          "en": [
+            "Renovated apartment in Alicante city center. Ideal for long-term rental income."
+          ],
+          "es": [
+            "Apartamento renovado en el centro de Alicante. Ideal para ingresos por alquiler a largo plazo."
+          ]
         },
         "features": {
           "feature": ["Elevator", "Air Conditioning", "Balcony"]
@@ -138,17 +272,50 @@
         "location_detail": ["Arenal"],
         "beds": ["3"],
         "baths": ["3"],
-        "surface_area": [{"built": ["180"]}],
+        "surface_area": [{ "built": ["180"] }],
         "images": [
           {
             "image": [
-              {"url": ["https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"]}
+              {
+                "url": [
+                  "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"
+                ]
+              }
             ]
           }
         ],
         "desc": {
-          "en": ["Luxury townhouse in Javea. High demand area for holiday lets."],
-          "es": ["Adosado de lujo en Jávea. Zona de alta demanda para alquileres vacacionales."]
+          "en": [
+            "Luxury townhouse in Javea. High demand area for holiday lets."
+          ],
+          "es": [
+            "Adosado de lujo en Jávea. Zona de alta demanda para alquileres vacacionales."
+          ]
         },
         "features": {
           "feature": ["Community Pool", "Private Garden", "Solarium"]
@@ -168,17 +335,50 @@
         "location_detail": ["Maryvilla"],
         "beds": ["4"],
         "baths": ["4"],
-        "surface_area": [{"built": ["300"]}],
+        "surface_area": [{ "built": ["300"] }],
         "images": [
           {
             "image": [
-              {"url": ["https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"]}
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                ]
+              }
             ]
           }
         ],
         "desc": {
-          "en": ["Contemporary villa with panoramic views of the Rock of Ifach."],
-          "es": ["Villa contemporánea con vistas panorámicas al Peñón de Ifach."]
+          "en": [
+            "Contemporary villa with panoramic views of the Rock of Ifach."
+          ],
+          "es": [
+            "Villa contemporánea con vistas panorámicas al Peñón de Ifach."
+          ]
         },
         "features": {
           "feature": ["Jacuzzi", "Home Cinema", "Domotics"]
@@ -198,17 +398,50 @@
         "location_detail": ["La Mata"],
         "beds": ["2"],
         "baths": ["1"],
-        "surface_area": [{"built": ["75"]}],
+        "surface_area": [{ "built": ["75"] }],
         "images": [
           {
             "image": [
-              {"url": ["https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg"]}
+              {
+                "url": [
+                  "https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg"
+                ]
+              }
             ]
           }
         ],
         "desc": {
-          "en": ["Beachside apartment in Torrevieja. Excellent entry-level investment."],
-          "es": ["Apartamento junto a la playa en Torrevieja. Excelente inversión de nivel de entrada."]
+          "en": [
+            "Beachside apartment in Torrevieja. Excellent entry-level investment."
+          ],
+          "es": [
+            "Apartamento junto a la playa en Torrevieja. Excelente inversión de nivel de entrada."
+          ]
         },
         "features": {
           "feature": ["Sea View", "Furniture Included", "Rental License"]
@@ -228,11 +461,45 @@
         "location_detail": ["Las Rotas"],
         "beds": ["4"],
         "baths": ["3"],
-        "surface_area": [{"built": ["220"]}],
+        "surface_area": [{ "built": ["220"] }],
         "images": [
           {
             "image": [
-              {"url": ["https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg"]}
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                ]
+              }
             ]
           }
         ],
@@ -258,17 +525,50 @@
         "location_detail": ["Allonbay"],
         "beds": ["3"],
         "baths": ["2"],
-        "surface_area": [{"built": ["120"]}],
+        "surface_area": [{ "built": ["120"] }],
         "images": [
           {
             "image": [
-              {"url": ["https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"]}
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+                ]
+              }
             ]
           }
         ],
         "desc": {
-          "en": ["High-end beachfront apartment in Villajoyosa. New development project."],
-          "es": ["Apartamento de lujo en primera línea de playa en Villajoyosa. Proyecto de nueva construcción."]
+          "en": [
+            "High-end beachfront apartment in Villajoyosa. New development project."
+          ],
+          "es": [
+            "Apartamento de lujo en primera línea de playa en Villajoyosa. Proyecto de nueva construcción."
+          ]
         },
         "features": {
           "feature": ["Spa", "Gym", "Concierge"]
@@ -288,17 +588,50 @@
         "location_detail": ["Hills"],
         "beds": ["4"],
         "baths": ["4"],
-        "surface_area": [{"built": ["280"]}],
+        "surface_area": [{ "built": ["280"] }],
         "images": [
           {
             "image": [
-              {"url": ["https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"]}
+              {
+                "url": [
+                  "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"
+                ]
+              },
+              {
+                "url": [
+                  "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"
+                ]
+              }
             ]
           }
         ],
         "desc": {
-          "en": ["Modern villa in Polop with mountain and sea views. Great appreciation potential."],
-          "es": ["Villa moderna en Polop con vistas a la montaña y al mar. Gran potencial de revalorización."]
+          "en": [
+            "Modern villa in Polop with mountain and sea views. Great appreciation potential."
+          ],
+          "es": [
+            "Villa moderna en Polop con vistas a la montaña y al mar. Gran potencial de revalorización."
+          ]
         },
         "features": {
           "feature": ["Underfloor Heating", "EV Charging", "Storage Room"]
