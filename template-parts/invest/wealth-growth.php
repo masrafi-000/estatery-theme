@@ -1,15 +1,15 @@
 <?php $growth = t('pages.invest.growth'); ?>
 
-<section class="py-20 bg-[#F8FAFC] js-growth-section">
+<section class="py-20 bg-[#F8FAFC] js-wealth-section">
     <div class="container mx-auto px-5">
-        <div class="text-center mb-16 js-growth-header">
+        <div class="text-center mb-16 js-wealth-header">
             <h2 class="text-3xl md:text-5xl font-bold text-secondary mb-4"><?php echo esc_html($growth['title']); ?></h2>
             <p class="text-secondary max-w-2xl mx-auto "><?php echo esc_html($growth['subtitle']); ?></p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 js-growth-cards">
             <?php foreach ($growth['items'] as $item) : ?>
-                <div class="group p-8 rounded-3xl bg-gray-50 hover:bg-primary transition-all duration-500 js-growth-card">
+                <div class="group p-8 rounded-3xl bg-gray-50 hover:bg-primary transition-all duration-500 js-wealth-card">
                     <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500">
                         <svg class="w-8 h-8 text-primary group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
@@ -21,7 +21,7 @@
             <?php endforeach; ?>
         </div>
 
-        <div class="mt-16 p-8 bg-secondary rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 js-growth-cta">
+        <div class="mt-16 p-8 bg-secondary rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 js-wealth-cta">
             <div class="text-white">
                 <h4 class="text-2xl font-bold"><?php echo esc_html($growth['cta']['title']); ?></h4>
                 <p class="text-gray-400"><?php echo esc_html($growth['cta']['subtitle']); ?></p>
@@ -33,72 +33,4 @@
         </div>
     </div>
 </section>
-
-<script>
-(function() {
-    function initWealthGrowth() {
-        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-        
-        gsap.registerPlugin(ScrollTrigger);
-        const section = document.querySelector(".js-growth-section");
-        if (!section) return;
-
-        const headerItems = section.querySelectorAll(".js-growth-header > *");
-        const cards       = section.querySelectorAll(".js-growth-card");
-        const cta         = section.querySelector(".js-growth-cta");
-
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: section,
-                start: "top 82%",
-                toggleActions: "play none none none",
-                once: true
-            }
-        });
-
-        // 1. Header
-        if (headerItems.length) {
-            gsap.set(headerItems, { opacity: 0, y: 30 });
-            tl.to(headerItems, {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                stagger: 0.12,
-                ease: "power3.out"
-            });
-        }
-
-        // 2. Cards Stagger
-        if (cards.length) {
-            gsap.set(cards, { opacity: 0, y: 40 });
-            tl.to(cards, {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                stagger: 0.12,
-                ease: "power3.out",
-                clearProps: "transform,opacity"
-            }, "-=0.5");
-        }
-
-        // 3. CTA Block Reveal
-        if (cta) {
-            gsap.set(cta, { opacity: 0, scale: 0.95, y: 30 });
-            tl.to(cta, {
-                opacity: 1,
-                scale: 1,
-                y: 0,
-                duration: 0.8,
-                ease: "back.out(1.4)"
-            }, "-=0.4");
-        }
-    }
-
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-        initWealthGrowth();
-    } else {
-        window.addEventListener('load', initWealthGrowth);
-        setTimeout(initWealthGrowth, 800);
-    }
-})();
-</script>
+

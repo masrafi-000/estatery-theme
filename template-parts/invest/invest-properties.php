@@ -154,42 +154,6 @@ $data_url = get_template_directory_uri() . '/data/investments.json';
         }
     }
 
-    function initInvestPropsAnims() {
-        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-        gsap.registerPlugin(ScrollTrigger);
-        const section = document.querySelector(".js-invest-props-section");
-        const cards = section.querySelectorAll(".property-card");
-        
-        // Kill existing triggers if any
-        ScrollTrigger.getAll().filter(t => t.trigger === section).forEach(t => t.kill());
-
-        const tl = gsap.timeline({ 
-            scrollTrigger: { 
-                trigger: section, 
-                start: "top 85%", 
-                once: true,
-                onEnter: () => {
-                    // Force refresh to account for dynamic content height
-                    ScrollTrigger.refresh();
-                }
-            } 
-        });
-
-        if (cards.length) {
-            gsap.set(cards, { opacity: 0, y: 30 });
-            tl.to(cards, { 
-                opacity: 1, 
-                y: 0, 
-                duration: 0.8, 
-                stagger: {
-                    amount: 0.4,
-                    ease: "power2.out"
-                }, 
-                ease: "expo.out", 
-                clearProps: "transform,opacity" 
-            });
-        }
-    }
 
     $(document).ready(loadInvestments);
 })(jQuery);

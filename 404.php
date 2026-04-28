@@ -10,9 +10,9 @@ get_header();
 <main id="primary" class="site-main">
     <section class="error-404-section relative overflow-hidden bg-white min-h-[85vh] flex items-center justify-center py-20">
         
-        <!-- Background 404 Text for GSAP Parallax/Movement -->
+        <!-- Background 404 Text for Parallax/Movement -->
         <div class="error-bg-text absolute inset-0 flex items-center justify-center z-0 pointer-events-none select-none overflow-hidden">
-            <h1 id="gsap-404-parallax" class="text-[clamp(150px,40vw,600px)] font-black text-gray-100/40 leading-none tracking-tighter transition-transform duration-700 ease-out">
+            <h1 id="js-404-parallax" class="text-[clamp(150px,40vw,600px)] font-black text-gray-100/40 leading-none tracking-tighter transition-transform duration-700 ease-out">
                 <?php echo esc_html( t('pages.error_404.bg_text') ); ?>
             </h1>
         </div>
@@ -21,17 +21,17 @@ get_header();
             <div class="max-w-3xl mx-auto">
                 
                 <!-- Modern Visual Element -->
-                <div class="reveal-fade inline-flex items-center justify-center w-24 h-24 bg-primary/10 text-primary rounded-[2.5rem] mb-10 shadow-inner group">
+                <div class="js-reveal-fade inline-flex items-center justify-center w-24 h-24 bg-primary/10 text-primary rounded-[2.5rem] mb-10 shadow-inner group">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-12 transition-transform duration-500">
                         <circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4"/><path d="M12 16V8"/>
                     </svg>
                 </div>
 
-                <h2 class="reveal-up text-4xl md:text-5xl lg:text-7xl font-bold text-secondary mb-6 leading-[1.1] tracking-tight">
+                <h2 class="js-reveal-text text-4xl md:text-5xl lg:text-7xl font-bold text-secondary mb-6 leading-[1.1] tracking-tight">
                     <?php echo esc_html( t('pages.error_404.subtitle') ); ?>
                 </h2>
 
-                <p class="reveal-up text-lg md:text-xl text-gray-500 mb-12 leading-relaxed max-w-2xl mx-auto">
+                <p class="js-reveal-fade text-lg md:text-xl text-gray-500 mb-12 leading-relaxed max-w-2xl mx-auto">
                     <?php echo esc_html( t('pages.error_404.message') ); ?>
                     <span class="block mt-3 px-4 py-2 bg-gray-50 rounded-lg italic text-primary break-all border border-gray-100 inline-block font-medium">
                         <?php echo esc_html( home_url( $_SERVER['REQUEST_URI'] ) ); ?>
@@ -39,7 +39,7 @@ get_header();
                 </p>
 
                 <!-- Premium Search Integration -->
-                <div class="reveal-up max-w-xl mx-auto mb-16 px-2">
+                <div class="js-reveal-fade max-w-xl mx-auto mb-16 px-2">
                     <form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" class="relative group">
                         <input type="text" name="s"
                                placeholder="<?php echo esc_attr( t('pages.error_404.search_placeholder') ); ?>"
@@ -59,7 +59,7 @@ get_header();
                 </div>
 
                 <!-- Strategic Navigation -->
-                <div class="reveal-up flex flex-wrap items-center justify-center gap-6">
+                <div class="js-reveal-fade flex flex-wrap items-center justify-center gap-6">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
                        class="group relative px-12 py-5 bg-secondary text-white font-bold rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-secondary/20 active:scale-95">
                         <span class="relative z-10"><?php echo esc_html( t('pages.error_404.back_home') ); ?></span>
@@ -75,7 +75,7 @@ get_header();
             </div>
         </div>
 
-        <!-- Abstract Decorative Shapes (GSAP targets) -->
+        <!-- Abstract Decorative Shapes -->
         <div class="error-shape absolute -top-20 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
         <div class="error-shape absolute -bottom-20 -left-20 w-80 h-80 bg-accent/5 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
     </section>

@@ -131,60 +131,7 @@
             </div>
         </div>
 
-        <script>
-        (function() {
-            function initInvestorOnboardingAnims() {
-                if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-                
-                gsap.registerPlugin(ScrollTrigger);
-                const section = document.querySelector(".js-onboarding-section");
-                if (!section) return;
 
-                const headerItems = section.querySelectorAll(".js-onboarding-header > *");
-                const formCard    = section.querySelector(".js-onboarding-form");
-
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: section,
-                        start: "top 82%",
-                        toggleActions: "play none none none",
-                        once: true
-                    }
-                });
-
-                // 1. Header
-                if (headerItems.length) {
-                    gsap.set(headerItems, { opacity: 0, y: 30 });
-                    tl.to(headerItems, {
-                        opacity: 1,
-                        y: 0,
-                        duration: 0.8,
-                        stagger: 0.12,
-                        ease: "power3.out"
-                    });
-                }
-
-                // 2. Form Card
-                if (formCard) {
-                    gsap.set(formCard, { opacity: 0, y: 40 });
-                    tl.to(formCard, {
-                        opacity: 1,
-                        y: 0,
-                        duration: 1,
-                        ease: "power3.out",
-                        clearProps: "transform,opacity"
-                    }, "-=0.6");
-                }
-            }
-
-            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-                initInvestorOnboardingAnims();
-            } else {
-                window.addEventListener('load', initInvestorOnboardingAnims);
-                setTimeout(initInvestorOnboardingAnims, 900);
-            }
-        })();
-        </script>
 
         <script>
         document.addEventListener('DOMContentLoaded', () => {

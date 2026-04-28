@@ -15,7 +15,7 @@
 
                 <div class="absolute -bottom-10 -left-6 lg:left-[-10%] bg-white p-6 shadow-xl z-20 hidden md:block border-l-4 border-black js-leadership-card">
                     <p class="text-black font-bold text-4xl italic">
-                        <span class="js-count-up" data-target="35">0</span>+
+                        <span class="js-count-up" data-target="18">0</span>+
                     </p>
                     <p class="text-xs uppercase tracking-widest text-black/60 font-semibold"><?php echo esc_html($leadership['years_label']); ?></p>
                 </div>

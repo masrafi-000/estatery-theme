@@ -43,6 +43,9 @@ class Enqueue {
         if ( is_page('contact') ) {
             wp_enqueue_script( 'estatery-contact', get_template_directory_uri() . '/assets/js/pages/contact.js', array('motion'), '1.0.0', true );
         }
+        if ( is_page('invest') ) {
+            wp_enqueue_script( 'estatery-invest', get_template_directory_uri() . '/assets/js/pages/invest.js', array('motion'), '1.0.0', true );
+        }
 
         // Localize search/data for JS
         $feature_icons = [
@@ -77,7 +80,7 @@ class Enqueue {
         
         // Add module type to JS files
         add_filter('script_loader_tag', function($tag, $handle, $src) {
-            $modules = ['estatery-main', 'estatery-home', 'estatery-about', 'estatery-contact'];
+            $modules = ['estatery-main', 'estatery-home', 'estatery-about', 'estatery-contact', 'estatery-invest'];
             if (!in_array($handle, $modules)) {
                 return $tag;
             }

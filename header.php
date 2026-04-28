@@ -100,6 +100,11 @@
 
     <!-- Sticky Header -->
     <header id="masthead" class="site-header bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-[90] transition-all duration-300">        
+        <!-- Scroll Progress Bar -->
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-gray-100 overflow-hidden pointer-events-none">
+            <div id="scroll-progress" class="h-full bg-primary origin-left scale-x-0"></div>
+        </div>
+
         <div class="container mx-auto px-4 max-w-[1400px]">
             <div class="flex justify-between items-center h-[72px]">
                 

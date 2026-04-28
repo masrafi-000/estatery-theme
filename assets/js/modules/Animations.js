@@ -2,7 +2,7 @@
  * Animations Module (Framer Motion / Motion library)
  * Professional Text & UI reveal system
  */
-import { animate, inView, stagger } from 'https://cdn.jsdelivr.net/npm/motion@11.11.17/+esm';
+import { animate, inView, stagger, scroll } from 'https://cdn.jsdelivr.net/npm/motion@11.11.17/+esm';
 
 export default class Animations {
     constructor() {
@@ -104,6 +104,15 @@ export default class Animations {
      * Add smooth transitions to links and buttons
      */
     initGlobalTransitions() {
+        // 404 Page Parallax
+        const parallax404 = document.getElementById('js-404-parallax');
+        if (parallax404) {
+            scroll(
+                animate(parallax404, { y: [-100, 100] }),
+                { target: document.querySelector('.error-404-section') }
+            );
+        }
+
         const buttons = document.querySelectorAll('button, .btn, .button, a');
         buttons.forEach(btn => {
             btn.style.transition = 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)';

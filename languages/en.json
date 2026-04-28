@@ -126,8 +126,8 @@
   "pages": {
     "about": {
       "hero": {
-        "title": "About Us",
-        "bg_text": "About",
+        "title": "About Me",
+        "bg_text": "About Me",
         "subtitle": "Contact Capital Union Investment for Elegant Solutions in Property Investments"
       },
       "story": {
@@ -581,7 +581,7 @@
       "rent": "Rent Property",
       "sell": "Sell Property",
       "services": "Services",
-      "about": "About Us",
+      "about": "About",
       "contact": "Contact",
       "careers": "Careers",
       "blog": "Blog",
