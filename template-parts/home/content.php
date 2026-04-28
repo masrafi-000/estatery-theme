@@ -12,4 +12,5 @@ get_template_part('template-parts/home/feature-poparty');
 get_template_part('template-parts/home/why-chose-us');
 
 
-get_template_part('template-parts/home/faq');
+// Dynamic FAQ Section
+get_template_part('template-parts/common/faq-section', null, ['perspective' => 'home']);

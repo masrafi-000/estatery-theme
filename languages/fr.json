@@ -22,23 +22,23 @@
     "navigation": [
       {
         "label": "Accueil",
-        "url": "\/"
+        "url": "/"
       },
       {
         "label": "Propriétés",
-        "url": "\/properties"
+        "url": "/properties"
       },
       {
         "label": "À propos",
-        "url": "\/about"
+        "url": "/about"
       },
       {
         "label": "Investir",
-        "url": "\/invest"
+        "url": "/invest"
       },
       {
         "label": "Contact",
-        "url": "\/contact"
+        "url": "/contact"
       }
     ],
     "actions": {
@@ -122,32 +122,39 @@
     },
     "faq": {
       "title": "Foire Aux Questions",
-      "description": "Tout ce que vous devez savoir sur la plateforme.",
-      "help_title": "Besoin d'Aide Supplémentaire ?",
-      "help_description": "Notre équipe de support est là pour vous.",
+      "description": "Trouvez des réponses aux questions courantes sur le processus d'achat immobilier et nos services spécialisés.",
+      "help_title": "Besoin d'aide supplémentaire ?",
+      "help_description": "Notre équipe de support est là pour vous guider à chaque étape.",
       "contact_button": "Contacter le Support",
       "items": [
         {
-          "question": "Comment commencer à chercher une propriété ?",
-          "answer": "Vous pouvez commencer par utiliser notre barre de recherche en haut de la page."
+          "question": "Quel est le processus d'achat d'un bien immobilier en Espagne ?",
+          "answer": "Le processus comprend la sélection d'un bien, la réservation, la signature d'un contrat privé et la finalisation de l'achat chez le notaire."
         },
         {
-          "question": "Les annonces immobilières sont-elles vérifiées ?",
-          "answer": "Oui, chaque annonce sur Estatery passe par un processus de vérification strict."
+          "question": "Combien de temps faut-il pour finaliser l'achat d'un bien immobilier ?",
+          "answer": "Pour l'achat d'un bien d'occasion, cela prend entre 4 et 8 semaines, selon les contrôles juridiques et le financement. Pour le neuf, cela peut prendre de 1 mois à 3 ans, selon l'état d'avancement de la construction au moment de l'achat."
         },
         {
-          "question": "Puis-je lister ma propre propriété à vendre ?",
-          "answer": "Absolument ! Cliquez sur le bouton Vendre une propriété et suivez les étapes."
+          "question": "Puis-je acheter un bien immobilier en Espagne sans être physiquement présent ?",
+          "answer": "Oui, l'achat peut être effectué à distance grâce à une procuration notariée."
         },
         {
-          "question": "Y a-t-il des frais de commission pour les acheteurs ?",
-          "answer": "Nous offrons des prix transparents. La navigation est gratuite."
+          "question": "Quels services proposez-vous au-delà de l'achat ?",
+          "answer": "Je propose un service immobilier complet de bout en bout sur la Costa Blanca, adapté aux acheteurs et investisseurs internationaux. Mon travail couvre l'ensemble du processus immobilier, garantissant la sécurité juridique, la transparence et une approche entièrement personnalisée. Cela comprend la recherche et l'acquisition de biens, le conseil en vente et en investissement, l'analyse du marché et la négociation. Je coordonne tous les aspects juridiques et notariaux pour garantir des transactions sécurisées, tout en aidant aux procédures administratives telles que l'obtention du NIE, l'ouverture de comptes bancaires et la gestion du financement."
         },
         {
-          "question": "Comment puis-je contacter un agent immobilier ?",
-          "answer": "Chaque page de détails dispose d'un bouton Contacter un agent."
+          "question": "Aidez-vous pour les services publics, les impôts et l'administration ?",
+          "answer": "Oui, une assistance est fournie pour les services publics (eau, électricité), les impôts et les procédures administratives afin d'assurer une transition en douceur."
+        },
+        {
+          "question": "Pouvez-vous aider au déménagement et à l'installation en Espagne ?",
+          "answer": "Oui, un soutien est disponible pour le déménagement, la résidence et l'installation en Espagne pour les clients s'installant dans la région de la Costa Blanca."
         }
-      ]
+      ],
+      "eyebrow": "FAQ",
+      "common_subtitle": "Tout ce que vous devez savoir sur l'achat, l'investissement et la vie sur la Costa Blanca.",
+      "frequently_asked": "Questions<br>Fréquentes"
     }
   },
   "pages": {
@@ -170,7 +177,7 @@
       },
       "how_we_work": {
         "badge": "Flux de Travail",
-        "title": "Comment nous donnons vie à votre <br> <span class='text-secondary'>vision<\/span>",
+        "title": "Comment nous donnons vie à votre <br> <span class='text-secondary'>vision</span>",
         "steps": [
           {
             "id": "01",
@@ -218,10 +225,32 @@
       "leadership": {
         "badge": "Message Exécutif",
         "years_label": "Années d'Intégrité",
-        "title": "Concevoir l'<span class='italic text-secondary'>avenir<\/span>, <br> respecter le <span class='italic'>passé<\/span>.",
+        "title": "Concevoir l'<span class='italic text-secondary'>avenir</span>, <br> respecter le <span class='italic'>passé</span>.",
         "message": "Notre voyage a commencé en 1988 avec un plan simple : construire avec une qualité sans compromis. Aujourd'hui, nous continuons à combler le fossé entre l'innovation architecturale et le design centré sur l'humain. Nous ne développons pas seulement des projets ; nous cultivons des héritages.",
         "name": "Asif Ahamed",
         "role": "Fondateur et Directeur Général"
+      },
+      "faq": {
+        "title": "FAQ sur l'agence et la vision",
+        "description": "Découvrez notre histoire, nos valeurs et comment nous garantissons l'excellence dans chaque projet immobilier depuis 1988.",
+        "items": [
+          {
+            "question": "Qu'est-ce qui définit l'approche d'Estatery en matière d'immobilier ?",
+            "answer": "Nous combinons des décennies d'expertise traditionnelle avec une intégration technologique moderne, en nous concentrant sur la valeur à long terme et l'intégrité architecturale plutôt que sur les tendances du marché à court terme."
+          },
+          {
+            "question": "Comment sélectionnez-vous les propriétés de votre portefeuille ?",
+            "answer": "Chaque propriété est soumise à un processus de vérification rigoureux en 50 points, couvrant le statut juridique, la qualité structurelle, le potentiel de rendement locatif et la durabilité environnementale."
+          },
+          {
+            "question": "Proposez-vous des services de gestion après achat ?",
+            "answer": "Oui, notre engagement ne s'arrête pas à la vente. Nous fournissons une gestion immobilière complète, une coordination de la maintenance et une optimisation locative pour nos clients internationaux."
+          },
+          {
+            "question": "Puis-je visiter votre bureau sur la Costa Blanca ?",
+            "answer": "Absolument. Nous accueillons nos clients dans notre bureau de Formentera del Segura pour discuter en personne de leur stratégie d'investissement avec nos conseillers dédiés."
+          }
+        ]
       }
     },
     "properties": {
@@ -295,19 +324,30 @@
         "shop": "Commerce",
         "not_found": "Propriété non trouvée."
       },
-
       "categories": {
         "title": "Explorez par Catégorie",
         "subtitle": "Trouvez le type de maison idéal qui correspond à votre style de vie.",
         "types": [
-          { "name": "Villa", "slug": "villa", "count": "Voir tout" },
-          { "name": "Appartement", "slug": "apartment", "count": "Voir tout" },
+          {
+            "name": "Villa",
+            "slug": "villa",
+            "count": "Voir tout"
+          },
+          {
+            "name": "Appartement",
+            "slug": "apartment",
+            "count": "Voir tout"
+          },
           {
             "name": "Maison de ville",
             "slug": "townhouse",
             "count": "Voir tout"
           },
-          { "name": "Bungalow", "slug": "bungalow", "count": "Voir tout" }
+          {
+            "name": "Bungalow",
+            "slug": "bungalow",
+            "count": "Voir tout"
+          }
         ]
       },
       "actions": {
@@ -327,6 +367,36 @@
         "badge_secure": "Transactions sécurisées",
         "badge_support": "Support client 24/7",
         "badge_verified": "Annonces vérifiées uniquement"
+      },
+      "faq": {
+        "title": "FAQ sur les Propriétés",
+        "description": "Informations sur les types de propriétés, la sécurité juridique et le processus d'achat pour les clients internationaux.",
+        "items": [
+          {
+            "question": "Quelle est la différence entre les propriétés neuves et les propriétés de revente ?",
+            "answer": "Les propriétés neuves sont de construction récente avec des normes et garanties modernes, tandis que les propriétés de revente ont eu des propriétaires précédents et sont généralement disponibles pour un emménagement immédiat."
+          },
+          {
+            "question": "Les propriétés neuves sont-elles plus sûres à acheter ?",
+            "answer": "Les constructions neuves offrent des normes et des garanties modernes, mais nécessitent une évaluation appropriée du projet, y compris l'évaluation du promoteur et la vérification des garanties bancaires."
+          },
+          {
+            "question": "Que dois-je prendre en compte lors d'un achat sur plan ?",
+            "answer": "Il est important d'évaluer le promoteur, les délais du projet et les garanties légales, en s'assurant spécifiquement que les garanties bancaires couvrent tous les paiements échelonnés."
+          },
+          {
+            "question": "Qu'est-ce qu'un numéro NIE et comment l'obtenir ?",
+            "answer": "Le NIE est un numéro d'identification étranger requis pour toute transaction juridique ou financière en Espagne. Nous aidons nos clients à l'obtenir par les voies administratives appropriées."
+          },
+          {
+            "question": "Ai-je besoin d'un avocat pour acheter un bien en Espagne ?",
+            "answer": "Un avocat est fortement recommandé pour garantir la sécurité juridique, examiner toute la documentation et protéger vos intérêts tout au long de la transaction."
+          },
+          {
+            "question": "Vérifiez-vous la documentation de la propriété avant l'achat ?",
+            "answer": "Oui, toute la documentation clé est minutieusement examinée avant de procéder à l'achat pour s'assurer que la propriété est juridiquement saine et libre de dettes."
+          }
+        ]
       }
     },
     "contact": {
@@ -467,6 +537,36 @@
           "submit": "Envoyer la Demande",
           "footer": "Portail Chiffré et Confidentiel"
         }
+      },
+      "faq": {
+        "title": "FAQ sur l'Investissement",
+        "description": "Questions courantes sur l'investissement immobilier, le financement et le ROI sur la Costa Blanca.",
+        "items": [
+          {
+            "question": "La Costa Blanca est-elle un bon endroit pour l'investissement immobilier ?",
+            "answer": "La Costa Blanca offre une forte demande, un attrait pour le style de vie, une valeur stable à long terme et des rendements attractifs, ce qui en fait l'un des marchés les plus résilients d'Espagne."
+          },
+          {
+            "question": "Quel type de propriétés génère les meilleurs revenus locatifs ?",
+            "answer": "Les appartements de 1 à 2 chambres dans des emplacements de choix près de la plage ou des complexes de golf affichent systématiquement la plus forte demande locative et les meilleurs rendements."
+          },
+          {
+            "question": "Quels facteurs affectent la rentabilité des propriétés ?",
+            "answer": "L'emplacement, le type de propriété, la demande saisonnière, la qualité de la gestion et les réglementations/restrictions des autorités locales jouent tous un rôle dans la rentabilité finale."
+          },
+          {
+            "question": "Les étrangers peuvent-ils obtenir un prêt hypothécaire en Espagne ?",
+            "answer": "Oui, les non-résidents peuvent obtenir un prêt hypothécaire en Espagne, finançant généralement entre 60 % et 70 % de la valeur de la propriété, sous réserve de justificatifs de revenus."
+          },
+          {
+            "question": "À quels coûts supplémentaires dois-je m'attendre lors de l'achat d'un bien ?",
+            "answer": "Les acheteurs doivent s'attendre à environ 12 à 13 % de coûts supplémentaires en plus du prix d'achat, couvrant les taxes (TVA ou droits de mutation), les frais de notaire, l'enregistrement et les frais juridiques."
+          },
+          {
+            "question": "Quel montant de dépôt est requis ?",
+            "answer": "Un dépôt de 10 % est généralement requis pour les propriétés de revente. Pour les nouveaux développements, les dépôts de réservation varient généralement de 6 000 € à 25 000 € selon le prix du bien."
+          }
+        ]
       }
     },
     "error_404": {
@@ -596,5 +696,161 @@
       "terms": "Conditions d'Utilisation",
       "cookie": "Politique de Cookies"
     }
-  }
+  },
+  "common_faq_tabs": [
+    {
+      "key": "general",
+      "label": "Processus Général",
+      "items": [
+        {
+          "question": "Quel est le processus d'achat en Espagne ?",
+          "answer": "Le processus implique la sélection du bien, la réservation, la signature d'un contrat privé, et la signature chez le notaire."
+        },
+        {
+          "question": "Combien de temps prend l'achat d'une propriété ?",
+          "answer": "Pour un bien d'occasion, 4 à 8 semaines. Pour du neuf, de 1 mois à 3 ans selon l'avancement."
+        },
+        {
+          "question": "Puis-je acheter sans être présent physiquement ?",
+          "answer": "Oui, l'achat peut être réalisé à distance grâce à une procuration."
+        },
+        {
+          "question": "Quels documents sont nécessaires ?",
+          "answer": "Vous aurez besoin d'un passeport, d'un numéro NIE et de prouver l'origine de vos fonds."
+        },
+        {
+          "question": "Faut-il un compte bancaire espagnol ?",
+          "answer": "Oui, il est généralement requis pour gérer les paiements et frais courants."
+        }
+      ]
+    },
+    {
+      "key": "international",
+      "label": "Acheteurs Internationaux",
+      "items": [
+        {
+          "question": "Qu'est-ce que le NIE et comment l'obtenir ?",
+          "answer": "Le NIE est le numéro d'identification des étrangers, requis pour toute démarche. Il s'obtient au consulat ou à la police."
+        },
+        {
+          "question": "Les étrangers peuvent-ils avoir un crédit ?",
+          "answer": "Oui, les non-résidents peuvent emprunter, souvent jusqu'à 60-70% du prix."
+        },
+        {
+          "question": "Quelles sont les différences d'achat pour un non-résident ?",
+          "answer": "Des exigences administratives et financières supplémentaires s'appliquent."
+        },
+        {
+          "question": "Ai-je besoin d'un avocat ?",
+          "answer": "Il est fortement recommandé pour garantir la sécurité juridique."
+        },
+        {
+          "question": "Puis-je donner procuration ?",
+          "answer": "Oui, une procuration notariée permet de tout faire à distance."
+        }
+      ]
+    },
+    {
+      "key": "costs",
+      "label": "Coûts et Financement",
+      "items": [
+        {
+          "question": "Quels coûts supplémentaires prévoir ?",
+          "answer": "Comptez environ 12 à 13 % de frais additionnels (impôts, notaire, avocat)."
+        },
+        {
+          "question": "Quel est l'acompte requis ?",
+          "answer": "Généralement 10 % pour l'ancien, et entre 6000 et 25000 € de réservation pour le neuf."
+        },
+        {
+          "question": "Quelle part puis-je financer ?",
+          "answer": "La plupart des banques prêtent 60 à 70 % aux non-résidents."
+        },
+        {
+          "question": "Quelles sont les conditions hypothécaires typiques ?",
+          "answer": "Taux fixes ou variables, et justification obligatoire des revenus et de la stabilité financière."
+        },
+        {
+          "question": "Y a-t-il des impôts récurrents ?",
+          "answer": "Oui, la taxe foncière (IBI) et les frais de copropriété annuels."
+        }
+      ]
+    },
+    {
+      "key": "investment",
+      "label": "Investissement",
+      "items": [
+        {
+          "question": "La Costa Blanca est-elle idéale pour investir ?",
+          "answer": "Oui, grâce à une forte demande, un cadre de vie attractif et une bonne valorisation."
+        },
+        {
+          "question": "Quels biens se louent le mieux ?",
+          "answer": "Les appartements 1 ou 2 chambres bien situés, près des plages ou des golfs."
+        },
+        {
+          "question": "Quels facteurs impactent la rentabilité ?",
+          "answer": "L'emplacement, le type, la gestion et la législation locale."
+        },
+        {
+          "question": "Gérez-vous les investissements commerciaux ?",
+          "answer": "Oui, nous accompagnons sur l'achat de commerces, d'hôtels et autres actifs."
+        }
+      ]
+    },
+    {
+      "key": "property_types",
+      "label": "Types de Propriété",
+      "items": [
+        {
+          "question": "Quelle est la différence entre le neuf et l'ancien ?",
+          "answer": "Le neuf offre les standards modernes et garanties promoteur, tandis que l'ancien est prêt à habiter."
+        },
+        {
+          "question": "L'achat neuf est-il plus sûr ?",
+          "answer": "Les garanties modernes sont un plus, mais il faut évaluer la fiabilité du promoteur."
+        },
+        {
+          "question": "Que vérifier pour un achat sur plan ?",
+          "answer": "L'historique du promoteur, les délais, et surtout les garanties bancaires couvrant les acomptes."
+        }
+      ]
+    },
+    {
+      "key": "legal",
+      "label": "Juridique et Sécurité",
+      "items": [
+        {
+          "question": "Vérifiez-vous la documentation ?",
+          "answer": "Oui, tout est rigoureusement audité avant l'achat (titres, urbanisme, dettes)."
+        },
+        {
+          "question": "Quel est le rôle du notaire en Espagne ?",
+          "answer": "Il assure la validité légale de l'acte et l'inscription à votre nom."
+        }
+      ]
+    },
+    {
+      "key": "services",
+      "label": "Services",
+      "items": [
+        {
+          "question": "Quels services après-vente offrez-vous ?",
+          "answer": "Un service de A à Z : conseil, démarches NIE, aide bancaire, gestion, etc."
+        },
+        {
+          "question": "Aidez-vous avec l'eau, l'électricité, et les taxes ?",
+          "answer": "Oui, nous gérons tous les changements de compteurs et domiciliations bancaires."
+        },
+        {
+          "question": "Pouvez-vous aider à l'installation ?",
+          "answer": "Oui, nous proposons une assistance complète à l'installation et l'expatriation."
+        },
+        {
+          "question": "Proposez-vous la gestion locative ?",
+          "answer": "Oui, un service intégral de gestion de propriété est disponible."
+        }
+      ]
+    }
+  ]
 }

@@ -6,3 +6,6 @@ get_template_part('template-parts/invest/invest-properties');
 get_template_part('template-parts/invest/wealth-growth');
 get_template_part('template-parts/invest/investor-onboarding');
 
+// Dynamic FAQ Section
+get_template_part('template-parts/common/faq-section', null, ['perspective' => 'invest']);
+

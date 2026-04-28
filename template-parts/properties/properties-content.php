@@ -185,6 +185,9 @@
         </div>
     </div>
 
+    <!-- Section 4.5: Dynamic FAQ Section -->
+    <?php get_template_part('template-parts/common/faq-section', null, ['perspective' => 'properties']); ?>
+
     <!-- Section 5: Call to Action -->
     <?php get_template_part('template-parts/properties/cta', 'block'); ?>
 </section>

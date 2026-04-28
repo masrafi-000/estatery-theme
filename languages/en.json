@@ -22,23 +22,23 @@
     "navigation": [
       {
         "label": "Home",
-        "url": "\/"
+        "url": "/"
       },
       {
         "label": "Properties",
-        "url": "\/properties"
+        "url": "/properties"
       },
       {
         "label": "About",
-        "url": "\/about"
+        "url": "/about"
       },
       {
         "label": "Invest",
-        "url": "\/invest"
+        "url": "/invest"
       },
       {
         "label": "Contact",
-        "url": "\/contact"
+        "url": "/contact"
       }
     ],
     "actions": {
@@ -118,32 +118,39 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Everything you need to know about the platform.",
+      "description": "Find answers to common questions about the property buying process and our specialized services.",
       "help_title": "Need More Help?",
-      "help_description": "Our support team is here for you.",
+      "help_description": "Our support team is here to guide you through every step.",
       "contact_button": "Contact Support",
       "items": [
         {
-          "question": "How do I start searching for a property?",
-          "answer": "You can start by using our search bar at the top of the page."
+          "question": "What is the process of buying a property in Spain?",
+          "answer": "The process involves selecting a property, making a reservation, signing a private contract, and completing the purchase in the notary."
         },
         {
-          "question": "Are the property listings verified?",
-          "answer": "Yes, every listing on Estatery goes through a strict verification process."
+          "question": "How long does it take to complete a property purchase?",
+          "answer": "For second hand property purchase takes between 4 to 8 weeks, depending on legal checks and financing and for the newbuild can take from 1 month till 3 years, it depends of the stage of the construction when you buy the property."
         },
         {
-          "question": "Can I list my own property for sale?",
-          "answer": "Absolutely! Click on the Sell Property button and follow the steps."
+          "question": "Can I buy a property in Spain without being physically present?",
+          "answer": "Yes, the purchase can be completed remotely through a power of attorney."
         },
         {
-          "question": "Is there any commission fee for buyers?",
-          "answer": "We provide transparent pricing. Browsing is free."
+          "question": "What services do you provide beyond the purchase?",
+          "answer": "I offer a comprehensive, end-to-end real estate service in Costa Blanca tailored to international buyers and investors. My work covers the entire property process, ensuring legal security, transparency, and a fully personalized approach. This includes property search and acquisition, sales and investment advisory, market analysis, and negotiation. I coordinate all legal and notarial aspects to guarantee secure transactions, while also assisting with administrative procedures such as obtaining an NIE, opening bank accounts, and managing financing."
         },
         {
-          "question": "How can I contact a real estate agent?",
-          "answer": "Each detail page has a Contact Agent button."
+          "question": "Do you help with utilities, taxes, and administration?",
+          "answer": "Yes, assistance is provided with utilities, taxes, and administrative procedures to ensure a smooth transition."
+        },
+        {
+          "question": "Can you assist with relocation and settling in Spain?",
+          "answer": "Yes, support is available for relocation, residency, and settling in Spain for clients moving to the Costa Blanca region."
         }
-      ]
+      ],
+      "eyebrow": "FAQ",
+      "common_subtitle": "Everything you need to know about buying, investing, and living in Costa Blanca.",
+      "frequently_asked": "Frequently Asked<br>Questions"
     }
   },
   "pages": {
@@ -166,7 +173,7 @@
       },
       "how_we_work": {
         "badge": "Work Flow",
-        "title": "How We Bring Your <br> <span class='text-secondary'>Vision to Life<\/span>",
+        "title": "How We Bring Your <br> <span class='text-secondary'>Vision to Life</span>",
         "steps": [
           {
             "id": "01",
@@ -214,10 +221,32 @@
       "leadership": {
         "badge": "Executive Message",
         "years_label": "Years of Integrity",
-        "title": "Designing the <span class='italic text-secondary'>Future<\/span>, <br> Respecting the <span class='italic'>Past<\/span>.",
+        "title": "Designing the <span class='italic text-secondary'>Future</span>, <br> Respecting the <span class='italic'>Past</span>.",
         "message": "Our journey began in 1988 with a simple blueprint: to build with uncompromising quality. Today, we continue to bridge the gap between architectural innovation and human-centric design. We don't just develop projects; we cultivate legacies.",
         "name": "Asif Ahamed",
         "role": "Founder & Managing Director"
+      },
+      "faq": {
+        "title": "Agency & Vision FAQ",
+        "description": "Learn more about our history, our values, and how we ensure excellence in every real estate project since 1988.",
+        "items": [
+          {
+            "question": "What defines the Estatery approach to real estate?",
+            "answer": "We combine decades of traditional expertise with modern technological integration, focusing on long-term value and architectural integrity rather than short-term market trends."
+          },
+          {
+            "question": "How do you select the properties in your portfolio?",
+            "answer": "Every property undergoes a rigorous 50-point vetting process, covering legal status, structural quality, investment yield potential, and environmental sustainability."
+          },
+          {
+            "question": "Do you offer post-purchase management services?",
+            "answer": "Yes, our commitment doesn't end at the sale. We provide comprehensive property management, maintenance coordination, and rental optimization for our international clients."
+          },
+          {
+            "question": "Can I visit your office in Costa Blanca?",
+            "answer": "Absolutely. We welcome clients to our Formentera del Segura office to discuss their investment strategy in person with our dedicated advisors."
+          }
+        ]
       }
     },
     "properties": {
@@ -291,7 +320,6 @@
         "shop": "Commercial",
         "not_found": "Property not found."
       },
-
       "categories": {
         "title": "Explore by Category",
         "subtitle": "Find the perfect type of home that suits your lifestyle.",
@@ -337,8 +365,38 @@
         "button_secondary": "Talk to an Agent",
         "badge_licensed": "Licensed & Regulated",
         "badge_secure": "Secure Transactions",
-        "badge_support": "24\/7 Client Support",
+        "badge_support": "24/7 Client Support",
         "badge_verified": "Verified Listings Only"
+      },
+      "faq": {
+        "title": "Properties FAQ",
+        "description": "Information about property types, legal security, and the buying process for international clients.",
+        "items": [
+          {
+            "question": "What is the difference between new build and resale properties?",
+            "answer": "New build properties are newly constructed with modern standards and guarantees, while resale properties have previous owners and are typically available for immediate move-in."
+          },
+          {
+            "question": "Are new build properties safer to buy?",
+            "answer": "New builds offer modern standards and guarantees, but require proper project evaluation, including assessing the developer and ensuring bank guarantees are in place."
+          },
+          {
+            "question": "What should I consider when buying off-plan?",
+            "answer": "It is important to assess the developer, project timelines, and legal guarantees, specifically ensuring that bank guarantees cover all stage payments."
+          },
+          {
+            "question": "What is an NIE number and how do I obtain it?",
+            "answer": "The NIE is a foreign identification number required for any legal or financial transaction in Spain. We assist our clients in obtaining this through the proper administrative channels."
+          },
+          {
+            "question": "Do I need a lawyer to buy property in Spain?",
+            "answer": "A lawyer is highly recommended to ensure legal security, review all documentation, and protect your interests throughout the transaction."
+          },
+          {
+            "question": "Do you check property documentation before purchase?",
+            "answer": "Yes, all key documentation is thoroughly reviewed before proceeding with the purchase to ensure the property is legally sound and free of debts."
+          }
+        ]
       }
     },
     "contact": {
@@ -479,6 +537,36 @@
           "submit": "Submit Application",
           "footer": "Encrypted & Confidential Portal"
         }
+      },
+      "faq": {
+        "title": "Investment FAQ",
+        "description": "Common questions about real estate investment, financing, and ROI in Costa Blanca.",
+        "items": [
+          {
+            "question": "Is Costa Blanca a good place for real estate investment?",
+            "answer": "Costa Blanca offers strong demand, lifestyle appeal, stable long-term value, and attractive returns, making it one of the most resilient markets in Spain."
+          },
+          {
+            "question": "What type of properties generate the best rental income?",
+            "answer": "Apartments with 1-2 bedrooms in prime locations close to the beach or golf resorts consistently show the strongest rental demand and highest yields."
+          },
+          {
+            "question": "What factors affect property profitability?",
+            "answer": "Location, property type, seasonal demand, management quality, and local council regulations/restrictions all play a role in determining final profitability."
+          },
+          {
+            "question": "Can foreigners get a mortgage in Spain?",
+            "answer": "Yes, non-residents can obtain a mortgage in Spain, usually financing between 60% and 70% of the property value, subject to proof of income."
+          },
+          {
+            "question": "What additional costs should I expect when buying a property?",
+            "answer": "Buyers should expect around 12–13% in additional costs above the purchase price, which covers taxes (VAT or Transfer Tax), notary fees, registration, and legal expenses."
+          },
+          {
+            "question": "How much deposit is required?",
+            "answer": "A deposit of 10% is typically required for resale properties. For new developments, reservation deposits usually range from €6,000 to €25,000 depending on the property price."
+          }
+        ]
       }
     },
     "error_404": {
@@ -608,5 +696,161 @@
       "terms": "Terms of Service",
       "cookie": "Cookie Policy"
     }
-  }
+  },
+  "common_faq_tabs": [
+    {
+      "key": "general",
+      "label": "General Process",
+      "items": [
+        {
+          "question": "What is the process of buying a property in Spain?",
+          "answer": "The process involves selecting a property, making a reservation, signing a private contract, and completing the purchase in the notary."
+        },
+        {
+          "question": "How long does it take to complete a property purchase?",
+          "answer": "For a second-hand property purchase it takes between 4 to 8 weeks, depending on legal checks and financing. For a new build it can take from 1 month to 3 years, depending on the stage of construction when you buy."
+        },
+        {
+          "question": "Can I buy a property in Spain without being physically present?",
+          "answer": "Yes, the purchase can be completed remotely through a power of attorney."
+        },
+        {
+          "question": "What documents are required to buy a property?",
+          "answer": "You will need a passport and NIE number. You will also be required to provide proof of the source of funds to comply with legal and financial regulations."
+        },
+        {
+          "question": "Do I need a Spanish bank account to purchase property?",
+          "answer": "Yes, a Spanish bank account is typically required to manage payments and ongoing expenses. If you already have an EU bank account, you can use it for maintenance costs, but opening a Spanish account is recommended for easier management."
+        }
+      ]
+    },
+    {
+      "key": "international",
+      "label": "International Buyers",
+      "items": [
+        {
+          "question": "What is an NIE number and how do I obtain it?",
+          "answer": "The NIE is a foreign identification number required for any legal or financial transaction in Spain. It can be obtained at a Spanish consulate abroad or at a police station in Spain."
+        },
+        {
+          "question": "Can foreigners get a mortgage in Spain?",
+          "answer": "Yes, non-residents can obtain a mortgage, usually financing 60–70% of the property value."
+        },
+        {
+          "question": "What are the main differences when buying as a non-resident?",
+          "answer": "Non-residents must comply with additional administrative and financial requirements, but the process is straightforward with proper guidance."
+        },
+        {
+          "question": "Do I need a lawyer to buy property in Spain?",
+          "answer": "A lawyer is highly recommended to ensure legal security and review all documentation."
+        },
+        {
+          "question": "Can I give power of attorney to complete the purchase remotely?",
+          "answer": "Yes, a power of attorney allows a legal representative to complete the entire process on your behalf."
+        }
+      ]
+    },
+    {
+      "key": "costs",
+      "label": "Costs & Financing",
+      "items": [
+        {
+          "question": "What additional costs should I expect when buying a property?",
+          "answer": "Buyers should expect around 12–13% in additional costs, including taxes and legal fees."
+        },
+        {
+          "question": "How much deposit is required?",
+          "answer": "A deposit of 10% is typically required at the private contract stage for resale properties. In new developments, the reservation deposit usually ranges from €6,000 to €25,000 depending on the final price."
+        },
+        {
+          "question": "What percentage of the property value can I finance?",
+          "answer": "Most banks finance between 60% and 70% of the property value for non-residents."
+        },
+        {
+          "question": "What are the typical mortgage conditions in Spain?",
+          "answer": "Mortgage conditions vary, but include fixed or variable rates and require proof of income and financial stability."
+        },
+        {
+          "question": "Are there any ongoing taxes after purchase?",
+          "answer": "Yes, there are annual property taxes (IBI) and community maintenance costs to consider."
+        }
+      ]
+    },
+    {
+      "key": "investment",
+      "label": "Investment",
+      "items": [
+        {
+          "question": "Is Costa Blanca a good place for real estate investment?",
+          "answer": "Costa Blanca offers strong demand, lifestyle appeal, and stable long-term value, making it one of the most sought-after investment destinations in Spain."
+        },
+        {
+          "question": "What type of properties generate the best rental income?",
+          "answer": "Apartments with 1–2 bedrooms in prime locations close to the beach or golf resorts tend to generate the strongest rental demand and returns."
+        },
+        {
+          "question": "What factors affect property profitability?",
+          "answer": "Location, property type, demand, management quality, and local council regulations and restrictions all directly affect profitability."
+        },
+        {
+          "question": "Can you help with commercial or large-scale investments?",
+          "answer": "Yes, advisory services include commercial assets, hotels, and large-scale investment projects."
+        }
+      ]
+    },
+    {
+      "key": "property_types",
+      "label": "Property Types",
+      "items": [
+        {
+          "question": "What is the difference between new build and resale properties?",
+          "answer": "New build properties are newly constructed, while resale properties have had previous owners. New builds often come with modern standards and developer warranties."
+        },
+        {
+          "question": "Are new build properties safer to buy?",
+          "answer": "New builds offer modern standards and guarantees, but require proper evaluation of the developer, project stage, and legal protections."
+        },
+        {
+          "question": "What should I consider when buying off-plan?",
+          "answer": "It is important to assess the developer's track record, construction timelines, legal guarantees, and bank guarantees that protect your deposit."
+        }
+      ]
+    },
+    {
+      "key": "legal",
+      "label": "Legal & Security",
+      "items": [
+        {
+          "question": "Do you check property documentation before purchase?",
+          "answer": "Yes, all key documentation — including title deeds, planning licences, and encumbrances — is thoroughly reviewed before proceeding with the purchase."
+        },
+        {
+          "question": "What role does the notary play in Spain?",
+          "answer": "The notary ensures the transaction is legally valid, witnesses the signing of the title deed, and facilitates registration of the property in your name."
+        }
+      ]
+    },
+    {
+      "key": "services",
+      "label": "Services",
+      "items": [
+        {
+          "question": "What services do you provide beyond the purchase?",
+          "answer": "A comprehensive, end-to-end real estate service is offered, covering property search, sales and investment advisory, market analysis, negotiation, legal coordination, NIE assistance, bank account setup, financing management, relocation support, and post-purchase property management."
+        },
+        {
+          "question": "Do you help with utilities, taxes, and administration?",
+          "answer": "Yes, full assistance is provided with utilities connection, local taxes, and all administrative procedures following the purchase."
+        },
+        {
+          "question": "Can you assist with relocation and settling in Spain?",
+          "answer": "Yes, comprehensive support is available for relocation, residency applications, and settling into your new life in Spain."
+        },
+        {
+          "question": "Do you offer property management after purchase?",
+          "answer": "Yes, ongoing support and full property management services — including rental management — are available after purchase."
+        }
+      ]
+    }
+  ]
 }

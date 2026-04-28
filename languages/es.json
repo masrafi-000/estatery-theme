@@ -22,23 +22,23 @@
     "navigation": [
       {
         "label": "Inicio",
-        "url": "\/"
+        "url": "/"
       },
       {
         "label": "Propiedades",
-        "url": "\/properties"
+        "url": "/properties"
       },
       {
         "label": "Nosotros",
-        "url": "\/about"
+        "url": "/about"
       },
       {
         "label": "Invertir",
-        "url": "\/invest"
+        "url": "/invest"
       },
       {
         "label": "Contacto",
-        "url": "\/contact"
+        "url": "/contact"
       }
     ],
     "actions": {
@@ -122,32 +122,39 @@
     },
     "faq": {
       "title": "Preguntas Frecuentes",
-      "description": "Todo lo que necesita saber sobre la plataforma.",
-      "help_title": "¿Necesita Más Ayuda?",
-      "help_description": "Nuestro equipo de soporte está aquí para usted.",
+      "description": "Encuentre respuestas a las preguntas comunes sobre el proceso de compra de propiedades y nuestros servicios especializados.",
+      "help_title": "¿Necesita más ayuda?",
+      "help_description": "Nuestro equipo de soporte está aquí para guiarle en cada paso.",
       "contact_button": "Contactar Soporte",
       "items": [
         {
-          "question": "¿Cómo comienzo a buscar una propiedad?",
-          "answer": "Puede comenzar utilizando nuestra barra de búsqueda en la parte superior de la página."
+          "question": "¿Cuál es el proceso de compra de una propiedad en España?",
+          "answer": "El proceso implica seleccionar una propiedad, realizar una reserva, firmar un contrato privado y completar la compra ante notario."
         },
         {
-          "question": "¿Están verificados los listados de propiedades?",
-          "answer": "Sí, cada listado en Estatery pasa por un estricto proceso de verificación."
+          "question": "¿Cuánto tiempo se tarda en completar la compra de una propiedad?",
+          "answer": "Para la compra de una propiedad de segunda mano se tarda entre 4 y 8 semanas, dependiendo de los controles legales y la financiación, y para la obra nueva puede tardar desde 1 mes hasta 3 años, dependiendo de la fase de construcción en el momento de la compra."
         },
         {
-          "question": "¿Puedo poner mi propia propiedad en venta?",
-          "answer": "¡Absolutamente! Haga clic en el botón Vender propiedad y siga los pasos."
+          "question": "¿Puedo comprar una propiedad en España sin estar físicamente presente?",
+          "answer": "Sí, la compra puede completarse a distancia mediante un poder notarial."
         },
         {
-          "question": "¿Hay alguna comisión para los compradores?",
-          "answer": "Ofrecemos precios transparentes. La navegación es gratuita."
+          "question": "¿Qué servicios ofrece más allá de la compra?",
+          "answer": "Ofrezco un servicio inmobiliario integral de principio a fin en la Costa Blanca adaptado a compradores e inversores internacionales. Mi trabajo cubre todo el proceso inmobiliario, garantizando seguridad jurídica, transparencia y un enfoque totalmente personalizado. Esto incluye la búsqueda y adquisición de propiedades, asesoramiento en ventas e inversiones, análisis de mercado y negociación. Coordino todos los aspectos legales y notariales para garantizar transacciones seguras, al tiempo que asisto en trámites administrativos como la obtención del NIE, la apertura de cuentas bancarias y la gestión de la financiación."
         },
         {
-          "question": "¿Cómo puedo contactar a un agente inmobiliario?",
-          "answer": "Cada página de detalles tiene un botón de Contactar Agente."
+          "question": "¿Ayudan con los suministros, impuestos y administración?",
+          "answer": "Sí, se ofrece asistencia con los suministros, impuestos y trámites administrativos para garantizar una transición fluida."
+        },
+        {
+          "question": "¿Pueden ayudar con el traslado y el asentamiento en España?",
+          "answer": "Sí, disponemos de apoyo para el traslado, la residencia y el asentamiento en España para los clientes que se muden a la región de la Costa Blanca."
         }
-      ]
+      ],
+      "eyebrow": "Preguntas Frecuentes",
+      "common_subtitle": "Todo lo que necesita saber sobre comprar, invertir y vivir en la Costa Blanca.",
+      "frequently_asked": "Preguntas<br>Frecuentes"
     }
   },
   "pages": {
@@ -170,7 +177,7 @@
       },
       "how_we_work": {
         "badge": "Flujo de Trabajo",
-        "title": "Cómo damos vida a su <br> <span class='text-secondary'>visión<\/span>",
+        "title": "Cómo damos vida a su <br> <span class='text-secondary'>visión</span>",
         "steps": [
           {
             "id": "01",
@@ -218,10 +225,32 @@
       "leadership": {
         "badge": "Mensaje Ejecutivo",
         "years_label": "Años de Integridad",
-        "title": "Diseñando el <span class='italic text-secondary'>futuro<\/span>, <br> respetando el <span class='italic'>pasado<\/span>.",
+        "title": "Diseñando el <span class='italic text-secondary'>futuro</span>, <br> respetando el <span class='italic'>pasado</span>.",
         "message": "Nuestro viaje comenzó en 1988 con un plano simple: construir con una calidad inquebrantable. Hoy, continuamos cerrando la brecha entre la innovación arquitectónica y el diseño centrado en el ser humano. No solo desarrollamos proyectos; cultivamos legados.",
         "name": "Asif Ahamed",
         "role": "Fundador y Director Gerente"
+      },
+      "faq": {
+        "title": "Preguntas frecuentes sobre la agencia y la visión",
+        "description": "Obtenga más información sobre nuestra historia, nuestros valores y cómo garantizamos la excelencia en cada proyecto inmobiliario desde 1988.",
+        "items": [
+          {
+            "question": "¿Qué define el enfoque de Estatery en el sector inmobiliario?",
+            "answer": "Combinamos décadas de experiencia tradicional con la integración tecnológica moderna, centrándonos en el valor a largo plazo y la integridad arquitectónica en lugar de las tendencias del mercado a corto plazo."
+          },
+          {
+            "question": "¿Cómo seleccionan las propiedades de su cartera?",
+            "answer": "Cada propiedad se somete a un riguroso proceso de evaluación de 50 puntos, que abarca el estado legal, la calidad estructural, el potencial de rendimiento de la inversión y la sostenibilidad ambiental."
+          },
+          {
+            "question": "¿Ofrecen servicios de gestión posteriores a la compra?",
+            "answer": "Sí, nuestro compromiso no termina en la venta. Ofrecemos una gestión integral de la propiedad, coordinación del mantenimiento y optimización del alquiler para nuestros clientes internacionales."
+          },
+          {
+            "question": "¿Puedo visitar su oficina en la Costa Blanca?",
+            "answer": "Por supuesto. Damos la bienvenida a los clientes a nuestra oficina de Formentera del Segura para hablar sobre su estrategia de inversión en persona con nuestros asesores dedicados."
+          }
+        ]
       }
     },
     "properties": {
@@ -296,15 +325,30 @@
         "shop": "Local Comercial",
         "not_found": "Propiedad no encontrada."
       },
-
       "categories": {
         "title": "Explorar por Categoría",
         "subtitle": "Encuentre el tipo de hogar perfecto que se adapte a su estilo de vida.",
         "types": [
-          { "name": "Villa", "slug": "villa", "count": "Ver todo" },
-          { "name": "Apartamento", "slug": "apartment", "count": "Ver todo" },
-          { "name": "Adosado", "slug": "townhouse", "count": "Ver todo" },
-          { "name": "Bungalow", "slug": "bungalow", "count": "Ver todo" }
+          {
+            "name": "Villa",
+            "slug": "villa",
+            "count": "Ver todo"
+          },
+          {
+            "name": "Apartamento",
+            "slug": "apartment",
+            "count": "Ver todo"
+          },
+          {
+            "name": "Adosado",
+            "slug": "townhouse",
+            "count": "Ver todo"
+          },
+          {
+            "name": "Bungalow",
+            "slug": "bungalow",
+            "count": "Ver todo"
+          }
         ]
       },
       "actions": {
@@ -324,6 +368,36 @@
         "badge_secure": "Transacciones seguras",
         "badge_support": "Soporte al cliente 24/7",
         "badge_verified": "Solo listados verificados"
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes sobre Propiedades",
+        "description": "Información sobre tipos de propiedades, seguridad jurídica y el proceso de compra para clientes internacionales.",
+        "items": [
+          {
+            "question": "¿Cuál es la diferencia entre las propiedades de obra nueva y las de reventa?",
+            "answer": "Las propiedades de obra nueva son de reciente construcción con estándares y garantías modernos, mientras que las de reventa han tenido propietarios anteriores y suelen estar disponibles para entrar a vivir de inmediato."
+          },
+          {
+            "question": "¿Es más seguro comprar propiedades de obra nueva?",
+            "answer": "Las obras nuevas ofrecen estándares y garantías modernos, pero requieren una evaluación adecuada del proyecto, incluyendo la valoración del promotor y asegurando que existan avales bancarios."
+          },
+          {
+            "question": "¿Qué debo tener en cuenta al comprar sobre plano?",
+            "answer": "Es importante evaluar al promotor, los plazos del proyecto y las garantías legales, asegurándose específicamente de que los avales bancarios cubran todos los pagos fraccionados."
+          },
+          {
+            "question": "¿Qué es un número NIE y cómo lo obtengo?",
+            "answer": "El NIE es un número de identificación de extranjeros necesario para cualquier transacción legal o financiera en España. Ayudamos a nuestros clientes a obtenerlo a través de los canales administrativos adecuados."
+          },
+          {
+            "question": "¿Necesito un abogado para comprar una propiedad en España?",
+            "answer": "Es muy recomendable contar con un abogado para garantizar la seguridad jurídica, revisar toda la documentación y proteger sus intereses durante la transacción."
+          },
+          {
+            "question": "¿Comprueban la documentación de la propiedad antes de la compra?",
+            "answer": "Sí, toda la documentación clave se revisa minuciosamente antes de proceder con la compra para garantizar que la propiedad sea legalmente sólida y esté libre de cargas."
+          }
+        ]
       }
     },
     "contact": {
@@ -464,6 +538,36 @@
           "submit": "Enviar Solicitud",
           "footer": "Portal Encriptado y Confidencial"
         }
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes sobre Inversión",
+        "description": "Preguntas comunes sobre inversión inmobiliaria, financiación y ROI en la Costa Blanca.",
+        "items": [
+          {
+            "question": "¿Es la Costa Blanca un buen lugar para la inversión inmobiliaria?",
+            "answer": "La Costa Blanca ofrece una fuerte demanda, atractivo estilo de vida, valor estable a largo plazo y rentabilidades atractivas, lo que la convierte en uno de los mercados más resilientes de España."
+          },
+          {
+            "question": "¿Qué tipo de propiedades generan los mejores ingresos por alquiler?",
+            "answer": "Los apartamentos de 1 o 2 dormitorios en ubicaciones privilegiadas cerca de la playa o de campos de golf muestran constantemente la mayor demanda de alquiler y los mejores rendimientos."
+          },
+          {
+            "question": "¿Qué factores afectan a la rentabilidad de la propiedad?",
+            "answer": "La ubicación, el tipo de propiedad, la demanda estacional, la calidad de la gestión y las normativas y restricciones de los ayuntamientos locales influyen en la rentabilidad final."
+          },
+          {
+            "question": "¿Pueden los extranjeros obtener una hipoteca en España?",
+            "answer": "Sí, los no residentes pueden obtener una hipoteca en España, financiando normalmente entre el 60% y el 70% del valor de la propiedad, sujeto a la acreditación de ingresos."
+          },
+          {
+            "question": "¿Qué costes adicionales debo esperar al comprar una propiedad?",
+            "answer": "Los compradores deben esperar entre un 12% y un 13% de costes adicionales sobre el precio de compra, lo que cubre impuestos (IVA o ITP), gastos de notaría, registro y honorarios legales."
+          },
+          {
+            "question": "¿Cuánto depósito se requiere?",
+            "answer": "Normalmente se requiere un depósito del 10% para las propiedades de reventa. Para las promociones de obra nueva, los depósitos de reserva suelen oscilar entre los 6.000 € y los 25.000 €, dependiendo del precio de la propiedad."
+          }
+        ]
       }
     },
     "error_404": {
@@ -593,5 +697,161 @@
       "terms": "Términos de Servicio",
       "cookie": "Política de Cookies"
     }
-  }
+  },
+  "common_faq_tabs": [
+    {
+      "key": "general",
+      "label": "Proceso General",
+      "items": [
+        {
+          "question": "¿Cuál es el proceso de compra de una propiedad en España?",
+          "answer": "El proceso implica seleccionar una propiedad, hacer una reserva, firmar un contrato privado y completar la compra ante notario."
+        },
+        {
+          "question": "¿Cuánto tiempo se tarda en completar la compra de una propiedad?",
+          "answer": "Para una propiedad de segunda mano, la compra tarda entre 4 y 8 semanas. Para obra nueva, puede tardar de 1 mes a 3 años."
+        },
+        {
+          "question": "¿Puedo comprar una propiedad en España sin estar presente?",
+          "answer": "Sí, la compra se puede completar a distancia mediante un poder notarial."
+        },
+        {
+          "question": "¿Qué documentos se necesitan para comprar una propiedad?",
+          "answer": "Necesitará un pasaporte y número NIE, además de demostrar el origen de los fondos."
+        },
+        {
+          "question": "¿Necesito una cuenta bancaria española para comprar?",
+          "answer": "Sí, generalmente se requiere una cuenta española para gestionar pagos y gastos continuos."
+        }
+      ]
+    },
+    {
+      "key": "international",
+      "label": "Compradores Internacionales",
+      "items": [
+        {
+          "question": "¿Qué es el número NIE y cómo lo obtengo?",
+          "answer": "El NIE es el número de identificación de extranjeros necesario para transacciones legales en España."
+        },
+        {
+          "question": "¿Pueden los extranjeros obtener una hipoteca en España?",
+          "answer": "Sí, los no residentes pueden obtener una hipoteca, financiando habitualmente el 60-70% del valor."
+        },
+        {
+          "question": "¿Cuáles son las diferencias principales al comprar como no residente?",
+          "answer": "Los no residentes deben cumplir con requisitos administrativos y fiscales adicionales."
+        },
+        {
+          "question": "¿Necesito un abogado para comprar en España?",
+          "answer": "Se recomienda encarecidamente un abogado para garantizar la seguridad jurídica."
+        },
+        {
+          "question": "¿Puedo otorgar poder notarial para comprar a distancia?",
+          "answer": "Sí, un poder notarial permite a un representante legal completar todo el proceso."
+        }
+      ]
+    },
+    {
+      "key": "costs",
+      "label": "Costes y Financiación",
+      "items": [
+        {
+          "question": "¿Qué costes adicionales debo esperar al comprar?",
+          "answer": "Los compradores deben prever un 12-13% en costes adicionales por impuestos y gastos legales."
+        },
+        {
+          "question": "¿Cuánto depósito se requiere?",
+          "answer": "Generalmente el 10% en propiedades de segunda mano, y entre 6.000 y 25.000 € para obra nueva."
+        },
+        {
+          "question": "¿Qué porcentaje del valor puedo financiar?",
+          "answer": "La mayoría de bancos financian entre el 60% y el 70% para no residentes."
+        },
+        {
+          "question": "¿Cuáles son las condiciones hipotecarias típicas en España?",
+          "answer": "Incluyen tipos fijos o variables y requieren prueba de ingresos y estabilidad financiera."
+        },
+        {
+          "question": "¿Hay impuestos continuos después de la compra?",
+          "answer": "Sí, existen impuestos anuales (IBI) y gastos de comunidad a considerar."
+        }
+      ]
+    },
+    {
+      "key": "investment",
+      "label": "Inversión",
+      "items": [
+        {
+          "question": "¿Es la Costa Blanca un buen lugar para invertir en inmuebles?",
+          "answer": "Sí, ofrece fuerte demanda, atractivo estilo de vida y valor estable a largo plazo."
+        },
+        {
+          "question": "¿Qué tipo de propiedades generan mejores ingresos de alquiler?",
+          "answer": "Los apartamentos de 1-2 dormitorios en ubicaciones privilegiadas cerca de la playa o el golf."
+        },
+        {
+          "question": "¿Qué factores afectan a la rentabilidad de la propiedad?",
+          "answer": "Ubicación, tipo, demanda, calidad de gestión y regulaciones municipales."
+        },
+        {
+          "question": "¿Ayudan con inversiones comerciales o a gran escala?",
+          "answer": "Sí, incluimos activos comerciales, hoteles y proyectos a gran escala en nuestra asesoría."
+        }
+      ]
+    },
+    {
+      "key": "property_types",
+      "label": "Tipos de Propiedad",
+      "items": [
+        {
+          "question": "¿Cuál es la diferencia entre obra nueva y segunda mano?",
+          "answer": "Las propiedades nuevas cuentan con estándares modernos y garantías de promotor, mientras que las de reventa están disponibles para entrada inmediata."
+        },
+        {
+          "question": "¿Es más seguro comprar propiedades de obra nueva?",
+          "answer": "Ofrecen estándares modernos pero requieren evaluación del promotor, etapa del proyecto y protección legal."
+        },
+        {
+          "question": "¿Qué debo tener en cuenta al comprar sobre plano?",
+          "answer": "Evaluar el historial del promotor, plazos de construcción, garantías legales y bancarias."
+        }
+      ]
+    },
+    {
+      "key": "legal",
+      "label": "Legal y Seguridad",
+      "items": [
+        {
+          "question": "¿Revisan la documentación antes de la compra?",
+          "answer": "Sí, se revisan escrituras, licencias urbanísticas y cargas antes de la compra."
+        },
+        {
+          "question": "¿Qué papel juega el notario en España?",
+          "answer": "Garantiza la validez legal de la transacción y facilita la inscripción a su nombre."
+        }
+      ]
+    },
+    {
+      "key": "services",
+      "label": "Servicios",
+      "items": [
+        {
+          "question": "¿Qué servicios prestan más allá de la compra?",
+          "answer": "Ofrecemos servicio inmobiliario integral: búsqueda, asesoría, análisis, negociación, coordinación legal, obtención del NIE, hipotecas, y más."
+        },
+        {
+          "question": "¿Ayudan con suministros, impuestos y administración?",
+          "answer": "Sí, prestamos asistencia total en la conexión de suministros, impuestos y procedimientos."
+        },
+        {
+          "question": "¿Pueden ayudar con la reubicación en España?",
+          "answer": "Sí, ofrecemos soporte integral para reubicarse, visados y asentarse."
+        },
+        {
+          "question": "¿Ofrecen gestión de la propiedad después de comprar?",
+          "answer": "Sí, disponemos de gestión integral, incluyendo gestión de alquiler."
+        }
+      ]
+    }
+  ]
 }
