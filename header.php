@@ -20,7 +20,7 @@
         
         <!-- Logo & Spinner -->
         <div class="relative flex flex-col items-center gap-8">
-            <div class="relative w-24 h-24 flex items-center justify-center">
+            <div class="relative max-w-60 max-h-40  flex items-center justify-center">
                 <!-- Decorative Ring -->
                 <div class="absolute inset-0 border border-white/10 rounded-full scale-150 animate-[ping_3s_infinite]"></div>
                 

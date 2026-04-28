@@ -144,6 +144,7 @@
       "how_we_work": {
         "badge": "Work Flow",
         "title": "How We Bring Your <br> <span class='text-secondary'>Vision to Life</span>",
+        "subtitle": "From the initial consultation to the final delivery, we follow a meticulous process to ensure your satisfaction.",
         "steps": [
           {
             "id": "01",
@@ -170,6 +171,7 @@
       "philosophy": {
         "badge": "Our Philosophy",
         "title": "The Core Pillars That <br> Define Our Craft",
+        "subtitle": "Discover the fundamental values that guide our vision and commitment to excellence in every project we undertake.",
         "values": [
           {
             "id": "01",
@@ -191,10 +193,10 @@
       "leadership": {
         "badge": "Executive Message",
         "years_label": "Years of Integrity",
-        "title": "Designing the <span class='italic text-secondary'>Future</span>, <br> Respecting the <span class='italic'>Past</span>.",
+        "title": "Executive Message",
         "message": "At Capital Union Investment, my approach is built on experience, precision, and a deep understanding of the Spanish property market.<br />With nearly two decades of hands-on experience, I have had the privilege of guiding international clients through property acquisitions, sales, and investment decisions with a strong focus on legal security and long-term value. Since beginning my career in 2008, I have developed a comprehensive expertise across all stages of the real estate process — from transaction management and legal coordination to new-build development analysis and investment strategy.<br />My background also includes leading short-term rental operations, providing a clear and practical understanding of real market performance, profitability, and asset optimization. This allows me to offer clients not just properties, but well-structured investment opportunities aligned with their goals.<br />My commitment is simple: to deliver a highly personalized, transparent, and results-driven service that ensures confidence, efficiency, and long-term success for every client.",
-        "name": "Asif Ahamed",
-        "role": "Founder & Managing Director"
+        "name": "Anna Alizarenko",
+        "role": "Founder & Independent Real Estate Advisor"
       }
       
     },

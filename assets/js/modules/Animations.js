@@ -23,18 +23,33 @@ export default class Animations {
         const textElements = document.querySelectorAll('.js-reveal-text');
         
         textElements.forEach(el => {
-            const text = el.innerText.trim();
-            if (!text) return;
+            const html = el.innerHTML.trim();
+            if (!html) return;
 
-            // Split text into words for a staggered "reveal"
-            const words = text.split(/\s+/);
-            el.innerHTML = words.map(word => `<span class="inline-block overflow-hidden"><span class="inline-block opacity-0 translate-y-full">${word}&nbsp;</span></span>`).join('');
+            // Split by words but preserve HTML tags as atomic units
+            // This regex matches either an HTML tag or a sequence of non-whitespace characters
+            const tokens = html.match(/(<[^>]+>|[^<>\s]+|\s+)/g);
+            if (!tokens) return;
+
+            el.innerHTML = tokens.map(token => {
+                // If it's a tag (like <br> or <span>) or just whitespace, return as is
+                if (token.startsWith('<') || token.trim() === '') {
+                    return token;
+                }
+                
+                // If it's a word, wrap it for animation. No initial hidden state to ensure visibility.
+                return `<span class="inline-block overflow-hidden"><span class="inline-block transition-opacity duration-300">${token}</span></span>`;
+            }).join('');
             
             inView(el, ({ target }) => {
                 const spans = target.querySelectorAll('span > span');
+                // Set initial state for animation
+                animate(spans, { opacity: 0, y: "100%" }, { duration: 0 });
+                
+                // Animate to visible
                 animate(
                     spans,
-                    { opacity: [0, 1], y: ["100%", "0%"] },
+                    { opacity: 1, y: 0 },
                     { 
                         delay: stagger(0.04), 
                         duration: 0.8, 

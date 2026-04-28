@@ -28,7 +28,7 @@ $active_index = 0;
                     <?php echo t('home.faq.frequently_asked') ?: 'Frequently Asked<br>Questions'; ?>
                 </h2>
                 <div class="flex flex-col lg:items-end gap-5 max-w-sm">
-                    <p class="text-secondary/60 text-sm leading-relaxed lg:text-right">
+                    <p class="text-secondary text-sm leading-relaxed lg:text-right">
                         <?php echo esc_html( t('home.faq.common_subtitle') ?: 'Everything you need to know about buying, investing, and living in Costa Blanca.' ); ?>
                     </p>
                     <a href="<?php echo \Estatery\Core\Translator::getInstance()->resolve_nav_url('/contact'); ?>" class="inline-flex items-center gap-3 group">
@@ -99,7 +99,7 @@ $active_index = 0;
                                     </button>
                                     <div class="js-faq-content overflow-hidden" style="height:0; opacity:0;">
                                         <div class="px-8 pb-7 pt-0 lg:pr-24">
-                                            <p class="text-secondary/70 text-sm leading-relaxed">
+                                            <p class="text-black text-sm leading-relaxed opacity-90">
                                                 <?php echo esc_html($item['answer']); ?>
                                             </p>
                                         </div>

@@ -148,6 +148,7 @@
       "how_we_work": {
         "badge": "Flujo de Trabajo",
         "title": "Cómo damos vida a su <br> <span class='text-secondary'>visión</span>",
+        "subtitle": "Desde la consulta inicial hasta la entrega final, seguimos un proceso meticuloso para garantizar su satisfacción.",
         "steps": [
           {
             "id": "01",
@@ -174,6 +175,7 @@
       "philosophy": {
         "badge": "Nuestra Filosofía",
         "title": "Los pilares fundamentales que <br> definen nuestro oficio",
+        "subtitle": "Descubra los valores fundamentales que guían nuestra visión y compromiso con la excelencia en cada proyecto que emprendemos.",
         "values": [
           {
             "id": "01",
@@ -195,10 +197,10 @@
       "leadership": {
         "badge": "Mensaje Ejecutivo",
         "years_label": "Años de Integridad",
-        "title": "Diseñando el <span class='italic text-secondary'>futuro</span>, <br> respetando el <span class='italic'>pasado</span>.",
-        "message": "Nuestro viaje comenzó en 1988 con un plano simple: construir con una calidad inquebrantable. Hoy, continuamos cerrando la brecha entre la innovación arquitectónica y el diseño centrado en el ser humano. No solo desarrollamos proyectos; cultivamos legados.",
-        "name": "Asif Ahamed",
-        "role": "Fundador y Director Gerente"
+        "title": "Mensaje Ejecutivo",
+        "message": "En Capital Union Investment, mi enfoque se basa en la experiencia, la precisión y una comprensión profunda del mercado inmobiliario español.<br />Con casi dos décadas de experiencia práctica, he tenido el privilegio de guiar a clientes internacionales a través de adquisiciones de propiedades, ventas y decisiones de inversión con un fuerte enfoque en la seguridad legal y el valor a largo plazo. Desde el comienzo de mi carrera en 2008, he desarrollado una experiencia integral en todas las etapas del proceso inmobiliario, desde la gestión de transacciones y la coordinación legal hasta el análisis de desarrollo de nuevas construcciones y la estrategia de inversión.<br />Mi experiencia también incluye la dirección de operaciones de alquiler a corto plazo, lo que proporciona una comprensión clara y práctica del rendimiento real del mercado, la rentabilidad y la optimización de activos. Esto me permite ofrecer a los clientes no solo propiedades, sino oportunidades de inversión bien estructuradas y alineadas con sus objetivos.<br />Mi compromiso es simple: ofrecer un servicio altamente personalizado, transparente y orientado a resultados que garantice confianza, eficiencia y éxito a largo plazo para cada cliente.",
+        "name": "Anna Alizarenko",
+        "role": "Fundadora y Asesora Inmobiliaria Independiente"
       
       }
     },

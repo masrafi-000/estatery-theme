@@ -3,16 +3,16 @@
     <div class="container mx-auto px-6">
 
         <!-- Header -->
-        <div class="max-w-3xl mb-16 lg:mb-24 js-reveal-fade">
-            <div class="inline-flex items-center gap-2.5 px-4 py-2 border border-secondary/20 mb-8">
-                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                <span class="text-secondary font-bold uppercase tracking-[0.3em] text-[10px]"><?php echo esc_html($philosophy['badge']); ?></span>
+        <div class="max-w-3xl mb-16 lg:mb-24 js-philosophy-header">
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 border border-black/20 mb-8">
+                <span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+                <span class="text-primary font-bold uppercase tracking-[0.3em] text-[10px]"><?php echo esc_html($philosophy['badge']); ?></span>
             </div>
-            <h2 class="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-secondary tracking-tight leading-[1.1] mb-8 js-reveal-text">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-secondary tracking-tight leading-[1.1] mb-8">
                 <?php echo $philosophy['title']; ?>
             </h2>
-            <p class="text-secondary/70 text-lg md:text-xl font-medium leading-relaxed max-w-2xl">
-                <?php echo esc_html($philosophy['subtitle']); ?>
+            <p class="text-secondary text-lg leading-relaxed max-w-2xl">
+                <?php echo esc_html($philosophy['subtitle'] ?? ''); ?>
             </p>
         </div>
 
@@ -27,20 +27,20 @@
             foreach ($philosophy['values'] as $idx => $val):
             ?>
                 <div class="js-value-card group relative p-10 bg-white shadow border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl overflow-hidden">
-                    <div class="absolute top-0 left-0 w-0 h-[3px] bg-secondary group-hover:w-full transition-all duration-700"></div>
+                    <div class="absolute top-0 left-0 w-0 h-[3px] bg-black group-hover:w-full transition-all duration-700"></div>
 
                     <div class="relative z-10">
-                        <span class="text-5xl font-serif text-gray-200 group-hover:text-secondary/20 transition-colors duration-500 font-bold"><?php echo esc_html($val['id']); ?></span>
+                        <span class="text-5xl font-serif text-gray-200 group-hover:text-black/20 transition-colors duration-500 font-bold"><?php echo esc_html($val['id']); ?></span>
 
-                        <div class="mt-6 mb-4 text-secondary">
+                        <div class="mt-6 mb-4 text-black">
                             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                     d="<?php echo $icons[$idx]; ?>"></path>
                             </svg>
                         </div>
 
-                        <h4 class="text-2xl font-bold text-secondary mb-4"><?php echo esc_html($val['title']); ?></h4>
-                        <p class="body-copy mb-0">
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-secondary mb-6"><?php echo esc_html($val['title']); ?></h2>
+                        <p class="text-black mb-0 opacity-80 leading-relaxed">
                             <?php echo esc_html($val['description']); ?>
                         </p>
                     </div>
