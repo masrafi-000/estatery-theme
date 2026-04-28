@@ -71,8 +71,9 @@ $current_lang = isset( $languages[ $current_lang_slug ] )
     </button>
 
     <!-- Options Dropdown -->
-    <div class="lang-options-menu absolute right-0 mt-3 w-48 bg-white border border-gray-100 rounded-2xl shadow-2xl flex flex-col overflow-hidden opacity-0 invisible translate-y-6 pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"
-         id="lang-options-list">
+    <div class="lang-options-menu absolute right-0 mt-3 w-48 bg-white border border-gray-100 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+         id="lang-options-list"
+         style="opacity:0; visibility:hidden; transform:translateY(12px); pointer-events:none; transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34,1.56,0.64,1), visibility 0.3s;">
         <ul class="py-2">
             <?php foreach ( $languages as $lang ) : ?>
                 <li>

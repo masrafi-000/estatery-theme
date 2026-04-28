@@ -12,9 +12,9 @@
     <?php wp_body_open(); ?>
 
     <!-- Premium Page Transition Overlay -->
-    <div id="page-loader" class="fixed inset-0 z-[10000] bg-secondary flex items-center justify-center pointer-events-auto">
+    <div id="page-loader" class="fixed inset-0 z-[10000] bg-gray-50 flex items-center justify-center pointer-events-auto">
         <!-- Progress Bar -->
-        <div class="absolute top-0 left-0 w-full h-1 bg-white/5 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-white overflow-hidden">
             <div id="loader-progress" class="h-full bg-primary w-0 transition-all duration-300 ease-out"></div>
         </div>
         
@@ -27,7 +27,7 @@
                 <!-- Logo Image (Styled for Loader) -->
                 <img src="<?php echo esc_url( get_template_directory_uri() . '/public/images/logo-ll.png' ); ?>" 
                      alt="Loading..." 
-                     class="w-full h-auto object-contain brightness-0 invert opacity-80 scale-150">
+                     class="w-full h-auto object-contain opacity-100 scale-150">
             </div>
             
             <div class="flex flex-col items-center gap-3">
@@ -36,7 +36,7 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-primary animate-bounce [animation-delay:-0.15s]"></span>
                     <span class="w-1.5 h-1.5 rounded-full bg-primary animate-bounce"></span>
                 </div>
-                <span class="text-[10px] uppercase tracking-[0.4em] text-white/40 font-bold ml-1">Estatery Premium</span>
+                <span class="text-[10px] uppercase tracking-[0.4em] text-gray-600 font-bold ml-1">Capital Union Investments</span>
             </div>
         </div>
     </div>

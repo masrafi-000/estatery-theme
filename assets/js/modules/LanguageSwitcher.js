@@ -1,29 +1,25 @@
 /**
  * LanguageSwitcher — React-like state + URL-based language routing
- * Refactored to use Motion library
+ * Pure CSS transition — no Motion dependency.
  */
-import { animate } from 'https://cdn.jsdelivr.net/npm/motion@11.11.17/+esm';
-
 export default class LanguageSwitcher {
-
-    // ── Init ──────────────────────────────────────────────────────────────────
 
     constructor() {
         this.wrapper      = document.getElementById('language-routing-wrapper');
         this.trigger      = document.getElementById('lang-select-trigger');
         this.triggerLabel = document.querySelector('#lang-select-trigger .lang-label');
+        this.chevron      = document.getElementById('lang-select-chevron');
         this.menu         = document.getElementById('lang-options-list');
         this.optionBtns   = document.querySelectorAll('.lang-option-btn');
 
         if (!this.trigger || !this.menu) return;
 
-        // ── State ─────────────────────────────────────────────────────────────
         this.state = {
             activeLang: this.readCookie('estatery_lang') || document.documentElement.getAttribute('data-lang') || 'en',
-            isOpen:     false,
+            isOpen: false,
         };
 
-        this.render();    
+        this.render();
         this.bindEvents();
 
         console.log(`[LanguageSwitcher] Ready — lang: ${this.state.activeLang}`);
@@ -40,14 +36,13 @@ export default class LanguageSwitcher {
         }
 
         this.optionBtns.forEach(btn => {
-            const slug     = btn.getAttribute('data-slug');
-            const isActive = slug === this.state.activeLang;
-            btn.classList.toggle('active-lang',          isActive);
-            btn.classList.toggle('text-primary',         isActive);
-            btn.classList.toggle('bg-primary/5',         isActive);
-            btn.classList.toggle('text-gray-500',        !isActive);
-            btn.classList.toggle('hover:bg-gray-50',     !isActive);
-            btn.classList.toggle('hover:text-foreground',!isActive);
+            const isActive = btn.getAttribute('data-slug') === this.state.activeLang;
+            btn.classList.toggle('active-lang',           isActive);
+            btn.classList.toggle('text-primary',          isActive);
+            btn.classList.toggle('bg-primary/5',          isActive);
+            btn.classList.toggle('text-gray-500',         !isActive);
+            btn.classList.toggle('hover:bg-gray-50',      !isActive);
+            btn.classList.toggle('hover:text-foreground', !isActive);
         });
     }
 
@@ -69,12 +64,14 @@ export default class LanguageSwitcher {
             });
         });
 
+        // Close on outside click
         document.addEventListener('click', (e) => {
             if (this.wrapper && !this.wrapper.contains(e.target)) {
                 this.closeMenu();
             }
         });
 
+        // Close on Escape
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') this.closeMenu();
         });
@@ -83,41 +80,40 @@ export default class LanguageSwitcher {
     selectLanguage(slug, url) {
         this.setState({ activeLang: slug });
         this.closeMenu();
-        
-        // Trigger page transition
-        window.dispatchEvent(new CustomEvent('page-exit', { 
-            detail: { url: url || window.location.href } 
+
+        // Trigger smooth page exit transition
+        window.dispatchEvent(new CustomEvent('page-exit', {
+            detail: { url: url || window.location.href }
         }));
     }
 
-    // ── Dropdown Animations ───────────────────────────────────────────────────
-
     openMenu() {
         this.setState({ isOpen: true });
-        this.menu.classList.add('active');
         this.trigger.setAttribute('aria-expanded', 'true');
+        if (this.chevron) this.chevron.style.transform = 'rotate(180deg)';
 
-        animate(
-            this.menu,
-            { opacity: [0, 1], y: [15, 0], visibility: "visible" },
-            { duration: 0.4, easing: [0.34, 1.56, 0.64, 1] }
-        );
+        // CSS transition handles the animation — just set the styles
+        this.menu.style.opacity       = '1';
+        this.menu.style.visibility    = 'visible';
+        this.menu.style.transform     = 'translateY(0)';
+        this.menu.style.pointerEvents = 'auto';
     }
 
     closeMenu() {
-        if (!this.state.isOpen && !this.menu.classList.contains('active')) return;
+        if (!this.state.isOpen && this.menu.style.visibility === 'hidden') return;
 
         this.setState({ isOpen: false });
         this.trigger.setAttribute('aria-expanded', 'false');
+        if (this.chevron) this.chevron.style.transform = 'rotate(0deg)';
 
-        animate(
-            this.menu,
-            { opacity: [1, 0], y: [0, 15] },
-            { duration: 0.3, easing: "ease-in" }
-        ).finished.then(() => {
-            this.menu.classList.remove('active');
-            this.menu.style.visibility = "hidden";
-        });
+        this.menu.style.opacity       = '0';
+        this.menu.style.transform     = 'translateY(12px)';
+        this.menu.style.pointerEvents = 'none';
+
+        // Hide from accessibility after transition (0.3s)
+        setTimeout(() => {
+            this.menu.style.visibility = 'hidden';
+        }, 300);
     }
 
     readCookie(name) {
