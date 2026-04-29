@@ -27,6 +27,46 @@ class Setup {
         $this->create_investment_query_table();
         $this->create_invest_table();
         $this->create_contact_table();
+        $this->create_investment_portfolio_table();
+    }
+
+    /**
+     * Create the investment portfolio table for dashboard management
+     */
+    private function create_investment_portfolio_table() {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'estatery_investment_portfolio';
+        $charset_collate = $wpdb->get_charset_collate();
+
+        $sql = "CREATE TABLE $table_name (
+            id mediumint(9) NOT NULL AUTO_INCREMENT,
+            external_id varchar(100) NOT NULL,
+            title varchar(255) NOT NULL,
+            price decimal(15,2) DEFAULT '0.00' NOT NULL,
+            currency varchar(10) DEFAULT 'EUR' NOT NULL,
+            type varchar(100) NOT NULL,
+            town varchar(100) NOT NULL,
+            province varchar(100) NOT NULL,
+            country varchar(100) DEFAULT 'Spain' NOT NULL,
+            location_detail varchar(255) NOT NULL,
+            beds int(5) DEFAULT 0 NOT NULL,
+            baths int(5) DEFAULT 0 NOT NULL,
+            built_area int(10) DEFAULT 0 NOT NULL,
+            plot_size int(10) DEFAULT 0 NOT NULL,
+            images text NOT NULL,
+            descriptions text NOT NULL,
+            features text NOT NULL,
+            new_build tinyint(1) DEFAULT 0 NOT NULL,
+            lat varchar(50) DEFAULT '' NOT NULL,
+            lng varchar(50) DEFAULT '' NOT NULL,
+            pool_count int(2) DEFAULT 0 NOT NULL,
+            featured_image text NOT NULL,
+            created_at datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
+            PRIMARY KEY  (id)
+        ) $charset_collate;";
+
+        require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+        dbDelta( $sql );
     }
 
     /**

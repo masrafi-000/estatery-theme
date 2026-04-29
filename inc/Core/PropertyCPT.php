@@ -176,10 +176,10 @@ class PropertyCPT {
         $baths      = get_post_meta($post->ID, '_baths', true) ?: '0';
         $built      = get_post_meta($post->ID, '_built', true) ?: '0';
         $plot       = get_post_meta($post->ID, '_plot', true) ?: '0';
-        $pool       = get_post_meta($post->ID, '_pool', true);
-        $new_build  = get_post_meta($post->ID, '_new_build', true);
-        $resale     = get_post_meta($post->ID, '_resale', true);
-        $features   = get_post_meta($post->ID, '_features', true);
+        $pool           = get_post_meta($post->ID, '_pool', true);
+        $new_build      = get_post_meta($post->ID, '_new_build', true);
+        $resale         = get_post_meta($post->ID, '_resale', true);
+        $features       = get_post_meta($post->ID, '_features', true);
         ?>
         <div class="estatery-meta-grid">
             <div class="estatery-meta-field">
@@ -404,7 +404,8 @@ class PropertyCPT {
             '_country'          => 'property_country',
             '_latitude'         => 'property_latitude',
             '_longitude'        => 'property_longitude',
-            '_location_detail'  => 'property_location_detail'
+            '_location_detail'  => 'property_location_detail',
+            '_is_investment'    => 'property_is_investment'
         ];
 
         foreach ($fields as $meta_key => $post_key) {
@@ -465,6 +466,7 @@ class PropertyCPT {
             'price_freq' => [get_post_meta($post_id, '_price_freq', true) ?: 'sale'],
             'new_build' => [get_post_meta($post_id, '_new_build', true) ?: '0'],
             'resale' => [get_post_meta($post_id, '_resale', true) ?: '0'],
+            'is_investment' => [get_post_meta($post_id, '_is_investment', true) ?: '0'],
             'type' => [get_post_meta($post_id, '_type', true) ?: 'property'],
             'town' => [get_post_meta($post_id, '_town', true) ?: ''],
             'province' => [get_post_meta($post_id, '_province', true) ?: ''],

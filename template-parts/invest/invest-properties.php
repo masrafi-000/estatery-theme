@@ -35,7 +35,7 @@ $data_url = get_template_directory_uri() . '/data/investments.json';
 (function($) {
     const CONFIG = {
         lang: '<?php echo $current_lang; ?>',
-        dataUrl: '<?php echo $data_url; ?>',
+        ajaxUrl: '<?php echo admin_url('admin-ajax.php'); ?>',
         baseUrl: '<?php echo home_url(); ?>',
         i18n: {
             new_build: '<?php echo esc_js( t('pages.properties.filters.new_build') ); ?>',
@@ -58,10 +58,15 @@ $data_url = get_template_directory_uri() . '/data/investments.json';
     }
 
     function renderPropertyCard(prop) {
-        const title = prop.town[0] + ' ' + (prop.type[0] || 'Property');
+        const title = (prop.title && prop.title[0]) ? prop.title[0] : (prop.town[0] + ' ' + (prop.type[0] || 'Property'));
         const price = formatPrice(prop.price[0]);
         const description = prop.desc && prop.desc[CONFIG.lang] ? prop.desc[CONFIG.lang][0] : (prop.desc && prop.desc['en'] ? prop.desc['en'][0] : '');
-        let image = prop.images[0].image[0].url[0];
+        
+        let image = (prop.featured_image && prop.featured_image[0]) ? prop.featured_image[0] : '';
+        if (!image && prop.images && prop.images[0] && prop.images[0].image && prop.images[0].image[0]) {
+            image = prop.images[0].image[0].url[0];
+        }
+        
         // Optimization: If it's a pexels image, add resize params
         if (image.includes('pexels.com')) {
             image += '?auto=compress&cs=tinysrgb&w=800';
@@ -119,7 +124,15 @@ $data_url = get_template_directory_uri() . '/data/investments.json';
     async function loadInvestments() {
         const $container = $('#investments-container');
         try {
-            const response = await fetch(CONFIG.dataUrl, { cache: 'force-cache' });
+            const formData = new FormData();
+            formData.append('action', 'get_investments');
+            formData.append('lang', CONFIG.lang);
+
+            const response = await fetch(CONFIG.ajaxUrl, { 
+                method: 'POST',
+                body: formData
+            });
+            
             const data = await response.json();
             const properties = data.root.property;
 

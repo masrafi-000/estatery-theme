@@ -16,7 +16,13 @@ $beds = $property_data['beds'][0] ?? '0';
 $baths = $property_data['baths'][0] ?? '0';
 $surface_built = $property_data['surface_area'][0]['built'][0] ?? '0';
 $surface_plot = $property_data['surface_area'][0]['plot'][0] ?? '0';
-$has_pool = $property_data['pool'][0] ?? '0';
+
+// Handle Pool (Support both legacy 'pool' and new 'pool_count')
+$pool_count = $property_data['pool_count'][0] ?? ($property_data['pool'][0] ?? '0');
+
+// Handle Coordinates (Support both nested JSON and flat DB structure)
+$lat = $property_data['lat'][0] ?? ($property_data['location'][0]['latitude'][0] ?? '51.50072911030101');
+$lng = $property_data['lng'][0] ?? ($property_data['location'][0]['longitude'][0] ?? '-0.12162622337144415');
 
 // Features mapping — raw strings directly from properties.json or investments.json
 $raw_features = $property_data['features'][0]['feature'] ?? ($property_data['features']['feature'] ?? []);
@@ -186,8 +192,6 @@ $gallery_images_json = json_encode($images);
 
             <div class="rounded-xl overflow-hidden border border-slate-200 h-[350px]">
                 <?php
-                $lat = $property_data['location'][0]['latitude'][0] ?? '51.50072911030101';
-                $lng = $property_data['location'][0]['longitude'][0] ?? '-0.12162622337144415';
                 $map_url = "https://maps.google.com/maps?q={$lat},{$lng}&z=15&output=embed";
                 ?>
                 <iframe
@@ -212,7 +216,7 @@ $gallery_images_json = json_encode($images);
                         <input type="hidden" name="prop_image" value="<?php echo esc_url($main_image); ?>">
                         <input type="hidden" name="prop_beds" value="<?php echo esc_attr($beds); ?>">
                         <input type="hidden" name="prop_baths" value="<?php echo esc_attr($baths); ?>">
-                        <input type="hidden" name="prop_pool" value="<?php echo esc_attr($has_pool); ?>">
+                        <input type="hidden" name="prop_pool" value="<?php echo esc_attr($pool_count); ?>">
                         <input type="hidden" name="prop_type" value="<?php echo esc_attr($property_data['type'][0] ?? ''); ?>">
                         <input type="hidden" name="prop_loc" value="<?php echo esc_attr(($property_data['location_detail'][0] ?? '') . ', ' . ($property_data['town'][0] ?? '') . ', ' . ($property_data['province'][0] ?? '')); ?>">
                         <input type="hidden" name="prop_lat" value="<?php echo esc_attr($lat); ?>">

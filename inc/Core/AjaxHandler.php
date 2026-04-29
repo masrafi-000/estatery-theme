@@ -220,37 +220,39 @@ class AjaxHandler {
 
     public function get_investments() {
         $lang = sanitize_key($_POST['lang'] ?? 'en');
-        $cache_key = 'estatery_investments_v1_' . $lang;
+        $portfolio_handler = new InvestPortfolioHandler();
         
-        $cached_html = get_transient($cache_key);
-        if (false !== $cached_html) {
-            wp_send_json_success(['html' => $cached_html]);
+        $all_investments = [];
+
+        // 1. Load Custom DB Table Investment Portfolio
+        $db_items = $portfolio_handler->get_all();
+        foreach ($db_items as $row) {
+            $all_investments[] = $portfolio_handler->map_to_frontend($row);
         }
 
+        // 2. Load JSON Source (Legacy/Fallback)
         $json_file = get_template_directory() . '/data/investments.json';
-        
-        if (!file_exists($json_file)) {
-            wp_send_json_error('Data file not found');
-        }
+        if (file_exists($json_file)) {
+            $json_data = file_get_contents($json_file);
+            $parsed_data = json_decode($json_data, true);
+            $raw_json_properties = $parsed_data['root']['property'] ?? [];
+            
+            // Deduplicate: If an external_id from JSON already exists in DB, skip it
+            $db_external_ids = array_column($all_investments, 'id');
+            $db_external_ids = array_map(function($id_arr) { return $id_arr[0]; }, $db_external_ids);
 
-        $raw_json = file_get_contents($json_file);
-        $data = json_decode($raw_json, true);
-        $raw_properties = $data['root']['property'] ?? [];
-
-        ob_start();
-        if (!empty($raw_properties)) {
-            foreach ($raw_properties as $prop) {
-                $mapped = Translator::map_property_data($prop, $lang);
-                $mapped['is_investment'] = true;
-                get_template_part('template-parts/properties/property-card', null, ['property' => $mapped]);
+            foreach ($raw_json_properties as $rp) {
+                if (!in_array($rp['id'][0], $db_external_ids)) {
+                    $all_investments[] = $rp;
+                }
             }
-        } else {
-            echo '<div class="col-span-full py-20 text-center text-slate-400 font-medium italic">' . t('pages.invest.no_properties') . '</div>';
         }
-        $html = ob_get_clean();
 
-        set_transient($cache_key, $html, 12 * HOUR_IN_SECONDS);
-
-        wp_send_json_success(['html' => $html]);
+        // 3. Return JSON to match the current JS expectation in invest-properties.php
+        wp_send_json([
+            'root' => [
+                'property' => $all_investments
+            ]
+        ]);
     }
 }

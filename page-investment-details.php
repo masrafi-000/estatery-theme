@@ -10,17 +10,23 @@ $property_id = $_GET['id'] ?? '';
 $property_data = null;
 
 if ( $property_id ) {
-    // ONLY check Investment Source
-    $invest_file = get_template_directory() . '/data/investments.json';
-    if ( file_exists( $invest_file ) ) {
-        $json_data = file_get_contents( $invest_file );
-        $parsed_data = json_decode( $json_data, true );
-        $raw_properties = $parsed_data['root']['property'] ?? [];
-        
-        foreach ( $raw_properties as $prop ) {
-            if ( ( $prop['id'][0] ?? '' ) == $property_id ) {
-                $property_data = $prop;
-                break;
+    $handler = new \Estatery\Core\InvestPortfolioHandler();
+    // Try to get from DB first
+    $property_data = $handler->get_by_external_id( $property_id );
+    
+    // Fallback to JSON if not in DB yet (for legacy support during transition)
+    if ( !$property_data ) {
+        $invest_file = get_template_directory() . '/data/investments.json';
+        if ( file_exists( $invest_file ) ) {
+            $json_data = file_get_contents( $invest_file );
+            $parsed_data = json_decode( $json_data, true );
+            $raw_properties = $parsed_data['root']['property'] ?? [];
+            
+            foreach ( $raw_properties as $prop ) {
+                if ( ( $prop['id'][0] ?? '' ) == $property_id ) {
+                    $property_data = $prop;
+                    break;
+                }
             }
         }
     }

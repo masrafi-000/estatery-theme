@@ -11,11 +11,11 @@ if ( $property_data ) {
     $raw_type = strtolower($property_data['type'][0] ?? 'property');
     $translated_type = t("pages.properties.meta.{$raw_type}") ?: ucfirst($raw_type);
     
-    $banner_title    = $property_data['title'][0] ?? ($translated_type . ' ' . ($property_data['town'][0] ?? ''));
-    $banner_bg_text  = $property_data['town'][0] ?? t('pages.property_details.bg_text');
-    $banner_subtitle = ($property_data['location_detail'][0] ?? '') . ' - ' . (t('pages.property_details.subtitle'));
+    $banner_title    = !empty($property_data['title'][0]) ? $property_data['title'][0] : ($translated_type . ' ' . (!empty($property_data['town'][0]) ? $property_data['town'][0] : ''));
+    $banner_bg_text  = !empty($property_data['town'][0]) ? $property_data['town'][0] : t('pages.property_details.bg_text');
+    $banner_subtitle = (!empty($property_data['location_detail'][0]) ? $property_data['location_detail'][0] : '') . ' - ' . (t('pages.property_details.subtitle'));
     
-    $banner_image = $property_data['images'][0]['image'][0]['url'][0] ?? "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1600";
+    $banner_image = !empty($property_data['featured_image'][0]) ? $property_data['featured_image'][0] : ($property_data['images'][0]['image'][0]['url'][0] ?? "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1600");
     
     $is_investment = get_query_var( 'is_investment' );
     $nav_index     = $is_investment ? 3 : 1;

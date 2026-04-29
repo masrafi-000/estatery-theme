@@ -74,6 +74,16 @@ class AdminDashboard {
             'estatery-add-property',
             [$this, 'render_add_properties_page']
         );
+
+        add_menu_page(
+            'Investment Portfolio',
+            'Invest Portfolio',
+            'manage_options',
+            'estatery-investment-portfolio',
+            [$this, 'render_investment_portfolio_page'],
+            'dashicons-chart-line',
+            27
+        );
     }
 
     public function render_inquiries_page() {
@@ -1233,6 +1243,624 @@ class AdminDashboard {
                 </div>
             </div>
         </div>
+        <?php
+    }
+
+    public function render_investment_portfolio_page() {
+        $handler = new InvestPortfolioHandler();
+        $action = $_GET['action'] ?? 'list';
+        $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
+        // Handle Actions
+        if ($action === 'sync') {
+            $handler->import_from_json();
+            echo '<div class="updated"><p>Successfully imported properties from JSON file.</p></div>';
+            $action = 'list';
+        }
+
+        if ($action === 'delete' && $id) {
+            check_admin_referer('estatery_delete_invest_' . $id);
+            $handler->delete($id);
+            echo '<div class="updated"><p>Investment property deleted.</p></div>';
+            $action = 'list';
+        }
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['estatery_save_invest'])) {
+            check_admin_referer('estatery_save_invest_nonce');
+            
+            $data = [
+                'id'              => $id,
+                'external_id'     => $_POST['external_id'],
+                'title'           => $_POST['title'],
+                'price'           => $_POST['price'],
+                'currency'        => $_POST['currency'],
+                'type'            => $_POST['type'],
+                'town'            => $_POST['town'],
+                'province'        => $_POST['province'],
+                'country'         => $_POST['country'],
+                'location_detail' => $_POST['location_detail'],
+                'beds'            => $_POST['beds'],
+                'baths'           => $_POST['baths'],
+                'built_area'      => $_POST['built_area'],
+                'plot_size'       => $_POST['plot_size'],
+                'new_build'       => $_POST['new_build'] ?? '0',
+                'pool_count'      => $_POST['pool_count'] ?? '0',
+                'images'          => $_POST['property_gallery'] ?? [],
+                'descriptions'    => [
+                    'en' => [$_POST['desc_en']],
+                    'es' => [$_POST['desc_es']],
+                    'pl' => [$_POST['desc_pl']],
+                    'ru' => [$_POST['desc_ru']]
+                ],
+                'features'        => $_POST['property_features'] ?? [],
+                'lat'             => $_POST['lat'] ?? '',
+                'lng'             => $_POST['lng'] ?? '',
+                'featured_image'  => $_POST['featured_image'] ?? ''
+            ];
+
+            $handler->save($data);
+            echo '<div class="updated"><p>Investment property saved successfully!</p></div>';
+            $action = 'list';
+        }
+
+        // Render Views
+        if ($action === 'add' || $action === 'edit') {
+            $this->render_investment_form($id);
+            return;
+        }
+
+        $items = $handler->get_all();
+        ?>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            .estatery-admin-wrap { font-family: 'Inter', sans-serif; color: #1e293b; max-width: 1200px; margin: 20px auto; }
+            .estatery-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+            .estatery-header h1 { font-size: 28px; font-weight: 700; color: #0f172a; margin: 0; }
+            .estatery-card { background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); overflow: hidden; border: 1px solid #f1f5f9; }
+            
+            .estatery-table { width: 100%; border-collapse: collapse; }
+            .estatery-table th { background: #f8fafc; padding: 16px 24px; text-align: left; font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #f1f5f9; }
+            .estatery-table td { padding: 20px 24px; vertical-align: middle; border-bottom: 1px solid #f1f5f9; color: #475569; font-size: 14px; }
+            .estatery-table tr:last-child td { border-bottom: none; }
+            .estatery-table tr:hover td { background: #fdfdfd; }
+
+            .prop-thumb { width: 64px; height: 44px; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+            .prop-id { font-family: monospace; background: #f1f5f9; padding: 4px 8px; border-radius: 6px; color: #475569; font-size: 11px; font-weight: 600; }
+            .prop-title { font-weight: 700; color: #0f172a; display: block; margin-bottom: 4px; }
+            .prop-loc { font-size: 12px; color: #94a3b8; display: flex; align-items: center; gap: 4px; }
+            .prop-price { font-weight: 700; color: #059669; font-size: 15px; }
+
+            .estatery-btn-primary { background: #2563eb; color: white; padding: 10px 20px; border-radius: 10px; font-weight: 600; border: none; cursor: pointer; transition: all 0.2s; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+            .estatery-btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
+            .estatery-btn-outline { background: white; color: #64748b; border: 1px solid #e2e8f0; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-size: 14px; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+            .estatery-btn-outline:hover { background: #f8fafc; color: #1e293b; border-color: #cbd5e1; }
+            
+            .action-btns { display: flex; gap: 8px; }
+            .btn-edit { color: #2563eb; background: #eff6ff; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 12px; }
+            .btn-edit:hover { background: #dbeafe; }
+            .btn-delete { color: #ef4444; background: #fef2f2; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 12px; }
+            .btn-delete:hover { background: #fee2e2; }
+        </style>
+
+        <div class="estatery-admin-wrap">
+            <div class="estatery-header">
+                <h1>Investment Portfolio</h1>
+                <div style="display: flex; gap: 12px;">
+                    <a href="?page=estatery-investment-portfolio&action=sync" class="estatery-btn-outline" style="background: #0f172a; color: white; border: none;" onclick="return confirm('Import from JSON if database is empty?')">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                        Import from JSON
+                    </a>
+                    <a href="?page=estatery-investment-portfolio&action=add" class="estatery-btn-primary">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        Add New Investment
+                    </a>
+                </div>
+            </div>
+
+            <div class="estatery-card">
+                <table class="estatery-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Property</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Location</th>
+                            <th>Specifications</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (empty($items)): ?>
+                            <tr><td colspan="6" style="text-align: center; padding: 80px; color: #94a3b8; font-style: italic;">No investment properties found. Start by adding one or importing from JSON.</td></tr>
+                        <?php else: ?>
+                            <?php foreach ($items as $item): 
+                                $imgs = json_decode($item['images'], true);
+                                $thumb = !empty($imgs) ? $imgs[0] : '';
+                            ?>
+                                <tr>
+                                    <td><span class="prop-id"><?php echo esc_html($item['external_id']); ?></span></td>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 15px;">
+                                            <img src="<?php echo esc_url($thumb); ?>" class="prop-thumb">
+                                            <div>
+                                                <span class="prop-title"><?php echo esc_html($item['title']); ?></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span style="font-size: 11px; background: #f1f5f9; padding: 4px 8px; border-radius: 6px; text-transform: uppercase; font-weight: 600; color: #64748b;"><?php echo esc_html($item['type']); ?></span>
+                                    </td>
+                                    <td>
+                                        <?php if ($item['new_build']): ?>
+                                            <span style="font-size: 11px; background: #dcfce7; color: #166534; padding: 4px 8px; border-radius: 9999px; font-weight: 600;">NEW BUILD</span>
+                                        <?php else: ?>
+                                            <span style="font-size: 11px; background: #f1f5f9; color: #475569; padding: 4px 8px; border-radius: 9999px; font-weight: 600;">RESALE</span>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td>
+                                        <div class="prop-loc">
+                                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                                            <?php echo esc_html($item['town']); ?>, <?php echo esc_html($item['country']); ?>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div style="display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: #64748b;">
+                                            <span><strong><?php echo $item['beds']; ?></strong> Beds, <strong><?php echo $item['baths']; ?></strong> Baths</span>
+                                            <span><strong><?php echo $item['built_area']; ?></strong> m² Built, <strong><?php echo $item['plot_size']; ?></strong> m² Plot</span>
+                                            <?php if ($item['pool_count'] > 0): ?>
+                                                <span><strong><?php echo $item['pool_count']; ?></strong> <?php echo $item['pool_count'] > 1 ? 'Pools' : 'Pool'; ?></span>
+                                            <?php endif; ?>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="prop-price"><?php echo number_format($item['price']); ?> <?php echo esc_html($item['currency']); ?></span>
+                                    </td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a href="?page=estatery-investment-portfolio&action=edit&id=<?php echo $item['id']; ?>" class="btn-edit">Edit</a>
+                                            <a href="<?php echo wp_nonce_url('?page=estatery-investment-portfolio&action=delete&id=' . $item['id'], 'estatery_delete_invest_' . $item['id']); ?>" class="btn-delete" onclick="return confirm('Are you sure?')">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <?php
+    }
+
+    private function render_investment_form($id = 0) {
+        $handler = new InvestPortfolioHandler();
+        $item = $id > 0 ? $handler->get_by_id($id) : null;
+        $images = $item ? json_decode($item['images'], true) : [];
+        $descriptions = $item ? json_decode($item['descriptions'], true) : [];
+        $features = $item ? json_decode($item['features'], true) : [];
+
+        wp_enqueue_media();
+        ?>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            .estatery-admin-wrap { font-family: 'Inter', sans-serif; color: #1e293b; max-width: 1200px; margin: 20px auto; }
+            .estatery-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+            .estatery-header h1 { font-size: 28px; font-weight: 700; color: #0f172a; margin: 0; }
+            .estatery-card { background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); overflow: hidden; border: 1px solid #f1f5f9; }
+            
+            .estatery-form-layout { display: grid; grid-template-columns: 240px 1fr; gap: 2px; background: #f1f5f9; }
+            .estatery-form-tabs { background: white; padding: 20px 0; }
+            .estatery-tab-link { display: flex; align-items: center; gap: 12px; padding: 12px 24px; color: #64748b; text-decoration: none; font-weight: 500; transition: all 0.2s; border-right: 3px solid transparent; cursor: pointer; }
+            .estatery-tab-link:hover { background: #f8fafc; color: #2563eb; }
+            .estatery-tab-link.active { background: #eff6ff; color: #2563eb; border-right-color: #2563eb; }
+            .estatery-tab-link svg { width: 18px; height: 18px; }
+
+            .estatery-form-content { background: white; padding: 40px; min-height: 600px; }
+            .estatery-section-title { font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 24px 0; display: flex; align-items: center; gap: 10px; }
+            .estatery-section-title::after { content: ''; flex: 1; height: 1px; background: #f1f5f9; }
+
+            .estatery-input-group { margin-bottom: 24px; }
+            .estatery-input-group label { display: block; font-size: 13px; font-weight: 600; color: #64748b; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.025em; }
+            .estatery-control { width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 15px; color: #1e293b; transition: all 0.2s; background: #f8fafc; }
+            .estatery-control:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 4px rgba(37,99,235,0.1); background: white; }
+            
+            .estatery-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+            .estatery-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+            .estatery-btn-primary { background: #2563eb; color: white; padding: 12px 32px; border-radius: 12px; font-weight: 600; border: none; cursor: pointer; transition: all 0.2s; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; }
+            .estatery-btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37,99,235,0.2); }
+            .estatery-btn-outline { background: white; color: #64748b; border: 1px solid #e2e8f0; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-size: 14px; transition: all 0.2s; }
+            .estatery-btn-outline:hover { background: #f8fafc; color: #1e293b; border-color: #cbd5e1; }
+
+            .estatery-tab-pane { display: none; animation: fadeIn 0.3s ease-out; }
+            .estatery-tab-pane.active { display: block; }
+            @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+            .estatery-inner-tab-nav { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; padding-bottom: 10px; }
+            .estatery-inner-tab-btn { background: none; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; color: #64748b; font-weight: 600; font-size: 13px; }
+            .estatery-inner-tab-btn.active { background: #f1f5f9; color: #2563eb; }
+
+            /* Gallery Styles */
+            .estatery-gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 15px; margin-top: 15px; }
+            .estatery-gallery-item { position: relative; aspect-ratio: 1; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; background: #f1f5f9; }
+            .estatery-gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+            .estatery-gallery-item .remove-img { position: absolute; top: 5px; right: 5px; background: #ef4444; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+            
+            .featured-img-preview { width: 100%; aspect-ratio: 16/9; background: #f8fafc; border: 2px dashed #e2e8f0; border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; overflow: hidden; position: relative; }
+            .featured-img-preview img { width: 100%; height: 100%; object-fit: cover; }
+            .featured-img-preview:hover { border-color: #2563eb; }
+
+            .wizard-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid #f1f5f9; }
+        </style>
+
+        <div class="estatery-admin-wrap">
+            <div class="estatery-header">
+                <div>
+                    <a href="?page=estatery-investment-portfolio" class="estatery-btn-outline" style="margin-bottom: 10px; display: inline-block;">← Back to Portfolio</a>
+                    <h1><?php echo $id > 0 ? 'Edit Investment' : 'New Investment'; ?></h1>
+                </div>
+                <button type="submit" form="investment-form" name="estatery_save_invest" class="estatery-btn-primary">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Save Investment
+                </button>
+            </div>
+
+            <form id="investment-form" method="post" action="">
+                <?php wp_nonce_field('estatery_save_invest_nonce'); ?>
+                
+                <div class="estatery-card estatery-form-layout">
+                    <!-- Sidebar Tabs -->
+                    <div class="estatery-form-tabs">
+                        <div class="estatery-tab-link active" data-tab="general">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                            General
+                        </div>
+                        <div class="estatery-tab-link" data-tab="specs">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            Specs
+                        </div>
+                        <div class="estatery-tab-link" data-tab="location">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Location
+                        </div>
+                        <div class="estatery-tab-link" data-tab="translations">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5a18.022 18.022 0 01-3.827-5.806m1.002 5.038a2 2 0 01-.996-2.011m12.153-1.16a9 9 0 01-18.151 0l16.7 1.181a9 9 0 011.451 0z"/></svg>
+                            Descriptions
+                        </div>
+                        <div class="estatery-tab-link" data-tab="media">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            Media
+                        </div>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="estatery-form-content">
+                        <!-- General Tab -->
+                        <div class="estatery-tab-pane active" data-tab="general">
+                            <h3 class="estatery-section-title">General Information</h3>
+                            <div class="estatery-grid-2">
+                                <div class="estatery-input-group">
+                                    <label>Internal ID (e.g. INV001)</label>
+                                    <input type="text" name="external_id" value="<?php echo esc_attr($item['external_id'] ?? ''); ?>" class="estatery-control" required>
+                                </div>
+                                <div class="estatery-input-group">
+                                    <label>Main Title</label>
+                                    <input type="text" name="title" value="<?php echo esc_attr($item['title'] ?? ''); ?>" class="estatery-control" required>
+                                </div>
+                            </div>
+
+                            <div class="estatery-grid-3">
+                                <div class="estatery-input-group">
+                                    <label>Price (€)</label>
+                                    <input type="number" name="price" value="<?php echo esc_attr($item['price'] ?? ''); ?>" class="estatery-control" required>
+                                </div>
+                                <div class="estatery-input-group">
+                                    <label>Currency</label>
+                                    <select name="currency" class="estatery-control">
+                                        <option value="EUR" <?php selected($item['currency'] ?? 'EUR', 'EUR'); ?>>EUR (€)</option>
+                                        <option value="USD" <?php selected($item['currency'] ?? '', 'USD'); ?>>USD ($)</option>
+                                        <option value="GBP" <?php selected($item['currency'] ?? '', 'GBP'); ?>>GBP (£)</option>
+                                    </select>
+                                </div>
+                                <div class="estatery-input-group">
+                                    <label>Property Type</label>
+                                    <select name="type" class="estatery-control">
+                                        <option value="villa" <?php selected($item['type'] ?? '', 'villa'); ?>>Villa</option>
+                                        <option value="apartment" <?php selected($item['type'] ?? '', 'apartment'); ?>>Apartment</option>
+                                        <option value="penthouse" <?php selected($item['type'] ?? '', 'penthouse'); ?>>Penthouse</option>
+                                        <option value="townhouse" <?php selected($item['type'] ?? '', 'townhouse'); ?>>Townhouse</option>
+                                        <option value="bungalow" <?php selected($item['type'] ?? '', 'bungalow'); ?>>Bungalow</option>
+                                        <option value="plot" <?php selected($item['type'] ?? '', 'plot'); ?>>Plot / Land</option>
+                                        <option value="commercial" <?php selected($item['type'] ?? '', 'commercial'); ?>>Commercial</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="estatery-grid-2">
+                                <div class="estatery-input-group">
+                                    <label>Property Status</label>
+                                    <select name="new_build" class="estatery-control">
+                                        <option value="1" <?php selected($item['new_build'] ?? 0, 1); ?>>New Build</option>
+                                        <option value="0" <?php selected($item['new_build'] ?? 0, 0); ?>>Resale</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Specs Tab -->
+                        <div class="estatery-tab-pane" data-tab="specs">
+                            <h3 class="estatery-section-title">Property Specifications</h3>
+                            <div class="estatery-grid-2">
+                                <div class="estatery-input-group">
+                                    <label>Bedrooms</label>
+                                    <input type="number" name="beds" value="<?php echo esc_attr($item['beds'] ?? 0); ?>" class="estatery-control">
+                                </div>
+                                <div class="estatery-input-group">
+                                    <label>Bathrooms</label>
+                                    <input type="number" name="baths" value="<?php echo esc_attr($item['baths'] ?? 0); ?>" class="estatery-control">
+                                </div>
+                                <div class="estatery-input-group">
+                                    <label>Number of Pools</label>
+                                    <select name="pool_count" class="estatery-control">
+                                        <option value="0" <?php selected($item['pool_count'] ?? 0, 0); ?>>None</option>
+                                        <option value="1" <?php selected($item['pool_count'] ?? 0, 1); ?>>1 Pool</option>
+                                        <option value="2" <?php selected($item['pool_count'] ?? 0, 2); ?>>2 Pools</option>
+                                        <option value="3" <?php selected($item['pool_count'] ?? 0, 3); ?>>3 Pools</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="estatery-grid-2">
+                                <div class="estatery-input-group">
+                                    <label>Built Area (m²)</label>
+                                    <input type="number" name="built_area" value="<?php echo esc_attr($item['built_area'] ?? 0); ?>" class="estatery-control">
+                                </div>
+                                <div class="estatery-input-group">
+                                    <label>Plot Size (m²)</label>
+                                    <input type="number" name="plot_size" value="<?php echo esc_attr($item['plot_size'] ?? 0); ?>" class="estatery-control">
+                                </div>
+                            </div>
+                            <div class="estatery-input-group">
+                                <label>Amenities / Features</label>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; margin-top: 5px;">
+                                    <?php 
+                                    $available_features = [
+                                        'Terrace', 'Swimming Pool', 'Solarium', 'Garden', 
+                                        'Private pool', 'Private parking', 'Basement', 'Clear Views',
+                                        'Air Conditioning', 'Heating', 'Sea Views', 'Mountain Views',
+                                        'Garage', 'Gym', 'Alarm System', 'Lift', 'Furnished', 
+                                        'Storage Room', 'Utility Room', 'White Goods'
+                                    ];
+                                    foreach ($available_features as $feature): ?>
+                                        <label style="font-size: 13px; font-weight: 500; color: #475569; display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                            <input type="checkbox" name="property_features[]" value="<?php echo esc_attr($feature); ?>" 
+                                                   <?php checked(in_array($feature, $features)); ?>>
+                                            <?php echo esc_html($feature); ?>
+                                        </label>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location Tab -->
+                        <div class="estatery-tab-pane" data-tab="location">
+                            <h3 class="estatery-section-title">Location Details</h3>
+                            <div class="estatery-grid-2">
+                                <div class="estatery-input-group">
+                                    <label>Town / City</label>
+                                    <input type="text" name="town" value="<?php echo esc_attr($item['town'] ?? ''); ?>" class="estatery-control">
+                                </div>
+                                <div class="estatery-input-group">
+                                    <label>Province / State</label>
+                                    <input type="text" name="province" value="<?php echo esc_attr($item['province'] ?? ''); ?>" class="estatery-control">
+                                </div>
+                            </div>
+                            <div class="estatery-grid-2">
+                                <div class="estatery-input-group">
+                                    <label>Country</label>
+                                    <input type="text" name="country" value="<?php echo esc_attr($item['country'] ?? 'Spain'); ?>" class="estatery-control">
+                                </div>
+                                <div class="estatery-input-group">
+                                    <label>Exact Location (Optional)</label>
+                                    <input type="text" name="location_detail" value="<?php echo esc_attr($item['location_detail'] ?? ''); ?>" class="estatery-control">
+                                </div>
+                            </div>
+                            <div class="estatery-grid-2">
+                                <div class="estatery-input-group">
+                                    <label>Latitude (Lat)</label>
+                                    <input type="text" name="lat" value="<?php echo esc_attr($item['lat'] ?? ''); ?>" class="estatery-control" placeholder="e.g. 38.5342">
+                                </div>
+                                <div class="estatery-input-group">
+                                    <label>Longitude (Lng)</label>
+                                    <input type="text" name="lng" value="<?php echo esc_attr($item['lng'] ?? ''); ?>" class="estatery-control" placeholder="e.g. -0.1234">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Translations Tab -->
+                        <div class="estatery-tab-pane" data-tab="translations">
+                            <h3 class="estatery-section-title">Multilingual Descriptions</h3>
+                            <div class="estatery-translations-container">
+                                <div class="estatery-inner-tab-nav">
+                                    <button type="button" class="estatery-inner-tab-btn active" data-target="desc-en">English</button>
+                                    <button type="button" class="estatery-inner-tab-btn" data-target="desc-es">Spanish</button>
+                                    <button type="button" class="estatery-inner-tab-btn" data-target="desc-pl">Polish</button>
+                                    <button type="button" class="estatery-inner-tab-btn" data-target="desc-ru">Russian</button>
+                                </div>
+                                <div id="desc-en" class="estatery-inner-tab-content active">
+                                    <textarea name="desc_en" rows="10" class="estatery-control" placeholder="English description..."><?php echo esc_textarea($descriptions['en'][0] ?? ''); ?></textarea>
+                                </div>
+                                <div id="desc-es" class="estatery-inner-tab-content" style="display:none;">
+                                    <textarea name="desc_es" rows="10" class="estatery-control" placeholder="Spanish description..."><?php echo esc_textarea($descriptions['es'][0] ?? ''); ?></textarea>
+                                </div>
+                                <div id="desc-pl" class="estatery-inner-tab-content" style="display:none;">
+                                    <textarea name="desc_pl" rows="10" class="estatery-control" placeholder="Polish description..."><?php echo esc_textarea($descriptions['pl'][0] ?? ''); ?></textarea>
+                                </div>
+                                <div id="desc-ru" class="estatery-inner-tab-content" style="display:none;">
+                                    <textarea name="desc_ru" rows="10" class="estatery-control" placeholder="Russian description..."><?php echo esc_textarea($descriptions['ru'][0] ?? ''); ?></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Media Tab -->
+                        <div class="estatery-tab-pane" data-tab="media">
+                            <h3 class="estatery-section-title">Featured Image</h3>
+                            <div class="estatery-input-group">
+                                <div id="featured-img-container" class="featured-img-preview">
+                                    <?php if (!empty($item['featured_image'])): ?>
+                                        <img src="<?php echo esc_url($item['featured_image']); ?>">
+                                        <input type="hidden" name="featured_image" value="<?php echo esc_url($item['featured_image']); ?>">
+                                    <?php else: ?>
+                                        <div style="text-align: center; color: #64748b;">
+                                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="48" style="margin: 0 auto 10px; opacity: 0.5;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                            <p style="margin:0; font-weight: 500;">Click to select featured image</p>
+                                        </div>
+                                        <input type="hidden" name="featured_image" value="">
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+
+                            <h3 class="estatery-section-title" style="margin-top: 40px;">Gallery Images</h3>
+                            <div class="estatery-input-group">
+                                <button type="button" id="add-gallery-btn" class="estatery-btn-outline" style="width: 100%; justify-content: center;">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" style="margin-right: 8px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                    Add Gallery Images
+                                </button>
+                                <div id="gallery-container" class="estatery-gallery-grid">
+                                    <?php if (!empty($images)): ?>
+                                        <?php foreach ($images as $img_url): ?>
+                                            <div class="estatery-gallery-item">
+                                                <img src="<?php echo esc_url($img_url); ?>">
+                                                <button type="button" class="remove-img">×</button>
+                                                <input type="hidden" name="property_gallery[]" value="<?php echo esc_url($img_url); ?>">
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Wizard Footer -->
+                        <div class="wizard-footer">
+                            <button type="button" id="prev-step" class="estatery-btn-outline" style="visibility: hidden;">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" style="margin-right: 8px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                                Previous Step
+                            </button>
+                            <button type="button" id="next-step" class="estatery-btn-primary">
+                                Next Step
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" style="margin-left: 8px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            jQuery(document).ready(function($) {
+                const tabs = ['general', 'specs', 'location', 'translations', 'media'];
+                let currentTabIndex = 0;
+
+                function updateWizardButtons() {
+                    if (currentTabIndex === 0) {
+                        $('#prev-step').css('visibility', 'hidden');
+                    } else {
+                        $('#prev-step').css('visibility', 'visible');
+                    }
+
+                    if (currentTabIndex === tabs.length - 1) {
+                        $('#next-step').html('Finish & Save <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" style="margin-left: 8px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>');
+                    } else {
+                        $('#next-step').html('Next Step <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" style="margin-left: 8px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>');
+                    }
+                }
+
+                // Tab Switching
+                $('.estatery-tab-link').click(function() {
+                    var tab = $(this).data('tab');
+                    currentTabIndex = tabs.indexOf(tab);
+                    $('.estatery-tab-link').removeClass('active');
+                    $(this).addClass('active');
+                    $('.estatery-tab-pane').removeClass('active');
+                    $('.estatery-tab-pane[data-tab="' + tab + '"]').addClass('active');
+                    updateWizardButtons();
+                });
+
+                // Next/Prev Step Buttons
+                $('#next-step').click(function() {
+                    if (currentTabIndex < tabs.length - 1) {
+                        currentTabIndex++;
+                        var nextTab = tabs[currentTabIndex];
+                        $('.estatery-tab-link[data-tab="' + nextTab + '"]').click();
+                    } else {
+                        $('#investment-form').submit();
+                    }
+                });
+
+                $('#prev-step').click(function() {
+                    if (currentTabIndex > 0) {
+                        currentTabIndex--;
+                        var prevTab = tabs[currentTabIndex];
+                        $('.estatery-tab-link[data-tab="' + prevTab + '"]').click();
+                    }
+                });
+
+                // Inner Language Tabs
+                $('.estatery-inner-tab-btn').click(function() {
+                    var target = $(this).data('target');
+                    $(this).closest('.estatery-translations-container').find('.estatery-inner-tab-btn').removeClass('active');
+                    $(this).addClass('active');
+                    $(this).closest('.estatery-translations-container').find('.estatery-inner-tab-content').hide();
+                    $('#' + target).show();
+                });
+
+                // Featured Image Logic
+                var featuredFrame;
+                $('#featured-img-container').click(function(e) {
+                    e.preventDefault();
+                    if (featuredFrame) { featuredFrame.open(); return; }
+                    featuredFrame = wp.media({
+                        title: 'Select Featured Image',
+                        button: { text: 'Set Featured Image' },
+                        multiple: false
+                    });
+                    featuredFrame.on('select', function() {
+                        var attachment = featuredFrame.state().get('selection').first().toJSON();
+                        $('#featured-img-container').html('<img src="' + attachment.url + '"><input type="hidden" name="featured_image" value="' + attachment.url + '">');
+                    });
+                    featuredFrame.open();
+                });
+
+                // Gallery Logic
+                var galleryFrame;
+                $('#add-gallery-btn').click(function(e) {
+                    e.preventDefault();
+                    if (galleryFrame) { galleryFrame.open(); return; }
+                    galleryFrame = wp.media({
+                        title: 'Select Gallery Images',
+                        button: { text: 'Add to Gallery' },
+                        multiple: true
+                    });
+                    galleryFrame.on('select', function() {
+                        var attachments = galleryFrame.state().get('selection').toJSON();
+                        attachments.forEach(function(attachment) {
+                            var html = '<div class="estatery-gallery-item">' +
+                                       '<img src="' + attachment.url + '">' +
+                                       '<button type="button" class="remove-img">×</button>' +
+                                       '<input type="hidden" name="property_gallery[]" value="' + attachment.url + '">' +
+                                       '</div>';
+                            $('#gallery-container').append(html);
+                        });
+                    });
+                    galleryFrame.open();
+                });
+
+                $(document).on('click', '.remove-img', function(e) {
+                    e.preventDefault();
+                    $(this).closest('.estatery-gallery-item').remove();
+                });
+            });
+        </script>
         <?php
     }
 }

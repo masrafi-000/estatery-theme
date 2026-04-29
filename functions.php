@@ -14,6 +14,7 @@ require_once get_template_directory() . '/inc/Core/AjaxHandler.php';
 require_once get_template_directory() . '/inc/Core/InquiryHandler.php';
 require_once get_template_directory() . '/inc/Core/InvestHandler.php';
 require_once get_template_directory() . '/inc/Core/ContactHandler.php';
+require_once get_template_directory() . '/inc/Core/InvestPortfolioHandler.php';
 require_once get_template_directory() . '/inc/Core/AdminDashboard.php';
 require_once get_template_directory() . '/inc/Core/PropertyCPT.php';
 
