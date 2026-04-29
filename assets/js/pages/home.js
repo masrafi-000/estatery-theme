@@ -35,7 +35,7 @@ function initHomeLogic() {
 
     if (featureWrapper && features.length) {
         featureWrapper.innerHTML = features.map(feature => `
-            <div class="feature-box p-10 bg-white rounded-[2.5rem] border border-transparent hover:border-primary/20 transition-all flex flex-col items-start shadow-sm group hover:shadow-xl duration-500 opacity-0 translate-y-10">
+            <div class="feature-box p-10 bg-white rounded-4xl border border-transparent hover:border-primary/20 transition-[border-color,box-shadow] hover:shadow-xl duration-500 flex flex-col items-start shadow-sm group opacity-0 translate-y-10 scale-95">
                 <div class="w-16 h-16 ${feature.bgColor} text-primary rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
                     ${feature.icon}
                 </div>
@@ -57,6 +57,7 @@ function initHomeLogic() {
             }
         });
 
+        // Custom reveal for the dynamic feature boxes
         inView('#dynamic-features-wrapper', () => {
             const boxes = document.querySelectorAll('.feature-box');
             if (boxes.length) {

@@ -77,12 +77,19 @@ export default class Animations {
         const staggerContainers = document.querySelectorAll('.js-reveal-stagger');
         staggerContainers.forEach(container => {
             inView(container, ({ target }) => {
-                const children = target.children;
-                animate(
-                    children,
-                    { opacity: [0, 1], y: [20, 0] },
-                    { delay: stagger(0.1), duration: 0.6, easing: "ease-out" }
-                );
+                // Filter out children that already have their own reveal classes to prevent double-animation
+                const children = Array.from(target.children).filter(child => {
+                    return !child.classList.contains('js-reveal-fade') && 
+                           !child.classList.contains('js-reveal-text');
+                });
+                
+                if (children.length > 0) {
+                    animate(
+                        children,
+                        { opacity: [0, 1], y: [20, 0] },
+                        { delay: stagger(0.1), duration: 0.6, easing: "ease-out" }
+                    );
+                }
             });
         });
 

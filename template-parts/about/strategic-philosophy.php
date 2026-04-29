@@ -3,20 +3,20 @@
     <div class="container mx-auto px-6">
 
         <!-- Header -->
-        <div class="max-w-4xl mb-16 lg:mb-24 js-philosophy-header">
-            <div class="inline-flex items-center justify-center gap-2.5 px-4 py-2 border border-black/20 mb-8">
+        <div class="max-w-4xl mb-16 lg:mb-24 js-philosophy-header js-reveal-stagger">
+            <div class="inline-flex items-center justify-center gap-2.5 px-4 py-2 border border-black/20 mb-8 js-reveal-fade">
                 <span class="w-1.5 h-1.5 rounded-full bg-black"></span>
                 <span class="text-primary font-bold uppercase tracking-[0.3em] text-[10px]"><?php echo esc_html($philosophy['badge']); ?></span>
             </div>
-            <h2 class="text-4xl md:text-5xl font-extrabold text-secondary tracking-tight leading-[1.1] mb-8">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-secondary tracking-tight leading-[1.1] mb-8 js-reveal-text">
                 <?php echo $philosophy['title']; ?>
             </h2>
-            <p class="text-secondary text-lg leading-relaxed max-w-2xl">
+            <p class="text-secondary text-lg leading-relaxed max-w-2xl js-reveal-fade">
                 <?php echo esc_html($philosophy['subtitle'] ?? ''); ?>
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 js-philosophy-cards">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 js-philosophy-cards js-reveal-stagger">
 
             <?php
             $icons = [
@@ -29,7 +29,7 @@
             ];
             foreach ($philosophy['values'] as $idx => $val):
             ?>
-                <div class="js-value-card group relative p-10 bg-white shadow border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl overflow-hidden">
+                <div class="js-value-card group relative p-10 bg-white shadow border border-gray-100 transition-[box-shadow,transform] duration-500 hover:-translate-y-2 hover:shadow-2xl overflow-hidden js-reveal-fade">
                     <div class="absolute top-0 left-0 w-0 h-[3px] bg-black group-hover:w-full transition-all duration-700"></div>
 
                     <div class="relative z-10">

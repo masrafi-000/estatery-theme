@@ -18,20 +18,20 @@ $active_index = 0;
     <div class="container mx-auto px-6 lg:px-12">
 
         <!-- Header -->
-        <div class="js-faq-header mb-16 lg:mb-20">
-            <div class="inline-flex items-center gap-2.5 px-4 py-2 border border-secondary/20 mb-6">
+        <div class="js-faq-header mb-16 lg:mb-20 js-reveal-stagger">
+            <div class="js-reveal-fade inline-flex items-center gap-2.5 px-4 py-2 border border-secondary/20 mb-6">
                 <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
                 <span class="text-secondary font-semibold uppercase tracking-[0.2em] text-[10px]"><?php echo esc_html( t('home.faq.eyebrow') ?: 'FAQ' ); ?></span>
             </div>
             <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
-                <h2 class="text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-secondary tracking-tight leading-[1.05]">
+                <h2 class="js-reveal-text text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-secondary tracking-tight leading-[1.05]">
                     <?php echo t('home.faq.frequently_asked') ?: 'Frequently Asked<br>Questions'; ?>
                 </h2>
                 <div class="flex flex-col lg:items-end gap-5 max-w-sm">
-                    <p class="text-secondary text-sm leading-relaxed lg:text-right">
+                    <p class="js-reveal-fade text-secondary text-sm leading-relaxed lg:text-right">
                         <?php echo esc_html( t('home.faq.common_subtitle') ?: 'Everything you need to know about buying, investing, and living in Costa Blanca.' ); ?>
                     </p>
-                    <a href="<?php echo \Estatery\Core\Translator::getInstance()->resolve_nav_url('/contact'); ?>" class="inline-flex items-center gap-3 group">
+                    <a href="<?php echo \Estatery\Core\Translator::getInstance()->resolve_nav_url('/contact'); ?>" class="js-reveal-fade inline-flex items-center gap-3 group">
                         <span class="text-secondary font-bold uppercase tracking-widest text-[10px] group-hover:opacity-70 transition-opacity duration-300"><?php echo esc_html( t('home.faq.contact_button') ?: 'Contact Us' ); ?></span>
                         <div class="w-9 h-9 border border-secondary/20 flex items-center justify-center group-hover:bg-secondary group-hover:border-secondary transition-all duration-300">
                             <svg class="w-3.5 h-3.5 text-secondary group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

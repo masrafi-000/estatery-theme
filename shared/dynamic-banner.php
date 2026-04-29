@@ -25,8 +25,8 @@ $breadcrumbs = isset($banner_breadcrumbs) ? $banner_breadcrumbs : [
     </div>
 
     <div class="container mx-auto px-6 lg:px-12 relative z-20">
-        <div class="max-w-4xl space-y-6 js-banner-content">
-            <nav class="flex items-center gap-3 text-xs uppercase tracking-widest text-gray-300 mb-6 font-medium js-banner-item">
+        <div class="max-w-4xl space-y-6 js-banner-content js-reveal-stagger">
+            <nav class="flex items-center gap-3 text-xs uppercase tracking-widest text-gray-300 mb-6 font-medium js-banner-item js-reveal-fade">
                 <?php foreach ($breadcrumbs as $index => $crumb): ?>
                     <?php if ($index > 0): ?>
                         <span class="opacity-50">/</span>
@@ -40,12 +40,12 @@ $breadcrumbs = isset($banner_breadcrumbs) ? $banner_breadcrumbs : [
                 <?php endforeach; ?>
             </nav>
 
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white font-medium capitalize leading-[1.1] wrap-break-word js-banner-item">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white font-medium capitalize leading-[1.1] wrap-break-word js-banner-item js-reveal-text">
                 <?php echo strtolower($title); ?><span class="text-secondary">.</span>
             </h1>
 
             <p
-                class="text-lg md:text-xl text-gray-200 font-light max-w-2xl leading-relaxed border-l-2 border-secondary pl-6 mt-8 js-banner-item">
+                class="text-lg md:text-xl text-gray-200 font-light max-w-2xl leading-relaxed border-l-2 border-secondary pl-6 mt-8 js-banner-item js-reveal-fade">
                 <?php echo $subtitle; ?>
             </p>
         </div>

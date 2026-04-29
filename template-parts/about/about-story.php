@@ -5,22 +5,22 @@
 
             
             
-            <div class="lg:col-span-6 space-y-6 js-story-text">
-                <div class="flex items-center gap-2">
+            <div class="lg:col-span-6 space-y-6 js-story-text js-reveal-stagger">
+                <div class="flex items-center gap-2 js-reveal-fade">
                     <div class="text-primary font-bold uppercase tracking-[0.3em] text-xs"><?php echo esc_html($story['badge']); ?></div>
                 </div>
 
-                <h2 class="text-3xl md:text-4xl font-extrabold text-secondary mb-6">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-secondary mb-6 js-reveal-text">
                     <?php echo $story['title']; ?>
                 </h2>
 
-                <div class="text-black max-w-xl mb-0">
+                <div class="text-black max-w-xl mb-0 js-reveal-fade">
                     <?php echo esc_html($story['description']); ?>
                 </div>
 
                 <ul class="space-y-4 py-4">
                     <?php foreach ($story['features'] as $item): ?>
-                        <li class="flex items-center gap-4 group">
+                        <li class="flex items-center gap-4 group js-reveal-fade">
                             <span class="h-[2px] w-8 bg-primary group-hover:w-12 transition-all duration-300"></span>
                             <span class="text-black font-medium tracking-wide"><?php echo esc_html($item); ?></span>
                         </li>
@@ -51,7 +51,7 @@
                     class="rounded-xl overflow-hidden shadow-2xl w-full h-[420px] md:h-[460px] lg:h-full bg-gray-100">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop"
                             alt="Corporate Building Architecture"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            class="w-full h-full object-cover">
                     </div>
                 </div>
 
@@ -61,13 +61,13 @@
                     <div class="rounded-xl overflow-hidden shadow-lg h-[200px] md:h-[220px] lg:h-full bg-gray-100">
                         <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1000&auto=format&fit=crop"
                             alt="Luxury Living Room"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            class="w-full h-full object-cover">
                     </div>
 
                     <div class="rounded-xl overflow-hidden shadow-lg h-[200px] md:h-[220px] lg:h-full bg-gray-100">
                         <img src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1000"
                             alt="Modern Kitchen Interior"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            class="w-full h-full object-cover">
                     </div>
 
                 </div>

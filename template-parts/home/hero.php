@@ -17,21 +17,21 @@ $video_url   = $video_id ? wp_get_attachment_url($video_id) : get_template_direc
         </video>
     </div>
 
-    <div class="container mx-auto px-4 relative z-20 text-center text-white">
+    <div class="container mx-auto px-4 relative z-20 text-center text-white js-reveal-stagger">
         <span
-            class="reveal-fade inline-block text-xs md:text-sm font-semibold mt-12 md:mt-0 mb-4 tracking-[0.2em] uppercase opacity-90 border-b border-primary pb-1">
+            class="js-reveal-fade inline-block text-xs md:text-sm font-semibold mt-12 md:mt-0 mb-4 tracking-[0.2em] uppercase opacity-90 border-b border-primary pb-1">
             <?php echo esc_html( t('home.hero.agency_label') ); ?>
         </span>
 
-        <h1 class="reveal-up text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 tracking-tight leading-[1.1]">
+        <h1 class="js-reveal-text text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 tracking-tight leading-[1.1]">
             <?php echo t('home.hero.title'); ?>
         </h1>
 
-        <p class="reveal-up text-gray-200 text-sm md:text-lg mb-12 leading-relaxed opacity-90 max-w-2xl mx-auto">
+        <p class="js-reveal-fade text-gray-200 text-sm md:text-lg mb-12 leading-relaxed opacity-90 max-w-2xl mx-auto">
             <?php echo esc_html( t('home.hero.description') ); ?>
         </p>
 
-        <div class="reveal-up max-w-6xl mx-auto mb-12 md:mb-0">
+        <div class="js-reveal-fade max-w-6xl mx-auto mb-12 md:mb-0">
 
             <div
                 class="bg-white/95 backdrop-blur-md rounded-2xl lg:rounded-b-2xl lg:rounded-tr-none shadow-2xl p-6 lg:p-8">

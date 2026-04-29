@@ -3,19 +3,19 @@
 <section class="py-24 bg-white js-onboarding-section">
     <div class="container mx-auto px-6 max-w-6xl">
 
-        <div class="max-w-3xl mx-auto text-center mb-16 js-onboarding-header">
-            <span class="inline-block text-primary font-bold uppercase tracking-[0.3em] text-[10px] mb-2">
+        <div class="max-w-3xl mx-auto text-center mb-16 js-onboarding-header js-reveal-stagger">
+            <span class="inline-block text-primary font-bold uppercase tracking-[0.3em] text-[10px] mb-2 js-reveal-fade">
                 <?php echo esc_html($onboarding['badge']); ?>
             </span>
-            <h2 class="text-3xl md:text-5xl font-bold text-secondary mb-3 leading-tight">
+            <h2 class="text-3xl md:text-5xl font-bold text-secondary mb-3 leading-tight js-reveal-text">
                 <?php echo esc_html($onboarding['title']); ?>
             </h2>
-            <p class="text-secondary  mx-auto">
+            <p class="text-secondary  mx-auto js-reveal-fade">
                 <?php echo esc_html($onboarding['subtitle']); ?>
             </p>
         </div>
 
-        <div class="w-full js-onboarding-form">
+        <div class="w-full js-onboarding-form js-reveal-fade">
             <div class="bg-[#fcfcfc] p-8 md:p-14 rounded-3xl border border-secondary/5 shadow-sm">
                 <form id="investor-onboarding-form" class="space-y-12">
                     <?php wp_nonce_field('estatery_invest_nonce', 'invest_nonce'); ?>

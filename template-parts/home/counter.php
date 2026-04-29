@@ -9,10 +9,10 @@ $stats = [
 
 
 <section class="py-20 bg-primary" id="stats-counter-section">
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-6 js-reveal-stagger">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
             <?php foreach ($stats as $stat): ?>
-                <div class="stat-item">
+                <div class="stat-item js-reveal-fade">
                     <h3 class="text-4xl lg:text-5xl font-bold mb-2 flex items-center justify-center">
                         <span class="counter-value" data-target="<?php echo $stat['count']; ?>">0</span>
                         <span><?php echo $stat['suffix']; ?></span>

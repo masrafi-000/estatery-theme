@@ -2,14 +2,14 @@
 
 <section class="py-20 bg-[#F8FAFC] js-wealth-section">
     <div class="container mx-auto px-5">
-        <div class="text-center mb-16 js-wealth-header">
-            <h2 class="text-3xl md:text-5xl font-bold text-secondary mb-4"><?php echo esc_html($growth['title']); ?></h2>
-            <p class="text-secondary max-w-2xl mx-auto "><?php echo esc_html($growth['subtitle']); ?></p>
+        <div class="text-center mb-16 js-wealth-header js-reveal-stagger">
+            <h2 class="text-3xl md:text-5xl font-bold text-secondary mb-4 js-reveal-text"><?php echo esc_html($growth['title']); ?></h2>
+            <p class="text-secondary max-w-2xl mx-auto js-reveal-fade"><?php echo esc_html($growth['subtitle']); ?></p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 js-growth-cards">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 js-growth-cards js-reveal-stagger">
             <?php foreach ($growth['items'] as $item) : ?>
-                <div class="group p-8 rounded-3xl bg-gray-50 hover:bg-primary transition-all duration-500 js-wealth-card">
+                <div class="group p-8 rounded-3xl bg-gray-50 hover:bg-primary transition-all duration-500 js-wealth-card js-reveal-fade">
                     <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500">
                         <svg class="w-8 h-8 text-primary group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>

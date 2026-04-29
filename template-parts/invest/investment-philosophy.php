@@ -3,8 +3,8 @@
 <section class="py-24 bg-white border-b border-secondary/5 js-philosophy-section">
     <div class="container mx-auto px-6 lg:px-12">
 
-        <div class="max-w-4xl mb-10 mx-auto text-center js-philosophy-header">
-            <div class="inline-flex items-center gap-4 mb-6 justify-center">
+        <div class="max-w-4xl mb-10 mx-auto text-center js-philosophy-header js-reveal-stagger">
+            <div class="inline-flex items-center gap-4 mb-6 justify-center js-reveal-fade">
                 <div class="w-10 h-px bg-secondary/30"></div>
                 <span class="text-secondary font-bold uppercase tracking-[0.3em] text-xs">
                     <?php echo esc_html($philosophy['badge']); ?>
@@ -12,7 +12,7 @@
                 <div class="w-10 h-px bg-secondary/30"></div>
             </div>
 
-            <h2 class="text-3xl md:text-4xl font-black text-secondary mb-4 leading-tight">
+            <h2 class="text-3xl md:text-4xl font-black text-secondary mb-4 leading-tight js-reveal-text">
                 <?php echo $philosophy['title']; ?>
             </h2>
         </div>
