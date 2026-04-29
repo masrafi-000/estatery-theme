@@ -175,18 +175,33 @@
         "values": [
           {
             "id": "01",
-            "title": "Architectural Integrity",
-            "description": "We prioritize structural soundness and timeless design over passing trends, ensuring every project lasts for generations."
+            "title": "Property Search & Acquisition",
+            "description": "Personalized property search based on your profile, budget, and objectives, covering the entire market to identify the best opportunities in new-build and resale properties."
           },
           {
             "id": "02",
-            "title": "Sustainable Innovation",
-            "description": "Integrating smart technology and eco-friendly materials to reduce carbon footprints without sacrificing luxury."
+            "title": "Sales & Investment Advisory",
+            "description": "Strategic guidance for buying, selling, and investing in real estate, including market analysis, property valuation, and negotiation to secure the best conditions."
           },
           {
             "id": "03",
-            "title": "Client-Centric Vision",
-            "description": "Your vision is our blueprint. We maintain transparent communication from the first sketch to the final brick."
+            "title": "Legal & Transaction Coordination",
+            "description": "Full coordination of the legal process, including contract review, notarial procedures, and collaboration with trusted legal professionals to ensure safe and secure transactions."
+          },
+          {
+            "id": "04",
+            "title": "Administrative Support for International Clients",
+            "description": "Complete assistance with key procedures such as NIE application, opening bank accounts, mortgage support, utility transfers, and tax management."
+          },
+          {
+            "id": "05",
+            "title": "Relocation & Settlement Services",
+            "description": "Guidance for clients relocating to Spain, including residency procedures, local registration, healthcare access, and support with schools and integration."
+          },
+          {
+            "id": "06",
+            "title": "After-Sales & Property Management",
+            "description": "Ongoing support after completion, including property management, rental services, renovations coordination, and long-term assistance to protect your investment."
           }
         ]
       },

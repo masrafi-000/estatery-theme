@@ -175,18 +175,33 @@
         "values": [
           {
             "id": "01",
-            "title": "Integralność Architektoniczna",
-            "description": "Przedkładamy solidność konstrukcyjną i ponadczasowy design nad przelotne trendy, zapewniając, że każdy projekt przetrwa pokolenia."
+            "title": "Poszukiwanie i Nabywanie Nieruchomości",
+            "description": "Spersonalizowane poszukiwanie nieruchomości w oparciu o Twój profil, budżet i cele, obejmujące cały rynek, aby zidentyfikować najlepsze okazje wśród nieruchomości z rynku pierwotnego i wtórnego."
           },
           {
             "id": "02",
-            "title": "Zrównoważone Innowacje",
-            "description": "Integracja inteligentnych technologii i materiałów przyjaznych dla środowiska w celu zmniejszenia śladu węglowego bez rezygnacji z luksusu."
+            "title": "Doradztwo Sprzedażowe i Inwestycyjne",
+            "description": "Strategiczne doradztwo w zakresie kupna, sprzedaży i inwestowania w nieruchomości, w tym analiza rynku, wycena nieruchomości i negocjacje mające na celu zapewnienie najlepszych warunków."
           },
           {
             "id": "03",
-            "title": "Wizja Skoncentrowana na Kliencie",
-            "description": "Twoja wizja to nasz plan. Utrzymujemy przejrzystą komunikację od pierwszego szkicu aż po ostatnią cegłę."
+            "title": "Koordynacja Prawna i Transakcyjna",
+            "description": "Pełna koordynacja procesu prawnego, w tym weryfikacja umów, procedury notarialne oraz współpraca z zaufanymi specjalistami prawnymi w celu zapewnienia bezpiecznych i pewnych transakcji."
+          },
+          {
+            "id": "04",
+            "title": "Wsparcie Administracyjne dla Klientów Międzynarodowych",
+            "description": "Kompleksowa pomoc w kluczowych procedurach, takich jak wniosek o NIE, otwieranie kont bankowych, wsparcie hipoteczne, przenoszenie mediów i zarządzanie podatkami."
+          },
+          {
+            "id": "05",
+            "title": "Usługi Relokacyjne i Osiedleniowe",
+            "description": "Wsparcie dla klientów przeprowadzających się do Hiszpanii, w tym procedury rezydencji, lokalna rejestracja, dostęp do opieki zdrowotnej oraz wsparcie w zakresie szkół i integracji."
+          },
+          {
+            "id": "06",
+            "title": "Obsługa Posprzedażowa i Zarządzanie Nieruchomościami",
+            "description": "Ciągłe wsparcie po zakończeniu transakcji, w tym zarządzanie nieruchomościami, usługi wynajmu, koordynacja remontów i długoterminowa pomoc w celu ochrony Twojej inwestycji."
           }
         ]
       },

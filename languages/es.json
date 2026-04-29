@@ -179,18 +179,33 @@
         "values": [
           {
             "id": "01",
-            "title": "Integridad Arquitectónica",
-            "description": "Priorizamos la solidez estructural y el diseño atemporal sobre las tendencias pasajeras, asegurando que cada proyecto dure por generaciones."
+            "title": "Búsqueda y Adquisición de Propiedades",
+            "description": "Búsqueda de propiedades personalizada según su perfil, presupuesto y objetivos, cubriendo todo el mercado para identificar las mejores oportunidades en propiedades de obra nueva y reventa."
           },
           {
             "id": "02",
-            "title": "Innovación Sostenible",
-            "description": "Integrando tecnología inteligente y materiales ecológicos para reducir las huellas de carbono sin sacrificar el lujo."
+            "title": "Asesoramiento en Ventas e Inversión",
+            "description": "Orientación estratégica para comprar, vender e invertir en bienes raíces, incluyendo análisis de mercado, valoración de propiedades y negociación para asegurar las mejores condiciones."
           },
           {
             "id": "03",
-            "title": "Visión Centrada en el Cliente",
-            "description": "Su visión es nuestro plano. Mantenemos una comunicación transparente desde el primer boceto hasta el último ladrillo."
+            "title": "Coordinación Legal y de Transacciones",
+            "description": "Coordinación completa del proceso legal, incluyendo revisión de contratos, procedimientos notariales y colaboración con profesionales legales de confianza para garantizar transacciones seguras."
+          },
+          {
+            "id": "04",
+            "title": "Soporte Administrativo para Clientes Internacionales",
+            "description": "Asistencia completa con procedimientos clave como la solicitud del NIE, apertura de cuentas bancarias, soporte hipotecario, transferencias de servicios públicos y gestión de impuestos."
+          },
+          {
+            "id": "05",
+            "title": "Servicios de Reubicación y Asentamiento",
+            "description": "Orientación para clientes que se trasladan a España, incluyendo procedimientos de residencia, empadronamiento, acceso a la atención médica y apoyo con escuelas e integración."
+          },
+          {
+            "id": "06",
+            "title": "Servicio Postventa y Gestión de Propiedades",
+            "description": "Soporte continuo después de la finalización, incluyendo gestión de propiedades, servicios de alquiler, coordinación de renovaciones y asistencia a largo plazo para proteger su inversión."
           }
         ]
       },

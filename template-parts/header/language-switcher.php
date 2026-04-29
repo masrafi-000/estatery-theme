@@ -58,7 +58,7 @@ $current_lang = isset( $languages[ $current_lang_slug ] )
         </svg>
 
         <!-- Active lang label — initialized from PHP (cookie), updated by JS state -->
-        <span class="lang-label text-[11px] font-black uppercase tracking-widest text-foreground group-hover:text-primary transition-colors duration-300">
+        <span class="lang-label text-[11px] font-base uppercase tracking-widest text-foreground group-hover:text-primary transition-colors duration-300">
             <?php echo esc_html( $current_lang['slug'] ); ?>
         </span>
 
