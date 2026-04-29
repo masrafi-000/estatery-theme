@@ -1,0 +1,749 @@
+{
+  "brand": {
+    "name": "Capital Union Investment",
+    "platform": "Capital Union Investment",
+    "email": "info@capitalunioninvestment.com",
+    "tagline": "Doskonałość w obrocie nieruchomościami"
+  },
+  "js": {
+    "applied": "Zastosowano!",
+    "from": "od",
+    "up_to": "do",
+    "beds_label": "łóżka",
+    "baths_label": "łazienki",
+    "success_inquiry": "Dziękujemy! Twoje zapytanie zostało wysłane. Skontaktujemy się z Tobą wkrótce.",
+    "close": "Zamknij",
+    "error_generic": "Coś poszło nie tak. Spróbuj ponownie.",
+    "fill_required": "Proszę wypełnić wszystkie wymagane pola.",
+    "loading": "Ładowanie..."
+  },
+  "header": {
+    "language_label": "Język:",
+    "navigation": [
+      {
+        "label": "Strona Główna",
+        "url": "/"
+      },
+      {
+        "label": "Nieruchomości",
+        "url": "/properties"
+      },
+      {
+        "label": "O Nas",
+        "url": "/about"
+      },
+      {
+        "label": "Inwestycje",
+        "url": "/invest"
+      },
+      {
+        "label": "Kontakt",
+        "url": "/contact"
+      }
+    ],
+    "actions": {
+      "contact": "Skontaktuj się",
+      "agent": "Zostań Agentem"
+    }
+  },
+  "home": {
+    "hero": {
+      "agency_label": "Ekskluzywny Doradca Nieruchomości na Costa Blanca",
+      "title": "Znajdź Swoje <br class=\"hidden md:block\"> Wymarzone Mieszkanie",
+      "description": "Zapoznaj się z naszą starannie wyselekcjonowaną ofertą luksusowych nieruchomości, zaprojektowanych z myślą o najwyższym komforcie i stylu.",
+      "form": {
+        "search_label": "Szukaj Nieruchomości",
+        "search_placeholder": "Nazwa nieruchomości...",
+        "location_label": "Lokalizacja",
+        "location_placeholder": "Wybierz lokalizację",
+        "type_label": "Typ Nieruchomości",
+        "location_options": {
+          "dhaka": "Dhaka",
+          "chittagong": "Czittagong",
+          "mymensingh": "Mymensingh"
+        },
+        "property_types": {
+          "apartment": "Mieszkanie",
+          "luxury": "Luksusowa Posiadłość",
+          "villa": "Willa"
+        },
+        "search_button": "Szukaj Teraz"
+      }
+    },
+    "featured": {
+      "label": "Ekskluzywne Oferty",
+      "title": "Polecane Nieruchomości",
+      "description": "Starannie wybrane nieruchomości specjalnie dla Ciebie.",
+      "beds": "Łóżka",
+      "baths": "Łazienki",
+      "pool": "Basen",
+      "sqft": "Pow.",
+      "view_all": "WSZYSTKIE NIERUCHOMOŚCI"
+    },
+    "why_choose": {
+      "title": "Dlaczego warto wybrać Capital Union Investment",
+      "description": "Od 2008 roku pomagamy ponad 200 międzynarodowym rodzinom z sukcesem kupować, sprzedawać i inwestować w nieruchomości w Hiszpanii",
+      "features": [
+        {
+          "title": "Niezależne Doradztwo Oparte na Interesach Klienta",
+          "description": "Capital Union Investment reprezentuje kupującego i inwestora – nie nieruchomość, gwarantując obiektywne rekomendacje bez konfliktu interesów."
+        },
+        {
+          "title": "Dopasowana Strategia Inwestycyjna (Brak Katalogów)",
+          "description": "Każdy projekt zaczynamy od zera, opierając się na Twoim profilu, celach i poziomie ryzyka – a nie na z góry ustalonych listach czy stałych portfelach."
+        },
+        {
+          "title": "Pełny Dostęp do Rynku",
+          "description": "Nieruchomości pozyskujemy z całego rynku, nie ograniczając się do wewnętrznych baz ani konkretnych deweloperów, zapewniając dostęp do prawdziwych okazji."
+        },
+        {
+          "title": "Kompleksowa Obsługa",
+          "description": "Od poszukiwań i negocjacji po wsparcie prawne, administracyjne i posprzedażowe – cały proces zarządzany jest z precyzją i płynnością."
+        },
+        {
+          "title": "Sprawdzone Doświadczenie Inwestycyjne",
+          "description": "Doświadczenie w sektorze mieszkaniowym, wynajmu, komercyjnym, hotelowym i przemysłowym zapewnia strategiczne, oparte na danych podejście do inwestycji."
+        },
+        {
+          "title": "Głęboka Wiedza Prawna i Transakcyjna",
+          "description": "Prawie dwie dekady praktycznego doświadczenia w koordynowaniu transakcji zapewniają zapobieganie ryzyku, bezpieczeństwo prawne i sprawną realizację."
+        }
+      ]
+    },
+    "stats": {
+      "listed": "Wystawione Nieruchomości",
+      "families": "Szczęśliwe Rodziny",
+      "visitors": "Miesięczni Odwiedzający",
+      "satisfaction": "Zadowolenie Klienta"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "common_subtitle": "Wszystko, co musisz wiedzieć o kupowaniu, inwestowaniu i życiu na Costa Blanca.",
+      "frequently_asked": "Często Zadawane<br>Pytania",
+      "contact_button": "Skontaktuj się z Wsparciem"
+    }
+  },
+  "pages": {
+    "about": {
+      "hero": {
+        "title": "O Mnie",
+        "bg_text": "O Mnie",
+        "subtitle": "Skontaktuj się z Capital Union Investment, aby uzyskać eleganckie rozwiązania inwestycyjne"
+      },
+      "story": {
+        "badge": "MOJA HISTORIA",
+        "title": "Niezależny Doradca Nieruchomości na Costa Blanca od 2008 roku",
+        "description": "Niezależny doradca ds. nieruchomości z siedzibą na Costa Blanca, z udokumentowanym doświadczeniem w pomaganiu ponad 200 międzynarodowym rodzinom w zakupach, sprzedaży i inwestycjach strategicznych. Oferuję pełen zakres usług dostosowanych do klientów ceniących bezpieczeństwo prawne, przejrzystość i spersonalizowane podejście.",
+        "features": [
+          "Kompleksowe wsparcie w całym procesie zakupu nieruchomości",
+          "Spersonalizowana strategia oparta na profilu klienta i celach inwestycyjnych",
+          "Silny nacisk na bezpieczeństwo prawne i zapobieganie ryzyku",
+          "Długoterminowa wartość oraz sprawne, bezproblemowe transakcje"
+        ]
+      },
+      "how_we_work": {
+        "badge": "Przepływ Pracy",
+        "title": "Jak Przekuwamy Twoją <br> <span class='text-secondary'>Wizję w Rzeczywistość</span>",
+        "subtitle": "Od wstępnej konsultacji po ostateczne przekazanie, postępujemy zgodnie z rygorystycznym procesem, aby zapewnić Twoją satysfakcję.",
+        "steps": [
+          {
+            "id": "01",
+            "title": "Odkrycie",
+            "description": "Słuchamy Twoich celów i analizujemy potencjał działki, aby stworzyć strategiczny plan działania."
+          },
+          {
+            "id": "02",
+            "title": "Projektowanie",
+            "description": "Nasi architekci tworzą plany na wymiar, które łączą estetykę z funkcjonalnością."
+          },
+          {
+            "id": "03",
+            "title": "Budowa",
+            "description": "Wykorzystując materiały najwyższej jakości i wykwalifikowaną siłę roboczą, przekształcamy projekty w betonową rzeczywistość."
+          },
+          {
+            "id": "04",
+            "title": "Dostarczenie",
+            "description": "Ostateczna rygorystyczna kontrola jakości zapewnia, że wszystko spełnia nasz standard doskonałości z 1988 roku."
+          }
+        ]
+      },
+      "philosophy": {
+        "badge": "Nasza Filozofia",
+        "title": "Główne Filary, Które <br> Definiują Nasze Rzemiosło",
+        "subtitle": "Poznaj fundamentalne wartości, które kierują naszą wizją i zaangażowaniem w doskonałość każdego projektu, którego się podejmujemy.",
+        "values": [
+          {
+            "id": "01",
+            "title": "Integralność Architektoniczna",
+            "description": "Przedkładamy solidność konstrukcyjną i ponadczasowy design nad przelotne trendy, zapewniając, że każdy projekt przetrwa pokolenia."
+          },
+          {
+            "id": "02",
+            "title": "Zrównoważone Innowacje",
+            "description": "Integracja inteligentnych technologii i materiałów przyjaznych dla środowiska w celu zmniejszenia śladu węglowego bez rezygnacji z luksusu."
+          },
+          {
+            "id": "03",
+            "title": "Wizja Skoncentrowana na Kliencie",
+            "description": "Twoja wizja to nasz plan. Utrzymujemy przejrzystą komunikację od pierwszego szkicu aż po ostatnią cegłę."
+          }
+        ]
+      },
+      "leadership": {
+        "badge": "Wiadomość od Zarządu",
+        "years_label": "Lat Rzetelności",
+        "title": "Wiadomość od Zarządu",
+        "message": "W Capital Union Investment moje podejście opiera się na doświadczeniu, precyzji oraz głębokim zrozumieniu hiszpańskiego rynku nieruchomości.<br />Dzięki blisko dwóm dekadom praktycznego doświadczenia miałam zaszczyt doradzać międzynarodowym klientom w nabywaniu, sprzedaży i inwestycjach w nieruchomości, z silnym naciskiem na bezpieczeństwo prawne i długoterminową wartość. Od rozpoczęcia mojej kariery w 2008 roku zdobyłam kompleksową wiedzę na wszystkich etapach procesu związanego z nieruchomościami — od zarządzania transakcjami i koordynacji prawnej, po analizę deweloperską nowych budynków i strategię inwestycyjną.<br />Moje doświadczenie obejmuje również kierowanie wynajmem krótkoterminowym, co daje jasne i praktyczne zrozumienie wydajności rynku, rentowności i optymalizacji aktywów. Pozwala mi to oferować klientom nie tylko nieruchomości, ale dobrze ustrukturyzowane możliwości inwestycyjne zgodne z ich celami.<br />Moje zaangażowanie jest proste: dostarczać wysoce spersonalizowaną, przejrzystą i zorientowaną na wyniki usługę, która zapewnia pewność, efektywność i długoterminowy sukces dla każdego klienta.",
+        "name": "Anna Alizarenko",
+        "role": "Założycielka i Niezależny Doradca Nieruchomości"
+      }
+      
+    },
+    "properties": {
+      "title": "Ekskluzywne Nieruchomości",
+      "subtitle": "Odkryj starannie wyselekcjonowaną ofertę naszych najlepszych nieruchomości.",
+      "hero_banner": {
+        "bg_text": "Rynek"
+      },
+      "grid_header": {
+        "showing_result": "Wyniki Wyszukiwania",
+        "items_available": "Znalezione Nieruchomości",
+        "range": "Pokazywanie %1$s–%2$s",
+        "no_results": "Spróbuj dostosować filtry.",
+        "view_grid": "Widok siatki",
+        "view_list": "Widok listy",
+        "sort_by": "Sortuj według",
+        "filters_active": "Filtry Aktywne"
+      },
+      "sort": {
+        "label": "Sortuj według",
+        "newest": "Od najnowszych",
+        "oldest": "Od najstarszych",
+        "price_low": "Cena: od najniższej",
+        "price_high": "Cena: od najwyższej",
+        "area_low": "Powierzchnia: od najmniejszej",
+        "area_high": "Powierzchnia: od największej"
+      },
+      "pagination": {
+        "prev": "Poprzednia strona",
+        "next": "Następna strona",
+        "go_to": "Idź do strony %s"
+      },
+      "filters": {
+        "all": "Wszystkie Nieruchomości",
+        "buy": "Na Sprzedaż",
+        "rent": "Na Wynajem",
+        "type": "Typ Nieruchomości",
+        "location": "Lokalizacja",
+        "location_placeholder": "Miasto, adres, kod pocztowy…",
+        "price": "Zakres Cenowy",
+        "search": "Szukaj Nieruchomości",
+        "min_price": "Cena Minimalna",
+        "max_price": "Cena Maksymalna",
+        "min_placeholder": "Min",
+        "max_placeholder": "Max",
+        "beds": "Sypialnie",
+        "baths": "Łazienki",
+        "any": "Dowolne",
+        "status": "Status Nieruchomości",
+        "all_tabs": "Wszystkie",
+        "new_build": "Nowe Budownictwo",
+        "resale": "Z Rynku Wtórnego",
+        "features": "Udogodnienia",
+        "reset": "Zresetuj Filtry",
+        "reset_button": "Zresetuj wszystko",
+        "apply": "Zastosuj Filtry",
+        "apply_button": "Zastosuj filtry",
+        "filter_results": "Filtruj wyniki",
+        "filters_active": "Filtry zastosowane",
+        "refine_search": "Doprecyzuj wyszukiwanie",
+        "sidebar_sr_description": "Pasek boczny filtrów wyszukiwania nieruchomości ze statusem, typem, ceną, sypialniami i łazienkami",
+        "plus_label": "%s+"
+      },
+      "meta": {
+        "sale": "Na Sprzedaż",
+        "rent": "Na Wynajem",
+        "apartment": "Mieszkanie",
+        "villa": "Willa",
+        "penthouse": "Penthouse",
+        "townhouse": "Kamienica",
+        "shop": "Lokal Komercyjny",
+        "not_found": "Nie znaleziono nieruchomości."
+      },
+      "categories": {
+        "title": "Przeglądaj Według Kategorii",
+        "subtitle": "Znajdź idealny rodzaj domu, który pasuje do Twojego stylu życia.",
+        "types": [
+          {
+            "name": "Willa",
+            "slug": "villa",
+            "count": "Pokaż Wszystko",
+            "icon": "home"
+          },
+          {
+            "name": "Mieszkanie",
+            "slug": "apartment",
+            "count": "Pokaż Wszystko",
+            "icon": "building"
+          },
+          {
+            "name": "Kamienica",
+            "slug": "townhouse",
+            "count": "Pokaż Wszystko",
+            "icon": "townhouse"
+          },
+          {
+            "name": "Bungalow",
+            "slug": "bungalow",
+            "count": "Pokaż Wszystko",
+            "icon": "home"
+          }
+        ]
+      },
+      "actions": {
+        "view_details": "Zobacz Szczegóły"
+      },
+      "cta": {
+        "title": "Wystaw Swoją Nieruchomość z Nami",
+        "subtitle": "Dołącz do tysięcy zadowolonych właścicieli, którzy znaleźli odpowiednich kupców dzięki naszej platformie.",
+        "button": "Zacznij Teraz",
+        "eyebrow": "Okazja Czeka",
+        "stat_listings": "Aktywne Oferty",
+        "stat_clients": "Zadowoleni Klienci",
+        "stat_experience": "Lata Doświadczenia",
+        "button_primary": "Przeglądaj Oferty",
+        "button_secondary": "Porozmawiaj z Agentem",
+        "badge_licensed": "Licencjonowane i Regulowane",
+        "badge_secure": "Bezpieczne Transakcje",
+        "badge_support": "Wsparcie Klienta 24/7",
+        "badge_verified": "Tylko Zweryfikowane Oferty"
+      
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Skontaktuj Się",
+        "bg_text": "Kontakt",
+        "subtitle": "Skontaktuj się z dedykowanym zespołem Capital Union, aby uzyskać dostosowane strategie inwestycyjne i fachowe doradztwo."
+      },
+      "info": {
+        "badge": "Capital Union Investment",
+        "title": "Skontaktuj się",
+        "company": "Capital Union Investment",
+        "description": "Skontaktuj się z nami, aby uzyskać specjalistyczne porady dotyczące inwestycji i ekskluzywnych rozwiązań na rynku nieruchomości w Alicante.",
+        "office_label": "Adres Biura",
+        "office_address": "Avenidad de La Constitucion\nFormentera del Segura 03179\n(Alicante)",
+        "email_label": "Napisz do Nas",
+        "email_value": "info@capitalunioninvestment.com",
+        "phone_label": "Zadzwoń Bezpośrednio",
+        "phone_value": "+34 639 31 58 61",
+        "hours_label": "Godziny Pracy",
+        "hours_value": "Pon-Pt 9:00 - 20:30"
+      },
+      "form": {
+        "title": "Wyślij do Nas Wiadomość",
+        "first_name_label": "Imię",
+        "first_name_placeholder": "Imię",
+        "last_name_label": "Nazwisko",
+        "last_name_placeholder": "Nazwisko",
+        "email_label": "Adres e-mail",
+        "email_placeholder": "Adres e-mail",
+        "phone_label": "Numer telefonu",
+        "phone_placeholder": "Numer telefonu",
+        "property_info_label": "Informacje o Nieruchomości",
+        "property_type_placeholder": "Typ",
+        "zip_label": "Kod pocztowy",
+        "zip_placeholder": "Kod pocztowy",
+        "city_label": "Miasto",
+        "city_placeholder": "Miasto",
+        "bedrooms_label": "Liczba sypialni",
+        "bedrooms_placeholder": "Liczba sypialni",
+        "bathrooms_label": "Liczba łazienek",
+        "bathrooms_placeholder": "Liczba łazienek",
+        "budget_label": "Twój budżet",
+        "budget_placeholder": "Twój budżet",
+        "submit": "Wyślij Aplikację"
+      }
+    },
+    "invest": {
+      "hero": {
+        "title": "Możliwości Inwestycyjne",
+        "bg_text": "Inwestycje",
+        "subtitle": "Zabezpiecz swoją przyszłość dzięki portfelom nieruchomości o wysokiej rentowności i ekskluzywnym projektom deweloperskim."
+      },
+      "philosophy": {
+        "badge": "Strategia Klasy Instytucjonalnej",
+        "title": "Zdyscyplinowane Podejście do <br> Ochrony Kapitału.",
+        "focus_area_label": "Obszar Skupienia",
+        "focus_area_title": "Integralność Aktywów Fizycznych",
+        "description": "W Capital Union nasza filozofia opiera się na ochronie wielopokoleniowego bogactwa. Priorytetowo traktujemy aktywa fizyczne o długoterminowej użyteczności społecznej.",
+        "quote": "\"Nie gonimy za trendami rynkowymi; zamiast tego skupiamy się na wartości wewnętrznej i odporności gospodarczej, aby zabezpieczyć przyszłość naszych partnerów.\"",
+        "items": [
+          {
+            "id": "01",
+            "title": "Dyscyplina Ryzyka",
+            "description": "Konserwatywne punkty wejścia z siatkami bezpieczeństwa o wysokiej marży dla każdego zaangażowania kapitału."
+          },
+          {
+            "id": "02",
+            "title": "Ochrona Aktywów",
+            "description": "Skupienie się na lokalizacjach premium i zrównoważonych strukturach, które przetrwają próbę czasu."
+          }
+        ]
+      },
+      "growth": {
+        "title": "Inteligentne Inwestowanie w Nieruchomości",
+        "subtitle": "Zbuduj swój majątek dzięki szybko rosnącym aktywom na rynku nieruchomości w najlepszych lokalizacjach.",
+        "items": [
+          {
+            "title": "Stały Zwrot (ROI)",
+            "description": "Ciesz się rocznym zwrotem od 8% do 15% na najlepszych nieruchomościach komercyjnych i mieszkalnych."
+          },
+          {
+            "title": "Bezpieczne Aktywa",
+            "description": "Każda nieruchomość jest w 100% zweryfikowana prawnie, z fizycznymi aktami własności i zgodami rządowymi."
+          },
+          {
+            "title": "Niska Bariera Wejścia",
+            "description": "Rozpocznij swoją przygodę z nieruchomościami przy minimalnej inwestycji. Posiadanie luksusowej nieruchomości jest teraz dostępne."
+          }
+        ],
+        "cta": {
+          "title": "Gotowy, aby zabezpieczyć swoją przyszłość?",
+          "subtitle": "Pobierz darmowy Przewodnik Inwestycyjny na 2024 rok.",
+          "button": "Pobierz Przewodnik"
+        }
+      },
+      "properties_label": "Ekskluzywne Okazje",
+      "properties_title": "Portfel Najlepszych Inwestycji w Nieruchomości",
+      "properties_subtitle": "Odkryj starannie wyselekcjonowane nieruchomości z wysokim potencjałem zwrotu i silnym wzrostem wartości kapitału w najbardziej poszukiwanych obszarach Alicante.",
+      "no_properties": "Kolejne możliwości inwestycyjne są analizowane. Sprawdź ponownie wkrótce.",
+      "onboarding": {
+        "badge": "Ekskluzywne Wdrożenie",
+        "title": "Rozpocznij Swoją Podróż Inwestycyjną",
+        "subtitle": "Wypełnij formularz zgłoszeniowy, aby pomóc naszemu zespołowi ds. relacji kapitałowych zrozumieć Twoje cele.",
+        "form": {
+          "name_label": "Pełne Imię i Nazwisko *",
+          "name_placeholder": "np. Jan Kowalski",
+          "email_label": "Adres E-mail *",
+          "email_placeholder": "np. jan@example.com",
+          "questions": [
+            "Jesteś naszym klientem?",
+            "Posisadasz nieruchomość w Hiszpanii?",
+            "Jesteś rezydentem podatkowym w Hiszpanii?"
+          ],
+          "options": {
+            "no": "Nie",
+            "yes": "Tak"
+          },
+          "interest_label": "Obszary Zainteresowania *",
+          "interests": [
+            "Działki",
+            "Nieruchomości mieszkaniowe",
+            "Nieruchomości komercyjne",
+            "Hotele",
+            "Rolnictwo",
+            "Inne"
+          ],
+          "amount_label": "Kwota Inwestycji *",
+          "amounts": [
+            "€1,000,000 - €2,000,000",
+            "€2,000,000 - €3,000,000",
+            "€3,000,000 - €4,000,000",
+            "€4,000,000 - €5,000,000",
+            "€5,000,000 - €10,000,000",
+            "€10,000,000 - €20,000,000",
+            "€20,000,000+"
+          ],
+          "submit": "Prześlij Aplikację",
+          "footer": "Szyfrowany i Poufny Portal"
+        }
+      
+      }
+    },
+    "error_404": {
+      "bg_text": "404",
+      "subtitle": "Ups! Nie Znaleziono Strony",
+      "message": "Przeszukaliśmy całe nasze portfolio, ale nie mogliśmy nic znaleźć pod adresem",
+      "search_placeholder": "Szukaj nieruchomości...",
+      "back_home": "Powrót na Stronę Główną",
+      "view_properties": "Zobacz Wszystkie Nieruchomości"
+    },
+    "property_details": {
+      "bg_text": "Szczegóły",
+      "subtitle": "Odkryj najwyższej klasy szczegóły i potencjał inwestycyjny tej nieruchomości",
+      "new_build": "Nowe Budownictwo",
+      "resale": "Z Rynku Wtórnego",
+      "for": "Na",
+      "description": "Opis",
+      "features": "Udogodnienia",
+      "bedrooms": "Sypialnie",
+      "bathrooms": "Łazienki",
+      "building": "Budynek",
+      "lot_size": "Wielkość Działki",
+      "view_photos": "Zobacz Zdjęcia",
+      "form": {
+        "contact_us": "Skontaktuj Się z Nami",
+        "name": "Imię",
+        "number": "Numer",
+        "email": "E-mail",
+        "message": "Jestem zainteresowany tą nieruchomością.",
+        "submit": "WYŚLIJ WIADOMOŚĆ"
+      }
+    },
+    "privacy_policy": {
+      "hero": {
+        "title": "Polityka Prywatności",
+        "bg_text": "Prywatność",
+        "subtitle": "Jak zbieramy, wykorzystujemy i chronimy Twoje dane."
+      },
+      "content": {
+        "title": "Polityka Prywatności",
+        "description": "Niniejsza Polityka Prywatności określa, w jaki sposób Twoje dane są zarządzane na naszych platformach. Szanujemy Twoją prywatność i zobowiązujemy się do jej ochrony poprzez przestrzeganie tej polityki.",
+        "sections": [
+          {
+            "title": "1. Zbieranie Informacji",
+            "text": "Zbieramy kilka różnych rodzajów informacji do różnych celów, aby świadczyć i ulepszać nasze Usługi. Obejmuje to dane osobowe, takie jak adres e-mail, imię i nazwisko, numer telefonu i adres."
+          },
+          {
+            "title": "2. Jak Wykorzystujemy Twoje Dane",
+            "text": "Capital Union wykorzystuje zebrane dane do różnych celów: świadczenia i utrzymywania naszej Usługi, powiadamiania o zmianach, zapewniania obsługi klienta, gromadzenia analiz w celu ulepszenia naszej Usługi oraz monitorowania korzystania z naszej Usługi."
+          },
+          {
+            "title": "3. Bezpieczeństwo Danych",
+            "text": "Bezpieczeństwo Twoich danych jest dla nas ważne, ale pamiętaj, że żadna metoda transmisji przez Internet ani metoda elektronicznego przechowywania nie jest w 100% bezpieczna. Chociaż staramy się używać komercyjnie akceptowalnych środków ochrony Twoich Danych Osobowych, nie możemy zagwarantować ich absolutnego bezpieczeństwa."
+          }
+        ]
+      }
+    },
+    "terms_of_service": {
+      "hero": {
+        "title": "Warunki Korzystania",
+        "bg_text": "Warunki",
+        "subtitle": "Zasady i wytyczne korzystania z naszej platformy."
+      },
+      "content": {
+        "title": "Warunki Korzystania",
+        "description": "Uzyskując dostęp do naszej platformy lub korzystając z niej, zgadzasz się na przestrzeganie tych Warunków. Jeśli nie zgadzasz się z jakąkolwiek częścią warunków, nie możesz korzystać z naszych usług.",
+        "sections": [
+          {
+            "title": "1. Własność Intelektualna",
+            "text": "Usługa oraz jej oryginalna treść, cechy i funkcjonalność są i pozostaną wyłączną własnością Capital Union i jej licencjodawców. Usługa jest chroniona prawem autorskim, prawem o znakach towarowych i innymi prawami zarówno w kraju, jak i za granicą."
+          },
+          {
+            "title": "2. Obowiązki Użytkownika",
+            "text": "Kiedy tworzysz u nas konto, musisz w każdym momencie podawać dokładne, kompletne i aktualne informacje. Niezastosowanie się do tego stanowi naruszenie Warunków, co może skutkować natychmiastowym zamknięciem Twojego konta w naszym Serwisie."
+          },
+          {
+            "title": "3. Ograniczenie Odpowiedzialności",
+            "text": "W żadnym wypadku Capital Union, ani jej dyrektorzy, pracownicy, partnerzy, agenci, dostawcy lub podmioty powiązane nie ponoszą odpowiedzialności za żadne szkody pośrednie, przypadkowe, specjalne, następcze lub moralne, w tym między innymi utratę zysków, danych, użytkowania, wartości firmy lub innych strat niematerialnych."
+          }
+        ]
+      }
+    },
+    "cookie_policy": {
+      "hero": {
+        "title": "Polityka Plików Cookie",
+        "bg_text": "Cookies",
+        "subtitle": "Informacje na temat korzystania przez nas z plików cookie."
+      },
+      "content": {
+        "title": "Polityka Plików Cookie",
+        "description": "Nasza witryna wykorzystuje pliki cookie, aby odróżnić Cię od innych użytkowników. Pomaga nam to zapewnić dobre wrażenia podczas przeglądania naszej witryny, a także pozwala nam ją ulepszać.",
+        "sections": [
+          {
+            "title": "1. Rodzaje Używanych przez Nas Plików Cookie",
+            "text": "Używamy Plików Cookie Sesji do obsługi naszej Usługi. Używamy Plików Cookie Preferencji, aby zapamiętać Twoje preferencje i różne ustawienia. Używamy Plików Cookie Zabezpieczeń w celach bezpieczeństwa. Wszystko to zapewnia optymalne i bezproblemowe przeglądanie."
+          },
+          {
+            "title": "2. Pliki Cookie Stron Trzecich",
+            "text": "Oprócz naszych własnych plików cookie, możemy również używać różnych plików cookie stron trzecich do raportowania statystyk korzystania z Usługi, dostarczania reklam za jej pośrednictwem i tak dalej. Dostawcy ci mają własne, rygorystyczne zasady dotyczące danych."
+          },
+          {
+            "title": "3. Zarządzanie Plikami Cookie",
+            "text": "Możesz poinstruować swoją przeglądarkę, aby odrzucała wszystkie pliki cookie lub wskazywała, kiedy plik cookie jest wysyłany. Jeśli jednak nie zaakceptujesz plików cookie, możesz nie być w stanie korzystać z niektórych części naszej Usługi. Zalecamy ich zachowanie, aby móc w pełni korzystać z platformy."
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Znajdź swój wymarzony dom dzięki najbardziej wszechstronnej platformie nieruchomości.",
+    "copyright": "Wszelkie prawa zastrzeżone.",
+    "menus": {
+      "quick_links": "Szybkie Linki",
+      "company": "Firma",
+      "legal": "Informacje Prawne"
+    },
+    "links": {
+      "buy": "Kup Nieruchomość",
+      "rent": "Wynajmij Nieruchomość",
+      "sell": "Sprzedaj Nieruchomość",
+      "services": "Usługi",
+      "about": "O Nas",
+      "contact": "Kontakt",
+      "careers": "Kariera",
+      "blog": "Blog",
+      "privacy": "Polityka Prywatności",
+      "terms": "Warunki Korzystania",
+      "cookie": "Polityka Plików Cookie"
+    }
+  },
+  "common_faq_tabs": [
+    {
+      "key": "general",
+      "label": "Ogólny Proces",
+      "items": [
+        {
+          "question": "Jak wygląda proces zakupu nieruchomości w Hiszpanii?",
+          "answer": "Proces obejmuje wybór nieruchomości, złożenie rezerwacji, podpisanie umowy prywatnej i sfinalizowanie zakupu u notariusza."
+        },
+        {
+          "question": "Ile czasu zajmuje finalizacja zakupu nieruchomości?",
+          "answer": "Zakup nieruchomości z rynku wtórnego zajmuje od 4 do 8 tygodni, w zależności od weryfikacji prawnej i finansowania. W przypadku nowych inwestycji może to potrwać od 1 miesiąca do 3 lat, w zależności od etapu budowy w momencie zakupu."
+        },
+        {
+          "question": "Czy mogę kupić nieruchomość w Hiszpanii bez fizycznej obecności?",
+          "answer": "Tak, zakup może zostać sfinalizowany zdalnie poprzez pełnomocnictwo."
+        },
+        {
+          "question": "Jakie dokumenty są wymagane do zakupu nieruchomości?",
+          "answer": "Będziesz potrzebować paszportu i numeru NIE. Wymagane będzie również przedstawienie dowodu pochodzenia środków, aby spełnić przepisy prawne i finansowe."
+        },
+        {
+          "question": "Czy potrzebuję hiszpańskiego konta bankowego, aby kupić nieruchomość?",
+          "answer": "Tak, hiszpańskie konto bankowe jest zazwyczaj wymagane do zarządzania płatnościami i bieżącymi wydatkami. Jeśli masz już konto bankowe w UE, możesz z niego korzystać do pokrywania kosztów utrzymania, ale zaleca się otwarcie hiszpańskiego konta dla łatwiejszego zarządzania."
+        }
+      ]
+    },
+    {
+      "key": "international",
+      "label": "Kupujący z Zagranicy",
+      "items": [
+        {
+          "question": "Czym jest numer NIE i jak mogę go uzyskać?",
+          "answer": "NIE to numer identyfikacyjny cudzoziemca wymagany do każdej transakcji prawnej lub finansowej w Hiszpanii. Można go uzyskać w hiszpańskim konsulacie za granicą lub na komisariacie policji w Hiszpanii."
+        },
+        {
+          "question": "Czy obcokrajowcy mogą uzyskać kredyt hipoteczny w Hiszpanii?",
+          "answer": "Tak, nierezydenci mogą uzyskać kredyt hipoteczny, zazwyczaj finansujący 60–70% wartości nieruchomości."
+        },
+        {
+          "question": "Jakie są główne różnice w kupowaniu jako nierezydent?",
+          "answer": "Nierezydenci muszą spełniać dodatkowe wymagania administracyjne i finansowe, ale przy odpowiednim doradztwie proces ten jest prosty."
+        },
+        {
+          "question": "Czy potrzebuję prawnika, aby kupić nieruchomość w Hiszpanii?",
+          "answer": "Gorąco polecamy skorzystanie z usług prawnika w celu zapewnienia bezpieczeństwa prawnego i weryfikacji całej dokumentacji."
+        },
+        {
+          "question": "Czy mogę udzielić pełnomocnictwa do zdalnego sfinalizowania zakupu?",
+          "answer": "Tak, pełnomocnictwo pozwala przedstawicielowi prawnemu na przeprowadzenie całego procesu w Twoim imieniu."
+        }
+      ]
+    },
+    {
+      "key": "costs",
+      "label": "Koszty i Finansowanie",
+      "items": [
+        {
+          "question": "Jakich dodatkowych kosztów powinienem się spodziewać przy zakupie nieruchomości?",
+          "answer": "Kupujący powinni spodziewać się około 12–13% dodatkowych kosztów, w tym podatków i opłat prawnych."
+        },
+        {
+          "question": "Jakiego depozytu się wymaga?",
+          "answer": "W przypadku nieruchomości z rynku wtórnego zazwyczaj wymaga się depozytu w wysokości 10% na etapie umowy prywatnej. W nowych inwestycjach zadatek rezerwacyjny wynosi zazwyczaj od 6 000 do 25 000 euro w zależności od ostatecznej ceny."
+        },
+        {
+          "question": "Jaki procent wartości nieruchomości mogę sfinansować?",
+          "answer": "Większość banków finansuje od 60% do 70% wartości nieruchomości dla nierezydentów."
+        },
+        {
+          "question": "Jakie są typowe warunki kredytów hipotecznych w Hiszpanii?",
+          "answer": "Warunki kredytów hipotecznych są różne, ale obejmują stałe lub zmienne stopy procentowe i wymagają dowodu dochodów oraz stabilności finansowej."
+        },
+        {
+          "question": "Czy po zakupie występują jakieś bieżące podatki?",
+          "answer": "Tak, należy wziąć pod uwagę roczne podatki od nieruchomości (IBI) i koszty utrzymania wspólnoty."
+        }
+      ]
+    },
+    {
+      "key": "investment",
+      "label": "Inwestycje",
+      "items": [
+        {
+          "question": "Czy Costa Blanca to dobre miejsce na inwestycje w nieruchomości?",
+          "answer": "Costa Blanca charakteryzuje się dużym popytem, atrakcyjnym stylem życia i stabilną długoterminową wartością, co czyni ją jednym z najbardziej poszukiwanych miejsc inwestycyjnych w Hiszpanii."
+        },
+        {
+          "question": "Jaki rodzaj nieruchomości generuje najlepsze dochody z wynajmu?",
+          "answer": "Apartamenty z 1–2 sypialniami w doskonałych lokalizacjach w pobliżu plaży lub ośrodków golfowych zazwyczaj generują największy popyt na wynajem i zwroty."
+        },
+        {
+          "question": "Jakie czynniki wpływają na rentowność nieruchomości?",
+          "answer": "Lokalizacja, typ nieruchomości, popyt, jakość zarządzania oraz przepisy i ograniczenia władz lokalnych bezpośrednio wpływają na rentowność."
+        },
+        {
+          "question": "Czy pomagacie w inwestycjach komercyjnych lub na dużą skalę?",
+          "answer": "Tak, nasze usługi doradcze obejmują aktywa komercyjne, hotele i projekty inwestycyjne na dużą skalę."
+        }
+      ]
+    },
+    {
+      "key": "property_types",
+      "label": "Typy Nieruchomości",
+      "items": [
+        {
+          "question": "Jaka jest różnica między nowym budownictwem a nieruchomościami z rynku wtórnego?",
+          "answer": "Nieruchomości z nowego budownictwa są nowo wybudowane, podczas wy nieruchomości z rynku wtórnego miały już poprzednich właścicieli. Nowe budownictwo często wiąże się z nowoczesnymi standardami i gwarancjami dewelopera."
+        },
+        {
+          "question": "Czy nowe nieruchomości są bezpieczniejsze w zakupie?",
+          "answer": "Nowe budynki oferują nowoczesne standardy i gwarancje, ale wymagają właściwej oceny dewelopera, etapu projektu i ochrony prawnej."
+        },
+        {
+          "question": "Co należy wziąć pod uwagę przy zakupie na etapie planów (off-plan)?",
+          "answer": "Ważne jest, aby ocenić doświadczenie dewelopera, harmonogram budowy, gwarancje prawne i gwarancje bankowe chroniące Twoją kaucję."
+        }
+      ]
+    },
+    {
+      "key": "legal",
+      "label": "Prawo i Bezpieczeństwo",
+      "items": [
+        {
+          "question": "Czy sprawdzacie dokumentację nieruchomości przed zakupem?",
+          "answer": "Tak, cała kluczowa dokumentacja — w tym akty własności, pozwolenia na budowę i obciążenia — jest dokładnie sprawdzana przed przystąpieniem do zakupu."
+        },
+        {
+          "question": "Jaką rolę w Hiszpanii odgrywa notariusz?",
+          "answer": "Notariusz zapewnia, że transakcja jest prawnie ważna, jest świadkiem podpisania aktu własności i ułatwia rejestrację nieruchomości na Twoje nazwisko."
+        }
+      ]
+    },
+    {
+      "key": "services",
+      "label": "Usługi",
+      "items": [
+        {
+          "question": "Jakie usługi świadczycie poza zakupem?",
+          "answer": "Oferujemy kompleksową obsługę nieruchomości, obejmującą wyszukiwanie nieruchomości, doradztwo w zakresie sprzedaży i inwestycji, analizę rynku, negocjacje, koordynację prawną, pomoc przy NIE, zakładanie kont bankowych, zarządzanie finansowaniem, wsparcie w relokacji oraz zarządzanie nieruchomością po zakupie."
+        },
+        {
+          "question": "Czy pomagacie w kwestiach rachunków za media, podatków i administracji?",
+          "answer": "Tak, zapewniamy pełną pomoc przy podłączaniu mediów, lokalnych podatkach i wszystkich procedurach administracyjnych po zakupie."
+        },
+        {
+          "question": "Czy możecie pomóc w przeprowadzce i osiedleniu się w Hiszpanii?",
+          "answer": "Tak, dostępne jest kompleksowe wsparcie w zakresie przeprowadzki, składania wniosków o rezydencję i rozpoczęcia nowego życia w Hiszpanii."
+        },
+        {
+          "question": "Czy oferujecie zarządzanie nieruchomościami po zakupie?",
+          "answer": "Tak, oferujemy bieżące wsparcie i pełne zarządzanie nieruchomościami — w tym zarządzanie wynajmem — po dokonaniu zakupu."
+        }
+      ]
+    }
+  ]
+}

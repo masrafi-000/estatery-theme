@@ -351,7 +351,7 @@ class PropertyCPT {
     }
 
     public function render_translations_metabox($post) {
-        $langs = ['es' => 'Spanish', 'fr' => 'French', 'ru' => 'Russian'];
+        $langs = ['es' => 'Spanish', 'pl' => 'Polish', 'ru' => 'Russian'];
         ?>
         <div class="estatery-translations-container" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden;">
             <div class="estatery-tabs-nav" style="background: #f8fafc; padding: 10px 10px 0 10px; margin-bottom: 0; display: flex; gap: 5px;">
@@ -422,7 +422,7 @@ class PropertyCPT {
         }
 
         // Translations
-        foreach (['es', 'fr', 'ru'] as $code) {
+        foreach (['es', 'pl', 'ru'] as $code) {
             $val = isset($_POST['property_desc_' . $code]) ? sanitize_textarea_field($_POST['property_desc_' . $code]) : '';
             update_post_meta($post_id, '_desc_' . $code, $val);
         }
@@ -441,7 +441,7 @@ class PropertyCPT {
 
         $desc = [];
         $desc['en'] = [$post->post_content];
-        foreach (['es', 'fr', 'ru'] as $code) {
+        foreach (['es', 'pl', 'ru'] as $code) {
             $desc[$code] = [get_post_meta($post_id, '_desc_' . $code, true) ?: $post->post_content];
         }
 
