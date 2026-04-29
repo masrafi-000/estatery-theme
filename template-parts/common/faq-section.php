@@ -32,7 +32,7 @@ $active_index = 0;
                         <?php echo esc_html( t('home.faq.common_subtitle') ?: 'Everything you need to know about buying, investing, and living in Costa Blanca.' ); ?>
                     </p>
                     <a href="<?php echo \Estatery\Core\Translator::getInstance()->resolve_nav_url('/contact'); ?>" class="inline-flex items-center gap-3 group">
-                        <span class="text-secondary font-bold uppercase tracking-widest text-[10px] group-hover:opacity-40 transition-opacity duration-300"><?php echo esc_html( t('home.faq.contact_button') ?: 'Contact Us' ); ?></span>
+                        <span class="text-secondary font-bold uppercase tracking-widest text-[10px] group-hover:opacity-70 transition-opacity duration-300"><?php echo esc_html( t('home.faq.contact_button') ?: 'Contact Us' ); ?></span>
                         <div class="w-9 h-9 border border-secondary/20 flex items-center justify-center group-hover:bg-secondary group-hover:border-secondary transition-all duration-300">
                             <svg class="w-3.5 h-3.5 text-secondary group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -51,7 +51,7 @@ $active_index = 0;
                 <nav class="js-faq-tabs flex flex-row lg:flex-col overflow-x-auto lg:overflow-x-visible">
                     <?php foreach ($all_faq_groups as $i => $group) : ?>
                         <button
-                            class="js-faq-tab group relative flex items-center justify-between gap-3 px-6 py-4 lg:py-5 w-full text-left border-b border-secondary/10 last:border-b-0 transition-all duration-200 whitespace-nowrap lg:whitespace-normal <?php echo $i === $active_index ? 'is-active bg-secondary text-white' : 'bg-white text-secondary hover:bg-secondary/[0.02]'; ?>"
+                            class="js-faq-tab group relative flex items-center justify-between gap-3 px-6 py-4 lg:py-5 w-full text-left border-b border-secondary/10 last:border-b-0 transition-all duration-200 whitespace-nowrap lg:whitespace-normal <?php echo $i === $active_index ? 'is-active bg-secondary text-white' : 'bg-white text-secondary'; ?>"
                             data-tab="<?php echo esc_attr($group['key']); ?>"
                             aria-selected="<?php echo $i === $active_index ? 'true' : 'false'; ?>"
                         >
@@ -88,7 +88,7 @@ $active_index = 0;
                             <?php foreach ($group['items'] as $idx => $item) : ?>
                                 <div class="js-faq-item border-b border-secondary/10 last:border-b-0">
                                     <button class="js-faq-trigger w-full flex items-start justify-between gap-6 px-8 py-6 text-left focus:outline-none cursor-pointer group">
-                                        <span class="js-faq-question text-secondary font-semibold text-[15px] leading-snug group-hover:opacity-60 transition-opacity duration-200 pr-2">
+                                        <span class="js-faq-question text-secondary font-semibold text-[15px] leading-snug group-hover:opacity-80 transition-opacity duration-200 pr-2">
                                             <?php echo esc_html($item['question']); ?>
                                         </span>
                                         <span class="js-faq-icon flex-shrink-0 mt-0.5 w-5 h-5 flex items-center justify-center border border-secondary/20 text-secondary transition-all duration-300 group-hover:bg-secondary group-hover:border-secondary group-hover:text-white">
@@ -205,5 +205,16 @@ $active_index = 0;
     }
     .js-faq-item.is-open .js-faq-icon svg {
         transform: rotate(45deg);
+    }
+    
+   
+    .js-faq-tab:not(.is-active):hover {
+        background-color: rgba(0, 0, 0, 0.03);
+    }
+    
+    
+    .js-faq-trigger:hover .js-faq-question {
+        color: var(--color-primary, #000);
+        opacity: 1;
     }
 </style>
