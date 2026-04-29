@@ -18,7 +18,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative js-process-grid">
 
             <!-- Connector line (desktop only) -->
-            <div class="js-process-line absolute top-1/4 left-0 w-0 h-[1px] bg-primary/10 z-0 hidden lg:block"></div>
+            <div class="js-process-line absolute top-1/4 left-0 w-0 h-px bg-primary/10 z-0 hidden lg:block"></div>
 
             <?php foreach ($how_we_work['steps'] as $index => $step): ?>
                 <div class="js-process-step relative z-10 group p-8 rounded-xl bg-white border border-primary/5 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500">
@@ -38,4 +38,4 @@
 
         </div>
     </div>
-</section>
+</section>

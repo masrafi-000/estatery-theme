@@ -91,7 +91,7 @@ $active_index = 0;
                                         <span class="js-faq-question text-secondary font-semibold text-[15px] leading-snug group-hover:opacity-80 transition-opacity duration-200 pr-2">
                                             <?php echo esc_html($item['question']); ?>
                                         </span>
-                                        <span class="js-faq-icon flex-shrink-0 mt-0.5 w-5 h-5 flex items-center justify-center border border-secondary/20 text-secondary transition-all duration-300 group-hover:bg-secondary group-hover:border-secondary group-hover:text-white">
+                                        <span class="js-faq-icon shrink-0 mt-0.5 w-5 h-5 flex items-center justify-center border border-secondary/20 text-secondary transition-all duration-300 group-hover:bg-secondary group-hover:border-secondary group-hover:text-white">
                                             <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path class="js-icon-line" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2.5" d="M12 5v14M5 12h14"/>
                                             </svg>

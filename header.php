@@ -12,7 +12,7 @@
     <?php wp_body_open(); ?>
 
     <!-- Premium Page Transition Overlay -->
-    <div id="page-loader" class="fixed inset-0 z-[10000] bg-gray-50 flex items-center justify-center pointer-events-auto">
+    <div id="page-loader" class="fixed inset-0 z-10000 bg-gray-50 flex items-center justify-center pointer-events-auto">
         <!-- Progress Bar -->
         <div class="absolute top-0 left-0 w-full h-1 bg-white overflow-hidden">
             <div id="loader-progress" class="h-full bg-primary w-0 transition-all duration-300 ease-out"></div>
@@ -99,7 +99,7 @@
     </div>
 
     <!-- Sticky Header -->
-    <header id="masthead" class="site-header bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-[90] transition-all duration-300">        
+    <header id="masthead" class="site-header bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-90 transition-all duration-300">        
         <!-- Scroll Progress Bar -->
         <div class="absolute top-0 left-0 w-full h-[2px] bg-gray-100 overflow-hidden pointer-events-none">
             <div id="scroll-progress" class="h-full bg-primary origin-left scale-x-0"></div>
@@ -118,7 +118,7 @@
                 </div>
 
                 <!-- Center: Desktop Navigation -->
-                <nav id="site-navigation" class="hidden md:flex flex-[2] justify-center">
+                <nav id="site-navigation" class="hidden md:flex flex-2 justify-center">
                     <ul class="flex gap-1 items-center">
                         <?php
                         $navigation = t('header.navigation');
@@ -135,7 +135,7 @@
                                         <?php echo esc_html( $item['label'] ); ?>
                                     </a>
                                     <!-- Animated Underline -->
-                                    <span class="absolute bottom-0 left-4 right-4 h-[3px] rounded-full bg-gradient-to-r from-primary to-accent transition-all duration-500 origin-left <?php echo $is_active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'; ?>"></span>
+                                    <span class="absolute bottom-0 left-4 right-4 h-[3px] rounded-full bg-linear-to-r from-primary to-accent transition-all duration-500 origin-left <?php echo $is_active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'; ?>"></span>
                                 </li>
                                 <?php
                             endforeach;

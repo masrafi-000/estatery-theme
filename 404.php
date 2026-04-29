@@ -33,7 +33,7 @@ get_header();
 
                 <p class="js-reveal-fade text-lg md:text-xl text-gray-500 mb-12 leading-relaxed max-w-2xl mx-auto">
                     <?php echo esc_html( t('pages.error_404.message') ); ?>
-                    <span class="block mt-3 px-4 py-2 bg-gray-50 rounded-lg italic text-primary break-all border border-gray-100 inline-block font-medium">
+                    <span class="inline-block mt-3 px-4 py-2 bg-gray-50 rounded-lg italic text-primary break-all border border-gray-100 font-medium">
                         <?php echo esc_html( home_url( $_SERVER['REQUEST_URI'] ) ); ?>
                     </span>
                 </p>
@@ -51,7 +51,7 @@ get_header();
                             </svg>
                         </span>
 
-                        <button type="submit" class="absolute right-3 top-3 bottom-3 px-8 bg-secondary text-white rounded-[2rem] font-bold hover:bg-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 active:scale-95 flex items-center justify-center gap-2">
+                        <button type="submit" class="absolute right-3 top-3 bottom-3 px-8 bg-secondary text-white rounded-4xl font-bold hover:bg-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 active:scale-95 flex items-center justify-center gap-2">
                             <span class="hidden sm:inline"><?php echo esc_html( t('home.hero.form.search_button') ); ?></span>
                             <svg class="w-5 h-5 sm:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m21 21-4.3-4.3M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"></path></svg>
                         </button>

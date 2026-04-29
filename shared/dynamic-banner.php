@@ -40,7 +40,7 @@ $breadcrumbs = isset($banner_breadcrumbs) ? $banner_breadcrumbs : [
                 <?php endforeach; ?>
             </nav>
 
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white font-medium capitalize leading-[1.1] break-words js-banner-item">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white font-medium capitalize leading-[1.1] wrap-break-word js-banner-item">
                 <?php echo strtolower($title); ?><span class="text-secondary">.</span>
             </h1>
 

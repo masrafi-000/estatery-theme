@@ -41,7 +41,7 @@ $current_lang = isset( $languages[ $current_lang_slug ] )
     : reset( $languages );
 ?>
 
-<div class="next-lang-switcher relative z-[100]" id="language-routing-wrapper">
+<div class="next-lang-switcher relative z-100" id="language-routing-wrapper">
 
     <!-- Trigger Button -->
     <button type="button"
