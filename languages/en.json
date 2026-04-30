@@ -39,6 +39,10 @@
       {
         "label": "Contact",
         "url": "/contact"
+      },
+      {
+        "label": "Blog",
+        "url": "/blog"
       }
     ],
     "actions": {
@@ -484,6 +488,19 @@
       "search_placeholder": "Search for properties...",
       "back_home": "Back to Home",
       "view_properties": "View All Properties"
+    },
+    "blog": {
+      "hero": {
+        "title": "Blog & News",
+        "bg_text": "Journal",
+        "subtitle": "Stay updated with the latest trends, news, and insights from the Costa Blanca real estate market."
+      },
+      "grid": {
+        "title": "Latest Articles",
+        "subtitle": "Expert advice, market analysis, and local news.",
+        "read_more": "READ ARTICLE",
+        "no_posts": "No articles found. Check back soon!"
+      }
     },
     "property_details": {
       "bg_text": "Details",

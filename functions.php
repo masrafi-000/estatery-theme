@@ -17,6 +17,7 @@ require_once get_template_directory() . '/inc/Core/ContactHandler.php';
 require_once get_template_directory() . '/inc/Core/InvestPortfolioHandler.php';
 require_once get_template_directory() . '/inc/Core/AdminDashboard.php';
 require_once get_template_directory() . '/inc/Core/PropertyCPT.php';
+require_once get_template_directory() . '/inc/Core/BlogCPT.php';
 
 // Instantiate Core Controllers
 new Estatery\Core\Setup();
@@ -28,6 +29,7 @@ new Estatery\Core\InvestHandler();
 new Estatery\Core\ContactHandler();
 new Estatery\Core\AdminDashboard();
 new Estatery\Core\PropertyCPT();
+new Estatery\Core\BlogCPT();
 
 // Bootstrap pages and settings
 \Estatery\Core\ThemeSetup::init();

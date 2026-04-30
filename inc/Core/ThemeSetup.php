@@ -125,6 +125,10 @@ class ThemeSetup {
                 'title'    => 'Cookie Policy',
                 'template' => 'page-cookie-policy.php',
             ],
+            'blog' => [
+                'title'    => 'Blog & News',
+                'template' => 'page-blog.php',
+            ],
         ];
 
         $has_polylang  = function_exists( 'pll_languages_list' ) && function_exists( 'pll_set_post_language' );

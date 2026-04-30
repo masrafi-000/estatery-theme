@@ -39,6 +39,10 @@
       {
         "label": "Контакты",
         "url": "/contact"
+      },
+      {
+        "label": "Блог",
+        "url": "/blog"
       }
     ],
     "actions": {
