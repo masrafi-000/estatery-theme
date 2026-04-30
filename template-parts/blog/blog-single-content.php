@@ -996,9 +996,9 @@ if (!empty($categories)) {
     <!-- HERO -->
     <header class="np-hero">
         <div class="np-hero__category"><?php echo esc_html($category); ?></div>
-        <h1 class="np-hero__headline"><?php the_title(); ?></h1>
+        <h1 class="np-hero__headline"><?php echo esc_html(get_blog_field('title')); ?></h1>
         <?php
-        $excerpt = get_the_excerpt();
+        $excerpt = get_blog_field('excerpt');
         if ($excerpt) : ?>
             <p class="np-hero__deck"><?php echo esc_html($excerpt); ?></p>
         <?php endif; ?>
@@ -1156,11 +1156,11 @@ if (!empty($categories)) {
                     ?>
                         <a href="<?php echo get_permalink($rp->ID); ?>" class="np-related-card">
                             <div class="np-related-card__img">
-                                <img src="<?php echo esc_url($rp_img); ?>" alt="<?php echo esc_attr($rp->post_title); ?>">
+                                <img src="<?php echo esc_url($rp_img); ?>" alt="<?php echo esc_attr(get_blog_field('title', $rp->ID)); ?>">
                             </div>
                             <div>
                                 <div class="np-related-card__cat"><?php echo esc_html($rp_cat); ?></div>
-                                <div class="np-related-card__title"><?php echo esc_html($rp->post_title); ?></div>
+                                <div class="np-related-card__title"><?php echo esc_html(get_blog_field('title', $rp->ID)); ?></div>
                             </div>
                         </a>
                     <?php endforeach; ?>
@@ -1198,11 +1198,11 @@ if (!empty($categories)) {
                     ?>
                         <a href="<?php echo get_permalink($rp->ID); ?>" class="np-story-card">
                             <div class="np-story-card__img">
-                                <img src="<?php echo esc_url($rp_img); ?>" alt="<?php echo esc_attr($rp->post_title); ?>">
+                                <img src="<?php echo esc_url($rp_img); ?>" alt="<?php echo esc_attr(get_blog_field('title', $rp->ID)); ?>">
                             </div>
                             <div class="np-story-card__body">
                                 <div class="np-story-card__cat"><?php echo esc_html($rp_cat); ?></div>
-                                <div class="np-story-card__title"><?php echo esc_html($rp->post_title); ?></div>
+                                <div class="np-story-card__title"><?php echo esc_html(get_blog_field('title', $rp->ID)); ?></div>
                                 <div class="np-story-card__meta"><?php echo get_the_date('M j, Y', $rp->ID); ?> &middot; <?php echo $rp_time; ?> min</div>
                             </div>
                         </a>
