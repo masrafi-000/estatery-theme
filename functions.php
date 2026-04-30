@@ -39,6 +39,36 @@ function t($key) {
     return \Estatery\Core\Translator::getInstance()->t($key);
 }
 
+/**
+ * Returns a blog post field in the current language.
+ * Falls back to the default WordPress field (English) if no translation is found.
+ *
+ * @param string $field   'title', 'content', or 'excerpt'
+ * @param int    $post_id Post ID (defaults to current post)
+ * @return string
+ */
+function get_blog_field($field, $post_id = null) {
+    if (!$post_id) $post_id = get_the_ID();
+    $lang = \Estatery\Core\Translator::getInstance()->getLang();
+
+    // English — always use WordPress native fields
+    if ($lang === 'en') {
+        if ($field === 'title')   return get_the_title($post_id);
+        if ($field === 'excerpt') return get_the_excerpt();
+        if ($field === 'content') return get_post_field('post_content', $post_id);
+        return '';
+    }
+
+    // Non-English: try translated meta, fall back to English
+    $meta = get_post_meta($post_id, "_{$field}_{$lang}", true);
+    if (!empty(trim($meta))) return $meta;
+
+    // Fallback to English
+    if ($field === 'title')   return get_the_title($post_id);
+    if ($field === 'excerpt') return get_the_excerpt();
+    if ($field === 'content') return get_post_field('post_content', $post_id);
+    return '';
+}
 
 
 // ─────────────────────────────────────────────────────────────────────────────

@@ -1044,7 +1044,7 @@ if (!empty($categories)) {
             <!-- Article Body -->
             <article class="np-article">
                 <div class="np-article__body">
-                    <?php the_content(); ?>
+                    <?php echo wp_kses_post(get_blog_field('content', $post_id)); ?>
                 </div>
 
                 <!-- Tags -->
@@ -1064,7 +1064,7 @@ if (!empty($categories)) {
 
                 <!-- Share Bar -->
                 <div class="np-share-bar">
-                    <span class="np-share-bar__label">Share this story</span>
+                    <span class="np-share-bar__label"><?php echo esc_html(t('pages.blog.ui.share_story')); ?></span>
                     <div class="np-share-bar__buttons">
                         <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>&text=<?php echo urlencode(get_the_title()); ?>" target="_blank" rel="noopener" class="np-share-btn">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -1089,7 +1089,7 @@ if (!empty($categories)) {
                 <div class="np-author-box">
                     <div class="np-author-box__avatar"><?php echo esc_html(substr($author_name, 0, 1)); ?></div>
                     <div>
-                        <div class="np-author-box__label">Written by</div>
+                        <div class="np-author-box__label"><?php echo esc_html(t('pages.blog.ui.journalist')); ?></div>
                         <h4 class="np-author-box__name"><?php echo esc_html($author_name); ?></h4>
                         <p class="np-author-box__role"><?php echo esc_html($author_role); ?></p>
                         <p class="np-author-box__bio">An expert voice in Costa Blanca real estate, providing deep market insights and localized knowledge for international investors and home buyers.</p>
@@ -1107,7 +1107,7 @@ if (!empty($categories)) {
                                 <a href="<?php echo get_permalink($prev_post->ID); ?>" class="np-post-nav__item np-post-nav__item--prev">
                                     <div class="np-post-nav__direction">
                                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-                                        Previous Story
+                                        <?php echo esc_html(t('pages.blog.ui.prev_story')); ?>
                                     </div>
                                     <div class="np-post-nav__title"><?php echo esc_html($prev_post->post_title); ?></div>
                                 </a>
@@ -1117,7 +1117,7 @@ if (!empty($categories)) {
                             <?php if ($next_post) : ?>
                                 <a href="<?php echo get_permalink($next_post->ID); ?>" class="np-post-nav__item np-post-nav__item--next">
                                     <div class="np-post-nav__direction" style="justify-content: flex-end;">
-                                        Next Story
+                                        <?php echo esc_html(t('pages.blog.ui.next_story')); ?>
                                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                                     </div>
                                     <div class="np-post-nav__title"><?php echo esc_html($next_post->post_title); ?></div>
@@ -1183,8 +1183,8 @@ if (!empty($categories)) {
         <section class="np-more-stories">
             <div class="np-more-stories__inner">
                 <div class="np-more-stories__header">
-                    <h2 class="np-more-stories__title">More From the Journal</h2>
-                    <a href="<?php echo home_url('/blog'); ?>" class="np-more-stories__all">All Stories →</a>
+                    <h2 class="np-more-stories__title"><?php echo esc_html(t('pages.blog.ui.more_from')); ?></h2>
+                    <a href="<?php echo home_url('/blog'); ?>" class="np-more-stories__all"><?php echo esc_html(t('pages.blog.ui.all_stories')); ?> →</a>
                 </div>
                 <div class="np-more-grid">
                     <?php foreach ($related_posts as $rp) :
@@ -1216,7 +1216,7 @@ if (!empty($categories)) {
     <div class="np-footer-action">
         <a href="<?php echo home_url('/blog'); ?>" class="np-back-btn">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-            Back to All Journal Entries
+            <?php echo esc_html(t('pages.blog.ui.back_to_journal')); ?>
         </a>
     </div>
 

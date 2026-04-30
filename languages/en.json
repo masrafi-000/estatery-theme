@@ -500,6 +500,32 @@
         "subtitle": "Expert advice, market analysis, and local news.",
         "read_more": "READ ARTICLE",
         "no_posts": "No articles found. Check back soon!"
+      },
+      "ui": {
+        "min_read": "Min Read",
+        "written_by": "Written by",
+        "journalist": "Journalist",
+        "share_story": "Share this story",
+        "back_to_journal": "Back to All Journal Entries",
+        "more_from": "More From the Journal",
+        "prev_story": "Previous Story",
+        "next_story": "Next Story",
+        "all_stories": "All Stories",
+        "no_news": "We haven't posted any news items yet. Check back soon!",
+        "no_blogs": "Our experts are writing new articles. Please check back later!",
+        "explore_all_news": "Explore All News",
+        "view_full_blog": "View Full Blog",
+        "back_overview": "Back to Journal Overview",
+        "subscribe_label": "Newsletter",
+        "subscribe_title": "Stay informed on Costa Blanca property",
+        "subscribe_text": "Weekly market analysis, investment insights, and featured listings — direct to your inbox.",
+        "subscribe_btn": "Subscribe to Journal"
+      },
+      "sections": {
+        "news_label": "Company Updates",
+        "news_title": "Latest News & Announcements",
+        "blog_label": "Expert Insights",
+        "blog_title": "Market Insights & Articles"
       }
     },
     "property_details": {

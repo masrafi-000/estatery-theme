@@ -47,16 +47,16 @@ if ($view_cat === 'news') {
                     <div class="max-w-2xl">
                         <div class="flex items-center gap-4 mb-6">
                             <span class="w-12 h-px bg-primary"></span>
-                            <span class="text-primary font-bold text-[10px] uppercase tracking-[0.4em]">Company Updates</span>
+                            <span class="text-primary font-bold text-[10px] uppercase tracking-[0.4em]"><?php echo esc_html(t('pages.blog.sections.news_label')); ?></span>
                         </div>
                         <h2 class="text-4xl md:text-6xl font-serif text-slate-900 leading-[1.1]">
-                            Latest News <span class="text-primary">&</span> Announcements<span class="text-primary">.</span>
+                            <?php echo esc_html(t('pages.blog.sections.news_title')); ?><span class="text-primary">.</span>
                         </h2>
                     </div>
                     <?php if (!$view_cat) : ?>
                         <div class="pb-2">
                             <a href="?cat=news" class="inline-flex items-center gap-4 bg-white text-slate-900 px-10 py-5 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-500 border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-primary/20 group">
-                                Explore All News
+                                <?php echo esc_html(t('pages.blog.ui.explore_all_news')); ?>
                                 <svg class="size-4 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                             </a>
                         </div>
@@ -80,7 +80,7 @@ if ($view_cat === 'news') {
                         <div class="size-20 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 text-slate-300">
                             <svg class="size-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l4 4v10a2 2 0 01-2 2zM14 4v4h4"/></svg>
                         </div>
-                        <p class="text-slate-400 font-light text-lg">We haven't posted any news items yet. Check back soon!</p>
+                        <p class="text-slate-400 font-light text-lg"><?php echo esc_html(t('pages.blog.ui.no_news')); ?></p>
                     </div>
                 <?php endif; wp_reset_postdata(); ?>
             </div>
@@ -98,16 +98,16 @@ if ($view_cat === 'news') {
                     <div class="max-w-2xl">
                         <div class="flex items-center gap-4 mb-6">
                             <span class="w-12 h-px bg-primary"></span>
-                            <span class="text-primary font-bold text-[10px] uppercase tracking-[0.4em]">Expert Insights</span>
+                            <span class="text-primary font-bold text-[10px] uppercase tracking-[0.4em]"><?php echo esc_html(t('pages.blog.sections.blog_label')); ?></span>
                         </div>
                         <h2 class="text-4xl md:text-6xl font-serif text-slate-900 leading-[1.1]">
-                            Market Insights <span class="text-primary">&</span> Articles<span class="text-primary">.</span>
+                            <?php echo esc_html(t('pages.blog.sections.blog_title')); ?><span class="text-primary">.</span>
                         </h2>
                     </div>
                     <?php if (!$view_cat) : ?>
                         <div class="pb-2">
                             <a href="?cat=blog" class="inline-flex items-center gap-4 bg-slate-900 text-white px-10 py-5 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-primary transition-all duration-500 shadow-xl shadow-slate-900/10 hover:shadow-primary/20 group">
-                                View Full Blog
+                                <?php echo esc_html(t('pages.blog.ui.view_full_blog')); ?>
                                 <svg class="size-4 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                             </a>
                         </div>
@@ -131,7 +131,7 @@ if ($view_cat === 'news') {
                         <div class="size-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 text-slate-300 shadow-sm">
                             <svg class="size-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                         </div>
-                        <p class="text-slate-400 font-light text-lg">Our experts are writing new articles. Please check back later!</p>
+                        <p class="text-slate-400 font-light text-lg"><?php echo esc_html(t('pages.blog.ui.no_blogs')); ?></p>
                     </div>
                 <?php endif; wp_reset_postdata(); ?>
             </div>
@@ -143,7 +143,7 @@ if ($view_cat === 'news') {
     <div class="py-20 text-center bg-slate-50/30 border-t border-slate-100">
         <a href="<?php echo strtok($_SERVER["REQUEST_URI"], '?'); ?>" class="inline-flex items-center gap-3 text-slate-900 font-black text-[10px] uppercase tracking-[0.4em] hover:text-primary transition-colors group">
             <svg class="size-4 transform group-hover:-translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 19l-7-7 7-7"/></svg>
-            Back to Journal Overview
+            <?php echo esc_html(t('pages.blog.ui.back_overview')); ?>
         </a>
     </div>
 <?php endif; ?>

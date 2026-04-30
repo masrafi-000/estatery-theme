@@ -489,6 +489,45 @@
       "back_home": "Volver al Inicio",
       "view_properties": "Ver Todas las Propiedades"
     },
+    "blog": {
+      "hero": {
+        "title": "Blog y Noticias",
+        "bg_text": "Journal",
+        "subtitle": "Manténgase al día con las últimas tendencias, noticias y análisis del mercado inmobiliario de Costa Blanca."
+      },
+      "grid": {
+        "title": "Últimos Artículos",
+        "subtitle": "Consejos de expertos, análisis de mercado y noticias locales.",
+        "read_more": "LEER ARTÍCULO",
+        "no_posts": "No se encontraron artículos. ¡Vuelva pronto!"
+      },
+      "ui": {
+        "min_read": "Min de Lectura",
+        "written_by": "Escrito por",
+        "journalist": "Periodista",
+        "share_story": "Compartir este artículo",
+        "back_to_journal": "Volver a Todos los Artículos",
+        "more_from": "Más del Blog",
+        "prev_story": "Historia Anterior",
+        "next_story": "Historia Siguiente",
+        "all_stories": "Todos los Artículos",
+        "no_news": "Aún no hemos publicado noticias. ¡Vuelva pronto!",
+        "no_blogs": "Nuestros expertos están escribiendo nuevos artículos. ¡Vuelva pronto!",
+        "explore_all_news": "Ver Todas las Noticias",
+        "view_full_blog": "Ver Blog Completo",
+        "back_overview": "Volver al Resumen",
+        "subscribe_label": "Boletín",
+        "subscribe_title": "Mantente informado sobre Costa Blanca",
+        "subscribe_text": "Análisis semanal del mercado, perspectivas de inversión y propiedades destacadas — directo a tu bandeja.",
+        "subscribe_btn": "Suscribirse al Blog"
+      },
+      "sections": {
+        "news_label": "Actualizaciones",
+        "news_title": "Últimas Noticias y Anuncios",
+        "blog_label": "Conocimiento Experto",
+        "blog_title": "Perspectivas del Mercado y Artículos"
+      }
+    },
     "property_details": {
       "bg_text": "Detalles",
       "subtitle": "Explore los detalles premium y el potencial de inversión de esta propiedad",

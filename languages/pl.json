@@ -489,6 +489,45 @@
       "back_home": "Powrót na Stronę Główną",
       "view_properties": "Zobacz Wszystkie Nieruchomości"
     },
+    "blog": {
+      "hero": {
+        "title": "Blog i Wiadomości",
+        "bg_text": "Dziennik",
+        "subtitle": "Bądź na bieżąco z najnowszymi trendami, wiadomościami i analizami rynku nieruchomości na Costa Blanca."
+      },
+      "grid": {
+        "title": "Najnowsze Artykuły",
+        "subtitle": "Porady ekspertów, analizy rynku i lokalne newsy.",
+        "read_more": "CZYTAJ ARTYKUŁ",
+        "no_posts": "Nie znaleziono artykułów. Wróć wkrótce!"
+      },
+      "ui": {
+        "min_read": "Min Czytania",
+        "written_by": "Napisane przez",
+        "journalist": "Dziennikarz",
+        "share_story": "Udostępnij ten artykuł",
+        "back_to_journal": "Powrót do Wszystkich Artykułów",
+        "more_from": "Więcej z Bloga",
+        "prev_story": "Poprzedni Artykuł",
+        "next_story": "Następny Artykuł",
+        "all_stories": "Wszystkie Artykuły",
+        "no_news": "Jeszcze nie opublikowaliśmy żadnych wiadomości. Wróć wkrótce!",
+        "no_blogs": "Nasi eksperci piszą nowe artykuły. Sprawdź ponownie później!",
+        "explore_all_news": "Zobacz Wszystkie Newsy",
+        "view_full_blog": "Zobacz Cały Blog",
+        "back_overview": "Powrót do Przeglądu",
+        "subscribe_label": "Newsletter",
+        "subscribe_title": "Bądź na bieżąco z Costa Blanca",
+        "subscribe_text": "Cotygodniowa analiza rynku, perspektywy inwestycyjne i wybrane oferty — prosto do Twojej skrzynki.",
+        "subscribe_btn": "Zapisz się do Newslettera"
+      },
+      "sections": {
+        "news_label": "Aktualności",
+        "news_title": "Najnowsze Wiadomości i Ogłoszenia",
+        "blog_label": "Artykuły Eksperckie",
+        "blog_title": "Analizy Rynku i Artykuły"
+      }
+    },
     "property_details": {
       "bg_text": "Szczegóły",
       "subtitle": "Odkryj najwyższej klasy szczegóły i potencjał inwestycyjny tej nieruchomości",
