@@ -36,7 +36,7 @@
 
             <!-- Logo -->
             <img
-                src="<?php echo esc_url( get_template_directory_uri() . '/public/images/logo-ll.png' ); ?>"
+                src="<?php echo esc_url( get_template_directory_uri() . '/public/images/preloader.png' ); ?>"
                 alt="Loading..."
                 class="w-full h-full object-contain scale-110 sm:scale-125 md:scale-140 lg:scale-150 select-none">
         </div>
@@ -145,6 +145,7 @@
                 <nav id="site-navigation" class="hidden md:flex flex-2 justify-center">
                     <ul class="flex gap-1 items-center">
                         <?php
+                        global $wp;
                         $navigation = t('header.navigation');
                         $current_url = rtrim(home_url(add_query_arg(array(), $wp->request)), '/');
 
