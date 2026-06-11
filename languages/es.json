@@ -147,7 +147,12 @@
                     "Acceso exclusivo a propiedades premium fuera del mercado.",
                     "Soporte legal y administrativo integral.",
                     "Asesoramiento personalizado adaptado a sus objetivos financieros."
-                ]
+                ],
+                "thumbnails": {
+                    "kitchen": "Detalle de diseño de cocina moderna",
+                    "office": "Elegante espacio de oficina corporativa",
+                    "skyscraper": "Fachada de rascacielos contemporáneo"
+                }
             },
             "how_we_work": {
                 "badge": "Flujo de Trabajo",
@@ -886,5 +891,52 @@
                 }
             ]
         }
-    ]
+    ],
+    "seo": {
+        "home": {
+            "title": "Capital Union Investment | Asesor Inmobiliario en Costa Blanca",
+            "description": "Compre, venda e invierta en propiedades premium en la Costa Blanca (Alicante, España). Asesoramiento independiente desde 2008 ayudando a más de 200 familias.",
+            "keywords": "inmobiliaria costa blanca, comprar casa españa, inmobiliaria alicante, inversión inmobiliaria españa, villa de lujo costa blanca"
+        },
+        "privacy_policy": {
+            "title": "Política de Privacidad | Capital Union Investment",
+            "description": "Descubra cómo Capital Union Investment recopila, procesa y protege sus datos personales de conformidad con el RGPD y las leyes españolas de protección de datos.",
+            "keywords": "política de privacidad, RGPD, protección de datos, Capital Union Investment"
+        },
+        "cookie_policy": {
+            "title": "Política de Cookies | Capital Union Investment",
+            "description": "Lea cómo utilizamos las cookies, los píxeles de seguimiento y las analíticas web para mejorar su experiencia de navegación en nuestro sitio web.",
+            "keywords": "política de cookies, cookies, cookies de seguimiento, google analytics, meta pixel"
+        },
+        "about": {
+            "title": "Sobre Nosotros | Capital Union Investment",
+            "description": "Asesora inmobiliaria independiente Anna Alizarenko en la Costa Blanca (Alicante, España) desde 2008. Más de 200 familias internacionales asesoradas con éxito.",
+            "keywords": "anna alizarenko, asesora inmobiliaria españa, sobre capital union investment, agente inmobiliario independiente españa"
+        },
+        "blog": {
+            "title": "Blog y Noticias | Capital Union Investment",
+            "description": "Manténgase al día con las últimas tendencias, análisis de mercado y noticias del sector inmobiliario en Costa Blanca con Capital Union Investment.",
+            "keywords": "blog inmobiliario, noticias costa blanca, tendencias mercado propiedad, noticias propiedad españa"
+        },
+        "contact": {
+            "title": "Contáctenos | Capital Union Investment",
+            "description": "Póngase en contacto con Capital Union Investment para obtener asesoramiento experto y opciones de inversión en Costa Blanca.",
+            "keywords": "contacto capital union investment, contacto agente inmobiliario, asesoramiento inmobiliario españa"
+        },
+        "invest": {
+            "title": "Oportunidades de Inversión Inmobiliaria | Capital Union Investment",
+            "description": "Explore carteras de inversión inmobiliaria de alto rendimiento, promociones de obra nueva y locales comerciales en Alicante.",
+            "keywords": "inversion inmobiliaria españa, roi inmobiliario, propiedades de inversion alicante, activos seguros"
+        },
+        "properties": {
+            "title": "Propiedades en Venta y Alquiler | Capital Union Investment",
+            "description": "Busque en nuestra amplia base de datos de villas de lujo, apartamentos, adosados y parcelas en venta o alquiler en Costa Blanca.",
+            "keywords": "villas en venta costa blanca, apartamentos en alquiler alicante, buscar propiedades españa, comprar adosado españa"
+        },
+        "terms_of_service": {
+            "title": "Términos de Servicio | Capital Union Investment",
+            "description": "Lea los términos de servicio, pautas y reglas para el uso de las plataformas y servicios de Capital Union Investment.",
+            "keywords": "terminos de servicio, terminos de uso, acuerdo legal, Capital Union Investment"
+        }
+    }
 }

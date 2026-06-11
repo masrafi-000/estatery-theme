@@ -25,6 +25,123 @@ if ( empty( $header_logo_url ) ) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Jost:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <?php
+    // Localized SEO Meta Tags Integration
+    $seo_title = '';
+    $seo_desc = '';
+    $seo_keywords = '';
+
+    if ( is_front_page() || is_home() ) {
+        $seo_title    = t('seo.home.title');
+        $seo_desc     = t('seo.home.description');
+        $seo_keywords = t('seo.home.keywords');
+    } elseif ( is_page_template('page-about.php') || is_page('about') ) {
+        $seo_title    = t('seo.about.title');
+        $seo_desc     = t('seo.about.description');
+        $seo_keywords = t('seo.about.keywords');
+    } elseif ( is_page_template('page-privacy-policy.php') || is_page('privacy-policy') ) {
+        $seo_title    = t('seo.privacy_policy.title');
+        $seo_desc     = t('seo.privacy_policy.description');
+        $seo_keywords = t('seo.privacy_policy.keywords');
+    } elseif ( is_page_template('page-cookie-policy.php') || is_page('cookie-policy') ) {
+        $seo_title    = t('seo.cookie_policy.title');
+        $seo_desc     = t('seo.cookie_policy.description');
+        $seo_keywords = t('seo.cookie_policy.keywords');
+    } elseif ( is_page_template('page-blog.php') || is_page('blog') ) {
+        $seo_title    = t('seo.blog.title');
+        $seo_desc     = t('seo.blog.description');
+        $seo_keywords = t('seo.blog.keywords');
+    } elseif ( is_page_template('page-contact.php') || is_page('contact') ) {
+        $seo_title    = t('seo.contact.title');
+        $seo_desc     = t('seo.contact.description');
+        $seo_keywords = t('seo.contact.keywords');
+    } elseif ( is_page_template('page-invest.php') || is_page('invest') ) {
+        $seo_title    = t('seo.invest.title');
+        $seo_desc     = t('seo.invest.description');
+        $seo_keywords = t('seo.invest.keywords');
+    } elseif ( is_page_template('page-properties.php') || is_page('properties') ) {
+        $seo_title    = t('seo.properties.title');
+        $seo_desc     = t('seo.properties.description');
+        $seo_keywords = t('seo.properties.keywords');
+    } elseif ( is_page_template('page-terms-of-service.php') || is_page('terms-of-service') ) {
+        $seo_title    = t('seo.terms_of_service.title');
+        $seo_desc     = t('seo.terms_of_service.description');
+        $seo_keywords = t('seo.terms_of_service.keywords');
+    } elseif ( is_page_template('page-property-details.php') || is_page('property-details') || is_page_template('page-investment-details.php') || is_page('investment-details') ) {
+        $property_id = $_GET['id'] ?? '';
+        $property_data = null;
+        if ( $property_id ) {
+            $json_file = get_template_directory() . '/data/properties.json';
+            if ( file_exists( $json_file ) ) {
+                $json_data = file_get_contents( $json_file );
+                $parsed_data = json_decode( $json_data, true );
+                $raw_properties = $parsed_data['root']['property'] ?? [];
+                foreach ( $raw_properties as $prop ) {
+                    if ( ( $prop['id'][0] ?? '' ) == $property_id ) {
+                        $property_data = $prop;
+                        break;
+                    }
+                }
+            }
+            if ( ! $property_data && is_numeric($property_id) ) {
+                $property_data = \Estatery\Core\PropertyCPT::to_kyero_array( intval($property_id) );
+            }
+        }
+        if ( $property_data ) {
+            $raw_type = strtolower($property_data['type'][0] ?? 'property');
+            $translated_type = t("pages.properties.meta.{$raw_type}") ?: ucfirst($raw_type);
+            $seo_title = !empty($property_data['title'][0]) ? $property_data['title'][0] : ($translated_type . ' ' . (!empty($property_data['town'][0]) ? $property_data['town'][0] : ''));
+            
+            $beds = $property_data['beds'][0] ?? '';
+            $baths = $property_data['baths'][0] ?? '';
+            $price = !empty($property_data['price'][0]) ? number_format(intval($property_data['price'][0])) : '';
+            $town = $property_data['town'][0] ?? '';
+            $desc_parts = [];
+            if ($beds) $desc_parts[] = "$beds " . (t('home.featured.beds') ?: 'beds');
+            if ($baths) $desc_parts[] = "$baths " . (t('home.featured.baths') ?: 'baths');
+            if ($town) $desc_parts[] = "in $town";
+            if ($price) $desc_parts[] = "for €$price";
+            
+            $seo_desc = implode(' ', $desc_parts);
+            if (empty($seo_desc)) {
+                $seo_desc = t('pages.property_details.subtitle');
+            } else {
+                $seo_desc = ucfirst($seo_desc) . ". " . t('brand.tagline');
+            }
+            
+            $seo_keywords = implode(', ', array_filter([$raw_type, $town, 'spain real estate', 'costa blanca']));
+        }
+    }
+
+    // Default Fallbacks
+    if ( empty($seo_title) || strpos($seo_title, 'seo.') === 0 ) {
+        $seo_title = wp_title('|', false, 'right') . get_bloginfo('name');
+    }
+    if ( empty($seo_desc) || strpos($seo_desc, 'seo.') === 0 ) {
+        $seo_desc = get_bloginfo('description');
+    }
+    ?>
+
+    <meta name="description" content="<?php echo esc_attr( $seo_desc ); ?>">
+    <?php if ( !empty($seo_keywords) && strpos($seo_keywords, 'seo.') !== 0 ) : ?>
+        <meta name="keywords" content="<?php echo esc_attr( $seo_keywords ); ?>">
+    <?php endif; ?>
+    
+    <!-- Open Graph / Facebook SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo esc_url( home_url( $_SERVER['REQUEST_URI'] ?? '' ) ); ?>">
+    <meta property="og:title" content="<?php echo esc_attr( $seo_title ); ?>">
+    <meta property="og:description" content="<?php echo esc_attr( $seo_desc ); ?>">
+    <meta property="og:image" content="<?php echo esc_url( get_theme_mod( 'header_logo' ) ?: (get_template_directory_uri() . '/public/images/logo.png') ); ?>">
+
+    <!-- Twitter SEO -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="<?php echo esc_url( home_url( $_SERVER['REQUEST_URI'] ?? '' ) ); ?>">
+    <meta name="twitter:title" content="<?php echo esc_attr( $seo_title ); ?>">
+    <meta name="twitter:description" content="<?php echo esc_attr( $seo_desc ); ?>">
+    <meta name="twitter:image" content="<?php echo esc_url( get_theme_mod( 'header_logo' ) ?: (get_template_directory_uri() . '/public/images/logo.png') ); ?>">
+
     <?php wp_head(); ?>
 </head>
 <body <?php body_class('font-["Inter"] antialiased'); ?>>

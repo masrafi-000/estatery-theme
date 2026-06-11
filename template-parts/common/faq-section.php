@@ -12,6 +12,33 @@ $all_faq_groups = t('common_faq_tabs');
 if (empty($all_faq_groups) || !is_array($all_faq_groups)) return;
 
 $active_index = 0;
+
+// Generate FAQ JSON-LD Schema dynamically for SEO optimization
+$faq_schema_items = [];
+foreach ($all_faq_groups as $group) {
+    if (isset($group['items']) && is_array($group['items'])) {
+        foreach ($group['items'] as $item) {
+            $faq_schema_items[] = [
+                '@type' => 'Question',
+                'name' => $item['question'],
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => $item['answer']
+                ]
+            ];
+        }
+    }
+}
+if (!empty($faq_schema_items)) {
+    echo '<!-- FAQ Structured Data Schema -->' . "\n";
+    echo '<script type="application/ld+json">' . "\n";
+    echo json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => $faq_schema_items
+    ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . "\n";
+    echo '</script>' . "\n";
+}
 ?>
 
 <section class="js-faq-section py-24 bg-white border-b border-secondary/5 overflow-hidden">

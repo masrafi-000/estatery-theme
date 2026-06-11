@@ -11,12 +11,12 @@ $data_url = get_template_directory_uri() . '/data/investments.json';
         
         <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
             <div class="max-w-3xl js-invest-props-header js-reveal-stagger">
-                <h2 class="text-secondary font-bold uppercase tracking-[0.2em] text-[10px] mb-4 js-invest-prop-item js-reveal-fade">
+                <div class="text-secondary font-bold uppercase tracking-[0.2em] text-[10px] mb-4 js-invest-prop-item js-reveal-fade">
                     <?php echo esc_html( t('pages.invest.properties_label') ?: 'Exclusive Opportunities' ); ?>
-                </h2>
-                <h3 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 leading-tight js-invest-prop-item js-reveal-text">
+                </div>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 leading-tight js-invest-prop-item js-reveal-text">
                     <?php echo esc_html( t('pages.invest.properties_title') ?: 'Prime Real Estate Investment Portfolio' ); ?>
-                </h3>
+                </h2>
                 <p class="text-slate-500 mt-6 text-lg leading-relaxed js-invest-prop-item js-reveal-fade">
                     <?php echo esc_html( t('pages.invest.properties_subtitle') ?: 'Discover hand-picked properties with high yield potential and strong capital appreciation in the most sought-after areas of Alicante.' ); ?>
                 </p>

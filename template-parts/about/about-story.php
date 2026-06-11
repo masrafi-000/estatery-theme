@@ -30,15 +30,15 @@
                 <div class="grid grid-cols-3 gap-4 pt-6 js-story-thumbnails">
                     <div class="rounded-lg overflow-hidden h-24 shadow-md">
                         <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80"
-                            class="w-full h-full object-cover" alt="">
+                            class="w-full h-full object-cover" alt="<?php echo esc_attr($story['thumbnails']['kitchen'] ?? 'Modern kitchen design detail'); ?>">
                     </div>
                     <div class="rounded-lg overflow-hidden h-24 shadow-md">
                         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
-                            class="w-full h-full object-cover" alt="">
+                            class="w-full h-full object-cover" alt="<?php echo esc_attr($story['thumbnails']['office'] ?? 'Elegant corporate office space'); ?>">
                     </div>
                     <div class="rounded-lg overflow-hidden h-24 shadow-md">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80"
-                            class="w-full h-full object-cover" alt="">
+                            class="w-full h-full object-cover" alt="<?php echo esc_attr($story['thumbnails']['skyscraper'] ?? 'Contemporary skyscraper facade'); ?>">
                     </div>
                 </div>
             </div>

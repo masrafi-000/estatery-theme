@@ -39,6 +39,62 @@ function t($key) {
     return \Estatery\Core\Translator::getInstance()->t($key);
 }
 
+// Filter WordPress dynamic title tag to use localized SEO titles
+add_filter( 'document_title_parts', function( $title_parts ) {
+    $seo_title = '';
+    if ( is_front_page() || is_home() ) {
+        $seo_title = t('seo.home.title');
+    } elseif ( is_page_template('page-about.php') || is_page('about') ) {
+        $seo_title = t('seo.about.title');
+    } elseif ( is_page_template('page-privacy-policy.php') || is_page('privacy-policy') ) {
+        $seo_title = t('seo.privacy_policy.title');
+    } elseif ( is_page_template('page-cookie-policy.php') || is_page('cookie-policy') ) {
+        $seo_title = t('seo.cookie_policy.title');
+    } elseif ( is_page_template('page-blog.php') || is_page('blog') ) {
+        $seo_title = t('seo.blog.title');
+    } elseif ( is_page_template('page-contact.php') || is_page('contact') ) {
+        $seo_title = t('seo.contact.title');
+    } elseif ( is_page_template('page-invest.php') || is_page('invest') ) {
+        $seo_title = t('seo.invest.title');
+    } elseif ( is_page_template('page-properties.php') || is_page('properties') ) {
+        $seo_title = t('seo.properties.title');
+    } elseif ( is_page_template('page-terms-of-service.php') || is_page('terms-of-service') ) {
+        $seo_title = t('seo.terms_of_service.title');
+    } elseif ( is_page_template('page-property-details.php') || is_page('property-details') || is_page_template('page-investment-details.php') || is_page('investment-details') ) {
+        $property_id = $_GET['id'] ?? '';
+        $property_data = null;
+        if ( $property_id ) {
+            $json_file = get_template_directory() . '/data/properties.json';
+            if ( file_exists( $json_file ) ) {
+                $json_data = file_get_contents( $json_file );
+                $parsed_data = json_decode( $json_data, true );
+                $raw_properties = $parsed_data['root']['property'] ?? [];
+                foreach ( $raw_properties as $prop ) {
+                    if ( ( $prop['id'][0] ?? '' ) == $property_id ) {
+                        $property_data = $prop;
+                        break;
+                    }
+                }
+            }
+            if ( ! $property_data && is_numeric($property_id) ) {
+                $property_data = \Estatery\Core\PropertyCPT::to_kyero_array( intval($property_id) );
+            }
+        }
+        if ( $property_data ) {
+            $raw_type = strtolower($property_data['type'][0] ?? 'property');
+            $translated_type = t("pages.properties.meta.{$raw_type}") ?: ucfirst($raw_type);
+            $seo_title = !empty($property_data['title'][0]) ? $property_data['title'][0] : ($translated_type . ' ' . (!empty($property_data['town'][0]) ? $property_data['town'][0] : ''));
+        }
+    }
+    
+    if ( !empty($seo_title) && strpos($seo_title, 'seo.') !== 0 ) {
+        $title_parts['title'] = $seo_title;
+        unset($title_parts['tagline']);
+        unset($title_parts['site']);
+    }
+    return $title_parts;
+}, 100 );
+
 /**
  * Returns a blog post field in the current language.
  * Falls back to the default WordPress field (English) if no translation is found.

@@ -143,7 +143,12 @@
                     "Spersonalizowana strategia oparta na profilu klienta i celach inwestycyjnych",
                     "Silny nacisk na bezpieczeństwo prawne i zapobieganie ryzyku",
                     "Długoterminowa wartość oraz sprawne, bezproblemowe transakcje"
-                ]
+                ],
+                "thumbnails": {
+                    "kitchen": "Szczegół projektu nowoczesnej kuchni",
+                    "office": "Elegancka przestrzeń biurowa",
+                    "skyscraper": "Współczesna fasada wieżowca"
+                }
             },
             "how_we_work": {
                 "badge": "Przepływ Pracy",
@@ -886,5 +891,52 @@
                 }
             ]
         }
-    ]
+    ],
+    "seo": {
+        "home": {
+            "title": "Capital Union Investment | Doradca ds. nieruchomości na Costa Blanca",
+            "description": "Kupuj, sprzedawaj i inwestuj w nieruchomości premium na Costa Blanca (Alicante, Hiszpania). Niezależne doradztwo od 2008 roku pomagające ponad 200 rodzinom.",
+            "keywords": "nieruchomości costa blanca, kupno nieruchomości hiszpania, nieruchomości alicante, inwestycje w nieruchomości hiszpania, luksusowa willa costa blanca"
+        },
+        "privacy_policy": {
+            "title": "Polityka Prywatności | Capital Union Investment",
+            "description": "Dowiedz się, w jaki sposób Capital Union Investment gromadzi, przetwarza i chroni Twoje dane osobowe zgodnie z RODO i hiszpańskimi przepisami o ochronie danych.",
+            "keywords": "polityka prywatności, RODO, ochrona danych osobowych, Capital Union Investment"
+        },
+        "cookie_policy": {
+            "title": "Polityka Cookies | Capital Union Investment",
+            "description": "Dowiedz się, jak używamy plików cookies, pikseli śledzących i analityki internetowej, aby ułatwić korzystanie z naszej strony internetowej.",
+            "keywords": "polityka cookies, pliki cookies, google analytics, meta pixel"
+        },
+        "about": {
+            "title": "O nas | Capital Union Investment",
+            "description": "Niezależna doradczyni ds. nieruchomości Anna Alizarenko na Costa Blanca (Alicante, Hiszpania) od 2008 roku. Ponad 200 rodzin obsłużonych z sukcesem.",
+            "keywords": "anna alizarenko, doradca ds nieruchomości hiszpania, o capital union investment, niezależny pośrednik nieruchomości hiszpania"
+        },
+        "blog": {
+            "title": "Blog i Wiadomości | Capital Union Investment",
+            "description": "Bądź na bieżąco z najnowszymi trendami, analizami rynku i wiadomościami z rynku nieruchomości na Costa Blanca z Capital Union Investment.",
+            "keywords": "blog o nieruchomościach, wiadomości costa blanca, trendy na rynku nieruchomości, wiadomości z hiszpanii"
+        },
+        "contact": {
+            "title": "Kontakt | Capital Union Investment",
+            "description": "Skontaktuj się z Capital Union Investment, aby uzyskać fachowe porady i opcje inwestycyjne na Costa Blanca w Hiszpanii.",
+            "keywords": "kontakt capital union investment, kontakt agent nieruchomości, doradztwo nieruchomości hiszpania"
+        },
+        "invest": {
+            "title": "Możliwości Inwestycji w Nieruchomości | Capital Union Investment",
+            "description": "Odkryj wysoko rentowne portfele inwestycyjne, nowe inwestycje deweloperskie i nieruchomości komercyjne w Alicante.",
+            "keywords": "inwestowanie w nieruchomości hiszpania, rentowność nieruchomości, nieruchomości inwestycyjne alicante, bezpieczne aktywa"
+        },
+        "properties": {
+            "title": "Nieruchomości na Sprzedaż i Wynajem | Capital Union Investment",
+            "description": "Przeszukaj naszą bazę luksusowych willi, mieszkań, kamienic i działek na sprzedaż lub wynajem na Costa Blanca.",
+            "keywords": "wille na sprzedaż costa blanca, mieszkania na wynajem alicante, wyszukiwarka nieruchomości hiszpania"
+        },
+        "terms_of_service": {
+            "title": "Warunki Korzystania | Capital Union Investment",
+            "description": "Przeczytaj warunki korzystania, wytyczne i zasady korzystania z platformy i usług Capital Union Investment.",
+            "keywords": "warunki korzystania, regulamin, umowa prawna, Capital Union Investment"
+        }
+    }
 }

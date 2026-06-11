@@ -143,7 +143,12 @@
                     "Személyre szabott stratégia az ügyfélprofil és a befektetési célok alapján",
                     "Erős fókusz a jogi biztonságra és a kockázatmegelőzésre",
                     "Hosszú távú érték és hatékony, zökkenőmentes tranzakciók"
-                ]
+                ],
+                "thumbnails": {
+                    "kitchen": "Modern konyhabútor tervezési részlet",
+                    "office": "Elegáns irodai munkaterület",
+                    "skyscraper": "Kortárs felhőkarcoló homlokzat"
+                }
             },
             "how_we_work": {
                 "badge": "Munkafolyamat",
@@ -886,5 +891,52 @@
                 }
             ]
         }
-    ]
+    ],
+    "seo": {
+        "home": {
+            "title": "Capital Union Investment | Ingatlantanácsadó Costa Blancán",
+            "description": "Vásároljon, adjon el és fektessen be prémium ingatlanokba a Costa Blancán (Alicante, Spanyolország). Független tanácsadás 2008 óta, több mint 200 család támogatásával.",
+            "keywords": "ingatlan costa blanca, ingatlanvásárlás spanyolország, alicante ingatlan, ingatlanbefektetés spanyolország, luxus villa costa blanca"
+        },
+        "privacy_policy": {
+            "title": "Adatvédelmi Szabályzat | Capital Union Investment",
+            "description": "Tájékozódjon arról, hogyan gyűjti, kezeli és védi a Capital Union Investment az Ön személyes adatait a GDPR és a spanyol adatvédelmi törvények szerint.",
+            "keywords": "adatvédelmi szabályzat, GDPR, adatvédelem, Capital Union Investment"
+        },
+        "cookie_policy": {
+            "title": "Cookie Szabályzat | Capital Union Investment",
+            "description": "Olvassa el, hogyan használjuk a sütiket, nyomkövető pixeleket és webanalitikai eszközöket böngészési élményének javítására.",
+            "keywords": "cookie szabályzat, sütik, nyomkövető sütik, google analytics, meta pixel"
+        },
+        "about": {
+            "title": "Rólunk | Capital Union Investment",
+            "description": "Anna Alizarenko független ingatlantanácsadó Costa Blancán (Alicante, Spanyolország) 2008 óta. Több mint 200 nemzetközi család sikeres támogatása.",
+            "keywords": "anna alizarenko, ingatlantanácsadó spanyolország, rólunk capital union investment, független ingatlanügynök spanyolország"
+        },
+        "blog": {
+            "title": "Blog és Hírek | Capital Union Investment",
+            "description": "Értesüljön a legfrissebb trendekről, piaci elemzésekről és hírekről a Costa Blanca ingatlanpiacán a Capital Union Investment segítségével.",
+            "keywords": "ingatlan blog, costa blanca hírek, ingatlanpiaci trendek, spanyolországi ingatlan hírek"
+        },
+        "contact": {
+            "title": "Kapcsolat | Capital Union Investment",
+            "description": "Vegye fel a kapcsolatot a Capital Union Investmenttel szakértő ingatlan tanácsadásért és befektetési lehetőségekért Costa Blancán.",
+            "keywords": "kapcsolat capital union investment, ingatlanügynök kapcsolat, spanyol ingatlan tanácsadás"
+        },
+        "invest": {
+            "title": "Ingatlanbefektetési Lehetőségek | Capital Union Investment",
+            "description": "Fedezze fel a magas hozamú ingatlanbefektetési portfóliókat, új építésű fejlesztéseket és kereskedelmi ingatlanokat Alicantéban.",
+            "keywords": "ingatlanbefektetés spanyolország, ingatlan hozam, alicante befektetési ingatlan, biztonságos ingatlan eszközök"
+        },
+        "properties": {
+            "title": "Eladó és Kiadó Ingatlanok | Capital Union Investment",
+            "description": "Keressen luxus villák, apartmanok, sorházak és telkek széles adatbázisában eladásra vagy kiadásra Costa Blancán.",
+            "keywords": "eladó villák costa blanca, kiadó lakások alicante, spanyol ingatlan kereső, sorház vásárlás spanyolország"
+        },
+        "terms_of_service": {
+            "title": "Szolgáltatási Feltételek | Capital Union Investment",
+            "description": "Olvassa el a Capital Union Investment platformok és szolgáltatások használatára vonatkozó feltételeket és szabályokat.",
+            "keywords": "szolgáltatási feltételek, használati feltételek, jogi megállapodás, Capital Union Investment"
+        }
+    }
 }

@@ -143,7 +143,12 @@
                     "Personalized strategy based on client profile and investment goals",
                     "Strong focus on legal security and risk prevention",
                     "Long-term value and efficient, seamless transactions"
-                ]
+                ],
+                "thumbnails": {
+                    "kitchen": "Modern kitchen design detail",
+                    "office": "Elegant corporate office space",
+                    "skyscraper": "Contemporary skyscraper facade"
+                }
             },
             "how_we_work": {
                 "badge": "Work Flow",
@@ -886,5 +891,52 @@
                 }
             ]
         }
-    ]
+    ],
+    "seo": {
+        "home": {
+            "title": "Capital Union Investment | Real Estate Advisor in Costa Blanca",
+            "description": "Buy, sell, and invest in premium properties on Costa Blanca (Alicante, Spain). Independent advisory since 2008 helping over 200 international families.",
+            "keywords": "real estate costa blanca, buy property spain, alicante real estate, property investment spain, luxury villa costa blanca"
+        },
+        "privacy_policy": {
+            "title": "Privacy Policy | Capital Union Investment",
+            "description": "Learn how Capital Union Investment collects, processes, and protects your personal data in compliance with GDPR and Spanish data protection laws.",
+            "keywords": "privacy policy, GDPR, data protection, Capital Union Investment"
+        },
+        "cookie_policy": {
+            "title": "Cookie Policy | Capital Union Investment",
+            "description": "Read about how we use cookies, tracking pixels, and web analytics to improve your browsing experience on our website.",
+            "keywords": "cookie policy, cookies, tracking cookies, google analytics, meta pixel"
+        },
+        "about": {
+            "title": "About Us | Capital Union Investment",
+            "description": "Independent real estate advisor Anna Alizarenko based in Costa Blanca (Alicante, Spain) since 2008. Over 200 international families successfully assisted.",
+            "keywords": "anna alizarenko, real estate advisor spain, about capital union investment, independent real estate agent spain"
+        },
+        "blog": {
+            "title": "Blog & News | Capital Union Investment",
+            "description": "Stay updated with the latest trends, market insights, and news in the Costa Blanca real estate market from Capital Union Investment.",
+            "keywords": "real estate blog, costa blanca news, property market trends, spain property news"
+        },
+        "contact": {
+            "title": "Contact Us | Capital Union Investment",
+            "description": "Get in touch with Capital Union Investment for expert real estate advice and investment options in Costa Blanca, Spain.",
+            "keywords": "contact capital union investment, real estate agent contact, spain property advisory"
+        },
+        "invest": {
+            "title": "Real Estate Investment Opportunities | Capital Union Investment",
+            "description": "Explore high-yield real estate investment portfolios, pre-construction developments, and commercial properties in Alicante.",
+            "keywords": "property investment spain, real estate roi, alicante investment property, secure real estate assets"
+        },
+        "properties": {
+            "title": "Properties for Sale & Rent | Capital Union Investment",
+            "description": "Search our extensive database of luxury villas, apartments, townhouses, and plots for sale or rent on Costa Blanca.",
+            "keywords": "villas for sale costa blanca, apartments for rent alicante, spain property search, buy townhouse spain"
+        },
+        "terms_of_service": {
+            "title": "Terms of Service | Capital Union Investment",
+            "description": "Read the terms of service, guidelines, and rules for using the Capital Union Investment platforms and services.",
+            "keywords": "terms of service, terms of use, legal agreement, Capital Union Investment"
+        }
+    }
 }

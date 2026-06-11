@@ -21,7 +21,10 @@ $read_time  = max(1, ceil($word_count / 200));
     <!-- Image -->
     <div class="relative h-64 overflow-hidden">
         <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail('large', ['class' => 'w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]']); ?>
+            <?php the_post_thumbnail('large', [
+                'class' => 'w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]',
+                'alt'   => esc_attr($post_title)
+            ]); ?>
         <?php else : ?>
             <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]" alt="<?php echo esc_attr($post_title); ?>">
         <?php endif; ?>

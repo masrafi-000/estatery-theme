@@ -42,7 +42,7 @@
                             </svg>
                         </div>
 
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-secondary mb-6"><?php echo esc_html($val['title']); ?></h2>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-secondary mb-6"><?php echo esc_html($val['title']); ?></h3>
                         <p class="text-black mb-0 opacity-80 leading-relaxed">
                             <?php echo esc_html($val['description']); ?>
                         </p>
