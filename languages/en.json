@@ -1,811 +1,890 @@
 {
-  "brand": {
-    "name": "Capital Union Investment",
-    "platform": "Capital Union Investment",
-    "email": "info@capitalunioninvestment.com",
-    "tagline": "Real Estate Excellence"
-  },
-  "js": {
-    "applied": "Applied!",
-    "from": "from",
-    "up_to": "up to",
-    "beds_label": "beds",
-    "baths_label": "baths",
-    "success_inquiry": "Thank you! Your inquiry has been sent. We will contact you soon.",
-    "close": "Close",
-    "error_generic": "Something went wrong. Please try again.",
-    "fill_required": "Please fill all required fields.",
-    "loading": "Loading..."
-  },
-  "header": {
-    "language_label": "Language:",
-    "navigation": [
-      {
-        "label": "Home",
-        "url": "/"
-      },
-      {
-        "label": "Properties",
-        "url": "/properties"
-      },
-      {
-        "label": "About",
-        "url": "/about"
-      },
-      {
-        "label": "Invest",
-        "url": "/invest"
-      },
-      {
-        "label": "Contact",
-        "url": "/contact"
-      },
-      {
-        "label": "Blog",
-        "url": "/blog"
-      }
-    ],
-    "actions": {
-      "contact": "Contact Us",
-      "agent": "Become Agent"
-    }
-  },
-  "home": {
-    "hero": {
-      "agency_label": "Exclusive Real Estate Advisor in Costa Blanca",
-      "title": "Find Your Dream <br class=\"hidden md:block\"> Apartment",
-      "description": "Explore our curated list of luxury properties designed for your ultimate comfort and style.",
-      "form": {
-        "search_label": "Search Property",
-        "search_placeholder": "Property name...",
-        "location_label": "Location",
-        "location_placeholder": "Select Location",
-        "type_label": "Property Type",
-        "location_options": {
-          "dhaka": "Dhaka",
-          "chittagong": "Chittagong",
-          "mymensingh": "Mymensingh"
-        },
-        "property_types": {
-          "apartment": "Apartment",
-          "luxury": "Luxury Estate",
-          "villa": "Villa"
-        },
-        "search_button": "Search Now"
-      }
+    "brand": {
+        "name": "Capital Union Investment",
+        "platform": "Capital Union Investment",
+        "email": "info@capitalunioninvestment.com",
+        "tagline": "Real Estate Excellence"
     },
-    "featured": {
-      "label": "Exclusive Listings",
-      "title": "Featured Properties",
-      "description": "Handpicked properties just for you.",
-      "beds": "Beds",
-      "baths": "Baths",
-      "pool": "Pool",
-      "sqft": "Sqft",
-      "view_all": "ALL PROPERTIES"
+    "js": {
+        "applied": "Applied!",
+        "from": "from",
+        "up_to": "up to",
+        "beds_label": "beds",
+        "baths_label": "baths",
+        "success_inquiry": "Thank you! Your inquiry has been sent. We will contact you soon.",
+        "close": "Close",
+        "error_generic": "Something went wrong. Please try again.",
+        "fill_required": "Please fill all required fields.",
+        "loading": "Loading..."
     },
-    "why_choose": {
-      "title": "Why choose Capital Union Investment",
-      "description": "From 2008 helping over 200 international families successfully buy, sell, and invest in property in Spain",
-      "features": [
-        {
-          "title": "Independent, Client-First Advisory",
-          "description": "Capital Union Investment represents the buyer and the investor — not the property, ensuring objective recommendations with no conflict of interest."
-        },
-        {
-          "title": "Tailored Investment Strategy (No Catalogs)",
-          "description": "Every project starts from scratch based on your profile, goals, and risk level — not from pre-selected listings or fixed portfolios."
-        },
-        {
-          "title": "Full Market Access",
-          "description": "Properties are sourced across the entire market, not limited to internal listings or specific developers, allowing access to real opportunities."
-        },
-        {
-          "title": "End-to-End Service",
-          "description": "From search and negotiation to legal, administrative, and after-sales support, the entire process is managed with precision and continuity."
-        },
-        {
-          "title": "Proven Investment Expertise",
-          "description": "Experience in residential, rental, commercial, hotel, and industrial assets ensures a strategic and data-driven approach to investment decisions."
-        },
-        {
-          "title": "Deep Legal & Transactional Knowledge",
-          "description": "Nearly two decades of hands-on experience coordinating transactions ensures risk prevention, legal security, and smooth execution."
-        }
-      ]
-    },
-    "stats": {
-      "listed": "Properties Listed",
-      "families": "Happy Families",
-      "visitors": "Monthly Visitors",
-      "satisfaction": "Customer Satisfaction"
-    },
-    "faq": {
-      "eyebrow": "FAQ",
-      "common_subtitle": "Everything you need to know about buying, investing, and living in Costa Blanca.",
-      "frequently_asked": "Frequently Asked<br>Questions",
-      "contact_button": "Contact Support"
-    }
-  },
-  "pages": {
-    "about": {
-      "hero": {
-        "title": "About Me",
-        "bg_text": "About Me",
-        "subtitle": "Contact Capital Union Investment for Elegant Solutions in Property Investments"
-      },
-      "story": {
-        "badge": "MY STORY",
-        "title": "Independent Real Estate Advisor in Costa Blanca Since 2008",
-        "description": "Independent real estate advisor based in the Costa Blanca, with a proven track record of assisting over 200 international families in property purchases, sales, and strategic investments. I provide a full range of real estate services tailored to clients who value legal security, transparency, and a personalized approach.",
-        "features": [
-          "Full-service support throughout the entire property process",
-          "Personalized strategy based on client profile and investment goals",
-          "Strong focus on legal security and risk prevention",
-          "Long-term value and efficient, seamless transactions"
-        ]
-      },
-      "how_we_work": {
-        "badge": "Work Flow",
-        "title": "How We Bring Your <br> <span class='text-secondary'>Vision to Life</span>",
-        "subtitle": "From the initial consultation to the final delivery, we follow a meticulous process to ensure your satisfaction.",
-        "steps": [
-          {
-            "id": "01",
-            "title": "Discovery",
-            "description": "We listen to your goals and analyze site potential to create a strategic roadmap."
-          },
-          {
-            "id": "02",
-            "title": "Design",
-            "description": "Our architects craft bespoke blueprints that balance aesthetics with functionality."
-          },
-          {
-            "id": "03",
-            "title": "Build",
-            "description": "Using premium materials and expert labor, we transform designs into concrete reality."
-          },
-          {
-            "id": "04",
-            "title": "Deliver",
-            "description": "A final rigorous quality check ensures everything meets our 1988-standard of excellence."
-          }
-        ]
-      },
-      "philosophy": {
-        "badge": "Our Philosophy",
-        "title": "The Core Pillars That <br> Define Our Craft",
-        "subtitle": "Discover the fundamental values that guide our vision and commitment to excellence in every project we undertake.",
-        "values": [
-          {
-            "id": "01",
-            "title": "Property Search & Acquisition",
-            "description": "Personalized property search based on your profile, budget, and objectives, covering the entire market to identify the best opportunities in new-build and resale properties."
-          },
-          {
-            "id": "02",
-            "title": "Sales & Investment Advisory",
-            "description": "Strategic guidance for buying, selling, and investing in real estate, including market analysis, property valuation, and negotiation to secure the best conditions."
-          },
-          {
-            "id": "03",
-            "title": "Legal & Transaction Coordination",
-            "description": "Full coordination of the legal process, including contract review, notarial procedures, and collaboration with trusted legal professionals to ensure safe and secure transactions."
-          },
-          {
-            "id": "04",
-            "title": "Administrative Support for International Clients",
-            "description": "Complete assistance with key procedures such as NIE application, opening bank accounts, mortgage support, utility transfers, and tax management."
-          },
-          {
-            "id": "05",
-            "title": "Relocation & Settlement Services",
-            "description": "Guidance for clients relocating to Spain, including residency procedures, local registration, healthcare access, and support with schools and integration."
-          },
-          {
-            "id": "06",
-            "title": "After-Sales & Property Management",
-            "description": "Ongoing support after completion, including property management, rental services, renovations coordination, and long-term assistance to protect your investment."
-          }
-        ]
-      },
-      "leadership": {
-        "badge": "Executive Message",
-        "years_label": "Years of Integrity",
-        "title": "Executive Message",
-        "message": "At Capital Union Investment, my approach is built on experience, precision, and a deep understanding of the Spanish property market.<br />With nearly two decades of hands-on experience, I have had the privilege of guiding international clients through property acquisitions, sales, and investment decisions with a strong focus on legal security and long-term value. Since beginning my career in 2008, I have developed a comprehensive expertise across all stages of the real estate process — from transaction management and legal coordination to new-build development analysis and investment strategy.<br />My background also includes leading short-term rental operations, providing a clear and practical understanding of real market performance, profitability, and asset optimization. This allows me to offer clients not just properties, but well-structured investment opportunities aligned with their goals.<br />My commitment is simple: to deliver a highly personalized, transparent, and results-driven service that ensures confidence, efficiency, and long-term success for every client.",
-        "name": "Anna Alizarenko",
-        "role": "Founder & Independent Real Estate Advisor"
-      }
-      
-    },
-    "properties": {
-      "title": "Exclusive Properties",
-      "subtitle": "Discover a curated selection of our finest listings.",
-      "hero_banner": {
-        "bg_text": "Market"
-      },
-      "grid_header": {
-        "showing_result": "Search Results",
-        "items_available": "Properties Found",
-        "range": "Showing %1$s–%2$s",
-        "no_results": "Try adjusting your filters.",
-        "view_grid": "Grid view",
-        "view_list": "List view",
-        "sort_by": "Sort by",
-        "filters_active": "Filters Active"
-      },
-      "sort": {
-        "label": "Sort By",
-        "newest": "Newest First",
-        "oldest": "Oldest First",
-        "price_low": "Price: Low to High",
-        "price_high": "Price: High to Low",
-        "area_low": "Area: Smallest First",
-        "area_high": "Area: Largest First"
-      },
-      "pagination": {
-        "prev": "Previous page",
-        "next": "Next page",
-        "go_to": "Go to page %s"
-      },
-      "filters": {
-        "all": "All Properties",
-        "buy": "For Sale",
-        "rent": "For Rent",
-        "type": "Property Type",
-        "location": "Location",
-        "location_placeholder": "City, address, zip…",
-        "price": "Price Range",
-        "search": "Search Properties",
-        "min_price": "Min Price",
-        "max_price": "Max Price",
-        "min_placeholder": "Min",
-        "max_placeholder": "Max",
-        "beds": "Bedrooms",
-        "baths": "Bathrooms",
-        "any": "Any",
-        "status": "Property Status",
-        "all_tabs": "All",
-        "new_build": "New Build",
-        "resale": "Resale",
-        "features": "Amenities",
-        "reset": "Reset Filters",
-        "reset_button": "Reset all",
-        "apply": "Apply Filters",
-        "apply_button": "Apply filters",
-        "filter_results": "Filter results",
-        "filters_active": "Filters applied",
-        "refine_search": "Refine your search",
-        "sidebar_sr_description": "Property search filter sidebar with status, type, price, bedrooms, and bathrooms filters",
-        "plus_label": "%s+"
-      },
-      "meta": {
-        "sale": "For Sale",
-        "rent": "For Rent",
-        "apartment": "Apartment",
-        "villa": "Villa",
-        "penthouse": "Penthouse",
-        "townhouse": "Townhouse",
-        "shop": "Commercial",
-        "not_found": "Property not found."
-      },
-      "categories": {
-        "title": "Explore by Category",
-        "subtitle": "Find the perfect type of home that suits your lifestyle.",
-        "types": [
-          {
-            "name": "Villa",
-            "slug": "villa",
-            "count": "View All",
-            "icon": "home"
-          },
-          {
-            "name": "Apartment",
-            "slug": "apartment",
-            "count": "View All",
-            "icon": "building"
-          },
-          {
-            "name": "Townhouse",
-            "slug": "townhouse",
-            "count": "View All",
-            "icon": "townhouse"
-          },
-          {
-            "name": "Bungalow",
-            "slug": "bungalow",
-            "count": "View All",
-            "icon": "home"
-          }
-        ]
-      },
-      "actions": {
-        "view_details": "View Details"
-      },
-      "cta": {
-        "title": "List Your Property with Us",
-        "subtitle": "Join thousands of satisfied homeowners who found the right buyers through our platform.",
-        "button": "Get Started Now",
-        "eyebrow": "Opportunity Awaits",
-        "stat_listings": "Active Listings",
-        "stat_clients": "Happy Clients",
-        "stat_experience": "Years Experience",
-        "button_primary": "Browse Listings",
-        "button_secondary": "Talk to an Agent",
-        "badge_licensed": "Licensed & Regulated",
-        "badge_secure": "Secure Transactions",
-        "badge_support": "24/7 Client Support",
-        "badge_verified": "Verified Listings Only"
-      
-      }
-    },
-    "contact": {
-      "hero": {
-        "title": "Get in Touch",
-        "bg_text": "Contact",
-        "subtitle": "Reach out to Capital Union Investment's dedicated team for tailored property investment strategies and expert guidance."
-      },
-      "info": {
-        "badge": "Capital Union Investment",
-        "title": "Get in touch",
-        "company": "Capital Union Investment",
-        "description": "Get in touch for expert guidance in property investments and premium real estate solutions in Alicante.",
-        "office_label": "Office Address",
-        "office_address": "Avenidad de La Constitucion\nFormentera del Segura 03179\n(Alicante)",
-        "email_label": "Email Us",
-        "email_value": "info@capitalunioninvestment.com",
-        "phone_label": "Call Directly",
-        "phone_value": "+34 639 31 58 61",
-        "hours_label": "Working Hours",
-        "hours_value": "Mon-Fri 9 am - 8.30 pm"
-      },
-      "form": {
-        "title": "Send us a Message",
-        "first_name_label": "First Name",
-        "first_name_placeholder": "First name",
-        "last_name_label": "Last Name",
-        "last_name_placeholder": "Last name",
-        "email_label": "Email address",
-        "email_placeholder": "Email address",
-        "phone_label": "Phone number",
-        "phone_placeholder": "Phone number",
-        "property_info_label": "Property Information",
-        "property_type_placeholder": "Type",
-        "zip_label": "Zip code",
-        "zip_placeholder": "Zip code",
-        "city_label": "City",
-        "city_placeholder": "City",
-        "bedrooms_label": "N. of bedrooms",
-        "bedrooms_placeholder": "N. of bedrooms",
-        "bathrooms_label": "N. of bathrooms",
-        "bathrooms_placeholder": "N. of bathrooms",
-        "budget_label": "Your budget",
-        "budget_placeholder": "Your budget",
-        "submit": "Submit Application"
-      }
-    },
-    "invest": {
-      "hero": {
-        "title": "Investment Opportunities",
-        "bg_text": "Invest",
-        "subtitle": "Secure your future with high-yield real estate portfolios and exclusive property developments."
-      },
-      "philosophy": {
-        "badge": "Institutional Grade Strategy",
-        "title": "A Disciplined Approach To <br> Capital Preservation.",
-        "focus_area_label": "Focus Area",
-        "focus_area_title": "Physical Asset Integrity",
-        "description": "At Capital Union, our philosophy is rooted in the preservation of generational wealth. We prioritize physical assets with long-term social utility.",
-        "quote": "\"We do not chase market trends; instead, we focus on intrinsic value and economic resilience to secure the future for our partners.\"",
-        "items": [
-          {
-            "id": "01",
-            "title": "Risk Discipline",
-            "description": "Conservative entry points with high-margin safety nets for every capital deployment."
-          },
-          {
-            "id": "02",
-            "title": "Asset Preservation",
-            "description": "Focusing on premium locations and sustainable structures that endure time."
-          }
-        ]
-      },
-      "growth": {
-        "title": "Smart Real Estate Investing",
-        "subtitle": "Build your wealth through high-growth real estate assets in prime locations.",
-        "items": [
-          {
-            "title": "Consistent ROI",
-            "description": "Enjoy annual returns ranging from 8% to 15% on prime commercial and residential properties."
-          },
-          {
-            "title": "Secure Assets",
-            "description": "Every property is 100% legally vetted with physical title deeds and government approval."
-          },
-          {
-            "title": "Low Entry Barrier",
-            "description": "Start your real estate journey with a minimum investment. Luxury property ownership is now accessible."
-          }
+    "header": {
+        "language_label": "Language:",
+        "navigation": [
+            {
+                "label": "Home",
+                "url": "/"
+            },
+            {
+                "label": "Properties",
+                "url": "/properties"
+            },
+            {
+                "label": "About",
+                "url": "/about"
+            },
+            {
+                "label": "Invest",
+                "url": "/invest"
+            },
+            {
+                "label": "Contact",
+                "url": "/contact"
+            },
+            {
+                "label": "Blog",
+                "url": "/blog"
+            }
         ],
-        "cta": {
-          "title": "Ready to secure your future?",
-          "subtitle": "Download our 2024 Investment Guide for free.",
-          "button": "Get Investment Guide"
+        "actions": {
+            "contact": "Contact Us",
+            "agent": "Become Agent"
         }
-      },
-      "properties_label": "Exclusive Opportunities",
-      "properties_title": "Prime Real Estate Investment Portfolio",
-      "properties_subtitle": "Discover hand-picked properties with high yield potential and strong capital appreciation in the most sought-after areas of Alicante.",
-      "no_properties": "More investment opportunities are being analyzed. Check back soon.",
-      "see_all_button": "See All Investment Property",
-      "hero_banner": {
-        "bg_text": "Portfolio"
-      },
-      "onboarding": {
-        "badge": "Exclusive Onboarding",
-        "title": "Start Your Investment Journey",
-        "subtitle": "Complete the inquiry form to help our capital relations team understand your objectives.",
-        "form": {
-          "name_label": "Full Legal Name *",
-          "name_placeholder": "e.g. Ahamed Asif",
-          "email_label": "Email Address *",
-          "email_placeholder": "e.g. asif@example.com",
-          "questions": [
-            "Existing Client?",
-            "Own Spanish Property?",
-            "Tax Resident of Spain?"
-          ],
-          "options": {
-            "no": "No",
-            "yes": "Yes"
-          },
-          "interest_label": "Areas of Interest *",
-          "interests": [
-            "Land plots",
-            "Residential",
-            "Commercial",
-            "Hotels",
-            "Agriculture",
-            "Other"
-          ],
-          "amount_label": "Investment Amount *",
-          "amounts": [
-            "€1,000,000 - €2,000,000",
-            "€2,000,000 - €3,000,000",
-            "€3,000,000 - €4,000,000",
-            "€4,000,000 - €5,000,000",
-            "€5,000,000 - €10,000,000",
-            "€10,000,000 - €20,000,000",
-            "€20,000,000+"
-          ],
-          "submit": "Submit Application",
-          "footer": "Encrypted & Confidential Portal"
+    },
+    "home": {
+        "hero": {
+            "agency_label": "Exclusive Real Estate Advisor in Costa Blanca",
+            "title": "Find Your Dream <br class=\"hidden md:block\"> Apartment",
+            "description": "Explore our curated list of luxury properties designed for your ultimate comfort and style.",
+            "form": {
+                "search_label": "Search Property",
+                "search_placeholder": "Property name...",
+                "location_label": "Location",
+                "location_placeholder": "Select Location",
+                "type_label": "Property Type",
+                "location_options": {
+                    "dhaka": "Dhaka",
+                    "chittagong": "Chittagong",
+                    "mymensingh": "Mymensingh"
+                },
+                "property_types": {
+                    "apartment": "Apartment",
+                    "luxury": "Luxury Estate",
+                    "villa": "Villa"
+                },
+                "search_button": "Search Now"
+            }
+        },
+        "featured": {
+            "label": "Exclusive Listings",
+            "title": "Featured Properties",
+            "description": "Handpicked properties just for you.",
+            "beds": "Beds",
+            "baths": "Baths",
+            "pool": "Pool",
+            "sqft": "Sqft",
+            "view_all": "ALL PROPERTIES"
+        },
+        "why_choose": {
+            "title": "Why choose Capital Union Investment",
+            "description": "From 2008 helping over 200 international families successfully buy, sell, and invest in property in Spain",
+            "features": [
+                {
+                    "title": "Independent, Client-First Advisory",
+                    "description": "Capital Union Investment represents the buyer and the investor — not the property, ensuring objective recommendations with no conflict of interest."
+                },
+                {
+                    "title": "Tailored Investment Strategy (No Catalogs)",
+                    "description": "Every project starts from scratch based on your profile, goals, and risk level — not from pre-selected listings or fixed portfolios."
+                },
+                {
+                    "title": "Full Market Access",
+                    "description": "Properties are sourced across the entire market, not limited to internal listings or specific developers, allowing access to real opportunities."
+                },
+                {
+                    "title": "End-to-End Service",
+                    "description": "From search and negotiation to legal, administrative, and after-sales support, the entire process is managed with precision and continuity."
+                },
+                {
+                    "title": "Proven Investment Expertise",
+                    "description": "Experience in residential, rental, commercial, hotel, and industrial assets ensures a strategic and data-driven approach to investment decisions."
+                },
+                {
+                    "title": "Deep Legal & Transactional Knowledge",
+                    "description": "Nearly two decades of hands-on experience coordinating transactions ensures risk prevention, legal security, and smooth execution."
+                }
+            ]
+        },
+        "stats": {
+            "listed": "Properties Listed",
+            "families": "Happy Families",
+            "visitors": "Monthly Visitors",
+            "satisfaction": "Customer Satisfaction"
+        },
+        "faq": {
+            "eyebrow": "FAQ",
+            "common_subtitle": "Everything you need to know about buying, investing, and living in Costa Blanca.",
+            "frequently_asked": "Frequently Asked<br>Questions",
+            "contact_button": "Contact Support"
         }
-      
-      }
     },
-    "error_404": {
-      "bg_text": "404",
-      "subtitle": "Oops! Page Not Found",
-      "message": "We've searched our entire portfolio, but we couldn't find anything at",
-      "search_placeholder": "Search for properties...",
-      "back_home": "Back to Home",
-      "view_properties": "View All Properties"
-    },
-    "blog": {
-      "hero": {
-        "title": "Blog & News",
-        "bg_text": "Journal",
-        "subtitle": "Stay updated with the latest trends, news, and insights from the Costa Blanca real estate market."
-      },
-      "grid": {
-        "title": "Latest Articles",
-        "subtitle": "Expert advice, market analysis, and local news.",
-        "read_more": "READ ARTICLE",
-        "no_posts": "No articles found. Check back soon!"
-      },
-      "ui": {
-        "min_read": "Min Read",
-        "written_by": "Written by",
-        "journalist": "Journalist",
-        "share_story": "Share this story",
-        "back_to_journal": "Back to All Journal Entries",
-        "more_from": "More From the Journal",
-        "prev_story": "Previous Story",
-        "next_story": "Next Story",
-        "all_stories": "All Stories",
-        "no_news": "We haven't posted any news items yet. Check back soon!",
-        "no_blogs": "Our experts are writing new articles. Please check back later!",
-        "explore_all_news": "Explore All News",
-        "view_full_blog": "View Full Blog",
-        "back_overview": "Back to Journal Overview",
-        "subscribe_label": "Newsletter",
-        "subscribe_title": "Stay informed on Costa Blanca property",
-        "subscribe_text": "Weekly market analysis, investment insights, and featured listings — direct to your inbox.",
-        "subscribe_btn": "Subscribe to Journal"
-      },
-      "sections": {
-        "news_label": "Company Updates",
-        "news_title": "Latest News & Announcements",
-        "blog_label": "Expert Insights",
-        "blog_title": "Market Insights & Articles"
-      }
-    },
-    "property_details": {
-      "bg_text": "Details",
-      "subtitle": "Explore the premium details and investment potential of this property",
-      "new_build": "New Build",
-      "resale": "Resale",
-      "for": "For",
-      "description": "Description",
-      "features": "Features",
-      "bedrooms": "Bedrooms",
-      "bathrooms": "Bathrooms",
-      "building": "Building",
-      "lot_size": "Lot Size",
-      "view_photos": "View Photos",
-      "form": {
-        "contact_us": "Contact Us",
-        "name": "Name",
-        "number": "Number",
-        "email": "Email",
-        "message": "I'm interested in this property.",
-        "submit": "SEND MESSAGE"
-      }
-    },
-    "privacy_policy": {
-      "hero": {
-        "title": "Privacy Policy",
-        "bg_text": "Privacy",
-        "subtitle": "How we collect, use, and handle your data."
-      },
-      "content": {
-        "title": "Privacy Policy",
-        "description": "This Privacy Policy outlines how your data is managed across our platforms. We respect your privacy and are committed to protecting it through our compliance with this policy.",
-        "sections": [
-          {
-            "title": "1. Information Collection",
-            "text": "We collect several different types of information for various purposes to provide and improve our Service to you. This includes personally identifiable information such as email address, first name and last name, phone number, and address."
-          },
-          {
-            "title": "2. How We Use Your Data",
-            "text": "Capital Union uses the collected data for various purposes: to provide and maintain our Service, to notify you about changes, to provide customer support, to gather analysis so that we can improve our Service, and to monitor the usage of our Service."
-          },
-          {
-            "title": "3. Data Security",
-            "text": "The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security."
-          }
-        ]
-      }
-    },
-    "terms_of_service": {
-      "hero": {
-        "title": "Terms of Service",
-        "bg_text": "Terms",
-        "subtitle": "Rules and guidelines for using our platform."
-      },
-      "content": {
-        "title": "Terms of Service",
-        "description": "By accessing or using our platform, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access our services.",
-        "sections": [
-          {
-            "title": "1. Intellectual Property",
-            "text": "The Service and its original content, features, and functionality are and will remain the exclusive property of Capital Union and its licensors. The Service is protected by copyright, trademark, and other laws of both the country and foreign countries."
-          },
-          {
-            "title": "2. User Obligations",
-            "text": "When you create an account with us, you must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service."
-          },
-          {
-            "title": "3. Limitation of Liability",
-            "text": "In no event shall Capital Union, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses."
-          }
-        ]
-      }
-    },
-    "cookie_policy": {
-      "hero": {
-        "title": "Cookie Policy",
-        "bg_text": "Cookies",
-        "subtitle": "Information about our use of cookies."
-      },
-      "content": {
-        "title": "Cookie Policy",
-        "description": "Our site uses cookies to distinguish you from other users. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site.",
-        "sections": [
-          {
-            "title": "1. Types of Cookies We Use",
-            "text": "We use Session Cookies to operate our Service. We use Preference Cookies to remember your preferences and various settings. We use Security Cookies for security purposes. All of these ensure an optimal and seamless browsing experience."
-          },
-          {
-            "title": "2. Third-Party Cookies",
-            "text": "In addition to our own cookies, we may also use various third-parties cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and so on. These providers have their own strict data policies."
-          },
-          {
-            "title": "3. Managing Your Cookies",
-            "text": "You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service. We recommend retaining them for full platform usage."
-          }
-        ]
-      }
-    }
-  },
-  "footer": {
-    "tagline": "Find your dream home with the most comprehensive real estate platform.",
-    "copyright": "All rights reserved.",
-    "menus": {
-      "quick_links": "Quick Links",
-      "company": "Company",
-      "legal": "Legal"
-    },
-    "links": {
-      "buy": "Buy Property",
-      "rent": "Rent Property",
-      "sell": "Sell Property",
-      "services": "Services",
-      "about": "About",
-      "contact": "Contact",
-      "careers": "Careers",
-      "blog": "Blog",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "cookie": "Cookie Policy"
-    }
-  },
-  "common_faq_tabs": [
-    {
-      "key": "general",
-      "label": "General Process",
-      "items": [
-        {
-          "question": "What is the process of buying a property in Spain?",
-          "answer": "The process involves selecting a property, making a reservation, signing a private contract, and completing the purchase in the notary."
+    "pages": {
+        "about": {
+            "hero": {
+                "title": "About Me",
+                "bg_text": "About Me",
+                "subtitle": "Contact Capital Union Investment for Elegant Solutions in Property Investments"
+            },
+            "story": {
+                "badge": "MY STORY",
+                "title": "Independent Real Estate Advisor in Costa Blanca Since 2008",
+                "description": "Independent real estate advisor based in the Costa Blanca, with a proven track record of assisting over 200 international families in property purchases, sales, and strategic investments. I provide a full range of real estate services tailored to clients who value legal security, transparency, and a personalized approach.",
+                "features": [
+                    "Full-service support throughout the entire property process",
+                    "Personalized strategy based on client profile and investment goals",
+                    "Strong focus on legal security and risk prevention",
+                    "Long-term value and efficient, seamless transactions"
+                ]
+            },
+            "how_we_work": {
+                "badge": "Work Flow",
+                "title": "How We Bring Your <br> <span class='text-secondary'>Vision to Life</span>",
+                "subtitle": "From the initial consultation to the final delivery, we follow a meticulous process to ensure your satisfaction.",
+                "steps": [
+                    {
+                        "id": "01",
+                        "title": "Discovery",
+                        "description": "We listen to your goals and analyze site potential to create a strategic roadmap."
+                    },
+                    {
+                        "id": "02",
+                        "title": "Design",
+                        "description": "Our architects craft bespoke blueprints that balance aesthetics with functionality."
+                    },
+                    {
+                        "id": "03",
+                        "title": "Build",
+                        "description": "Using premium materials and expert labor, we transform designs into concrete reality."
+                    },
+                    {
+                        "id": "04",
+                        "title": "Deliver",
+                        "description": "A final rigorous quality check ensures everything meets our 1988-standard of excellence."
+                    }
+                ]
+            },
+            "philosophy": {
+                "badge": "Our Philosophy",
+                "title": "The Core Pillars That <br> Define Our Craft",
+                "subtitle": "Discover the fundamental values that guide our vision and commitment to excellence in every project we undertake.",
+                "values": [
+                    {
+                        "id": "01",
+                        "title": "Property Search & Acquisition",
+                        "description": "Personalized property search based on your profile, budget, and objectives, covering the entire market to identify the best opportunities in new-build and resale properties."
+                    },
+                    {
+                        "id": "02",
+                        "title": "Sales & Investment Advisory",
+                        "description": "Strategic guidance for buying, selling, and investing in real estate, including market analysis, property valuation, and negotiation to secure the best conditions."
+                    },
+                    {
+                        "id": "03",
+                        "title": "Legal & Transaction Coordination",
+                        "description": "Full coordination of the legal process, including contract review, notarial procedures, and collaboration with trusted legal professionals to ensure safe and secure transactions."
+                    },
+                    {
+                        "id": "04",
+                        "title": "Administrative Support for International Clients",
+                        "description": "Complete assistance with key procedures such as NIE application, opening bank accounts, mortgage support, utility transfers, and tax management."
+                    },
+                    {
+                        "id": "05",
+                        "title": "Relocation & Settlement Services",
+                        "description": "Guidance for clients relocating to Spain, including residency procedures, local registration, healthcare access, and support with schools and integration."
+                    },
+                    {
+                        "id": "06",
+                        "title": "After-Sales & Property Management",
+                        "description": "Ongoing support after completion, including property management, rental services, renovations coordination, and long-term assistance to protect your investment."
+                    }
+                ]
+            },
+            "leadership": {
+                "badge": "Executive Message",
+                "years_label": "Years of Integrity",
+                "title": "Executive Message",
+                "message": "At Capital Union Investment, my approach is built on experience, precision, and a deep understanding of the Spanish property market.<br />With nearly two decades of hands-on experience, I have had the privilege of guiding international clients through property acquisitions, sales, and investment decisions with a strong focus on legal security and long-term value. Since beginning my career in 2008, I have developed a comprehensive expertise across all stages of the real estate process — from transaction management and legal coordination to new-build development analysis and investment strategy.<br />My background also includes leading short-term rental operations, providing a clear and practical understanding of real market performance, profitability, and asset optimization. This allows me to offer clients not just properties, but well-structured investment opportunities aligned with their goals.<br />My commitment is simple: to deliver a highly personalized, transparent, and results-driven service that ensures confidence, efficiency, and long-term success for every client.",
+                "name": "Anna Alizarenko",
+                "role": "Founder & Independent Real Estate Advisor"
+            }
         },
-        {
-          "question": "How long does it take to complete a property purchase?",
-          "answer": "For a second-hand property purchase it takes between 4 to 8 weeks, depending on legal checks and financing. For a new build it can take from 1 month to 3 years, depending on the stage of construction when you buy."
+        "properties": {
+            "title": "Exclusive Properties",
+            "subtitle": "Discover a curated selection of our finest listings.",
+            "hero_banner": {
+                "bg_text": "Market"
+            },
+            "grid_header": {
+                "showing_result": "Search Results",
+                "items_available": "Properties Found",
+                "range": "Showing %1$s–%2$s",
+                "no_results": "Try adjusting your filters.",
+                "view_grid": "Grid view",
+                "view_list": "List view",
+                "sort_by": "Sort by",
+                "filters_active": "Filters Active"
+            },
+            "sort": {
+                "label": "Sort By",
+                "newest": "Newest First",
+                "oldest": "Oldest First",
+                "price_low": "Price: Low to High",
+                "price_high": "Price: High to Low",
+                "area_low": "Area: Smallest First",
+                "area_high": "Area: Largest First"
+            },
+            "pagination": {
+                "prev": "Previous page",
+                "next": "Next page",
+                "go_to": "Go to page %s"
+            },
+            "filters": {
+                "all": "All Properties",
+                "buy": "For Sale",
+                "rent": "For Rent",
+                "type": "Property Type",
+                "location": "Location",
+                "location_placeholder": "City, address, zip…",
+                "price": "Price Range",
+                "search": "Search Properties",
+                "min_price": "Min Price",
+                "max_price": "Max Price",
+                "min_placeholder": "Min",
+                "max_placeholder": "Max",
+                "beds": "Bedrooms",
+                "baths": "Bathrooms",
+                "any": "Any",
+                "status": "Property Status",
+                "all_tabs": "All",
+                "new_build": "New Build",
+                "resale": "Resale",
+                "features": "Amenities",
+                "reset": "Reset Filters",
+                "reset_button": "Reset all",
+                "apply": "Apply Filters",
+                "apply_button": "Apply filters",
+                "filter_results": "Filter results",
+                "filters_active": "Filters applied",
+                "refine_search": "Refine your search",
+                "sidebar_sr_description": "Property search filter sidebar with status, type, price, bedrooms, and bathrooms filters",
+                "plus_label": "%s+"
+            },
+            "meta": {
+                "sale": "For Sale",
+                "rent": "For Rent",
+                "apartment": "Apartment",
+                "villa": "Villa",
+                "penthouse": "Penthouse",
+                "townhouse": "Townhouse",
+                "shop": "Commercial",
+                "not_found": "Property not found."
+            },
+            "categories": {
+                "title": "Explore by Category",
+                "subtitle": "Find the perfect type of home that suits your lifestyle.",
+                "types": [
+                    {
+                        "name": "Villa",
+                        "slug": "villa",
+                        "count": "View All",
+                        "icon": "home"
+                    },
+                    {
+                        "name": "Apartment",
+                        "slug": "apartment",
+                        "count": "View All",
+                        "icon": "building"
+                    },
+                    {
+                        "name": "Townhouse",
+                        "slug": "townhouse",
+                        "count": "View All",
+                        "icon": "townhouse"
+                    },
+                    {
+                        "name": "Bungalow",
+                        "slug": "bungalow",
+                        "count": "View All",
+                        "icon": "home"
+                    }
+                ]
+            },
+            "actions": {
+                "view_details": "View Details"
+            },
+            "cta": {
+                "title": "List Your Property with Us",
+                "subtitle": "Join thousands of satisfied homeowners who found the right buyers through our platform.",
+                "button": "Get Started Now",
+                "eyebrow": "Opportunity Awaits",
+                "stat_listings": "Active Listings",
+                "stat_clients": "Happy Clients",
+                "stat_experience": "Years Experience",
+                "button_primary": "Browse Listings",
+                "button_secondary": "Talk to an Agent",
+                "badge_licensed": "Licensed & Regulated",
+                "badge_secure": "Secure Transactions",
+                "badge_support": "24/7 Client Support",
+                "badge_verified": "Verified Listings Only"
+            }
         },
-        {
-          "question": "Can I buy a property in Spain without being physically present?",
-          "answer": "Yes, the purchase can be completed remotely through a power of attorney."
+        "contact": {
+            "hero": {
+                "title": "Get in Touch",
+                "bg_text": "Contact",
+                "subtitle": "Reach out to Capital Union Investment's dedicated team for tailored property investment strategies and expert guidance."
+            },
+            "info": {
+                "badge": "Capital Union Investment",
+                "title": "Get in touch",
+                "company": "Capital Union Investment",
+                "description": "Get in touch for expert guidance in property investments and premium real estate solutions in Alicante.",
+                "office_label": "Office Address",
+                "office_address": "Avenidad de La Constitucion\nFormentera del Segura 03179\n(Alicante)",
+                "email_label": "Email Us",
+                "email_value": "info@capitalunioninvestment.com",
+                "phone_label": "Call Directly",
+                "phone_value": "+34 639 31 58 61",
+                "hours_label": "Working Hours",
+                "hours_value": "Mon-Fri 9 am - 8.30 pm"
+            },
+            "form": {
+                "title": "Send us a Message",
+                "first_name_label": "First Name",
+                "first_name_placeholder": "First name",
+                "last_name_label": "Last Name",
+                "last_name_placeholder": "Last name",
+                "email_label": "Email address",
+                "email_placeholder": "Email address",
+                "phone_label": "Phone number",
+                "phone_placeholder": "Phone number",
+                "property_info_label": "Property Information",
+                "property_type_placeholder": "Type",
+                "zip_label": "Zip code",
+                "zip_placeholder": "Zip code",
+                "city_label": "City",
+                "city_placeholder": "City",
+                "bedrooms_label": "N. of bedrooms",
+                "bedrooms_placeholder": "N. of bedrooms",
+                "bathrooms_label": "N. of bathrooms",
+                "bathrooms_placeholder": "N. of bathrooms",
+                "budget_label": "Your budget",
+                "budget_placeholder": "Your budget",
+                "submit": "Submit Application"
+            }
         },
-        {
-          "question": "What documents are required to buy a property?",
-          "answer": "You will need a passport and NIE number. You will also be required to provide proof of the source of funds to comply with legal and financial regulations."
+        "invest": {
+            "hero": {
+                "title": "Investment Opportunities",
+                "bg_text": "Invest",
+                "subtitle": "Secure your future with high-yield real estate portfolios and exclusive property developments."
+            },
+            "philosophy": {
+                "badge": "Institutional Grade Strategy",
+                "title": "A Disciplined Approach To <br> Capital Preservation.",
+                "focus_area_label": "Focus Area",
+                "focus_area_title": "Physical Asset Integrity",
+                "description": "At Capital Union, our philosophy is rooted in the preservation of generational wealth. We prioritize physical assets with long-term social utility.",
+                "quote": "\"We do not chase market trends; instead, we focus on intrinsic value and economic resilience to secure the future for our partners.\"",
+                "items": [
+                    {
+                        "id": "01",
+                        "title": "Risk Discipline",
+                        "description": "Conservative entry points with high-margin safety nets for every capital deployment."
+                    },
+                    {
+                        "id": "02",
+                        "title": "Asset Preservation",
+                        "description": "Focusing on premium locations and sustainable structures that endure time."
+                    }
+                ]
+            },
+            "growth": {
+                "title": "Smart Real Estate Investing",
+                "subtitle": "Build your wealth through high-growth real estate assets in prime locations.",
+                "items": [
+                    {
+                        "title": "Consistent ROI",
+                        "description": "Enjoy annual returns ranging from 8% to 15% on prime commercial and residential properties."
+                    },
+                    {
+                        "title": "Secure Assets",
+                        "description": "Every property is 100% legally vetted with physical title deeds and government approval."
+                    },
+                    {
+                        "title": "Low Entry Barrier",
+                        "description": "Start your real estate journey with a minimum investment. Luxury property ownership is now accessible."
+                    }
+                ],
+                "cta": {
+                    "title": "Ready to secure your future?",
+                    "subtitle": "Download our 2024 Investment Guide for free.",
+                    "button": "Get Investment Guide"
+                }
+            },
+            "properties_label": "Exclusive Opportunities",
+            "properties_title": "Prime Real Estate Investment Portfolio",
+            "properties_subtitle": "Discover hand-picked properties with high yield potential and strong capital appreciation in the most sought-after areas of Alicante.",
+            "no_properties": "More investment opportunities are being analyzed. Check back soon.",
+            "see_all_button": "See All Investment Property",
+            "hero_banner": {
+                "bg_text": "Portfolio"
+            },
+            "onboarding": {
+                "badge": "Exclusive Onboarding",
+                "title": "Start Your Investment Journey",
+                "subtitle": "Complete the inquiry form to help our capital relations team understand your objectives.",
+                "form": {
+                    "name_label": "Full Legal Name *",
+                    "name_placeholder": "e.g. Ahamed Asif",
+                    "email_label": "Email Address *",
+                    "email_placeholder": "e.g. asif@example.com",
+                    "questions": [
+                        "Existing Client?",
+                        "Own Spanish Property?",
+                        "Tax Resident of Spain?"
+                    ],
+                    "options": {
+                        "no": "No",
+                        "yes": "Yes"
+                    },
+                    "interest_label": "Areas of Interest *",
+                    "interests": [
+                        "Land plots",
+                        "Residential",
+                        "Commercial",
+                        "Hotels",
+                        "Agriculture",
+                        "Other"
+                    ],
+                    "amount_label": "Investment Amount *",
+                    "amounts": [
+                        "€1,000,000 - €2,000,000",
+                        "€2,000,000 - €3,000,000",
+                        "€3,000,000 - €4,000,000",
+                        "€4,000,000 - €5,000,000",
+                        "€5,000,000 - €10,000,000",
+                        "€10,000,000 - €20,000,000",
+                        "€20,000,000+"
+                    ],
+                    "submit": "Submit Application",
+                    "footer": "Encrypted & Confidential Portal"
+                }
+            }
         },
-        {
-          "question": "Do I need a Spanish bank account to purchase property?",
-          "answer": "Yes, a Spanish bank account is typically required to manage payments and ongoing expenses. If you already have an EU bank account, you can use it for maintenance costs, but opening a Spanish account is recommended for easier management."
+        "error_404": {
+            "bg_text": "404",
+            "subtitle": "Oops! Page Not Found",
+            "message": "We've searched our entire portfolio, but we couldn't find anything at",
+            "search_placeholder": "Search for properties...",
+            "back_home": "Back to Home",
+            "view_properties": "View All Properties"
+        },
+        "blog": {
+            "hero": {
+                "title": "Blog & News",
+                "bg_text": "Journal",
+                "subtitle": "Stay updated with the latest trends, news, and insights from the Costa Blanca real estate market."
+            },
+            "grid": {
+                "title": "Latest Articles",
+                "subtitle": "Expert advice, market analysis, and local news.",
+                "read_more": "READ ARTICLE",
+                "no_posts": "No articles found. Check back soon!"
+            },
+            "ui": {
+                "min_read": "Min Read",
+                "written_by": "Written by",
+                "journalist": "Journalist",
+                "share_story": "Share this story",
+                "back_to_journal": "Back to All Journal Entries",
+                "more_from": "More From the Journal",
+                "prev_story": "Previous Story",
+                "next_story": "Next Story",
+                "all_stories": "All Stories",
+                "no_news": "We haven't posted any news items yet. Check back soon!",
+                "no_blogs": "Our experts are writing new articles. Please check back later!",
+                "explore_all_news": "Explore All News",
+                "view_full_blog": "View Full Blog",
+                "back_overview": "Back to Journal Overview",
+                "subscribe_label": "Newsletter",
+                "subscribe_title": "Stay informed on Costa Blanca property",
+                "subscribe_text": "Weekly market analysis, investment insights, and featured listings — direct to your inbox.",
+                "subscribe_btn": "Subscribe to Journal"
+            },
+            "sections": {
+                "news_label": "Company Updates",
+                "news_title": "Latest News & Announcements",
+                "blog_label": "Expert Insights",
+                "blog_title": "Market Insights & Articles"
+            }
+        },
+        "property_details": {
+            "bg_text": "Details",
+            "subtitle": "Explore the premium details and investment potential of this property",
+            "new_build": "New Build",
+            "resale": "Resale",
+            "for": "For",
+            "description": "Description",
+            "features": "Features",
+            "bedrooms": "Bedrooms",
+            "bathrooms": "Bathrooms",
+            "building": "Building",
+            "lot_size": "Lot Size",
+            "view_photos": "View Photos",
+            "form": {
+                "contact_us": "Contact Us",
+                "name": "Name",
+                "number": "Number",
+                "email": "Email",
+                "message": "I'm interested in this property.",
+                "submit": "SEND MESSAGE"
+            }
+        },
+        "privacy_policy": {
+            "hero": {
+                "title": "Privacy Policy",
+                "bg_text": "Privacy",
+                "subtitle": "How we collect, use, and handle your data."
+            },
+            "content": {
+                "title": "Privacy Policy",
+                "description": "This Privacy Policy outlines how your data is managed across our platforms. We respect your privacy and are committed to protecting it through our compliance with this policy.",
+                "sections": [
+                    {
+                        "title": "1. Information Collection",
+                        "text": "We collect several different types of information for various purposes to provide and improve our Service to you. This includes personally identifiable information such as email address, first name and last name, phone number, and address."
+                    },
+                    {
+                        "title": "2. How We Use Your Data",
+                        "text": "Capital Union uses the collected data for various purposes: to provide and maintain our Service, to notify you about changes, to provide customer support, to gather analysis so that we can improve our Service, and to monitor the usage of our Service."
+                    },
+                    {
+                        "title": "3. Data Security",
+                        "text": "The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security."
+                    }
+                ]
+            },
+            "page": {
+                "privacy_policy": "Privacy Policy",
+                "legal_notice": "Legal Notice",
+                "last_updated": "Last Updated: June 2026",
+                "intro": "In accordance with Regulation (EU) 2016/679 (General Data Protection Regulation – GDPR) and Spanish Organic Law 3/2018 on Personal Data Protection and Guarantee of Digital Rights (LOPDGDD), users are hereby informed that personal data collected through this website will be processed in accordance with this policy.",
+                "brand_name": "Capital Union Investment",
+                "sec1_title": "1. Data Controller",
+                "sec1_desc": "The processing of personal data collected through this website is managed by:",
+                "trade_name": "Trade Name",
+                "nif": "NIF",
+                "email": "Email",
+                "phone": "Telephone",
+                "address": "Address",
+                "address_val": "Avenida de la Constitución, Formentera del Segura, 03179 (Alicante), Spain",
+                "sec2_title": "2. Purpose of Processing",
+                "sec2_desc": "The personal data provided by users may be used for the following purposes:",
+                "sec2_items": [
+                    "Responding to inquiries submitted through contact forms.",
+                    "Managing requests for information regarding real estate properties.",
+                    "Arranging property viewings.",
+                    "Managing commercial and contractual relationships.",
+                    "Contacting potential clients.",
+                    "Sending information about properties, promotions, and investment opportunities.",
+                    "Managing communications via email and WhatsApp.",
+                    "Conducting statistical analysis and improving services.",
+                    "Complying with legal obligations."
+                ],
+                "sec3_title": "3. Legal Basis for Processing",
+                "sec3_items": [
+                    "The user's explicit consent.",
+                    "The implementation of pre-contractual measures requested by the user.",
+                    "Compliance with legal obligations.",
+                    "Legitimate interest in managing and improving services."
+                ],
+                "sec4_title": "4. Data Retention",
+                "sec4_desc": "Personal data will be retained for as long as a commercial relationship exists, until the user requests its deletion, or for the periods required by applicable tax, commercial, and administrative regulations.",
+                "sec5_title": "5. Recipients of Data",
+                "sec5_desc": "Personal data may be disclosed to legal firms involved in real estate transactions, notaries, Land Registry Offices, financial institutions (when the user requests financing services), and public authorities. To deliver our services, data may also be processed by our technology service providers:",
+                "sec6_title": "6. User Rights",
+                "sec6_desc": "Users may exercise the following rights: Access, Rectification, Erasure, Objection, Restriction of processing, Data portability, and Withdrawal of consent.",
+                "sec6_rights": [
+                    "Right of Access",
+                    "Right to Rectification",
+                    "Right to Erasure",
+                    "Right to Portability"
+                ],
+                "sec6_box_title": "How to Exercise Your Rights?",
+                "sec6_box_desc": "Send a request with \"GDPR Rights Request\" in the subject line. A copy of a valid identification document may be required to verify identity.",
+                "sec7_title": "7. Security",
+                "sec7_desc": "Capital Union Investment adopts the technical and organizational measures necessary to ensure the security of personal data and to prevent unauthorized access, loss, alteration, disclosure, or improper processing.",
+                "sec8_title": "8. Complaints",
+                "sec8_desc": "If you believe that your rights have not been respected, you may lodge a complaint with the Spanish Data Protection Agency (AEPD).",
+                "ln_intro": "In compliance with Article 10 of Spanish Law 34/2002 on Information Society Services and Electronic Commerce (LSSI-CE), the following legal notice governs the use of this website.",
+                "ln_owner_title": "Website Owner Identification",
+                "ln_ip_title": "Intellectual Property",
+                "ln_ip_desc": "All content available on this website, including but not limited to texts, images, logos, designs, videos, graphics, and other materials, is the property of Capital Union Investment or its respective owners and is protected by applicable intellectual and industrial property laws. Any total or partial reproduction, distribution, modification, or public communication of such content without prior written authorization is strictly prohibited.",
+                "ln_liability_title": "Liability Disclaimer",
+                "ln_liability_desc": "Capital Union Investment shall not be held liable for:",
+                "ln_liability_items": [
+                    "Service interruptions.",
+                    "Technical errors or failures.",
+                    "Damages resulting from improper use of the website.",
+                    "Content available on third-party websites linked from this website."
+                ]
+            }
+        },
+        "terms_of_service": {
+            "hero": {
+                "title": "Terms of Service",
+                "bg_text": "Terms",
+                "subtitle": "Rules and guidelines for using our platform."
+            },
+            "content": {
+                "title": "Terms of Service",
+                "description": "By accessing or using our platform, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access our services.",
+                "sections": [
+                    {
+                        "title": "1. Intellectual Property",
+                        "text": "The Service and its original content, features, and functionality are and will remain the exclusive property of Capital Union and its licensors. The Service is protected by copyright, trademark, and other laws of both the country and foreign countries."
+                    },
+                    {
+                        "title": "2. User Obligations",
+                        "text": "When you create an account with us, you must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service."
+                    },
+                    {
+                        "title": "3. Limitation of Liability",
+                        "text": "In no event shall Capital Union, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses."
+                    }
+                ]
+            }
+        },
+        "cookie_policy": {
+            "hero": {
+                "title": "Cookie Policy",
+                "bg_text": "Cookies",
+                "subtitle": "Information about our use of cookies."
+            },
+            "content": {
+                "title": "Cookie Policy",
+                "description": "Our site uses cookies to distinguish you from other users. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site.",
+                "sections": [
+                    {
+                        "title": "1. Types of Cookies We Use",
+                        "text": "We use Session Cookies to operate our Service. We use Preference Cookies to remember your preferences and various settings. We use Security Cookies for security purposes. All of these ensure an optimal and seamless browsing experience."
+                    },
+                    {
+                        "title": "2. Third-Party Cookies",
+                        "text": "In addition to our own cookies, we may also use various third-parties cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and so on. These providers have their own strict data policies."
+                    },
+                    {
+                        "title": "3. Managing Your Cookies",
+                        "text": "You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service. We recommend retaining them for full platform usage."
+                    }
+                ]
+            },
+            "page": {
+                "cookie_policy": "Cookie Policy",
+                "cookies_used_title": "Cookies Used",
+                "tech_title": "Technical Cookies",
+                "tech_desc": "These cookies are necessary for the proper functioning of WordPress and this website.",
+                "anal_title": "Analytical Cookies",
+                "anal_service": "Google Analytics 4",
+                "anal_desc": "These cookies allow us to analyze user behavior in an aggregated and anonymous manner.",
+                "adv_title": "Advertising Cookies",
+                "adv_service": "Meta Pixel (Facebook and Instagram)",
+                "adv_desc": "These cookies help measure advertising campaign performance and display personalized advertisements.",
+                "manage_title": "Cookie Management",
+                "manage_desc1": "Users may accept, reject, or configure cookies through the cookie consent banner.",
+                "manage_desc2": "Cookie settings can also be modified directly through the user's browser.",
+                "manage_desc3": "",
+                "privacy_link_text": "For further information, please refer to the Privacy Policy."
+            }
         }
-      ]
     },
-    {
-      "key": "international",
-      "label": "International Buyers",
-      "items": [
-        {
-          "question": "What is an NIE number and how do I obtain it?",
-          "answer": "The NIE is a foreign identification number required for any legal or financial transaction in Spain. It can be obtained at a Spanish consulate abroad or at a police station in Spain."
+    "footer": {
+        "tagline": "Find your dream home with the most comprehensive real estate platform.",
+        "copyright": "All rights reserved.",
+        "menus": {
+            "quick_links": "Quick Links",
+            "company": "Company",
+            "legal": "Legal"
         },
-        {
-          "question": "Can foreigners get a mortgage in Spain?",
-          "answer": "Yes, non-residents can obtain a mortgage, usually financing 60–70% of the property value."
-        },
-        {
-          "question": "What are the main differences when buying as a non-resident?",
-          "answer": "Non-residents must comply with additional administrative and financial requirements, but the process is straightforward with proper guidance."
-        },
-        {
-          "question": "Do I need a lawyer to buy property in Spain?",
-          "answer": "A lawyer is highly recommended to ensure legal security and review all documentation."
-        },
-        {
-          "question": "Can I give power of attorney to complete the purchase remotely?",
-          "answer": "Yes, a power of attorney allows a legal representative to complete the entire process on your behalf."
+        "links": {
+            "buy": "Buy Property",
+            "rent": "Rent Property",
+            "sell": "Sell Property",
+            "services": "Services",
+            "about": "About",
+            "contact": "Contact",
+            "careers": "Careers",
+            "blog": "Blog",
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service",
+            "cookie": "Cookie Policy"
         }
-      ]
     },
-    {
-      "key": "costs",
-      "label": "Costs & Financing",
-      "items": [
+    "common_faq_tabs": [
         {
-          "question": "What additional costs should I expect when buying a property?",
-          "answer": "Buyers should expect around 12–13% in additional costs, including taxes and legal fees."
+            "key": "general",
+            "label": "General Process",
+            "items": [
+                {
+                    "question": "What is the process of buying a property in Spain?",
+                    "answer": "The process involves selecting a property, making a reservation, signing a private contract, and completing the purchase in the notary."
+                },
+                {
+                    "question": "How long does it take to complete a property purchase?",
+                    "answer": "For a second-hand property purchase it takes between 4 to 8 weeks, depending on legal checks and financing. For a new build it can take from 1 month to 3 years, depending on the stage of construction when you buy."
+                },
+                {
+                    "question": "Can I buy a property in Spain without being physically present?",
+                    "answer": "Yes, the purchase can be completed remotely through a power of attorney."
+                },
+                {
+                    "question": "What documents are required to buy a property?",
+                    "answer": "You will need a passport and NIE number. You will also be required to provide proof of the source of funds to comply with legal and financial regulations."
+                },
+                {
+                    "question": "Do I need a Spanish bank account to purchase property?",
+                    "answer": "Yes, a Spanish bank account is typically required to manage payments and ongoing expenses. If you already have an EU bank account, you can use it for maintenance costs, but opening a Spanish account is recommended for easier management."
+                }
+            ]
         },
         {
-          "question": "How much deposit is required?",
-          "answer": "A deposit of 10% is typically required at the private contract stage for resale properties. In new developments, the reservation deposit usually ranges from €6,000 to €25,000 depending on the final price."
+            "key": "international",
+            "label": "International Buyers",
+            "items": [
+                {
+                    "question": "What is an NIE number and how do I obtain it?",
+                    "answer": "The NIE is a foreign identification number required for any legal or financial transaction in Spain. It can be obtained at a Spanish consulate abroad or at a police station in Spain."
+                },
+                {
+                    "question": "Can foreigners get a mortgage in Spain?",
+                    "answer": "Yes, non-residents can obtain a mortgage, usually financing 60–70% of the property value."
+                },
+                {
+                    "question": "What are the main differences when buying as a non-resident?",
+                    "answer": "Non-residents must comply with additional administrative and financial requirements, but the process is straightforward with proper guidance."
+                },
+                {
+                    "question": "Do I need a lawyer to buy property in Spain?",
+                    "answer": "A lawyer is highly recommended to ensure legal security and review all documentation."
+                },
+                {
+                    "question": "Can I give power of attorney to complete the purchase remotely?",
+                    "answer": "Yes, a power of attorney allows a legal representative to complete the entire process on your behalf."
+                }
+            ]
         },
         {
-          "question": "What percentage of the property value can I finance?",
-          "answer": "Most banks finance between 60% and 70% of the property value for non-residents."
+            "key": "costs",
+            "label": "Costs & Financing",
+            "items": [
+                {
+                    "question": "What additional costs should I expect when buying a property?",
+                    "answer": "Buyers should expect around 12–13% in additional costs, including taxes and legal fees."
+                },
+                {
+                    "question": "How much deposit is required?",
+                    "answer": "A deposit of 10% is typically required at the private contract stage for resale properties. In new developments, the reservation deposit usually ranges from €6,000 to €25,000 depending on the final price."
+                },
+                {
+                    "question": "What percentage of the property value can I finance?",
+                    "answer": "Most banks finance between 60% and 70% of the property value for non-residents."
+                },
+                {
+                    "question": "What are the typical mortgage conditions in Spain?",
+                    "answer": "Mortgage conditions vary, but include fixed or variable rates and require proof of income and financial stability."
+                },
+                {
+                    "question": "Are there any ongoing taxes after purchase?",
+                    "answer": "Yes, there are annual property taxes (IBI) and community maintenance costs to consider."
+                }
+            ]
         },
         {
-          "question": "What are the typical mortgage conditions in Spain?",
-          "answer": "Mortgage conditions vary, but include fixed or variable rates and require proof of income and financial stability."
+            "key": "investment",
+            "label": "Investment",
+            "items": [
+                {
+                    "question": "Is Costa Blanca a good place for real estate investment?",
+                    "answer": "Costa Blanca offers strong demand, lifestyle appeal, and stable long-term value, making it one of the most sought-after investment destinations in Spain."
+                },
+                {
+                    "question": "What type of properties generate the best rental income?",
+                    "answer": "Apartments with 1–2 bedrooms in prime locations close to the beach or golf resorts tend to generate the strongest rental demand and returns."
+                },
+                {
+                    "question": "What factors affect property profitability?",
+                    "answer": "Location, property type, demand, management quality, and local council regulations and restrictions all directly affect profitability."
+                },
+                {
+                    "question": "Can you help with commercial or large-scale investments?",
+                    "answer": "Yes, advisory services include commercial assets, hotels, and large-scale investment projects."
+                }
+            ]
         },
         {
-          "question": "Are there any ongoing taxes after purchase?",
-          "answer": "Yes, there are annual property taxes (IBI) and community maintenance costs to consider."
+            "key": "property_types",
+            "label": "Property Types",
+            "items": [
+                {
+                    "question": "What is the difference between new build and resale properties?",
+                    "answer": "New build properties are newly constructed, while resale properties have had previous owners. New builds often come with modern standards and developer warranties."
+                },
+                {
+                    "question": "Are new build properties safer to buy?",
+                    "answer": "New builds offer modern standards and guarantees, but require proper evaluation of the developer, project stage, and legal protections."
+                },
+                {
+                    "question": "What should I consider when buying off-plan?",
+                    "answer": "It is important to assess the developer's track record, construction timelines, legal guarantees, and bank guarantees that protect your deposit."
+                }
+            ]
+        },
+        {
+            "key": "legal",
+            "label": "Legal & Security",
+            "items": [
+                {
+                    "question": "Do you check property documentation before purchase?",
+                    "answer": "Yes, all key documentation — including title deeds, planning licences, and encumbrances — is thoroughly reviewed before proceeding with the purchase."
+                },
+                {
+                    "question": "What role does the notary play in Spain?",
+                    "answer": "The notary ensures the transaction is legally valid, witnesses the signing of the title deed, and facilitates registration of the property in your name."
+                }
+            ]
+        },
+        {
+            "key": "services",
+            "label": "Services",
+            "items": [
+                {
+                    "question": "What services do you provide beyond the purchase?",
+                    "answer": "A comprehensive, end-to-end real estate service is offered, covering property search, sales and investment advisory, market analysis, negotiation, legal coordination, NIE assistance, bank account setup, financing management, relocation support, and post-purchase property management."
+                },
+                {
+                    "question": "Do you help with utilities, taxes, and administration?",
+                    "answer": "Yes, full assistance is provided with utilities connection, local taxes, and all administrative procedures following the purchase."
+                },
+                {
+                    "question": "Can you assist with relocation and settling in Spain?",
+                    "answer": "Yes, comprehensive support is available for relocation, residency applications, and settling into your new life in Spain."
+                },
+                {
+                    "question": "Do you offer property management after purchase?",
+                    "answer": "Yes, ongoing support and full property management services — including rental management — are available after purchase."
+                }
+            ]
         }
-      ]
-    },
-    {
-      "key": "investment",
-      "label": "Investment",
-      "items": [
-        {
-          "question": "Is Costa Blanca a good place for real estate investment?",
-          "answer": "Costa Blanca offers strong demand, lifestyle appeal, and stable long-term value, making it one of the most sought-after investment destinations in Spain."
-        },
-        {
-          "question": "What type of properties generate the best rental income?",
-          "answer": "Apartments with 1–2 bedrooms in prime locations close to the beach or golf resorts tend to generate the strongest rental demand and returns."
-        },
-        {
-          "question": "What factors affect property profitability?",
-          "answer": "Location, property type, demand, management quality, and local council regulations and restrictions all directly affect profitability."
-        },
-        {
-          "question": "Can you help with commercial or large-scale investments?",
-          "answer": "Yes, advisory services include commercial assets, hotels, and large-scale investment projects."
-        }
-      ]
-    },
-    {
-      "key": "property_types",
-      "label": "Property Types",
-      "items": [
-        {
-          "question": "What is the difference between new build and resale properties?",
-          "answer": "New build properties are newly constructed, while resale properties have had previous owners. New builds often come with modern standards and developer warranties."
-        },
-        {
-          "question": "Are new build properties safer to buy?",
-          "answer": "New builds offer modern standards and guarantees, but require proper evaluation of the developer, project stage, and legal protections."
-        },
-        {
-          "question": "What should I consider when buying off-plan?",
-          "answer": "It is important to assess the developer's track record, construction timelines, legal guarantees, and bank guarantees that protect your deposit."
-        }
-      ]
-    },
-    {
-      "key": "legal",
-      "label": "Legal & Security",
-      "items": [
-        {
-          "question": "Do you check property documentation before purchase?",
-          "answer": "Yes, all key documentation — including title deeds, planning licences, and encumbrances — is thoroughly reviewed before proceeding with the purchase."
-        },
-        {
-          "question": "What role does the notary play in Spain?",
-          "answer": "The notary ensures the transaction is legally valid, witnesses the signing of the title deed, and facilitates registration of the property in your name."
-        }
-      ]
-    },
-    {
-      "key": "services",
-      "label": "Services",
-      "items": [
-        {
-          "question": "What services do you provide beyond the purchase?",
-          "answer": "A comprehensive, end-to-end real estate service is offered, covering property search, sales and investment advisory, market analysis, negotiation, legal coordination, NIE assistance, bank account setup, financing management, relocation support, and post-purchase property management."
-        },
-        {
-          "question": "Do you help with utilities, taxes, and administration?",
-          "answer": "Yes, full assistance is provided with utilities connection, local taxes, and all administrative procedures following the purchase."
-        },
-        {
-          "question": "Can you assist with relocation and settling in Spain?",
-          "answer": "Yes, comprehensive support is available for relocation, residency applications, and settling into your new life in Spain."
-        },
-        {
-          "question": "Do you offer property management after purchase?",
-          "answer": "Yes, ongoing support and full property management services — including rental management — are available after purchase."
-        }
-      ]
-    }
-  ]
+    ]
 }

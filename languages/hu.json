@@ -1,808 +1,890 @@
 {
-  "brand": {
-    "name": "Capital Union Investment",
-    "platform": "Capital Union Investment",
-    "email": "info@capitalunioninvestment.com",
-    "tagline": "Ingatlankiválóság"
-  },
-  "js": {
-    "applied": "Alkalmazva!",
-    "from": "tól",
-    "up_to": "ig",
-    "beds_label": "hálószoba",
-    "baths_label": "fürdőszoba",
-    "success_inquiry": "Köszönjük! Érdeklődését elküldtük. Hamarosan felvesszük Önnel a kapcsolatot.",
-    "close": "Bezárás",
-    "error_generic": "Valami hiba történt. Kérjük, próbálja újra.",
-    "fill_required": "Kérjük, töltsön ki minden kötelező mezőt.",
-    "loading": "Betöltés..."
-  },
-  "header": {
-    "language_label": "Nyelv:",
-    "navigation": [
-      {
-        "label": "Főoldal",
-        "url": "/"
-      },
-      {
-        "label": "Ingatlanok",
-        "url": "/properties"
-      },
-      {
-        "label": "Rólunk",
-        "url": "/about"
-      },
-      {
-        "label": "Befektetés",
-        "url": "/invest"
-      },
-      {
-        "label": "Kapcsolat",
-        "url": "/contact"
-      },
-      {
-        "label": "Blog",
-        "url": "/blog"
-      }
-    ],
-    "actions": {
-      "contact": "Kapcsolatfelvétel",
-      "agent": "Legyen ügynök"
-    }
-  },
-  "home": {
-    "hero": {
-      "agency_label": "Exkluzív ingatlanszakértő a Costa Blancán",
-      "title": "Találja meg álmai <br class=\"hidden md:block\"> lakását",
-      "description": "Fedezze fel luxusingatlanjaink válogatott listáját, amelyeket az Ön kényelmére és stílusára terveztünk.",
-      "form": {
-        "search_label": "Ingatlan keresése",
-        "search_placeholder": "Ingatlan neve...",
-        "location_label": "Helyszín",
-        "location_placeholder": "Válasszon helyszínt",
-        "type_label": "Ingatlan típusa",
-        "location_options": {
-          "dhaka": "Dhaka",
-          "chittagong": "Chittagong",
-          "mymensingh": "Mymensingh"
-        },
-        "property_types": {
-          "apartment": "Lakás",
-          "luxury": "Luxus birtok",
-          "villa": "Villa"
-        },
-        "search_button": "Keresés most"
-      }
+    "brand": {
+        "name": "Capital Union Investment",
+        "platform": "Capital Union Investment",
+        "email": "info@capitalunioninvestment.com",
+        "tagline": "Ingatlankiválóság"
     },
-    "featured": {
-      "label": "Exkluzív ajánlatok",
-      "title": "Kiemelt ingatlanok",
-      "description": "Kézzel válogatott ingatlanok csak Önnek.",
-      "beds": "Háló",
-      "baths": "Fürdő",
-      "pool": "Medence",
-      "sqft": "m²",
-      "view_all": "ÖSSZES INGATLAN"
+    "js": {
+        "applied": "Alkalmazva!",
+        "from": "tól",
+        "up_to": "ig",
+        "beds_label": "hálószoba",
+        "baths_label": "fürdőszoba",
+        "success_inquiry": "Köszönjük! Érdeklődését elküldtük. Hamarosan felvesszük Önnel a kapcsolatot.",
+        "close": "Bezárás",
+        "error_generic": "Valami hiba történt. Kérjük, próbálja újra.",
+        "fill_required": "Kérjük, töltsön ki minden kötelező mezőt.",
+        "loading": "Betöltés..."
     },
-    "why_choose": {
-      "title": "Miért válassza a Capital Union Investmentet?",
-      "description": "2008 óta több mint 200 nemzetközi családnak segítettünk sikeresen ingatlant vásárolni, eladni és befektetni Spanyolországban.",
-      "features": [
-        {
-          "title": "Független, ügyfélközpontú tanácsadás",
-          "description": "A Capital Union Investment a vevőt és a befektetőt képviseli – nem az ingatlant, biztosítva az objektív ajánlásokat összeférhetetlenség nélkül."
-        },
-        {
-          "title": "Személyre szabott befektetési stratégia (nincsenek katalógusok)",
-          "description": "Minden projektet az alapoktól kezdünk az Ön profilja, céljai és kockázati szintje alapján – nem előre kiválasztott listákból vagy fix portfóliókból."
-        },
-        {
-          "title": "Teljes piaci hozzáférés",
-          "description": "Az ingatlanokat a teljes piacon kutatjuk fel, nem korlátozódunk belső listákra vagy konkrét fejlesztőkre, lehetővé téve a valódi lehetőségek elérését."
-        },
-        {
-          "title": "Teljes körű szolgáltatás",
-          "description": "A kereséstől és a tárgyalástól kezdve a jogi, adminisztratív és értékesítés utáni támogatásig a teljes folyamatot precízen és folyamatosan kezeljük."
-        },
-        {
-          "title": "Bizonyított befektetési szakértelem",
-          "description": "A lakó-, bérleti, kereskedelmi, szállodai és ipari eszközök terén szerzett tapasztalat stratégiai és adatalapú megközelítést biztosít a befektetési döntésekhez."
-        },
-        {
-          "title": "Mélyreható jogi és tranzakciós ismeretek",
-          "description": "Közel két évtizedes gyakorlati tapasztalat a tranzakciók koordinálásában biztosítja a kockázatmegelőzést, a jogi biztonságot és a zökkenőmentes végrehajtást."
-        }
-      ]
-    },
-    "stats": {
-      "listed": "Listázott ingatlanok",
-      "families": "Boldog családok",
-      "visitors": "Havi látogatók",
-      "satisfaction": "Ügyfél-elégedettség"
-    },
-    "faq": {
-      "eyebrow": "GYIK",
-      "common_subtitle": "Minden, amit a Costa Blancán történő vásárlásról, befektetésről és életről tudni kell.",
-      "frequently_asked": "Gyakran Ismételt<br>Kérdések",
-      "contact_button": "Kapcsolatfelvétel a támogatással"
-    }
-  },
-  "pages": {
-    "about": {
-      "hero": {
-        "title": "Rólam",
-        "bg_text": "Rólam",
-        "subtitle": "Vegye fel a kapcsolatot a Capital Union Investmenttel elegáns megoldásokért ingatlanbefektetésekben."
-      },
-      "story": {
-        "badge": "TÖRTÉNETEM",
-        "title": "Független ingatlan-tanácsadó a Costa Blancán 2008 óta",
-        "description": "Független ingatlan-tanácsadó a Costa Blancán, aki több mint 200 nemzetközi családnak segített ingatlanvásárlásban, eladásban és stratégiai befektetésekben. Teljes körű ingatlanszolgáltatást nyújtok azoknak az ügyfeleknek, akik értékelik a jogi biztonságot, az átláthatóságot és a személyre szabott megközelítést.",
-        "features": [
-          "Teljes körű támogatás a teljes ingatlanfolyamat során",
-          "Személyre szabott stratégia az ügyfélprofil és a befektetési célok alapján",
-          "Erős fókusz a jogi biztonságra és a kockázatmegelőzésre",
-          "Hosszú távú érték és hatékony, zökkenőmentes tranzakciók"
-        ]
-      },
-      "how_we_work": {
-        "badge": "Munkafolyamat",
-        "title": "Hogyan keltjük életre <br> <span class='text-secondary'>az Ön elképzeléseit</span>",
-        "subtitle": "Az első konzultációtól a végső átadásig aprólékos folyamatot követünk az Ön elégedettsége érdekében.",
-        "steps": [
-          {
-            "id": "01",
-            "title": "Felfedezés",
-            "description": "Meghallgatjuk céljait és elemezzük a helyszín lehetőségeit egy stratégiai útiterv elkészítéséhez."
-          },
-          {
-            "id": "02",
-            "title": "Tervezés",
-            "description": "Építészeink egyedi terveket készítenek, amelyek egyensúlyt teremtenek az esztétika és a funkcionalitás között."
-          },
-          {
-            "id": "03",
-            "title": "Építés",
-            "description": "Prémium anyagok és szakértő munkaerő felhasználásával a terveket konkrét valósággá alakítjuk."
-          },
-          {
-            "id": "04",
-            "title": "Átadás",
-            "description": "Egy végső szigorú minőségellenőrzés biztosítja, hogy minden megfeleljen az 1988-as kiválósági szabványunknak."
-          }
-        ]
-      },
-      "philosophy": {
-        "badge": "Filozófiánk",
-        "title": "Az alapvető pillérek, <br> amelyek meghatározzák munkánkat",
-        "subtitle": "Fedezze fel az alapvető értékeket, amelyek vezérlik elképzeléseinket és elkötelezettségünket a kiválóság iránt minden projektünkben.",
-        "values": [
-          {
-            "id": "01",
-            "title": "Ingatlankeresés és -szerzés",
-            "description": "Személyre szabott ingatlankeresés az Ön profilja, költségvetése és céljai alapján, lefedve a teljes piacot az új építésű és használt ingatlanok legjobb lehetőségeinek azonosításához."
-          },
-          {
-            "id": "02",
-            "title": "Értékesítési és befektetési tanácsadás",
-            "description": "Stratégiai útmutatás ingatlanok vásárlásához, eladásához és befektetéséhez, beleértve a piacelemzést, az ingatlanértékelést és a tárgyalást a legjobb feltételek biztosítása érdekében."
-          },
-          {
-            "id": "03",
-            "title": "Jogi és tranzakciós koordináció",
-            "description": "A jogi folyamat teljes körű koordinálása, beleértve a szerződések felülvizsgálatát, a közjegyzői eljárásokat és az együttműködést megbízható jogi szakemberekkel a biztonságos tranzakciók érdekében."
-          },
-          {
-            "id": "04",
-            "title": "Adminisztratív támogatás nemzetközi ügyfeleknek",
-            "description": "Teljes körű segítségnyújtás a legfontosabb eljárásokban, mint például NIE igénylés, bankszámlanyitás, jelzáloghitel-támogatás, közműátírás és adókezelés."
-          },
-          {
-            "id": "05",
-            "title": "Relokációs és letelepedési szolgáltatások",
-            "description": "Útmutatás a Spanyolországba költöző ügyfeleknek, beleértve a tartózkodási eljárásokat, a helyi regisztrációt, az egészségügyi hozzáférést, valamint az iskolákkal és az integrációval kapcsolatos támogatást."
-          },
-          {
-            "id": "06",
-            "title": "Értékesítés utáni és ingatlankezelés",
-            "description": "Folyamatos támogatás a befejezés után, beleértve az ingatlankezelést, a bérbeadási szolgáltatásokat, a felújítások koordinálását és a hosszú távú segítséget a befektetés védelme érdekében."
-          }
-        ]
-      },
-      "leadership": {
-        "badge": "Vezetői üzenet",
-        "years_label": "A becsület évei",
-        "title": "Vezetői üzenet",
-        "message": "A Capital Union Investmentnél megközelítésem tapasztalaton, precizitáson és a spanyol ingatlanpiac mély ismeretén alapul.<br />Közel két évtizedes gyakorlati tapasztalattal abban a megtiszteltetésben volt részem, hogy nemzetközi ügyfeleket vezethettem végig ingatlanvásárlásokon, eladásokokon és befektetési döntéseken, erős fókuszal a jogi biztonságra és a hosszú távú értékre. Pályafutásom 2008-as kezdete óta átfogó szakértelmet fejlesztettem ki az ingatlanfolyamat minden szakaszában – a tranzakciókezeléstől és a jogi koordinációtól kezdve az új építésű fejlesztések elemzésén át a befektetési stratégiáig.<br />Hátterem magában foglalja a rövid távú bérbeadási műveletek vezetését is, ami világos és gyakorlati megértést biztosít a valódi piaci teljesítményről, a jövedelmezőségről és az eszközoptimalizálásról. Ez lehetővé teszi számomra, hogy ne csak ingatlanokat, hanem jól felépített, a céljaikhoz igazodó befektetési lehetőségeket kínáljak az ügyfeleknek.<br />Elkötelezettségem egyszerű: magasan személyre szabott, átlátható és eredményorientált szolgáltatást nyújtani, amely bizalmat, hatékonyságot és hosszú távú sikert biztosít minden ügyfél számára.",
-        "name": "Anna Alizarenko",
-        "role": "Alapító és független ingatlan-tanácsadó"
-      }
-    },
-    "properties": {
-      "title": "Exkluzív ingatlanok",
-      "subtitle": "Fedezze fel legkiválóbb hirdetéseink válogatott kínálatát.",
-      "hero_banner": {
-        "bg_text": "Piac"
-      },
-      "grid_header": {
-        "showing_result": "Keresési eredmények",
-        "items_available": "Talált ingatlanok",
-        "range": "Megjelenítés: %1$s–%2$s",
-        "no_results": "Próbálja meg módosítani a szűrőket.",
-        "view_grid": "Rácsnézet",
-        "view_list": "Listanézet",
-        "sort_by": "Rendezés",
-        "filters_active": "Aktív szűrők"
-      },
-      "sort": {
-        "label": "Rendezés",
-        "newest": "Legújabb elöl",
-        "oldest": "Legrégebbi elöl",
-        "price_low": "Ár: alacsonytól a magasig",
-        "price_high": "Ár: magastól az alacsonyig",
-        "area_low": "Terület: legkisebb elöl",
-        "area_high": "Terület: legnagyobb elöl"
-      },
-      "pagination": {
-        "prev": "Előző oldal",
-        "next": "Következő oldal",
-        "go_to": "Ugrás a(z) %s. oldalra"
-      },
-      "filters": {
-        "all": "Összes ingatlan",
-        "buy": "Eladó",
-        "rent": "Kiadó",
-        "type": "Ingatlan típusa",
-        "location": "Helyszín",
-        "location_placeholder": "Város, cím, irányítószám…",
-        "price": "Ártartomány",
-        "search": "Ingatlanok keresése",
-        "min_price": "Min ár",
-        "max_price": "Max ár",
-        "min_placeholder": "Min",
-        "max_placeholder": "Max",
-        "beds": "Hálószobák",
-        "baths": "Fürdőszobák",
-        "any": "Bármelyik",
-        "status": "Ingatlan állapota",
-        "all_tabs": "Összes",
-        "new_build": "Új építésű",
-        "resale": "Használt",
-        "features": "Felszereltség",
-        "reset": "Szűrők alaphelyzetbe állítása",
-        "reset_button": "Összes törlése",
-        "apply": "Szűrők alkalmazása",
-        "apply_button": "Szűrők alkalmazása",
-        "filter_results": "Eredmények szűrése",
-        "filters_active": "Alkalmazott szűrők",
-        "refine_search": "Keresés pontosítása",
-        "sidebar_sr_description": "Ingatlankereső szűrő oldalsáv állapottal, típussal, árral, hálószobákkal és fürdőszobákkal",
-        "plus_label": "%s+"
-      },
-      "meta": {
-        "sale": "Eladó",
-        "rent": "Kiadó",
-        "apartment": "Lakás",
-        "villa": "Villa",
-        "penthouse": "Penthouse",
-        "townhouse": "Sorház",
-        "shop": "Kereskedelmi",
-        "not_found": "Ingatlan nem található."
-      },
-      "categories": {
-        "title": "Fedezze fel kategória szerint",
-        "subtitle": "Találja meg az életstílusához illő tökéletes otthont.",
-        "types": [
-          {
-            "name": "Villa",
-            "slug": "villa",
-            "count": "Összes megtekintése",
-            "icon": "home"
-          },
-          {
-            "name": "Lakás",
-            "slug": "apartment",
-            "count": "Összes megtekintése",
-            "icon": "building"
-          },
-          {
-            "name": "Sorház",
-            "slug": "townhouse",
-            "count": "Összes megtekintése",
-            "icon": "townhouse"
-          },
-          {
-            "name": "Bungaló",
-            "slug": "bungalow",
-            "count": "Összes megtekintése",
-            "icon": "home"
-          }
-        ]
-      },
-      "actions": {
-        "view_details": "Részletek megtekintése"
-      },
-      "cta": {
-        "title": "Hirdesse ingatlanát nálunk",
-        "subtitle": "Csatlakozzon több ezer elégedett ingatlantulajdonoshoz, akik platformunkon keresztül találták meg a megfelelő vevőt.",
-        "button": "Kezdje el most",
-        "eyebrow": "Lehetőség vár ránk",
-        "stat_listings": "Aktív hirdetések",
-        "stat_clients": "Boldog ügyfelek",
-        "stat_experience": "Év tapasztalat",
-        "button_primary": "Böngésszen a hirdetések között",
-        "button_secondary": "Beszéljen egy ügynökkel",
-        "badge_licensed": "Engedéllyel rendelkező és szabályozott",
-        "badge_secure": "Biztonságos tranzakciók",
-        "badge_support": "24/7 ügyfélszolgálat",
-        "badge_verified": "Csak ellenőrzött hirdetések"
-      }
-    },
-    "contact": {
-      "hero": {
-        "title": "Kapcsolatfelvétel",
-        "bg_text": "Kapcsolat",
-        "subtitle": "Lépjen kapcsolatba a Capital Union Investment elkötelezett csapatával személyre szabott ingatlanbefektetési stratégiákért és szakértői útmutatásért."
-      },
-      "info": {
-        "badge": "Capital Union Investment",
-        "title": "Lépjen velünk kapcsolatba",
-        "company": "Capital Union Investment",
-        "description": "Keressen minket szakértői útmutatásért ingatlanbefektetések és prémium ingatlankezelés terén Alicantéban.",
-        "office_label": "Iroda címe",
-        "office_address": "Avenidad de La Constitucion\nFormentera del Segura 03179\n(Alicante)",
-        "email_label": "E-mail nekünk",
-        "email_value": "info@capitalunioninvestment.com",
-        "phone_label": "Hívjon közvetlenül",
-        "phone_value": "+34 639 31 58 61",
-        "hours_label": "Nyitvatartás",
-        "hours_value": "Hét-Pén 9:00 - 20:30"
-      },
-      "form": {
-        "title": "Küldjön üzenetet",
-        "first_name_label": "Keresztnév",
-        "first_name_placeholder": "Keresztnév",
-        "last_name_label": "Vezetéknév",
-        "last_name_placeholder": "Vezetéknév",
-        "email_label": "E-mail cím",
-        "email_placeholder": "E-mail cím",
-        "phone_label": "Telefonszám",
-        "phone_placeholder": "Telefonszám",
-        "property_info_label": "Ingatlan adatai",
-        "property_type_placeholder": "Típus",
-        "zip_label": "Irányítószám",
-        "zip_placeholder": "Irányítószám",
-        "city_label": "Város",
-        "city_placeholder": "Város",
-        "bedrooms_label": "Hálószobák száma",
-        "bedrooms_placeholder": "Hálószobák száma",
-        "bathrooms_label": "Fürdőszobák száma",
-        "bathrooms_placeholder": "Fürdőszobák száma",
-        "budget_label": "Költségvetés",
-        "budget_placeholder": "Költségvetés",
-        "submit": "Jelentkezés benyújtása"
-      }
-    },
-    "invest": {
-      "hero": {
-        "title": "Befektetési lehetőségek",
-        "bg_text": "Befektetés",
-        "subtitle": "Biztosítsa jövőjét magas hozamú ingatlanportfóliókkal és exkluzív ingatlanfejlesztésekkel."
-      },
-      "philosophy": {
-        "badge": "Intézményi szintű stratégia",
-        "title": "Fegyelmezett megközelítés a <br> tőkemegőrzéshez.",
-        "focus_area_label": "Fókuszterület",
-        "focus_area_title": "Fizikai eszközök integritása",
-        "description": "A Capital Unionnál filozófiánk a generációs vagyon megőrzésében gyökerezik. Előnyben részesítjük a hosszú távú társadalmi hasznossággal bíró fizikai eszközöket.",
-        "quote": "\"Nem piaci trendeket kergetünk; ehelyett a belső értékre és a gazdasági rugalmasságra összpontosítunk, hogy biztosítsuk partnereink jövőjét.\"",
-        "items": [
-          {
-            "id": "01",
-            "title": "Kockázati fegyelem",
-            "description": "Konzervatív belépési pontok magas árrésű biztonsági hálóval minden tőkekihelyezéshez."
-          },
-          {
-            "id": "02",
-            "title": "Eszközmegőrzés",
-            "description": "A prémium helyszínekre és a fenntartható, időtálló szerkezetekre összpontosítva."
-          }
-        ]
-      },
-      "growth": {
-        "title": "Okos ingatlanbefektetés",
-        "subtitle": "Építse vagyonát magas növekedési potenciállal rendelkező ingatlanokkal kiemelt helyszíneken.",
-        "items": [
-          {
-            "title": "Folyamatos ROI",
-            "description": "Élvezze az évi 8% és 15% közötti hozamot prémium kereskedelmi és lakóingatlanokon."
-          },
-          {
-            "title": "Biztonságos eszközök",
-            "description": "Minden ingatlan 100%-ban jogilag ellenőrzött, fizikai tulajdoni lappal és kormányzati jóváhagyással rendelkezik."
-          },
-          {
-            "title": "Alacsony belépési korlát",
-            "description": "Kezdje ingatlanbefektetési útját minimális tőkével. A luxusingatlan-tulajdonlás immár elérhető."
-          }
+    "header": {
+        "language_label": "Nyelv:",
+        "navigation": [
+            {
+                "label": "Főoldal",
+                "url": "/"
+            },
+            {
+                "label": "Ingatlanok",
+                "url": "/properties"
+            },
+            {
+                "label": "Rólunk",
+                "url": "/about"
+            },
+            {
+                "label": "Befektetés",
+                "url": "/invest"
+            },
+            {
+                "label": "Kapcsolat",
+                "url": "/contact"
+            },
+            {
+                "label": "Blog",
+                "url": "/blog"
+            }
         ],
-        "cta": {
-          "title": "Készen áll jövője biztosítására?",
-          "subtitle": "Töltse le ingyenesen a 2024-es befektetési útmutatónkat.",
-          "button": "Befektetési útmutató letöltése"
+        "actions": {
+            "contact": "Kapcsolatfelvétel",
+            "agent": "Legyen ügynök"
         }
-      },
-      "properties_label": "Exkluzív lehetőségek",
-      "properties_title": "Prémium ingatlanbefektetési portfólió",
-      "properties_subtitle": "Fedezze fel kézzel válogatott, magas hozamú és erős tőkenövekedési potenciállal rendelkező ingatlanjainkat Alicante legkeresettebb területein.",
-      "no_properties": "További befektetési lehetőségek elemzése folyamatban. Nézzen vissza hamarosan.",
-      "see_all_button": "Összes Befektetési Ingatlan",
-      "hero_banner": {
-        "bg_text": "Portfólió"
-      },
-      "onboarding": {
-        "badge": "Exkluzív jelentkezés",
-        "title": "Kezdje el befektetési útját",
-        "subtitle": "Töltse ki az érdeklődési űrlapot, hogy tőkekapcsolati csapatunk megértse céljait.",
-        "form": {
-          "name_label": "Teljes hivatalos név *",
-          "name_placeholder": "pl. Kovács János",
-          "email_label": "E-mail cím *",
-          "email_placeholder": "pl. janos@pelda.hu",
-          "questions": [
-            "Meglévő ügyfél?",
-            "Van spanyol ingatlana?",
-            "Spanyol adórezidens?"
-          ],
-          "options": {
-            "no": "Nem",
-            "yes": "Igen"
-          },
-          "interest_label": "Érdeklődési körök *",
-          "interests": [
-            "Telek",
-            "Lakóingatlan",
-            "Kereskedelmi",
-            "Szálloda",
-            "Mezőgazdaság",
-            "Egyéb"
-          ],
-          "amount_label": "Befektetési összeg *",
-          "amounts": [
-            "€1,000,000 - €2,000,000",
-            "€2,000,000 - €3,000,000",
-            "€3,000,000 - €4,000,000",
-            "€4,000,000 - €5,000,000",
-            "€5,000,000 - €10,000,000",
-            "€10,000,000 - €20,000,000",
-            "€20,000,000+"
-          ],
-          "submit": "Jelentkezés benyújtása",
-          "footer": "Titkosított és bizalmas portál"
+    },
+    "home": {
+        "hero": {
+            "agency_label": "Exkluzív ingatlanszakértő a Costa Blancán",
+            "title": "Találja meg álmai <br class=\"hidden md:block\"> lakását",
+            "description": "Fedezze fel luxusingatlanjaink válogatott listáját, amelyeket az Ön kényelmére és stílusára terveztünk.",
+            "form": {
+                "search_label": "Ingatlan keresése",
+                "search_placeholder": "Ingatlan neve...",
+                "location_label": "Helyszín",
+                "location_placeholder": "Válasszon helyszínt",
+                "type_label": "Ingatlan típusa",
+                "location_options": {
+                    "dhaka": "Dhaka",
+                    "chittagong": "Chittagong",
+                    "mymensingh": "Mymensingh"
+                },
+                "property_types": {
+                    "apartment": "Lakás",
+                    "luxury": "Luxus birtok",
+                    "villa": "Villa"
+                },
+                "search_button": "Keresés most"
+            }
+        },
+        "featured": {
+            "label": "Exkluzív ajánlatok",
+            "title": "Kiemelt ingatlanok",
+            "description": "Kézzel válogatott ingatlanok csak Önnek.",
+            "beds": "Háló",
+            "baths": "Fürdő",
+            "pool": "Medence",
+            "sqft": "m²",
+            "view_all": "ÖSSZES INGATLAN"
+        },
+        "why_choose": {
+            "title": "Miért válassza a Capital Union Investmentet?",
+            "description": "2008 óta több mint 200 nemzetközi családnak segítettünk sikeresen ingatlant vásárolni, eladni és befektetni Spanyolországban.",
+            "features": [
+                {
+                    "title": "Független, ügyfélközpontú tanácsadás",
+                    "description": "A Capital Union Investment a vevőt és a befektetőt képviseli – nem az ingatlant, biztosítva az objektív ajánlásokat összeférhetetlenség nélkül."
+                },
+                {
+                    "title": "Személyre szabott befektetési stratégia (nincsenek katalógusok)",
+                    "description": "Minden projektet az alapoktól kezdünk az Ön profilja, céljai és kockázati szintje alapján – nem előre kiválasztott listákból vagy fix portfóliókból."
+                },
+                {
+                    "title": "Teljes piaci hozzáférés",
+                    "description": "Az ingatlanokat a teljes piacon kutatjuk fel, nem korlátozódunk belső listákra vagy konkrét fejlesztőkre, lehetővé téve a valódi lehetőségek elérését."
+                },
+                {
+                    "title": "Teljes körű szolgáltatás",
+                    "description": "A kereséstől és a tárgyalástól kezdve a jogi, adminisztratív és értékesítés utáni támogatásig a teljes folyamatot precízen és folyamatosan kezeljük."
+                },
+                {
+                    "title": "Bizonyított befektetési szakértelem",
+                    "description": "A lakó-, bérleti, kereskedelmi, szállodai és ipari eszközök terén szerzett tapasztalat stratégiai és adatalapú megközelítést biztosít a befektetési döntésekhez."
+                },
+                {
+                    "title": "Mélyreható jogi és tranzakciós ismeretek",
+                    "description": "Közel két évtizedes gyakorlati tapasztalat a tranzakciók koordinálásában biztosítja a kockázatmegelőzést, a jogi biztonságot és a zökkenőmentes végrehajtást."
+                }
+            ]
+        },
+        "stats": {
+            "listed": "Listázott ingatlanok",
+            "families": "Boldog családok",
+            "visitors": "Havi látogatók",
+            "satisfaction": "Ügyfél-elégedettség"
+        },
+        "faq": {
+            "eyebrow": "GYIK",
+            "common_subtitle": "Minden, amit a Costa Blancán történő vásárlásról, befektetésről és életről tudni kell.",
+            "frequently_asked": "Gyakran Ismételt<br>Kérdések",
+            "contact_button": "Kapcsolatfelvétel a támogatással"
         }
-      }
     },
-    "error_404": {
-      "bg_text": "404",
-      "subtitle": "Hoppá! Az oldal nem található",
-      "message": "Átkutattuk a teljes portfóliónkat, de nem találtunk semmit itt:",
-      "search_placeholder": "Ingatlanok keresése...",
-      "back_home": "Vissza a főoldalra",
-      "view_properties": "Összes ingatlan megtekintése"
-    },
-    "blog": {
-      "hero": {
-        "title": "Blog és hírek",
-        "bg_text": "Napló",
-        "subtitle": "Maradjon naprakész a Costa Blanca ingatlanpiacának legfrissebb trendjeivel, híreivel és felismeréseivel."
-      },
-      "grid": {
-        "title": "Legfrissebb cikkek",
-        "subtitle": "Szakértői tanácsok, piacelemzés és helyi hírek.",
-        "read_more": "CIKK OLVASÁSA",
-        "no_posts": "Nem találhatók cikkek. Nézzen vissza hamarosan!"
-      },
-      "ui": {
-        "min_read": "perc olvasás",
-        "written_by": "Írta",
-        "journalist": "Újságíró",
-        "share_story": "Történet megosztása",
-        "back_to_journal": "Vissza az összes naplóbejegyzéshez",
-        "more_from": "Továbbiak a naplóból",
-        "prev_story": "Előző történet",
-        "next_story": "Következő történet",
-        "all_stories": "Összes történet",
-        "no_news": "Még nem tettünk közzé híreket. Nézzen vissza hamarosan!",
-        "no_blogs": "Szakértőink éppen új cikkeket írnak. Kérjük, nézzen vissza később!",
-        "explore_all_news": "Összes hír felfedezése",
-        "view_full_blog": "Teljes blog megtekintése",
-        "back_overview": "Vissza a napló áttekintéséhez",
-        "subscribe_label": "Hírlevél",
-        "subscribe_title": "Maradjon tájékozott a Costa Blanca ingatlanairól",
-        "subscribe_text": "Heti piacelemzés, befektetési tippek és kiemelt ajánlatok – egyenesen a postaládájába.",
-        "subscribe_btn": "Feliratkozás a naplóra"
-      },
-      "sections": {
-        "news_label": "Vállalati frissítések",
-        "news_title": "Legfrissebb hírek és bejelentések",
-        "blog_label": "Szakértői felismerések",
-        "blog_title": "Piaci elemzések és cikkek"
-      }
-    },
-    "property_details": {
-      "bg_text": "Részletek",
-      "subtitle": "Fedezze fel az ingatlan prémium részleteit és befektetési potenciálját",
-      "new_build": "Új építésű",
-      "resale": "Használt",
-      "for": "Típus:",
-      "description": "Leírás",
-      "features": "Jellemzők",
-      "bedrooms": "Hálószoba",
-      "bathrooms": "Fürdőszoba",
-      "building": "Épület",
-      "lot_size": "Telekméret",
-      "view_photos": "Fotók megtekintése",
-      "form": {
-        "contact_us": "Kapcsolatfelvétel",
-        "name": "Név",
-        "number": "Telefonszám",
-        "email": "E-mail",
-        "message": "Érdekel ez az ingatlan.",
-        "submit": "ÜZENET KÜLDÉSE"
-      }
-    },
-    "privacy_policy": {
-      "hero": {
-        "title": "Adatvédelmi irányelvek",
-        "bg_text": "Adatvédelem",
-        "subtitle": "Hogyan gyűjtjük, használjuk és kezeljük az Ön adatait."
-      },
-      "content": {
-        "title": "Adatvédelmi irányelvek",
-        "description": "Ez az Adatvédelmi nyilatkozat leírja, hogyan kezeljük adatait platformjainkon. Tiszteletben tartjuk személyiségi jogait és elkötelezettek vagyunk azok védelme mellett.",
-        "sections": [
-          {
-            "title": "1. Adatgyűjtés",
-            "text": "Különböző típusú információkat gyűjtünk különböző célokból, hogy szolgáltatásunkat nyújthassuk és fejleszthessük. Ez magában foglalja a személyazonosításra alkalmas adatokat, például e-mail címet, vezeték- és keresztnevet, telefonszámot és címet."
-          },
-          {
-            "title": "2. Hogyan használjuk fel adatait",
-            "text": "A Capital Union a gyűjtött adatokat különféle célokra használja: a szolgáltatás nyújtására és fenntartására, a változásokról való értesítésre, ügyfélszolgálat biztosítására, elemzések készítésére a fejlesztéshez, valamint a használat nyomon követésére."
-          },
-          {
-            "title": "3. Adatbiztonság",
-            "text": "Az Ön adatainak biztonsága fontos számunkra, de ne feledje, hogy az interneten keresztül történő továbbítás vagy az elektronikus tárolás egyik módszere sem 100%-osan biztonságos. Bár törekszünk a kereskedelmi szempontból elfogadható eszközök használatára az adatok védelme érdekében, nem tudjuk garantálni azok abszolút biztonságát."
-          }
-        ]
-      }
-    },
-    "terms_of_service": {
-      "hero": {
-        "title": "Felhasználási feltételek",
-        "bg_text": "Feltételek",
-        "subtitle": "Platformunk használatára vonatkozó szabályok és irányelvek."
-      },
-      "content": {
-        "title": "Felhasználási feltételek",
-        "description": "Platformunk elérésével vagy használatával Ön elfogadja, hogy magára nézve kötelezőnek ismeri el ezeket a feltételeket. Ha a feltételek bármely részével nem ért egyet, nem veheti igénybe szolgáltatásainkat.",
-        "sections": [
-          {
-            "title": "1. Szellemi tulajdon",
-            "text": "A szolgáltatás és annak eredeti tartalma, jellemzői és funkciói a Capital Union és licencadóinak kizárólagos tulajdonát képezik és maradnak. A szolgáltatást szerzői jogi, védjegy- és egyéb törvények védik."
-          },
-          {
-            "title": "2. Felhasználói kötelezettségek",
-            "text": "Amikor fiókot hoz létre nálunk, mindig pontos, teljes és aktuális adatokat kell megadnia. Ennek elmulasztása a feltételek megszegésének minősül, ami a fiók azonnali megszüntetését vonhatja maga után."
-          },
-          {
-            "title": "3. Felelősség korlátozása",
-            "text": "A Capital Union, annak igazgatói, alkalmazottai vagy partnerei semmilyen esetben sem felelősek semmilyen közvetett, véletlen vagy következményes kárért, beleértve korlátozás nélkül a profitvesztést, adatvesztést vagy egyéb eszmei veszteségeket."
-          }
-        ]
-      }
-    },
-    "cookie_policy": {
-      "hero": {
-        "title": "Süti (Cookie) szabályzat",
-        "bg_text": "Sütik",
-        "subtitle": "Tájékoztatás a sütik használatáról."
-      },
-      "content": {
-        "title": "Süti szabályzat",
-        "description": "Oldalunk sütiket használ, hogy megkülönböztesse Önt a többi felhasználótól. Ez segít nekünk abban, hogy jó élményt nyújtsunk a böngészés során, és fejlesszük oldalunkat.",
-        "sections": [
-          {
-            "title": "1. Az általunk használt sütik típusai",
-            "text": "Munkamenet sütiket használunk a szolgáltatás működtetéséhez. Preferencia sütiket használunk az Ön beállításainak megjegyzéséhez. Biztonsági sütiket használunk biztonsági célokból."
-          },
-          {
-            "title": "2. Harmadik féltől származó sütik",
-            "text": "Saját sütijeinken kívül különféle harmadik felek sütijeit is használhatjuk használati statisztikák jelentésére, hirdetések megjelenítésére és egyéb célokra. Ezek a szolgáltatók saját szigorú adatvédelmi szabályzattal rendelkeznek."
-          },
-          {
-            "title": "3. Sütik kezelése",
-            "text": "Beállíthatja böngészőjét, hogy utasítsa el az összes sütit, vagy jelezze, ha süti érkezik. Ha azonban nem fogadja el a sütiket, előfordulhat, hogy szolgáltatásunk egyes részeit nem tudja majd használni."
-          }
-        ]
-      }
-    }
-  },
-  "footer": {
-    "tagline": "Találja meg álmai otthonát a legátfogóbb ingatlanplatform segítségével.",
-    "copyright": "Minden jog fenntartva.",
-    "menus": {
-      "quick_links": "Gyorshivatkozások",
-      "company": "Vállalat",
-      "legal": "Jogi"
-    },
-    "links": {
-      "buy": "Ingatlan vásárlása",
-      "rent": "Ingatlan bérlése",
-      "sell": "Ingatlan eladása",
-      "services": "Szolgáltatások",
-      "about": "Rólunk",
-      "contact": "Kapcsolat",
-      "careers": "Karrier",
-      "blog": "Blog",
-      "privacy": "Adatvédelmi irányelvek",
-      "terms": "Felhasználási feltételek",
-      "cookie": "Süti szabályzat"
-    }
-  },
-  "common_faq_tabs": [
-    {
-      "key": "general",
-      "label": "Általános folyamat",
-      "items": [
-        {
-          "question": "Mi a spanyolországi ingatlanvásárlás folyamata?",
-          "answer": "A folyamat az ingatlan kiválasztásából, a foglalásból, a magánszerződés aláírásából és a vásárlás közjegyző előtti befejezéséből áll."
+    "pages": {
+        "about": {
+            "hero": {
+                "title": "Rólam",
+                "bg_text": "Rólam",
+                "subtitle": "Vegye fel a kapcsolatot a Capital Union Investmenttel elegáns megoldásokért ingatlanbefektetésekben."
+            },
+            "story": {
+                "badge": "TÖRTÉNETEM",
+                "title": "Független ingatlan-tanácsadó a Costa Blancán 2008 óta",
+                "description": "Független ingatlan-tanácsadó a Costa Blancán, aki több mint 200 nemzetközi családnak segített ingatlanvásárlásban, eladásban és stratégiai befektetésekben. Teljes körű ingatlanszolgáltatást nyújtok azoknak az ügyfeleknek, akik értékelik a jogi biztonságot, az átláthatóságot és a személyre szabott megközelítést.",
+                "features": [
+                    "Teljes körű támogatás a teljes ingatlanfolyamat során",
+                    "Személyre szabott stratégia az ügyfélprofil és a befektetési célok alapján",
+                    "Erős fókusz a jogi biztonságra és a kockázatmegelőzésre",
+                    "Hosszú távú érték és hatékony, zökkenőmentes tranzakciók"
+                ]
+            },
+            "how_we_work": {
+                "badge": "Munkafolyamat",
+                "title": "Hogyan keltjük életre <br> <span class='text-secondary'>az Ön elképzeléseit</span>",
+                "subtitle": "Az első konzultációtól a végső átadásig aprólékos folyamatot követünk az Ön elégedettsége érdekében.",
+                "steps": [
+                    {
+                        "id": "01",
+                        "title": "Felfedezés",
+                        "description": "Meghallgatjuk céljait és elemezzük a helyszín lehetőségeit egy stratégiai útiterv elkészítéséhez."
+                    },
+                    {
+                        "id": "02",
+                        "title": "Tervezés",
+                        "description": "Építészeink egyedi terveket készítenek, amelyek egyensúlyt teremtenek az esztétika és a funkcionalitás között."
+                    },
+                    {
+                        "id": "03",
+                        "title": "Építés",
+                        "description": "Prémium anyagok és szakértő munkaerő felhasználásával a terveket konkrét valósággá alakítjuk."
+                    },
+                    {
+                        "id": "04",
+                        "title": "Átadás",
+                        "description": "Egy végső szigorú minőségellenőrzés biztosítja, hogy minden megfeleljen az 1988-as kiválósági szabványunknak."
+                    }
+                ]
+            },
+            "philosophy": {
+                "badge": "Filozófiánk",
+                "title": "Az alapvető pillérek, <br> amelyek meghatározzák munkánkat",
+                "subtitle": "Fedezze fel az alapvető értékeket, amelyek vezérlik elképzeléseinket és elkötelezettségünket a kiválóság iránt minden projektünkben.",
+                "values": [
+                    {
+                        "id": "01",
+                        "title": "Ingatlankeresés és -szerzés",
+                        "description": "Személyre szabott ingatlankeresés az Ön profilja, költségvetése és céljai alapján, lefedve a teljes piacot az új építésű és használt ingatlanok legjobb lehetőségeinek azonosításához."
+                    },
+                    {
+                        "id": "02",
+                        "title": "Értékesítési és befektetési tanácsadás",
+                        "description": "Stratégiai útmutatás ingatlanok vásárlásához, eladásához és befektetéséhez, beleértve a piacelemzést, az ingatlanértékelést és a tárgyalást a legjobb feltételek biztosítása érdekében."
+                    },
+                    {
+                        "id": "03",
+                        "title": "Jogi és tranzakciós koordináció",
+                        "description": "A jogi folyamat teljes körű koordinálása, beleértve a szerződések felülvizsgálatát, a közjegyzői eljárásokat és az együttműködést megbízható jogi szakemberekkel a biztonságos tranzakciók érdekében."
+                    },
+                    {
+                        "id": "04",
+                        "title": "Adminisztratív támogatás nemzetközi ügyfeleknek",
+                        "description": "Teljes körű segítségnyújtás a legfontosabb eljárásokban, mint például NIE igénylés, bankszámlanyitás, jelzáloghitel-támogatás, közműátírás és adókezelés."
+                    },
+                    {
+                        "id": "05",
+                        "title": "Relokációs és letelepedési szolgáltatások",
+                        "description": "Útmutatás a Spanyolországba költöző ügyfeleknek, beleértve a tartózkodási eljárásokat, a helyi regisztrációt, az egészségügyi hozzáférést, valamint az iskolákkal és az integrációval kapcsolatos támogatást."
+                    },
+                    {
+                        "id": "06",
+                        "title": "Értékesítés utáni és ingatlankezelés",
+                        "description": "Folyamatos támogatás a befejezés után, beleértve az ingatlankezelést, a bérbeadási szolgáltatásokat, a felújítások koordinálását és a hosszú távú segítséget a befektetés védelme érdekében."
+                    }
+                ]
+            },
+            "leadership": {
+                "badge": "Vezetői üzenet",
+                "years_label": "A becsület évei",
+                "title": "Vezetői üzenet",
+                "message": "A Capital Union Investmentnél megközelítésem tapasztalaton, precizitáson és a spanyol ingatlanpiac mély ismeretén alapul.<br />Közel két évtizedes gyakorlati tapasztalattal abban a megtiszteltetésben volt részem, hogy nemzetközi ügyfeleket vezethettem végig ingatlanvásárlásokon, eladásokokon és befektetési döntéseken, erős fókuszal a jogi biztonságra és a hosszú távú értékre. Pályafutásom 2008-as kezdete óta átfogó szakértelmet fejlesztettem ki az ingatlanfolyamat minden szakaszában – a tranzakciókezeléstől és a jogi koordinációtól kezdve az új építésű fejlesztések elemzésén át a befektetési stratégiáig.<br />Hátterem magában foglalja a rövid távú bérbeadási műveletek vezetését is, ami világos és gyakorlati megértést biztosít a valódi piaci teljesítményről, a jövedelmezőségről és az eszközoptimalizálásról. Ez lehetővé teszi számomra, hogy ne csak ingatlanokat, hanem jól felépített, a céljaikhoz igazodó befektetési lehetőségeket kínáljak az ügyfeleknek.<br />Elkötelezettségem egyszerű: magasan személyre szabott, átlátható és eredményorientált szolgáltatást nyújtani, amely bizalmat, hatékonyságot és hosszú távú sikert biztosít minden ügyfél számára.",
+                "name": "Anna Alizarenko",
+                "role": "Alapító és független ingatlan-tanácsadó"
+            }
         },
-        {
-          "question": "Mennyi ideig tart egy ingatlanvásárlás befejezése?",
-          "answer": "Használt ingatlan esetén 4-8 hetet vesz igénybe, a jogi ellenőrzésektől és a finanszírozástól függően. Új építésnél 1 hónaptól 3 évig tarthat, az építési szakasztól függően."
+        "properties": {
+            "title": "Exkluzív ingatlanok",
+            "subtitle": "Fedezze fel legkiválóbb hirdetéseink válogatott kínálatát.",
+            "hero_banner": {
+                "bg_text": "Piac"
+            },
+            "grid_header": {
+                "showing_result": "Keresési eredmények",
+                "items_available": "Talált ingatlanok",
+                "range": "Megjelenítés: %1$s–%2$s",
+                "no_results": "Próbálja meg módosítani a szűrőket.",
+                "view_grid": "Rácsnézet",
+                "view_list": "Listanézet",
+                "sort_by": "Rendezés",
+                "filters_active": "Aktív szűrők"
+            },
+            "sort": {
+                "label": "Rendezés",
+                "newest": "Legújabb elöl",
+                "oldest": "Legrégebbi elöl",
+                "price_low": "Ár: alacsonytól a magasig",
+                "price_high": "Ár: magastól az alacsonyig",
+                "area_low": "Terület: legkisebb elöl",
+                "area_high": "Terület: legnagyobb elöl"
+            },
+            "pagination": {
+                "prev": "Előző oldal",
+                "next": "Következő oldal",
+                "go_to": "Ugrás a(z) %s. oldalra"
+            },
+            "filters": {
+                "all": "Összes ingatlan",
+                "buy": "Eladó",
+                "rent": "Kiadó",
+                "type": "Ingatlan típusa",
+                "location": "Helyszín",
+                "location_placeholder": "Város, cím, irányítószám…",
+                "price": "Ártartomány",
+                "search": "Ingatlanok keresése",
+                "min_price": "Min ár",
+                "max_price": "Max ár",
+                "min_placeholder": "Min",
+                "max_placeholder": "Max",
+                "beds": "Hálószobák",
+                "baths": "Fürdőszobák",
+                "any": "Bármelyik",
+                "status": "Ingatlan állapota",
+                "all_tabs": "Összes",
+                "new_build": "Új építésű",
+                "resale": "Használt",
+                "features": "Felszereltség",
+                "reset": "Szűrők alaphelyzetbe állítása",
+                "reset_button": "Összes törlése",
+                "apply": "Szűrők alkalmazása",
+                "apply_button": "Szűrők alkalmazása",
+                "filter_results": "Eredmények szűrése",
+                "filters_active": "Alkalmazott szűrők",
+                "refine_search": "Keresés pontosítása",
+                "sidebar_sr_description": "Ingatlankereső szűrő oldalsáv állapottal, típussal, árral, hálószobákkal és fürdőszobákkal",
+                "plus_label": "%s+"
+            },
+            "meta": {
+                "sale": "Eladó",
+                "rent": "Kiadó",
+                "apartment": "Lakás",
+                "villa": "Villa",
+                "penthouse": "Penthouse",
+                "townhouse": "Sorház",
+                "shop": "Kereskedelmi",
+                "not_found": "Ingatlan nem található."
+            },
+            "categories": {
+                "title": "Fedezze fel kategória szerint",
+                "subtitle": "Találja meg az életstílusához illő tökéletes otthont.",
+                "types": [
+                    {
+                        "name": "Villa",
+                        "slug": "villa",
+                        "count": "Összes megtekintése",
+                        "icon": "home"
+                    },
+                    {
+                        "name": "Lakás",
+                        "slug": "apartment",
+                        "count": "Összes megtekintése",
+                        "icon": "building"
+                    },
+                    {
+                        "name": "Sorház",
+                        "slug": "townhouse",
+                        "count": "Összes megtekintése",
+                        "icon": "townhouse"
+                    },
+                    {
+                        "name": "Bungaló",
+                        "slug": "bungalow",
+                        "count": "Összes megtekintése",
+                        "icon": "home"
+                    }
+                ]
+            },
+            "actions": {
+                "view_details": "Részletek megtekintése"
+            },
+            "cta": {
+                "title": "Hirdesse ingatlanát nálunk",
+                "subtitle": "Csatlakozzon több ezer elégedett ingatlantulajdonoshoz, akik platformunkon keresztül találták meg a megfelelő vevőt.",
+                "button": "Kezdje el most",
+                "eyebrow": "Lehetőség vár ránk",
+                "stat_listings": "Aktív hirdetések",
+                "stat_clients": "Boldog ügyfelek",
+                "stat_experience": "Év tapasztalat",
+                "button_primary": "Böngésszen a hirdetések között",
+                "button_secondary": "Beszéljen egy ügynökkel",
+                "badge_licensed": "Engedéllyel rendelkező és szabályozott",
+                "badge_secure": "Biztonságos tranzakciók",
+                "badge_support": "24/7 ügyfélszolgálat",
+                "badge_verified": "Csak ellenőrzött hirdetések"
+            }
         },
-        {
-          "question": "Vásárolhatok ingatlant Spanyolországban anélkül, hogy fizikailag jelen lennék?",
-          "answer": "Igen, a vásárlás távolról is lebonyolítható meghatalmazás útján."
+        "contact": {
+            "hero": {
+                "title": "Kapcsolatfelvétel",
+                "bg_text": "Kapcsolat",
+                "subtitle": "Lépjen kapcsolatba a Capital Union Investment elkötelezett csapatával személyre szabott ingatlanbefektetési stratégiákért és szakértői útmutatásért."
+            },
+            "info": {
+                "badge": "Capital Union Investment",
+                "title": "Lépjen velünk kapcsolatba",
+                "company": "Capital Union Investment",
+                "description": "Keressen minket szakértői útmutatásért ingatlanbefektetések és prémium ingatlankezelés terén Alicantéban.",
+                "office_label": "Iroda címe",
+                "office_address": "Avenidad de La Constitucion\nFormentera del Segura 03179\n(Alicante)",
+                "email_label": "E-mail nekünk",
+                "email_value": "info@capitalunioninvestment.com",
+                "phone_label": "Hívjon közvetlenül",
+                "phone_value": "+34 639 31 58 61",
+                "hours_label": "Nyitvatartás",
+                "hours_value": "Hét-Pén 9:00 - 20:30"
+            },
+            "form": {
+                "title": "Küldjön üzenetet",
+                "first_name_label": "Keresztnév",
+                "first_name_placeholder": "Keresztnév",
+                "last_name_label": "Vezetéknév",
+                "last_name_placeholder": "Vezetéknév",
+                "email_label": "E-mail cím",
+                "email_placeholder": "E-mail cím",
+                "phone_label": "Telefonszám",
+                "phone_placeholder": "Telefonszám",
+                "property_info_label": "Ingatlan adatai",
+                "property_type_placeholder": "Típus",
+                "zip_label": "Irányítószám",
+                "zip_placeholder": "Irányítószám",
+                "city_label": "Város",
+                "city_placeholder": "Város",
+                "bedrooms_label": "Hálószobák száma",
+                "bedrooms_placeholder": "Hálószobák száma",
+                "bathrooms_label": "Fürdőszobák száma",
+                "bathrooms_placeholder": "Fürdőszobák száma",
+                "budget_label": "Költségvetés",
+                "budget_placeholder": "Költségvetés",
+                "submit": "Jelentkezés benyújtása"
+            }
         },
-        {
-          "question": "Milyen dokumentumok szükségesek az ingatlanvásárláshoz?",
-          "answer": "Útlevélre és NIE számra lesz szüksége. A jogi szabályozások miatt igazolnia kell a források eredetét is."
+        "invest": {
+            "hero": {
+                "title": "Befektetési lehetőségek",
+                "bg_text": "Befektetés",
+                "subtitle": "Biztosítsa jövőjét magas hozamú ingatlanportfóliókkal és exkluzív ingatlanfejlesztésekkel."
+            },
+            "philosophy": {
+                "badge": "Intézményi szintű stratégia",
+                "title": "Fegyelmezett megközelítés a <br> tőkemegőrzéshez.",
+                "focus_area_label": "Fókuszterület",
+                "focus_area_title": "Fizikai eszközök integritása",
+                "description": "A Capital Unionnál filozófiánk a generációs vagyon megőrzésében gyökerezik. Előnyben részesítjük a hosszú távú társadalmi hasznossággal bíró fizikai eszközöket.",
+                "quote": "\"Nem piaci trendeket kergetünk; ehelyett a belső értékre és a gazdasági rugalmasságra összpontosítunk, hogy biztosítsuk partnereink jövőjét.\"",
+                "items": [
+                    {
+                        "id": "01",
+                        "title": "Kockázati fegyelem",
+                        "description": "Konzervatív belépési pontok magas árrésű biztonsági hálóval minden tőkekihelyezéshez."
+                    },
+                    {
+                        "id": "02",
+                        "title": "Eszközmegőrzés",
+                        "description": "A prémium helyszínekre és a fenntartható, időtálló szerkezetekre összpontosítva."
+                    }
+                ]
+            },
+            "growth": {
+                "title": "Okos ingatlanbefektetés",
+                "subtitle": "Építse vagyonát magas növekedési potenciállal rendelkező ingatlanokkal kiemelt helyszíneken.",
+                "items": [
+                    {
+                        "title": "Folyamatos ROI",
+                        "description": "Élvezze az évi 8% és 15% közötti hozamot prémium kereskedelmi és lakóingatlanokon."
+                    },
+                    {
+                        "title": "Biztonságos eszközök",
+                        "description": "Minden ingatlan 100%-ban jogilag ellenőrzött, fizikai tulajdoni lappal és kormányzati jóváhagyással rendelkezik."
+                    },
+                    {
+                        "title": "Alacsony belépési korlát",
+                        "description": "Kezdje ingatlanbefektetési útját minimális tőkével. A luxusingatlan-tulajdonlás immár elérhető."
+                    }
+                ],
+                "cta": {
+                    "title": "Készen áll jövője biztosítására?",
+                    "subtitle": "Töltse le ingyenesen a 2024-es befektetési útmutatónkat.",
+                    "button": "Befektetési útmutató letöltése"
+                }
+            },
+            "properties_label": "Exkluzív lehetőségek",
+            "properties_title": "Prémium ingatlanbefektetési portfólió",
+            "properties_subtitle": "Fedezze fel kézzel válogatott, magas hozamú és erős tőkenövekedési potenciállal rendelkező ingatlanjainkat Alicante legkeresettebb területein.",
+            "no_properties": "További befektetési lehetőségek elemzése folyamatban. Nézzen vissza hamarosan.",
+            "see_all_button": "Összes Befektetési Ingatlan",
+            "hero_banner": {
+                "bg_text": "Portfólió"
+            },
+            "onboarding": {
+                "badge": "Exkluzív jelentkezés",
+                "title": "Kezdje el befektetési útját",
+                "subtitle": "Töltse ki az érdeklődési űrlapot, hogy tőkekapcsolati csapatunk megértse céljait.",
+                "form": {
+                    "name_label": "Teljes hivatalos név *",
+                    "name_placeholder": "pl. Kovács János",
+                    "email_label": "E-mail cím *",
+                    "email_placeholder": "pl. janos@pelda.hu",
+                    "questions": [
+                        "Meglévő ügyfél?",
+                        "Van spanyol ingatlana?",
+                        "Spanyol adórezidens?"
+                    ],
+                    "options": {
+                        "no": "Nem",
+                        "yes": "Igen"
+                    },
+                    "interest_label": "Érdeklődési körök *",
+                    "interests": [
+                        "Telek",
+                        "Lakóingatlan",
+                        "Kereskedelmi",
+                        "Szálloda",
+                        "Mezőgazdaság",
+                        "Egyéb"
+                    ],
+                    "amount_label": "Befektetési összeg *",
+                    "amounts": [
+                        "€1,000,000 - €2,000,000",
+                        "€2,000,000 - €3,000,000",
+                        "€3,000,000 - €4,000,000",
+                        "€4,000,000 - €5,000,000",
+                        "€5,000,000 - €10,000,000",
+                        "€10,000,000 - €20,000,000",
+                        "€20,000,000+"
+                    ],
+                    "submit": "Jelentkezés benyújtása",
+                    "footer": "Titkosított és bizalmas portál"
+                }
+            }
         },
-        {
-          "question": "Szükségem van spanyol bankszámlára az ingatlanvásárláshoz?",
-          "answer": "Igen, általában spanyol bankszámlára van szükség a kifizetések és a folyamatos költségek kezeléséhez."
+        "error_404": {
+            "bg_text": "404",
+            "subtitle": "Hoppá! Az oldal nem található",
+            "message": "Átkutattuk a teljes portfóliónkat, de nem találtunk semmit itt:",
+            "search_placeholder": "Ingatlanok keresése...",
+            "back_home": "Vissza a főoldalra",
+            "view_properties": "Összes ingatlan megtekintése"
+        },
+        "blog": {
+            "hero": {
+                "title": "Blog és hírek",
+                "bg_text": "Napló",
+                "subtitle": "Maradjon naprakész a Costa Blanca ingatlanpiacának legfrissebb trendjeivel, híreivel és felismeréseivel."
+            },
+            "grid": {
+                "title": "Legfrissebb cikkek",
+                "subtitle": "Szakértői tanácsok, piacelemzés és helyi hírek.",
+                "read_more": "CIKK OLVASÁSA",
+                "no_posts": "Nem találhatók cikkek. Nézzen vissza hamarosan!"
+            },
+            "ui": {
+                "min_read": "perc olvasás",
+                "written_by": "Írta",
+                "journalist": "Újságíró",
+                "share_story": "Történet megosztása",
+                "back_to_journal": "Vissza az összes naplóbejegyzéshez",
+                "more_from": "Továbbiak a naplóból",
+                "prev_story": "Előző történet",
+                "next_story": "Következő történet",
+                "all_stories": "Összes történet",
+                "no_news": "Még nem tettünk közzé híreket. Nézzen vissza hamarosan!",
+                "no_blogs": "Szakértőink éppen új cikkeket írnak. Kérjük, nézzen vissza később!",
+                "explore_all_news": "Összes hír felfedezése",
+                "view_full_blog": "Teljes blog megtekintése",
+                "back_overview": "Vissza a napló áttekintéséhez",
+                "subscribe_label": "Hírlevél",
+                "subscribe_title": "Maradjon tájékozott a Costa Blanca ingatlanairól",
+                "subscribe_text": "Heti piacelemzés, befektetési tippek és kiemelt ajánlatok – egyenesen a postaládájába.",
+                "subscribe_btn": "Feliratkozás a naplóra"
+            },
+            "sections": {
+                "news_label": "Vállalati frissítések",
+                "news_title": "Legfrissebb hírek és bejelentések",
+                "blog_label": "Szakértői felismerések",
+                "blog_title": "Piaci elemzések és cikkek"
+            }
+        },
+        "property_details": {
+            "bg_text": "Részletek",
+            "subtitle": "Fedezze fel az ingatlan prémium részleteit és befektetési potenciálját",
+            "new_build": "Új építésű",
+            "resale": "Használt",
+            "for": "Típus:",
+            "description": "Leírás",
+            "features": "Jellemzők",
+            "bedrooms": "Hálószoba",
+            "bathrooms": "Fürdőszoba",
+            "building": "Épület",
+            "lot_size": "Telekméret",
+            "view_photos": "Fotók megtekintése",
+            "form": {
+                "contact_us": "Kapcsolatfelvétel",
+                "name": "Név",
+                "number": "Telefonszám",
+                "email": "E-mail",
+                "message": "Érdekel ez az ingatlan.",
+                "submit": "ÜZENET KÜLDÉSE"
+            }
+        },
+        "privacy_policy": {
+            "hero": {
+                "title": "Adatvédelmi irányelvek",
+                "bg_text": "Adatvédelem",
+                "subtitle": "Hogyan gyűjtjük, használjuk és kezeljük az Ön adatait."
+            },
+            "content": {
+                "title": "Adatvédelmi irányelvek",
+                "description": "Ez az Adatvédelmi nyilatkozat leírja, hogyan kezeljük adatait platformjainkon. Tiszteletben tartjuk személyiségi jogait és elkötelezettek vagyunk azok védelme mellett.",
+                "sections": [
+                    {
+                        "title": "1. Adatgyűjtés",
+                        "text": "Különböző típusú információkat gyűjtünk különböző célokból, hogy szolgáltatásunkat nyújthassuk és fejleszthessük. Ez magában foglalja a személyazonosításra alkalmas adatokat, például e-mail címet, vezeték- és keresztnevet, telefonszámot és címet."
+                    },
+                    {
+                        "title": "2. Hogyan használjuk fel adatait",
+                        "text": "A Capital Union a gyűjtött adatokat különféle célokra használja: a szolgáltatás nyújtására és fenntartására, a változásokról való értesítésre, ügyfélszolgálat biztosítására, elemzések készítésére a fejlesztéshez, valamint a használat nyomon követésére."
+                    },
+                    {
+                        "title": "3. Adatbiztonság",
+                        "text": "Az Ön adatainak biztonsága fontos számunkra, de ne feledje, hogy az interneten keresztül történő továbbítás vagy az elektronikus tárolás egyik módszere sem 100%-osan biztonságos. Bár törekszünk a kereskedelmi szempontból elfogadható eszközök használatára az adatok védelme érdekében, nem tudjuk garantálni azok abszolút biztonságát."
+                    }
+                ]
+            },
+            "page": {
+                "privacy_policy": "Adatvédelmi Szabályzat",
+                "legal_notice": "Jogi Nyilatkozat",
+                "last_updated": "Utolsó frissítés: 2026. június",
+                "intro": "Az Európai Unió 2016/679 rendelete (Általános Adatvédelmi Rendelet – GDPR), valamint a személyes adatok védelméről és a digitális jogok biztosításáról szóló spanyol 3/2018. sz. szerves törvény (LOPDGDD) rendelkezéseinek megfelelően tájékoztatjuk a felhasználókat, hogy a weboldalon keresztül gyűjtött személyes adatokat az alábbi adatkezelő kezeli.",
+                "brand_name": "Capital Union Investment",
+                "sec1_title": "1. Adatkezelő",
+                "sec1_desc": "A weboldalon keresztül gyűjtött személyes adatokat az alábbi adatkezelő kezeli:",
+                "trade_name": "Kereskedelmi név",
+                "nif": "NIF",
+                "email": "E-mail",
+                "phone": "Telefon",
+                "address": "Cím",
+                "address_val": "Avenida de la Constitución, Formentera del Segura, 03179 (Alicante), Spanyolország",
+                "sec2_title": "2. Az adatkezelés célja",
+                "sec2_desc": "A felhasználók által megadott személyes adatokat az alábbi célokra használhatjuk fel:",
+                "sec2_items": [
+                    "Kapcsolatfelvételi űrlapokon keresztül érkező megkeresések megválaszolása.",
+                    "Ingatlanokkal kapcsolatos információkérések kezelése.",
+                    "Ingatlanbemutatók és megtekintések szervezése.",
+                    "Üzleti és szerződéses kapcsolatok kezelése.",
+                    "Kapcsolattartás potenciális ügyfelekkel.",
+                    "Tájékoztatás küldése ingatlanokról, promóciókról és befektetési lehetőségekről.",
+                    "Kommunikáció kezelése e-mailen és WhatsAppon keresztül.",
+                    "Statisztikai elemzések készítése és szolgáltatásaink fejlesztése.",
+                    "Jogi kötelezettségek teljesítése."
+                ],
+                "sec3_title": "3. Az adatkezelés jogalapja",
+                "sec3_items": [
+                    "A felhasználó kifejezett hozzájárulása.",
+                    "A felhasználó kérésére végrehajtott szerződéskötést megelőző intézkedések.",
+                    "Jogi kötelezettségek teljesítése.",
+                    "Jogos érdek a szolgáltatások működtetésében és fejlesztésében."
+                ],
+                "sec4_title": "4. Az adatok megőrzése",
+                "sec4_desc": "A személyes adatokat az üzleti kapcsolat fennállásáig, a törlési kérelem benyújtásáig, vagy az adózási, kereskedelmi és közigazgatási jogszabályok által előírt megőrzési időtartamokig őrizzük meg.",
+                "sec5_title": "5. Az adatok címzettjei",
+                "sec5_desc": "A személyes adatok továbbíthatók ingatlanügyletekben részt vevő ügyvédi irodák, közjegyzők és ingatlan-nyilvántartási hivatalok, pénzügyi intézmények (finanszírozási igény esetén), valamint állami szervek részére. Szolgáltatásaink működtetéséhez az alábbi technológiai szolgáltatók is kezelhetik az adatokat:",
+                "sec6_title": "6. A felhasználó jogai",
+                "sec6_desc": "A felhasználó jogosult személyes adataihoz hozzáférni, helyesbítést vagy törlést kérni, az adatkezelés ellen tiltakozni, a korlátozást, az adathordozhatóságot kérni, valamint a hozzájárulást visszavonni.",
+                "sec6_rights": [
+                    "Hozzáférési jog",
+                    "Helyesbítési jog",
+                    "Törlési jog",
+                    "Hordozhatósági jog"
+                ],
+                "sec6_box_title": "Hogyan gyakorolhatja jogait?",
+                "sec6_box_desc": "E jogok gyakorlása érdekében kérelmet küldhet a megadott e-mail címre „GDPR jogok gyakorlására irányuló kérelem” tárggyal. A személyazonosság igazolásához érvényes okmány másolata kérhető.",
+                "sec7_title": "7. Biztonság",
+                "sec7_desc": "A Capital Union Investment minden szükséges technikai és szervezési intézkedést megtesz a személyes adatok biztonságának garantálása, valamint az illetéktelen hozzáférés, elvesztés, módosítás vagy jogellenes kezelés megelőzése érdekében.",
+                "sec8_title": "8. Panaszok",
+                "sec8_desc": "Amennyiben úgy véli, hogy jogai sérültek, panaszt nyújthat be a spanyol adatvédelmi hatóságnál (AEPD).",
+                "ln_intro": "A spanyol 34/2002. sz. törvény (LSSI-CE – Információs Társadalom Szolgáltatásairól és Elektronikus Kereskedelemről szóló törvény) 10. cikkének megfelelően ez a jogi nyilatkozat szabályozza a weboldal használatát.",
+                "ln_owner_title": "A weboldal tulajdonosának adatai",
+                "ln_ip_title": "Szellemi tulajdon",
+                "ln_ip_desc": "A weboldalon található valamennyi tartalom – beleértve a szövegeket, képeket, logókat, terveket, videókat és grafikákat – a Capital Union Investment vagy azok jogos tulajdonosainak tulajdonát képezi, és szellemi tulajdonjogi jogszabályok védelme alatt áll. Írásos engedély nélküli másolásuk, terjesztésük vagy nyilvános felhasználásuk szigorúan tilos.",
+                "ln_liability_title": "Felelősségkizárás",
+                "ln_liability_desc": "A Capital Union Investment nem vállal felelősséget az alábbiakért:",
+                "ln_liability_items": [
+                    "A szolgáltatás megszakadása vagy a weboldal elérhetetlensége.",
+                    "Technikai hibák vagy rendszerhibák.",
+                    "A weboldal nem megfelelő használatából eredő károk.",
+                    "A harmadik fél weboldalain található tartalmak."
+                ]
+            }
+        },
+        "terms_of_service": {
+            "hero": {
+                "title": "Felhasználási feltételek",
+                "bg_text": "Feltételek",
+                "subtitle": "Platformunk használatára vonatkozó szabályok és irányelvek."
+            },
+            "content": {
+                "title": "Felhasználási feltételek",
+                "description": "Platformunk elérésével vagy használatával Ön elfogadja, hogy magára nézve kötelezőnek ismeri el ezeket a feltételeket. Ha a feltételek bármely részével nem ért egyet, nem veheti igénybe szolgáltatásainkat.",
+                "sections": [
+                    {
+                        "title": "1. Szellemi tulajdon",
+                        "text": "A szolgáltatás és annak eredeti tartalma, jellemzői és funkciói a Capital Union és licencadóinak kizárólagos tulajdonát képezik és maradnak. A szolgáltatást szerzői jogi, védjegy- és egyéb törvények védik."
+                    },
+                    {
+                        "title": "2. Felhasználói kötelezettségek",
+                        "text": "Amikor fiókot hoz létre nálunk, mindig pontos, teljes és aktuális adatokat kell megadnia. Ennek elmulasztása a feltételek megszegésének minősül, ami a fiók azonnali megszüntetését vonhatja maga után."
+                    },
+                    {
+                        "title": "3. Felelősség korlátozása",
+                        "text": "A Capital Union, annak igazgatói, alkalmazottai vagy partnerei semmilyen esetben sem felelősek semmilyen közvetett, véletlen vagy következményes kárért, beleértve korlátozás nélkül a profitvesztést, adatvesztést vagy egyéb eszmei veszteségeket."
+                    }
+                ]
+            }
+        },
+        "cookie_policy": {
+            "hero": {
+                "title": "Süti (Cookie) szabályzat",
+                "bg_text": "Sütik",
+                "subtitle": "Tájékoztatás a sütik használatáról."
+            },
+            "content": {
+                "title": "Süti szabályzat",
+                "description": "Oldalunk sütiket használ, hogy megkülönböztesse Önt a többi felhasználótól. Ez segít nekünk abban, hogy jó élményt nyújtsunk a böngészés során, és fejlesszük oldalunkat.",
+                "sections": [
+                    {
+                        "title": "1. Az általunk használt sütik típusai",
+                        "text": "Munkamenet sütiket használunk a szolgáltatás működtetéséhez. Preferencia sütiket használunk az Ön beállításainak megjegyzéséhez. Biztonsági sütiket használunk biztonsági célokból."
+                    },
+                    {
+                        "title": "2. Harmadik féltől származó sütik",
+                        "text": "Saját sütijeinken kívül különféle harmadik felek sütijeit is használhatjuk használati statisztikák jelentésére, hirdetések megjelenítésére és egyéb célokra. Ezek a szolgáltatók saját szigorú adatvédelmi szabályzattal rendelkeznek."
+                    },
+                    {
+                        "title": "3. Sütik kezelése",
+                        "text": "Beállíthatja böngészőjét, hogy utasítsa el az összes sütit, vagy jelezze, ha süti érkezik. Ha azonban nem fogadja el a sütiket, előfordulhat, hogy szolgáltatásunk egyes részeit nem tudja majd használni."
+                    }
+                ]
+            },
+            "page": {
+                "cookie_policy": "Cookie Szabályzat",
+                "cookies_used_title": "Használt sütik",
+                "tech_title": "Technikai sütik",
+                "tech_desc": "Ezek a sütik szükségesek a WordPress és a weboldal megfelelő működéséhez.",
+                "anal_title": "Analitikai sütik",
+                "anal_service": "Google Analytics 4",
+                "anal_desc": "Ezek a sütik lehetővé teszik a felhasználói viselkedés összesített és anonim elemzését.",
+                "adv_title": "Reklámcélú sütik",
+                "adv_service": "Meta Pixel (Facebook és Instagram)",
+                "adv_desc": "Ezek a sütik segítenek a reklámkampányok hatékonyságának mérésében és személyre szabott hirdetések megjelenítésében.",
+                "manage_title": "A sütik kezelése",
+                "manage_desc1": "A felhasználó a hozzájárulási banner segítségével elfogadhatja, elutasíthatja vagy beállíthatja a sütiket.",
+                "manage_desc2": "A sütik beállításai a böngészőben is módosíthatók.",
+                "manage_desc3": "",
+                "privacy_link_text": "További információért kérjük, olvassa el az Adatvédelmi Szabályzatot."
+            }
         }
-      ]
     },
-    {
-      "key": "international",
-      "label": "Nemzetközi vásárlók",
-      "items": [
-        {
-          "question": "Mi az a NIE szám és hogyan szerezhetem meg?",
-          "answer": "A NIE egy külföldi azonosító szám, amely minden spanyolországi jogi vagy pénzügyi tranzakcióhoz szükséges. Megszerezhető külföldi spanyol konzulátuson vagy spanyolországi rendőrségen."
+    "footer": {
+        "tagline": "Találja meg álmai otthonát a legátfogóbb ingatlanplatform segítségével.",
+        "copyright": "Minden jog fenntartva.",
+        "menus": {
+            "quick_links": "Gyorshivatkozások",
+            "company": "Vállalat",
+            "legal": "Jogi"
         },
-        {
-          "question": "Kaphatnak a külföldiek jelzáloghitelt Spanyolországban?",
-          "answer": "Igen, a nem rezidensek is kaphatnak hitelt, általában az ingatlan értékének 60-70%-áig."
-        },
-        {
-          "question": "Melyek a fő különbségek nem rezidensként történő vásárláskor?",
-          "answer": "A nem rezidenseknek további adminisztratív és pénzügyi követelményeknek kell megfelelniük, de a folyamat megfelelő útmutatással egyszerű."
-        },
-        {
-          "question": "Szükségem van ügyvédre a spanyolországi vásárláshoz?",
-          "answer": "Az ügyvéd erősen ajánlott a jogi biztonság és a dokumentáció teljes körű ellenőrzése érdekében."
-        },
-        {
-          "question": "Adhatok meghatalmazást a vásárlás távú befejezéséhez?",
-          "answer": "Igen, a meghatalmazás lehetővé teszi, hogy egy jogi képviselő az Ön nevében végezze el a teljes folyamatot."
+        "links": {
+            "buy": "Ingatlan vásárlása",
+            "rent": "Ingatlan bérlése",
+            "sell": "Ingatlan eladása",
+            "services": "Szolgáltatások",
+            "about": "Rólunk",
+            "contact": "Kapcsolat",
+            "careers": "Karrier",
+            "blog": "Blog",
+            "privacy": "Adatvédelmi irányelvek",
+            "terms": "Felhasználási feltételek",
+            "cookie": "Süti szabályzat"
         }
-      ]
     },
-    {
-      "key": "costs",
-      "label": "Költségek és finanszírozás",
-      "items": [
+    "common_faq_tabs": [
         {
-          "question": "Milyen többletköltségekre számíthatok ingatlanvásárláskor?",
-          "answer": "A vevőknek körülbelül 12-13% pluszköltséggel kell számolniuk, amely magában foglalja az adókat és a jogi díjakat."
+            "key": "general",
+            "label": "Általános folyamat",
+            "items": [
+                {
+                    "question": "Mi a spanyolországi ingatlanvásárlás folyamata?",
+                    "answer": "A folyamat az ingatlan kiválasztásából, a foglalásból, a magánszerződés aláírásából és a vásárlás közjegyző előtti befejezéséből áll."
+                },
+                {
+                    "question": "Mennyi ideig tart egy ingatlanvásárlás befejezése?",
+                    "answer": "Használt ingatlan esetén 4-8 hetet vesz igénybe, a jogi ellenőrzésektől és a finanszírozástól függően. Új építésnél 1 hónaptól 3 évig tarthat, az építési szakasztól függően."
+                },
+                {
+                    "question": "Vásárolhatok ingatlant Spanyolországban anélkül, hogy fizikailag jelen lennék?",
+                    "answer": "Igen, a vásárlás távolról is lebonyolítható meghatalmazás útján."
+                },
+                {
+                    "question": "Milyen dokumentumok szükségesek az ingatlanvásárláshoz?",
+                    "answer": "Útlevélre és NIE számra lesz szüksége. A jogi szabályozások miatt igazolnia kell a források eredetét is."
+                },
+                {
+                    "question": "Szükségem van spanyol bankszámlára az ingatlanvásárláshoz?",
+                    "answer": "Igen, általában spanyol bankszámlára van szükség a kifizetések és a folyamatos költségek kezeléséhez."
+                }
+            ]
         },
         {
-          "question": "Mekkora előlegre van szükség?",
-          "answer": "Használt ingatlanoknál általában 10% foglalóra van szükség. Új fejlesztéseknél a foglalási díj általában 6 000 és 25 000 euró között mozog."
+            "key": "international",
+            "label": "Nemzetközi vásárlók",
+            "items": [
+                {
+                    "question": "Mi az a NIE szám és hogyan szerezhetem meg?",
+                    "answer": "A NIE egy külföldi azonosító szám, amely minden spanyolországi jogi vagy pénzügyi tranzakcióhoz szükséges. Megszerezhető külföldi spanyol konzulátuson vagy spanyolországi rendőrségen."
+                },
+                {
+                    "question": "Kaphatnak a külföldiek jelzáloghitelt Spanyolországban?",
+                    "answer": "Igen, a nem rezidensek is kaphatnak hitelt, általában az ingatlan értékének 60-70%-áig."
+                },
+                {
+                    "question": "Melyek a fő különbségek nem rezidensként történő vásárláskor?",
+                    "answer": "A nem rezidenseknek további adminisztratív és pénzügyi követelményeknek kell megfelelniük, de a folyamat megfelelő útmutatással egyszerű."
+                },
+                {
+                    "question": "Szükségem van ügyvédre a spanyolországi vásárláshoz?",
+                    "answer": "Az ügyvéd erősen ajánlott a jogi biztonság és a dokumentáció teljes körű ellenőrzése érdekében."
+                },
+                {
+                    "question": "Adhatok meghatalmazást a vásárlás távú befejezéséhez?",
+                    "answer": "Igen, a meghatalmazás lehetővé teszi, hogy egy jogi képviselő az Ön nevében végezze el a teljes folyamatot."
+                }
+            ]
         },
         {
-          "question": "Az ingatlan értékének hány százalékát finanszírozhatom?",
-          "answer": "A legtöbb bank az ingatlan értékének 60-70%-át finanszírozza nem rezidensek számára."
+            "key": "costs",
+            "label": "Költségek és finanszírozás",
+            "items": [
+                {
+                    "question": "Milyen többletköltségekre számíthatok ingatlanvásárláskor?",
+                    "answer": "A vevőknek körülbelül 12-13% pluszköltséggel kell számolniuk, amely magában foglalja az adókat és a jogi díjakat."
+                },
+                {
+                    "question": "Mekkora előlegre van szükség?",
+                    "answer": "Használt ingatlanoknál általában 10% foglalóra van szükség. Új fejlesztéseknél a foglalási díj általában 6 000 és 25 000 euró között mozog."
+                },
+                {
+                    "question": "Az ingatlan értékének hány százalékát finanszírozhatom?",
+                    "answer": "A legtöbb bank az ingatlan értékének 60-70%-át finanszírozza nem rezidensek számára."
+                },
+                {
+                    "question": "Mik a jellemző jelzáloghitel-feltételek Spanyolországban?",
+                    "answer": "A feltételek változóak, de fix vagy változó kamatozásúak lehetnek, és jövedelemigazolást igényelnek."
+                },
+                {
+                    "question": "Vannak folyamatos adók a vásárlás után?",
+                    "answer": "Igen, éves ingatlanadóval (IBI) és közösségi fenntartási költségekkel is számolni kell."
+                }
+            ]
         },
         {
-          "question": "Mik a jellemző jelzáloghitel-feltételek Spanyolországban?",
-          "answer": "A feltételek változóak, de fix vagy változó kamatozásúak lehetnek, és jövedelemigazolást igényelnek."
+            "key": "investment",
+            "label": "Befektetés",
+            "items": [
+                {
+                    "question": "Jó hely a Costa Blanca ingatlanbefektetésre?",
+                    "answer": "A Costa Blanca erős keresletet, vonzó életmódot és stabil hosszú távú értéket kínál, így Spanyolország egyik legkeresettebb befektetési célpontja."
+                },
+                {
+                    "question": "Milyen típusú ingatlanok termelik a legjobb bérleti díjat?",
+                    "answer": "A tengerparthoz vagy golfpályákhoz közeli, 1-2 hálószobás lakások generálják a legerősebb bérleti keresletet és hozamot."
+                },
+                {
+                    "question": "Milyen tényezők befolyásolják az ingatlan jövedelmezőségét?",
+                    "answer": "A helyszín, az ingatlan típusa, a kereslet, a kezelés minősége és a helyi önkormányzati szabályozások mind befolyásolják a jövedelmezőséget."
+                },
+                {
+                    "question": "Tudnak segíteni kereskedelmi vagy nagyszabású befektetésekben?",
+                    "answer": "Igen, tanácsadási szolgáltatásaink kiterjednek kereskedelmi eszközökre, szállodákra és nagyszabású befektetési projektekre is."
+                }
+            ]
         },
         {
-          "question": "Vannak folyamatos adók a vásárlás után?",
-          "answer": "Igen, éves ingatlanadóval (IBI) és közösségi fenntartási költségekkel is számolni kell."
+            "key": "property_types",
+            "label": "Ingatlantípusok",
+            "items": [
+                {
+                    "question": "Mi a különbség az új építésű és a használt ingatlanok között?",
+                    "answer": "Az új építésű ingatlanok frissen készültek, míg a használtaknak korábban már volt tulajdonosuk. Az új építésűek gyakran modern szabványokkal és garanciával rendelkeznek."
+                },
+                {
+                    "question": "Biztonságosabb új építésű ingatlant vásárolni?",
+                    "answer": "Az új építésűek modern szabványokat és garanciákat kínálnak, de fontos a fejlesztő és a projekt jogi hátterének alapos ellenőrzése."
+                },
+                {
+                    "question": "Mit kell figyelembe venni tervasztalról történő vásárláskor?",
+                    "answer": "Fontos felmérni a fejlesztő múltját, az építési határidőket, a jogi garanciákat és a befizetett összeget védő bankgaranciákat."
+                }
+            ]
+        },
+        {
+            "key": "legal",
+            "label": "Jogi biztonság",
+            "items": [
+                {
+                    "question": "Ellenőrzik az ingatlan dokumentációját vásárlás előtt?",
+                    "answer": "Igen, minden kulcsfontosságú dokumentációt – beleértve a tulajdoni lapokat és az engedélyeket – alaposan átvilágítunk a vásárlás előtt."
+                },
+                {
+                    "question": "Milyen szerepet játszik a közjegyző Spanyolországban?",
+                    "answer": "A közjegyző biztosítja a tranzakció jogi érvényességét, tanúsítja a tulajdoni lap aláírását, és segíti az ingatlan regisztrációját."
+                }
+            ]
+        },
+        {
+            "key": "services",
+            "label": "Szolgáltatások",
+            "items": [
+                {
+                    "question": "Milyen szolgáltatásokat nyújtanak a vásárláson túl?",
+                    "answer": "Átfogó, teljes körű ingatlanszolgáltatást kínálunk, beleértve a keresést, tanácsadást, piacelemzést, tárgyalást, jogi koordinációt, NIE ügyintézést és ingatlankezelést."
+                },
+                {
+                    "question": "Segítenek a közművekkel, adókkal és adminisztrációval?",
+                    "answer": "Igen, teljes körű segítséget nyújtunk a közművek átírásában, a helyi adók rendezésében és minden vásárlás utáni adminisztrációs folyamatban."
+                },
+                {
+                    "question": "Tudnak segíteni a relokációban és a spanyolországi letelepedésben?",
+                    "answer": "Igen, átfogó támogatást nyújtunk a költözéshez, a tartózkodási engedélyekhez és az új spanyolországi élet megkezdéséhez."
+                },
+                {
+                    "question": "Kínálnak ingatlankezelést a vásárlás után?",
+                    "answer": "Igen, folyamatos támogatás és teljes körű ingatlankezelési szolgáltatások – beleértve a bérbeadás kezelését – elérhetőek a vásárlás után."
+                }
+            ]
         }
-      ]
-    },
-    {
-      "key": "investment",
-      "label": "Befektetés",
-      "items": [
-        {
-          "question": "Jó hely a Costa Blanca ingatlanbefektetésre?",
-          "answer": "A Costa Blanca erős keresletet, vonzó életmódot és stabil hosszú távú értéket kínál, így Spanyolország egyik legkeresettebb befektetési célpontja."
-        },
-        {
-          "question": "Milyen típusú ingatlanok termelik a legjobb bérleti díjat?",
-          "answer": "A tengerparthoz vagy golfpályákhoz közeli, 1-2 hálószobás lakások generálják a legerősebb bérleti keresletet és hozamot."
-        },
-        {
-          "question": "Milyen tényezők befolyásolják az ingatlan jövedelmezőségét?",
-          "answer": "A helyszín, az ingatlan típusa, a kereslet, a kezelés minősége és a helyi önkormányzati szabályozások mind befolyásolják a jövedelmezőséget."
-        },
-        {
-          "question": "Tudnak segíteni kereskedelmi vagy nagyszabású befektetésekben?",
-          "answer": "Igen, tanácsadási szolgáltatásaink kiterjednek kereskedelmi eszközökre, szállodákra és nagyszabású befektetési projektekre is."
-        }
-      ]
-    },
-    {
-      "key": "property_types",
-      "label": "Ingatlantípusok",
-      "items": [
-        {
-          "question": "Mi a különbség az új építésű és a használt ingatlanok között?",
-          "answer": "Az új építésű ingatlanok frissen készültek, míg a használtaknak korábban már volt tulajdonosuk. Az új építésűek gyakran modern szabványokkal és garanciával rendelkeznek."
-        },
-        {
-          "question": "Biztonságosabb új építésű ingatlant vásárolni?",
-          "answer": "Az új építésűek modern szabványokat és garanciákat kínálnak, de fontos a fejlesztő és a projekt jogi hátterének alapos ellenőrzése."
-        },
-        {
-          "question": "Mit kell figyelembe venni tervasztalról történő vásárláskor?",
-          "answer": "Fontos felmérni a fejlesztő múltját, az építési határidőket, a jogi garanciákat és a befizetett összeget védő bankgaranciákat."
-        }
-      ]
-    },
-    {
-      "key": "legal",
-      "label": "Jogi biztonság",
-      "items": [
-        {
-          "question": "Ellenőrzik az ingatlan dokumentációját vásárlás előtt?",
-          "answer": "Igen, minden kulcsfontosságú dokumentációt – beleértve a tulajdoni lapokat és az engedélyeket – alaposan átvilágítunk a vásárlás előtt."
-        },
-        {
-          "question": "Milyen szerepet játszik a közjegyző Spanyolországban?",
-          "answer": "A közjegyző biztosítja a tranzakció jogi érvényességét, tanúsítja a tulajdoni lap aláírását, és segíti az ingatlan regisztrációját."
-        }
-      ]
-    },
-    {
-      "key": "services",
-      "label": "Szolgáltatások",
-      "items": [
-        {
-          "question": "Milyen szolgáltatásokat nyújtanak a vásárláson túl?",
-          "answer": "Átfogó, teljes körű ingatlanszolgáltatást kínálunk, beleértve a keresést, tanácsadást, piacelemzést, tárgyalást, jogi koordinációt, NIE ügyintézést és ingatlankezelést."
-        },
-        {
-          "question": "Segítenek a közművekkel, adókkal és adminisztrációval?",
-          "answer": "Igen, teljes körű segítséget nyújtunk a közművek átírásában, a helyi adók rendezésében és minden vásárlás utáni adminisztrációs folyamatban."
-        },
-        {
-          "question": "Tudnak segíteni a relokációban és a spanyolországi letelepedésben?",
-          "answer": "Igen, átfogó támogatást nyújtunk a költözéshez, a tartózkodási engedélyekhez és az új spanyolországi élet megkezdéséhez."
-        },
-        {
-          "question": "Kínálnak ingatlankezelést a vásárlás után?",
-          "answer": "Igen, folyamatos támogatás és teljes körű ingatlankezelési szolgáltatások – beleértve a bérbeadás kezelését – elérhetőek a vásárlás után."
-        }
-      ]
-    }
-  ]
+    ]
 }
