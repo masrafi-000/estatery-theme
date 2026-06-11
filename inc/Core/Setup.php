@@ -13,6 +13,19 @@ class Setup {
         add_theme_support( 'automatic-feed-links' );
         add_theme_support( 'title-tag' );
         add_theme_support( 'post-thumbnails' );
+        add_theme_support( 'custom-logo', [
+            'height'      => 250,
+            'width'       => 250,
+            'flex-width'  => true,
+            'flex-height' => true,
+        ] );
+        add_theme_support( 'custom-header', [
+            'default-image' => '',
+            'width'         => 1920,
+            'height'        => 600,
+            'flex-width'    => true,
+            'flex-height'   => true,
+        ] );
 
         register_nav_menus([
             'menu-1' => esc_html__( 'Primary', 'estatery' ),

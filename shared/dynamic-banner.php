@@ -2,8 +2,18 @@
 // Receive variables or set defaults
 $title    = isset($banner_title) ? $banner_title : "Page Title";
 $subtitle = isset($banner_subtitle) ? $banner_subtitle : "Default subtitle text goes here.";
-$image    = isset($banner_image) ? $banner_image : "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg";
 $bg_text  = isset($banner_bg_text) ? $banner_bg_text : $title;
+
+// Handle the header image dynamically from WordPress admin panel
+$image = isset($banner_image) ? $banner_image : '';
+if ( empty( $image ) || strpos( $image, 'pexels.com' ) !== false || strpos( $image, 'unsplash.com' ) !== false ) {
+    if ( has_header_image() ) {
+        $image = get_header_image();
+    }
+}
+if ( empty( $image ) ) {
+    $image = "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg";
+}
 
 // Breadcrumbs logic
 $breadcrumbs = isset($banner_breadcrumbs) ? $banner_breadcrumbs : [

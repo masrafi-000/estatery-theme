@@ -1,3 +1,22 @@
+<?php
+// Dynamic logo management
+$preloader_logo_url = get_theme_mod( 'preloader_logo' );
+if ( empty( $preloader_logo_url ) ) {
+    $preloader_logo_url = get_template_directory_uri() . '/public/images/logo.png';
+}
+
+$header_logo_url = get_theme_mod( 'header_logo' );
+if ( empty( $header_logo_url ) && has_custom_logo() ) {
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $logo_data = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+    if ( ! empty( $logo_data ) ) {
+        $header_logo_url = $logo_data[0];
+    }
+}
+if ( empty( $header_logo_url ) ) {
+    $header_logo_url = get_template_directory_uri() . '/public/images/logo.png';
+}
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -36,7 +55,7 @@
 
             <!-- Logo -->
             <img
-                src="<?php echo esc_url( get_template_directory_uri() . '/public/images/preloader.png' ); ?>"
+                src="<?php echo esc_url( $preloader_logo_url ); ?>"
                 alt="Loading..."
                 class="w-full h-full object-contain scale-110 sm:scale-125 md:scale-140 lg:scale-150 select-none">
         </div>
@@ -90,9 +109,9 @@
         <aside id="drawer-content" class="absolute top-0 left-0 h-full w-[85%] max-w-[380px] bg-white shadow-2xl transition-transform duration-500 -translate-x-full flex flex-col">
             <div class="p-6 border-b border-gray-100 flex items-center justify-between">
                 <a href="<?php echo esc_url( \Estatery\Core\Translator::getInstance()->resolve_nav_url('/') ); ?>" class="flex items-center gap-3 no-underline group">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/public/images/logo-ll.png' ); ?>" 
+                    <img src="<?php echo esc_url( $header_logo_url ); ?>" 
                          alt="<?php bloginfo( 'name' ); ?>" 
-                         class="h-6.5 w-auto object-contain scale-[1.8] origin-left transition-transform duration-500">
+                         class="h-8 w-auto object-contain scale-[1.8] origin-left transition-transform duration-500">
                 </a>
                 <button id="drawer-close" class="p-2 text-gray-400 hover:text-primary transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -135,9 +154,9 @@
                 <!-- Left: Logo -->
                 <div class="flex-1 flex justify-start items-center">
                     <a href="<?php echo esc_url( \Estatery\Core\Translator::getInstance()->resolve_nav_url('/') ); ?>" class="flex items-center gap-3 group no-underline">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/public/images/logo-ll.png' ); ?>" 
-                             alt="<?php bloginfo( 'name' ); ?>" 
-                             class="h-5 md:h-6 w-auto object-contain scale-[2] md:scale-[3] origin-left transition-transform duration-500 max-w-none">
+                        <img src="<?php echo esc_url( $header_logo_url ); ?>" 
+                              alt="<?php bloginfo( 'name' ); ?>" 
+                             class="h-8 md:h-8 w-auto object-contain scale-[2] md:scale-[3] origin-left transition-transform duration-500 max-w-none">
                     </a>
                 </div>
 

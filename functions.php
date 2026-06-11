@@ -141,5 +141,44 @@ function luxury_realestate_customize_register($wp_customize)
         'section'   => 'hero_section',
         'mime_type' => 'video',
     )));
+
+    // Theme Logo Settings Section
+    $wp_customize->add_section('theme_logos_section', array(
+        'title'    => __('Theme Logo Settings', 'estatery'),
+        'priority' => 31,
+    ));
+
+    // 2. Header Logo
+    $wp_customize->add_setting('header_logo', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'header_logo', array(
+        'label'    => __('Header Logo', 'estatery'),
+        'section'  => 'theme_logos_section',
+        'settings' => 'header_logo',
+    )));
+
+    // 3. Preloader Logo / Header Image
+    $wp_customize->add_setting('preloader_logo', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'preloader_logo', array(
+        'label'    => __('Preloader Logo / Header Image', 'estatery'),
+        'section'  => 'theme_logos_section',
+        'settings' => 'preloader_logo',
+    )));
+
+    // 4. Footer Logo
+    $wp_customize->add_setting('footer_logo', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_logo', array(
+        'label'    => __('Footer Logo', 'estatery'),
+        'section'  => 'theme_logos_section',
+        'settings' => 'footer_logo',
+    )));
 }
 add_action('customize_register', 'luxury_realestate_customize_register');

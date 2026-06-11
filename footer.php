@@ -1,7 +1,12 @@
 <?php
+
 /**
  * Classic Dark Footer Configuration
  */
+$footer_logo_url = get_theme_mod('footer_logo');
+if (empty($footer_logo_url)) {
+    $footer_logo_url = get_template_directory_uri() . '/public/images/logo.png';
+}
 $marketplace_links = [
     ["label" => t('header.navigation.0.label') ?: 'Home', "url" => \Estatery\Core\Translator::getInstance()->resolve_nav_url('/')],
     ["label" => t('header.navigation.1.label') ?: 'Properties', "url" => \Estatery\Core\Translator::getInstance()->resolve_nav_url('/properties')],
@@ -42,11 +47,11 @@ $social_links = [
             <!-- Agency Brand -->
             <div class="lg:col-span-4 space-y-8">
                 <a href="<?php echo \Estatery\Core\Translator::getInstance()->resolve_nav_url('/'); ?>" class="inline-block transition-transform hover:scale-105 duration-300">
-                    <img src="<?php echo get_template_directory_uri(); ?>/public/images/logo-ll.png"
-                        alt="<?php echo esc_attr( t('brand.name') ); ?>" class="h-16 md:h-20 w-auto">
+                    <img src="<?php echo esc_url($footer_logo_url); ?>"
+                        alt="<?php echo esc_attr(t('brand.name')); ?>" class="h-16 md:h-30 object-contain">
                 </a>
                 <p class="text-slate-500 leading-relaxed max-w-sm text-sm">
-                    <?php echo esc_html( t('footer.tagline') ); ?>
+                    <?php echo esc_html(t('footer.tagline')); ?>
                 </p>
                 <div class="flex items-center gap-4">
                     <?php foreach ($social_links as $name => $data): ?>
@@ -62,13 +67,13 @@ $social_links = [
             <!-- Marketplace -->
             <div class="lg:col-span-2">
                 <h4 class="text-secondary font-bold uppercase tracking-[0.2em] text-[10px] mb-8">
-                    <?php echo esc_html( t('footer.menus.quick_links') ); ?>
+                    <?php echo esc_html(t('footer.menus.quick_links')); ?>
                 </h4>
                 <ul class="space-y-4">
                     <?php foreach ($marketplace_links as $link): ?>
                         <li>
                             <a href="<?php echo esc_url($link['url']); ?>" class="text-slate-600 hover:text-primary transition-colors duration-300 font-semibold text-sm">
-                                <?php echo esc_html( $link['label'] ); ?>
+                                <?php echo esc_html($link['label']); ?>
                             </a>
                         </li>
                     <?php endforeach; ?>
@@ -78,13 +83,13 @@ $social_links = [
             <!-- Company -->
             <div class="lg:col-span-2">
                 <h4 class="text-secondary font-bold uppercase tracking-[0.2em] text-[10px] mb-8">
-                    <?php echo esc_html( t('footer.menus.company') ); ?>
+                    <?php echo esc_html(t('footer.menus.company')); ?>
                 </h4>
                 <ul class="space-y-4">
                     <?php foreach ($company_links as $link): ?>
                         <li>
                             <a href="<?php echo esc_url($link['url']); ?>" class="text-slate-600 hover:text-primary transition-colors duration-300 font-semibold text-sm">
-                                <?php echo esc_html( $link['label'] ); ?>
+                                <?php echo esc_html($link['label']); ?>
                             </a>
                         </li>
                     <?php endforeach; ?>
@@ -94,39 +99,47 @@ $social_links = [
             <!-- Contact/Location -->
             <div class="lg:col-span-4">
                 <h4 class="text-secondary font-bold uppercase tracking-[0.2em] text-[10px] mb-8">
-                    <?php echo esc_html( t('pages.contact.info.badge') ?: 'Reach Us' ); ?>
+                    <?php echo esc_html(t('pages.contact.info.badge') ?: 'Reach Us'); ?>
                 </h4>
                 <div class="space-y-6">
                     <div class="flex gap-4 items-start group">
                         <div class="w-9 h-9 rounded-xl bg-slate-50 flex items-center justify-center shrink-0 border border-slate-100 group-hover:bg-primary/5 transition-colors">
-                            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            </svg>
                         </div>
                         <p class="text-sm font-semibold text-slate-500 leading-relaxed group-hover:text-secondary transition-colors">
-                            <?php echo nl2br(esc_html( t('pages.contact.info.office_address') )); ?>
+                            <?php echo nl2br(esc_html(t('pages.contact.info.office_address'))); ?>
                         </p>
                     </div>
                     <div class="flex gap-4 items-center group">
                         <div class="w-9 h-9 rounded-xl bg-slate-50 flex items-center justify-center shrink-0 border border-slate-100 group-hover:bg-primary/5 transition-colors">
-                            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
                         </div>
                         <p class="text-sm font-semibold text-slate-500 group-hover:text-secondary transition-colors">
-                            <?php echo esc_html( t('brand.email') ); ?>
+                            <?php echo esc_html(t('brand.email')); ?>
                         </p>
                     </div>
                     <div class="flex gap-4 items-center group">
                         <div class="w-9 h-9 rounded-xl bg-slate-50 flex items-center justify-center shrink-0 border border-slate-100 group-hover:bg-primary/5 transition-colors">
-                            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
                         </div>
                         <p class="text-sm font-semibold text-slate-500 group-hover:text-secondary transition-colors">
-                            <?php echo esc_html( t('pages.contact.info.phone_value') ); ?>
+                            <?php echo esc_html(t('pages.contact.info.phone_value')); ?>
                         </p>
                     </div>
                     <div class="flex gap-4 items-center group">
                         <div class="w-9 h-9 rounded-xl bg-slate-50 flex items-center justify-center shrink-0 border border-slate-100 group-hover:bg-primary/5 transition-colors">
-                            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
                         </div>
                         <p class="text-sm font-semibold text-slate-500 group-hover:text-secondary transition-colors">
-                            <?php echo esc_html( t('pages.contact.info.hours_value') ); ?>
+                            <?php echo esc_html(t('pages.contact.info.hours_value')); ?>
                         </p>
                     </div>
                 </div>
@@ -137,13 +150,13 @@ $social_links = [
         <!-- Sub-Footer -->
         <div class="pt-10 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
             <p class="text-slate-400 text-[11px] font-medium tracking-wider">
-                © <?php echo date('Y'); ?> <span class="text-secondary font-bold"><?php echo esc_html( t('brand.platform') ); ?></span>. <?php echo esc_html( t('footer.copyright') ); ?>
+                © <?php echo date('Y'); ?> <span class="text-secondary font-bold"><?php echo esc_html(t('brand.platform')); ?></span>. <?php echo esc_html(t('footer.copyright')); ?>
             </p>
 
             <div class="flex items-center gap-8">
                 <?php foreach ($legal_links as $link): ?>
                     <a href="<?php echo esc_url($link['url']); ?>" class="text-slate-400 hover:text-secondary text-[10px] uppercase font-bold tracking-[0.2em] transition-colors">
-                        <?php echo esc_html( $link['label'] ); ?>
+                        <?php echo esc_html($link['label']); ?>
                     </a>
                 <?php endforeach; ?>
             </div>
@@ -151,12 +164,13 @@ $social_links = [
     </div>
 </footer>
 
-    </div>
+</div>
 </footer>
 
-    </div>
+</div>
 </footer>
 
 <?php wp_footer(); ?>
 </body>
+
 </html>
