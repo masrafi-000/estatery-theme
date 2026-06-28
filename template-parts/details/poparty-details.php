@@ -54,30 +54,31 @@ if (empty($images)) {
 
 $main_image = $images[0] ?? '';
 $gallery_images_json = json_encode($images);
+$total_images = count($images);
 ?>
 <section class="max-w-7xl mx-auto px-4 py-12 font-sans text-slate-900">
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12 h-auto md:h-[500px]">
-        <div class="md:col-span-2 h-[300px] md:h-full overflow-hidden rounded-2xl bg-slate-100 relative group">
+    <div class="grid grid-cols-1 <?php echo ($total_images > 1) ? 'md:grid-cols-4' : ''; ?> gap-4 mb-12 h-auto md:h-[500px]">
+        <div class="<?php 
+            if ($total_images === 1) {
+                echo 'md:col-span-4';
+            } elseif ($total_images === 2 || $total_images === 3) {
+                echo 'md:col-span-3';
+            } else {
+                echo 'md:col-span-2';
+            }
+        ?> h-[300px] md:h-full overflow-hidden rounded-2xl bg-slate-100 relative group">
             <img id="main-display-image"
                 src="<?php echo esc_url($main_image); ?>?auto=compress&cs=tinysrgb&w=1260"
                 alt="Main Property View" class="w-full h-full object-cover transition-all duration-500">
             <div class="absolute inset-0 bg-black/5 pointer-events-none"></div>
         </div>
 
-        <div id="side-gallery-container" class="contents">
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-1 md:col-span-1 gap-4">
-            <div class="h-[150px] md:h-[242px] overflow-hidden rounded-2xl cursor-pointer group border-2 border-transparent hover:border-primary transition-all gallery-thumb"
-                onclick="updateGallery(this, '<?php echo esc_url($images[1] ?? $main_image); ?>?auto=compress&cs=tinysrgb&w=1260')">
-                <img src="<?php echo esc_url($images[1] ?? $main_image); ?>?auto=compress&cs=tinysrgb&w=600"
-                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-            </div>
-            <div class="h-[150px] md:h-[242px] overflow-hidden rounded-2xl cursor-pointer group relative transition-all"
+        <?php if ($total_images === 2): ?>
+            <div class="md:col-span-1 h-[150px] md:h-full overflow-hidden rounded-2xl cursor-pointer group relative border-2 border-transparent hover:border-primary transition-all gallery-thumb"
                 onclick="openModal()">
-                <img src="<?php echo esc_url($images[2] ?? $main_image); ?>?auto=compress&cs=tinysrgb&w=600"
-                    class="w-full h-full object-cover">
+                <img src="<?php echo esc_url($images[1]); ?>?auto=compress&cs=tinysrgb&w=600"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 <div
                     class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-white transition-all group-hover:bg-black/40 backdrop-blur-[2px]">
                     <i data-lucide="plus-square" class="w-8 h-8 mb-1 text-primary"></i>
@@ -85,7 +86,84 @@ $gallery_images_json = json_encode($images);
                         class="font-bold text-xs uppercase tracking-widest text-center px-2"><?php echo esc_html(t('pages.property_details.view_photos')); ?></span>
                 </div>
             </div>
-        </div>
+
+        <?php elseif ($total_images === 3): ?>
+            <div class="grid grid-cols-2 md:grid-cols-1 md:col-span-1 gap-4">
+                <div class="h-[150px] md:h-[242px] overflow-hidden rounded-2xl cursor-pointer group border-2 border-transparent hover:border-primary transition-all gallery-thumb"
+                    onclick="updateGallery(this, '<?php echo esc_url($images[1]); ?>?auto=compress&cs=tinysrgb&w=1260')">
+                    <img src="<?php echo esc_url($images[1]); ?>?auto=compress&cs=tinysrgb&w=600"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="h-[150px] md:h-[242px] overflow-hidden rounded-2xl cursor-pointer group relative transition-all"
+                    onclick="openModal()">
+                    <img src="<?php echo esc_url($images[2]); ?>?auto=compress&cs=tinysrgb&w=600"
+                        class="w-full h-full object-cover">
+                    <div
+                        class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-white transition-all group-hover:bg-black/40 backdrop-blur-[2px]">
+                        <i data-lucide="plus-square" class="w-8 h-8 mb-1 text-primary"></i>
+                        <span id="photo-count-label"
+                            class="font-bold text-xs uppercase tracking-widest text-center px-2"><?php echo esc_html(t('pages.property_details.view_photos')); ?></span>
+                    </div>
+                </div>
+            </div>
+
+        <?php elseif ($total_images === 4): ?>
+            <div class="grid grid-cols-2 md:grid-cols-1 md:col-span-1 gap-4">
+                <div class="h-[150px] md:h-[242px] overflow-hidden rounded-2xl cursor-pointer group border-2 border-transparent hover:border-primary transition-all gallery-thumb"
+                    onclick="updateGallery(this, '<?php echo esc_url($images[1]); ?>?auto=compress&cs=tinysrgb&w=1260')">
+                    <img src="<?php echo esc_url($images[1]); ?>?auto=compress&cs=tinysrgb&w=600"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="h-[150px] md:h-[242px] overflow-hidden rounded-2xl cursor-pointer group border-2 border-transparent hover:border-primary transition-all gallery-thumb"
+                    onclick="updateGallery(this, '<?php echo esc_url($images[2]); ?>?auto=compress&cs=tinysrgb&w=1260')">
+                    <img src="<?php echo esc_url($images[2]); ?>?auto=compress&cs=tinysrgb&w=600"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+            <div class="md:col-span-1 h-[150px] md:h-full overflow-hidden rounded-2xl cursor-pointer group relative border-2 border-transparent hover:border-primary transition-all gallery-thumb"
+                onclick="openModal()">
+                <img src="<?php echo esc_url($images[3]); ?>?auto=compress&cs=tinysrgb&w=600"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div
+                    class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-white transition-all group-hover:bg-black/40 backdrop-blur-[2px]">
+                    <i data-lucide="plus-square" class="w-8 h-8 mb-1 text-primary"></i>
+                    <span id="photo-count-label"
+                        class="font-bold text-xs uppercase tracking-widest text-center px-2"><?php echo esc_html(t('pages.property_details.view_photos')); ?></span>
+                </div>
+            </div>
+
+        <?php elseif ($total_images >= 5): ?>
+            <div class="grid grid-cols-2 md:grid-cols-1 md:col-span-1 gap-4">
+                <div class="h-[150px] md:h-[242px] overflow-hidden rounded-2xl cursor-pointer group border-2 border-transparent hover:border-primary transition-all gallery-thumb"
+                    onclick="updateGallery(this, '<?php echo esc_url($images[1]); ?>?auto=compress&cs=tinysrgb&w=1260')">
+                    <img src="<?php echo esc_url($images[1]); ?>?auto=compress&cs=tinysrgb&w=600"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="h-[150px] md:h-[242px] overflow-hidden rounded-2xl cursor-pointer group border-2 border-transparent hover:border-primary transition-all gallery-thumb"
+                    onclick="updateGallery(this, '<?php echo esc_url($images[2]); ?>?auto=compress&cs=tinysrgb&w=1260')">
+                    <img src="<?php echo esc_url($images[2]); ?>?auto=compress&cs=tinysrgb&w=600"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-1 md:col-span-1 gap-4">
+                <div class="h-[150px] md:h-[242px] overflow-hidden rounded-2xl cursor-pointer group border-2 border-transparent hover:border-primary transition-all gallery-thumb"
+                    onclick="updateGallery(this, '<?php echo esc_url($images[3]); ?>?auto=compress&cs=tinysrgb&w=1260')">
+                    <img src="<?php echo esc_url($images[3]); ?>?auto=compress&cs=tinysrgb&w=600"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="h-[150px] md:h-[242px] overflow-hidden rounded-2xl cursor-pointer group relative transition-all"
+                    onclick="openModal()">
+                    <img src="<?php echo esc_url($images[4]); ?>?auto=compress&cs=tinysrgb&w=600"
+                        class="w-full h-full object-cover">
+                    <div
+                        class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-white transition-all group-hover:bg-black/40 backdrop-blur-[2px]">
+                        <i data-lucide="plus-square" class="w-8 h-8 mb-1 text-primary"></i>
+                        <span id="photo-count-label"
+                            class="font-bold text-xs uppercase tracking-widest text-center px-2"><?php echo esc_html(t('pages.property_details.view_photos')); ?></span>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
     </div>
 
     <div class="flex flex-col lg:flex-row gap-8">
@@ -440,7 +518,6 @@ $gallery_images_json = json_encode($images);
         let currentGalleryIndex = 0;
 
         document.addEventListener('DOMContentLoaded', () => {
-            const sideContainer = document.getElementById('side-gallery-container');
             const modalThumbContainer = document.getElementById('modal-thumbnails-container');
             const photoLabel = document.getElementById('photo-count-label');
 
@@ -448,18 +525,6 @@ $gallery_images_json = json_encode($images);
                 const viewPhotosText = <?php echo json_encode( t('pages.property_details.view_photos') ); ?>;
                 photoLabel.innerText = `${viewPhotosText} (${propertyImages.length})`;
             }
-
-            const sideImages = propertyImages.slice(1, 3);
-            let sideHtml = '<div class="grid grid-cols-2 md:grid-cols-1 md:col-span-1 gap-4">';
-            sideImages.forEach(img => {
-                sideHtml += `
-                    <div class="h-[150px] md:h-[242px] overflow-hidden rounded-2xl cursor-pointer group border-2 border-transparent hover:border-primary transition-all gallery-thumb"
-                        onclick="updateGallery(this, '${img}?auto=compress&cs=tinysrgb&w=1260')">
-                        <img src="${img}?auto=compress&cs=tinysrgb&w=600" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>`;
-            });
-            sideHtml += '</div>';
-            sideContainer.innerHTML = sideHtml;
 
             propertyImages.forEach((img, index) => {
                 const thumb = document.createElement('img');
