@@ -300,17 +300,19 @@ if (empty($header_logo_url)) {
         </div>
 
         <div id="top-bar" class="border-b border-gray-100 bg-white/50">
-            <div class="container mx-auto px-4 max-w-[1400px] flex flex-col sm:flex-row justify-between items-center py-2 gap-2 sm:gap-0">
-                <div class="flex items-center gap-2 text-xs text-slate-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <div class="container mx-auto px-4 max-w-[1400px] flex justify-between items-center py-2.5 gap-4">
+                <div class="flex items-start lg:items-center justify-start gap-2 text-xs text-slate-500 min-w-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary shrink-0 mt-0.5 lg:mt-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
                         <circle cx="12" cy="10" r="3" />
                     </svg>
-                    <a href="https://maps.google.com/?q=Avenida+de+la+Constitucion+Formentera+del+Segura+03179+Alicante" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors no-underline text-slate-600 font-medium">
-                        Avenida de la Constitución, Formentera del Segura 03179 (Alicante)
+                    <a href="https://maps.google.com/?q=Avenida+de+la+Constitucion+Formentera+del+Segura+03179+Alicante" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors no-underline text-slate-600 font-medium text-left break-normal">
+                        Avenida de la Constitución,
+                        <br class="block md:hidden">
+                        Formentera del Segura 03179 (Alicante)
                     </a>
                 </div>
-                <div class="flex items-center gap-2 text-xs text-slate-500">
+                <div class="flex items-center justify-end gap-2 text-xs text-slate-500 shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
                     </svg>
@@ -329,12 +331,12 @@ if (empty($header_logo_url)) {
                     <a href="<?php echo esc_url(\Estatery\Core\Translator::getInstance()->resolve_nav_url('/')); ?>" class="flex items-center gap-3 group no-underline">
                         <img src="<?php echo esc_url($header_logo_url); ?>"
                             alt="<?php bloginfo('name'); ?>"
-                            class="h-8 md:h-8 w-auto object-contain scale-[2] md:scale-[3] origin-left transition-transform duration-500 max-w-none">
+                            class="h-8 lg:h-8 w-auto object-contain scale-[2] lg:scale-[3] origin-left transition-transform duration-500 max-w-none">
                     </a>
                 </div>
 
                 <!-- Center: Desktop Navigation -->
-                <nav id="site-navigation" class="hidden md:flex flex-2 justify-center">
+                <nav id="site-navigation" class="hidden lg:flex flex-2 justify-center">
                     <ul class="flex gap-1 items-center">
                         <?php
                         global $wp;
@@ -362,12 +364,12 @@ if (empty($header_logo_url)) {
                 </nav>
 
                 <!-- Right: Actions & Language -->
-                <div class="flex-1 flex justify-end items-center gap-2 md:gap-4">
+                <div class="flex-1 flex justify-end items-center gap-2 lg:gap-4">
                     <!-- Language Switcher Component -->
                     <?php get_template_part('template-parts/header/language-switcher'); ?>
 
                     <!-- Mobile Toggle -->
-                    <button id="mobile-toggle" class="md:hidden p-2 rounded-xl border-2 border-gray-100 text-foreground hover:border-primary hover:text-primary transition-all duration-300">
+                    <button id="mobile-toggle" class="lg:hidden p-2 rounded-xl border-2 border-gray-100 text-foreground hover:border-primary hover:text-primary transition-all duration-300">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                         </svg>
