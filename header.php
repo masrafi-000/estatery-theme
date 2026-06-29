@@ -156,6 +156,16 @@ if (empty($header_logo_url)) {
             padding-bottom: 0 !important;
             border-bottom-width: 0 !important;
         }
+        .navbar-logo {
+            transform: scale(2) !important;
+            transform-origin: left center !important;
+            transition: transform 0.5s ease-in-out !important;
+        }
+        @media (min-width: 1024px) {
+            .navbar-logo {
+                transform: scale(3) !important;
+            }
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -331,7 +341,7 @@ if (empty($header_logo_url)) {
                     <a href="<?php echo esc_url(\Estatery\Core\Translator::getInstance()->resolve_nav_url('/')); ?>" class="flex items-center gap-3 group no-underline">
                         <img src="<?php echo esc_url($header_logo_url); ?>"
                             alt="<?php bloginfo('name'); ?>"
-                            class="h-8 lg:h-8 w-auto object-contain scale-[2] lg:scale-[3] origin-left transition-transform duration-500 max-w-none">
+                            class="h-8 lg:h-8 w-auto object-contain navbar-logo max-w-none">
                     </a>
                 </div>
 
