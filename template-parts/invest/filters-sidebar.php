@@ -235,6 +235,12 @@
 </aside>
 
 <script>
+    <?php
+    global $wp_rewrite;
+    $using_permalinks = $wp_rewrite && $wp_rewrite->using_permalinks();
+    ?>
+    const usingPermalinks = <?php echo json_encode( $using_permalinks ); ?>;
+
     document.addEventListener('DOMContentLoaded', function() {
         // Initialize state from URL
         const urlParams = new URLSearchParams(window.location.search);
@@ -252,6 +258,19 @@
             view:         urlParams.get('view')         || 'grid'
         };
         const state = window.filterState;
+
+        function getCurrentPage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let paged = urlParams.get('paged') || urlParams.get('page');
+            if (paged && !isNaN(paged)) {
+                return parseInt(paged, 10);
+            }
+            const pathMatch = window.location.pathname.match(/\/page\/(\d+)\/?/);
+            if (pathMatch && pathMatch[1]) {
+                return parseInt(pathMatch[1], 10);
+            }
+            return 1;
+        }
 
         const selectors = {
             searchInput:     document.getElementById('search-input'),
@@ -440,9 +459,26 @@
             if (state.baths !== 'any') params.set('baths', state.baths);
             params.set('sort', state.sort);
             params.set('view', state.view);
-            params.set('paged', paged);
 
-            const newUrl = window.location.pathname + '?' + params.toString();
+            // Clean the pathname from existing page numbers
+            const cleanPathname = window.location.pathname.replace(/\/page\/\d+\/?$/, '');
+            let newUrl = '';
+
+            if (usingPermalinks) {
+                let newPath = cleanPathname;
+                if (paged > 1) {
+                    newPath = newPath.replace(/\/$/, '') + '/page/' + paged + '/';
+                } else {
+                    newPath = newPath.replace(/\/$/, '') + '/';
+                }
+                newUrl = newPath + (params.toString() ? '?' + params.toString() : '');
+            } else {
+                if (paged > 1) {
+                    params.set('paged', paged);
+                }
+                newUrl = cleanPathname + (params.toString() ? '?' + params.toString() : '');
+            }
+
             window.history.pushState({ path: newUrl }, '', newUrl);
 
             const formData = new FormData();

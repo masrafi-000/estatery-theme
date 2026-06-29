@@ -16,7 +16,78 @@ if ( $total_pages <= 1 ) return;
 $base_url = strtok( $_SERVER['REQUEST_URI'], '?' );
 
 function pagination_url( string $base, int $page ): string {
-    return esc_url( get_pagenum_link( $page ) );
+    // If we're doing AJAX, use the referrer URL (the frontend URL that initiated the request)
+    $request_uri = $_SERVER['REQUEST_URI'];
+    if ( ( defined( 'DOING_AJAX' ) && DOING_AJAX ) || wp_doing_ajax() ) {
+        $request_uri = wp_get_referer() ?: $_SERVER['HTTP_REFERER'] ?: '';
+    }
+
+    if ( ! $request_uri ) {
+        return esc_url( get_pagenum_link( $page ) );
+    }
+
+    // Parse URL parts
+    $url_parts = wp_parse_url( $request_uri );
+    $path = $url_parts['path'] ?? '/';
+    $query = $url_parts['query'] ?? '';
+
+    // Clean existing page number from path if present (e.g. /page/2/ or /page/2)
+    $path = preg_replace( '/\/page\/\d+\/?$/', '', $path );
+    
+    // Remember if path had a trailing slash
+    $had_trailing_slash = ( substr( $path, -1 ) === '/' );
+    $path = rtrim( $path, '/' );
+
+    global $wp_rewrite;
+    if ( $wp_rewrite && $wp_rewrite->using_permalinks() ) {
+        // Pretty permalinks enabled
+        if ( $page > 1 ) {
+            $path .= '/page/' . $page;
+        }
+        $path = user_trailingslashit( $path );
+    } else {
+        // Ugly permalinks: restore trailing slash if it was there originally
+        if ( $had_trailing_slash ) {
+            $path .= '/';
+        }
+        
+        parse_str( $query, $query_args );
+        if ( $page > 1 ) {
+            $query_args['paged'] = $page;
+        } else {
+            unset( $query_args['paged'] );
+        }
+        $query = http_build_query( $query_args );
+    }
+
+    // Reconstruct full URL
+    $scheme = is_ssl() ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    $port = $_SERVER['SERVER_PORT'] ?? '';
+
+    $port_suffix = '';
+    if ( $port && ! strpos( $host, ':' ) ) {
+        if ( ( $scheme === 'http' && $port !== '80' ) || ( $scheme === 'https' && $port !== '443' ) ) {
+            $port_suffix = ':' . $port;
+        }
+    }
+
+    $base_domain = $scheme . '://' . $host . $port_suffix;
+    $final_url = $base_domain . $path;
+
+    if ( $query ) {
+        // Ensure paged parameter is not in both path and query when pretty permalinks are used
+        if ( $wp_rewrite && $wp_rewrite->using_permalinks() ) {
+            parse_str( $query, $query_args );
+            unset( $query_args['paged'] );
+            $query = http_build_query( $query_args );
+        }
+        if ( $query ) {
+            $final_url .= '?' . $query;
+        }
+    }
+
+    return esc_url( $final_url );
 }
 
 /**

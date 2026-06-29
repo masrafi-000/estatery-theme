@@ -158,6 +158,11 @@
 
 <script>
     const i18n = <?php echo json_encode( t('pages.properties.js') ); ?>;
+    <?php
+    global $wp_rewrite;
+    $using_permalinks = $wp_rewrite && $wp_rewrite->using_permalinks();
+    ?>
+    const usingPermalinks = <?php echo json_encode( $using_permalinks ); ?>;
 
     // Debounce Utility
     function debounce(func, wait) {
@@ -184,6 +189,19 @@
             view:     urlParams.get('view')      || 'grid'
         };
         const state = window.filterState;
+
+        function getCurrentPage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let paged = urlParams.get('paged') || urlParams.get('page');
+            if (paged && !isNaN(paged)) {
+                return parseInt(paged, 10);
+            }
+            const pathMatch = window.location.pathname.match(/\/page\/(\d+)\/?/);
+            if (pathMatch && pathMatch[1]) {
+                return parseInt(pathMatch[1], 10);
+            }
+            return 1;
+        }
 
         const selectors = {
             searchInput:     document.getElementById('search-input'),
@@ -356,10 +374,26 @@
             
             params.set('sort', state.sort);
             params.set('view', state.view);
-            params.set('paged', paged);
 
-            // Update URL without reload
-            const newUrl = window.location.pathname + '?' + params.toString();
+            // Clean the pathname from existing page numbers
+            const cleanPathname = window.location.pathname.replace(/\/page\/\d+\/?$/, '');
+            let newUrl = '';
+
+            if (usingPermalinks) {
+                let newPath = cleanPathname;
+                if (paged > 1) {
+                    newPath = newPath.replace(/\/$/, '') + '/page/' + paged + '/';
+                } else {
+                    newPath = newPath.replace(/\/$/, '') + '/';
+                }
+                newUrl = newPath + (params.toString() ? '?' + params.toString() : '');
+            } else {
+                if (paged > 1) {
+                    params.set('paged', paged);
+                }
+                newUrl = cleanPathname + (params.toString() ? '?' + params.toString() : '');
+            }
+
             window.history.pushState({ path: newUrl }, '', newUrl);
 
             // Prepare POST data
@@ -495,7 +529,7 @@
             loading.classList.remove('opacity-0', 'pointer-events-none');
             ajaxContent.classList.add('opacity-40');
 
-            const paged = urlParams.get('paged') || 1;
+            const paged = getCurrentPage();
             const sortSelection = urlParams.get('sort') || 'newest';
             const viewSelection = urlParams.get('view') || 'grid';
 
@@ -536,7 +570,7 @@
 
         // Trigger search on load if URL params are present
         if (window.location.search) {
-            updateProperties(1);
+            updateProperties(getCurrentPage());
         }
     });
 </script>
