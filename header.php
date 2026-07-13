@@ -149,6 +149,7 @@ if (empty($header_logo_url)) {
             overflow: hidden;
             max-height: 100px;
         }
+
         .header-scrolled #top-bar {
             max-height: 0 !important;
             opacity: 0 !important;
@@ -156,11 +157,13 @@ if (empty($header_logo_url)) {
             padding-bottom: 0 !important;
             border-bottom-width: 0 !important;
         }
+
         .navbar-logo {
             transform: scale(2) !important;
             transform-origin: left center !important;
             transition: transform 0.5s ease-in-out !important;
         }
+
         @media (min-width: 1024px) {
             .navbar-logo {
                 transform: scale(3) !important;
@@ -178,7 +181,9 @@ if (empty($header_logo_url)) {
                         masthead.classList.remove('header-scrolled');
                     }
                 };
-                window.addEventListener('scroll', handleScroll, { passive: true });
+                window.addEventListener('scroll', handleScroll, {
+                    passive: true
+                });
                 handleScroll(); // Initial check
             }
         });
@@ -310,26 +315,29 @@ if (empty($header_logo_url)) {
         </div>
 
         <div id="top-bar" class="border-b border-gray-100 bg-white/50">
-            <div class="container mx-auto px-4 max-w-[1400px] flex justify-between items-center py-2.5 gap-4">
-                <div class="flex items-start lg:items-center justify-start gap-2 text-xs text-slate-500 min-w-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary shrink-0 mt-0.5 lg:mt-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-                        <circle cx="12" cy="10" r="3" />
+            <div class="container mx-auto px-4 max-w-[1400px] flex flex-col sm:flex-row justify-center sm:justify-between items-center py-2 sm:py-2.5 gap-1.5 sm:gap-4">
+
+                <!-- Email Area -->
+                <div class="flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2 text-[11px] sm:text-xs text-slate-500 w-full sm:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
                     </svg>
-                    <a href="https://maps.google.com/?q=Avenida+de+la+Constitucion+Formentera+del+Segura+03179+Alicante" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors no-underline text-slate-600 font-medium text-left break-normal">
-                        Avenida de la Constitución,
-                        <br class="block md:hidden">
-                        Formentera del Segura 03179 (Alicante)
+                    <a href="mailto:info@capitalunioninvestment.com" class="hover:text-primary transition-colors no-underline text-slate-600 font-bold text-center sm:text-left break-all sm:break-normal">
+                        info@capitalunioninvestment.com
                     </a>
                 </div>
-                <div class="flex items-center justify-end gap-2 text-xs text-slate-500 shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                <!-- Phone Area -->
+                <div class="flex items-center justify-center sm:justify-end gap-1.5 sm:gap-2 text-[11px] sm:text-xs text-slate-500 shrink-0 w-full sm:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
                     </svg>
                     <a href="tel:+34639315861" class="hover:text-primary transition-colors no-underline text-slate-600 font-bold">
                         +34 639 31 58 61
                     </a>
                 </div>
+
             </div>
         </div>
 
